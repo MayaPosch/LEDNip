@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5BB7D52D
-P 1000 1300
-F 0 "J1" H 920 975 50  0000 C CNN
-F 1 "Conn_01x02" H 920 1066 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 1000 1300 50  0001 C CNN
-F 3 "~" H 1000 1300 50  0001 C CNN
-	1    1000 1300
+P 650 1300
+F 0 "J1" H 570 975 50  0000 C CNN
+F 1 "Conn_01x02" H 570 1066 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 650 1300 50  0001 C CNN
+F 3 "~" H 650 1300 50  0001 C CNN
+	1    650  1300
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -48,9 +48,7 @@ F 3 "~" H 1950 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 1150 1500 1150
-Wire Wire Line
-	1450 1150 1450 1200
+	1600 1150 1550 1150
 Connection ~ 1600 1150
 $Comp
 L power:GND #PWR05
@@ -64,9 +62,9 @@ F 3 "" H 1350 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 1300 1350 1300
+	850  1300 1000 1300
 Wire Wire Line
-	1350 1300 1350 1450
+	1000 1300 1350 1450
 Wire Wire Line
 	1350 1450 1600 1450
 Connection ~ 1350 1450
@@ -1215,8 +1213,6 @@ Connection ~ 6550 1200
 Wire Wire Line
 	6550 1200 6550 750 
 Wire Wire Line
-	1200 1200 1450 1200
-Wire Wire Line
 	1200 6250 1200 6350
 Connection ~ 1200 6250
 $Sheet
@@ -1479,7 +1475,7 @@ L Device:C C13
 U 1 1 5CFCD718
 P 8750 1600
 F 0 "C13" H 8865 1646 50  0000 L CNN
-F 1 "100nF" H 8800 1500 50  0000 L CNN
+F 1 "4.7uF" H 8800 1500 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 8788 1450 50  0001 C CNN
 F 3 "~" H 8750 1600 50  0001 C CNN
 	1    8750 1600
@@ -1490,7 +1486,7 @@ L Device:C C14
 U 1 1 5CFCD850
 P 8750 2650
 F 0 "C14" H 8865 2696 50  0000 L CNN
-F 1 "100nF" H 8800 2550 50  0000 L CNN
+F 1 "4.7uF" H 8800 2550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 8788 2500 50  0001 C CNN
 F 3 "~" H 8750 2650 50  0001 C CNN
 	1    8750 2650
@@ -1536,19 +1532,15 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5D054B0F
-P 1500 1100
-F 0 "#FLG0101" H 1500 1175 50  0001 C CNN
-F 1 "PWR_FLAG" H 1500 1274 50  0000 C CNN
-F 2 "" H 1500 1100 50  0001 C CNN
-F 3 "~" H 1500 1100 50  0001 C CNN
-	1    1500 1100
+P 1550 1100
+F 0 "#FLG0101" H 1550 1175 50  0001 C CNN
+F 1 "PWR_FLAG" H 1550 1274 50  0000 C CNN
+F 2 "" H 1550 1100 50  0001 C CNN
+F 3 "~" H 1550 1100 50  0001 C CNN
+	1    1550 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1500 1100 1500 1150
-Connection ~ 1500 1150
-Wire Wire Line
-	1500 1150 1450 1150
+Connection ~ 1550 1150
 Text Label 1650 1150 0    50   ~ 0
 +24V
 Text Label 5400 800  0    50   ~ 0
@@ -1607,4 +1599,39 @@ Wire Wire Line
 	2850 1050 2950 1050
 Wire Wire Line
 	2650 1150 2850 1150
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 5BCB2C00
+P 1150 1150
+F 0 "F1" V 945 1150 50  0000 C CNN
+F 1 "Polyfuse_Small" V 1036 1150 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 1200 950 50  0001 L CNN
+F 3 "~" H 1150 1150 50  0001 C CNN
+	1    1150 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 1100 1550 1150
+Wire Wire Line
+	1050 1150 850  1200
+Wire Wire Line
+	1250 1150 1350 1150
+$Comp
+L Device:D_Small D3
+U 1 1 5BCE641C
+P 1350 1300
+F 0 "D3" V 1304 1368 50  0000 L CNN
+F 1 "D_Small" V 1395 1368 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric" V 1350 1300 50  0001 C CNN
+F 3 "~" V 1350 1300 50  0001 C CNN
+	1    1350 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1200 1350 1150
+Connection ~ 1350 1150
+Wire Wire Line
+	1350 1150 1550 1150
+Wire Wire Line
+	1350 1400 1350 1450
 $EndSCHEMATC
