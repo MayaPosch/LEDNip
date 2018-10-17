@@ -1,0 +1,59 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# HR911105A-SamacSys_Parts
+#
+DEF HR911105A-SamacSys_Parts J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "HR911105A-SamacSys_Parts" 750 200 50 H V L CNN
+F2 "HR911105A_1" 750 100 50 H I L CNN
+F3 "http://www.kosmodrom.com.ua/pdf/HR911105A.pdf" 750 0 50 H I L CNN
+F4 "Single port RJ45 connector, with magnetics module and LED" 750 -100 50 H I L CNN "Description"
+F5 "Hanrun Electronics" 750 -300 50 H I L CNN "Manufacturer_Name"
+F6 "HR911105A" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "HR911105A" 750 -700 50 H I L CNN "Arrow Part Number"
+DRAW
+P 5 0 1 6 200 100 700 100 700 -600 200 -600 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 10 10 900 -400 200 L 50 50 0 0 W
+X 11 11 0 -500 200 R 50 50 0 0 W
+X 12 12 900 -500 200 L 50 50 0 0 P
+X 2 2 900 0 200 L 50 50 0 0 B
+X 3 3 0 -100 200 R 50 50 0 0 B
+X 4 4 900 -100 200 L 50 50 0 0 B
+X 5 5 0 -200 200 R 50 50 0 0 B
+X 6 6 900 -200 200 L 50 50 0 0 B
+X 7 7 0 -300 200 R 50 50 0 0 B
+X 8 8 900 -300 200 L 50 50 0 0 W
+X 9 9 0 -400 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# LDD-1000H-SamacSys_Parts
+#
+DEF LDD-1000H-SamacSys_Parts PS 0 30 Y Y 1 F N
+F0 "PS" 1250 300 50 H V L CNN
+F1 "LDD-1000H-SamacSys_Parts" 1250 200 50 H V L CNN
+F2 "" 1250 100 50 H I L CNN
+F3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" 1250 0 50 H I L CNN
+F4 "LED Power Supplies 9-56Vin 2-52Vout 1000mA LED Driver" 1250 -100 50 H I L CNN "Description"
+F5 "Mean Well" 1250 -300 50 H I L CNN "Manufacturer_Name"
+F6 "LDD-1000H" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "70345763" 1250 -700 50 H I L CNN "Allied_Number"
+F8 "http://www.alliedelec.com/mean-well-usa-ldd-1000h/70345763/" 1250 -800 50 H I L CNN "Allied Price/Stock"
+F9 "LDD-1000H" 1250 -900 50 H I L CNN "Arrow Part Number"
+DRAW
+P 5 0 1 6 200 100 1200 100 1200 -500 200 -500 200 100 N
+X -VIN_1 1 0 0 200 R 50 50 0 0 W
+X -VOUT_1 11 0 -200 200 R 50 50 0 0 P
+X -VOUT_2 12 0 -300 200 R 50 50 0 0 P
+X +VOUT_1 13 0 -400 200 R 50 50 0 0 w
+X +VOUT_2 14 1400 0 200 L 50 50 0 0 P
+X -VIN_2 2 0 -100 200 R 50 50 0 0 W
+X PWM_DIM 22 1400 -100 200 L 50 50 0 0 I
+X +VIN_1 23 1400 -200 200 L 50 50 0 0 W
+X +VIN_2 24 1400 -300 200 L 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
+#End Library

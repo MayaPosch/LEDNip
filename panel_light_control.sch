@@ -73,7 +73,7 @@ Wire Wire Line
 Connection ~ 1600 1450
 Connection ~ 1950 1150
 $Comp
-L SamacSys_Parts:LDD-1000H PS4
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS4
 U 1 1 5BB7E2A0
 P 6650 2250
 F 0 "PS4" H 7350 2515 50  0000 C CNN
@@ -135,7 +135,7 @@ F 3 "~" H 4050 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:LDD-1000H PS3
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS3
 U 1 1 5BB8F859
 P 6650 1200
 F 0 "PS3" H 7350 1465 50  0000 C CNN
