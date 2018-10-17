@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SamacSys_Parts:HR911105A J13
+L panel_light_control-rescue:HR911105A-SamacSys_Parts J13
 U 1 1 5BBC51BA
 P 9650 5350
 F 0 "J13" H 10100 5615 50  0000 C CNN

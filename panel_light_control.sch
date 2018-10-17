@@ -573,8 +573,8 @@ F 3 "~" H 3100 7150 50  0001 C CNN
 	1    3100 7150
 	-1   0    0    1   
 $EndComp
-Text GLabel 2700 6850 0    50   Output ~ 0
-+3.3V
+Text GLabel 2700 6850 0    50   Input ~ 0
++5V
 $Comp
 L power:GND #PWR07
 U 1 1 5BC2D399
@@ -1634,4 +1634,48 @@ Wire Wire Line
 	1350 1150 1550 1150
 Wire Wire Line
 	1350 1400 1350 1450
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5BD4EBE3
+P 1050 2500
+F 0 "H1" H 1150 2546 50  0000 L CNN
+F 1 "MountingHole" H 1150 2455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 2500 50  0001 C CNN
+F 3 "~" H 1050 2500 50  0001 C CNN
+	1    1050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5BD4EC9B
+P 1050 2750
+F 0 "H2" H 1150 2796 50  0000 L CNN
+F 1 "MountingHole" H 1150 2705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 2750 50  0001 C CNN
+F 3 "~" H 1050 2750 50  0001 C CNN
+	1    1050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5BD4ED2F
+P 1050 3000
+F 0 "H3" H 1150 3046 50  0000 L CNN
+F 1 "MountingHole" H 1150 2955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 3000 50  0001 C CNN
+F 3 "~" H 1050 3000 50  0001 C CNN
+	1    1050 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5BD4EDC1
+P 1050 3250
+F 0 "H4" H 1150 3296 50  0000 L CNN
+F 1 "MountingHole" H 1150 3205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 3250 50  0001 C CNN
+F 3 "~" H 1050 3250 50  0001 C CNN
+	1    1050 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

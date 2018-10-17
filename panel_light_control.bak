@@ -73,7 +73,7 @@ Wire Wire Line
 Connection ~ 1600 1450
 Connection ~ 1950 1150
 $Comp
-L SamacSys_Parts:LDD-1000H PS4
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS4
 U 1 1 5BB7E2A0
 P 6650 2250
 F 0 "PS4" H 7350 2515 50  0000 C CNN
@@ -135,7 +135,7 @@ F 3 "~" H 4050 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:LDD-1000H PS3
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS3
 U 1 1 5BB8F859
 P 6650 1200
 F 0 "PS3" H 7350 1465 50  0000 C CNN
@@ -1634,4 +1634,48 @@ Wire Wire Line
 	1350 1150 1550 1150
 Wire Wire Line
 	1350 1400 1350 1450
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5BD4EBE3
+P 1050 2500
+F 0 "H1" H 1150 2546 50  0000 L CNN
+F 1 "MountingHole" H 1150 2455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 2500 50  0001 C CNN
+F 3 "~" H 1050 2500 50  0001 C CNN
+	1    1050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5BD4EC9B
+P 1050 2750
+F 0 "H2" H 1150 2796 50  0000 L CNN
+F 1 "MountingHole" H 1150 2705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 2750 50  0001 C CNN
+F 3 "~" H 1050 2750 50  0001 C CNN
+	1    1050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5BD4ED2F
+P 1050 3000
+F 0 "H3" H 1150 3046 50  0000 L CNN
+F 1 "MountingHole" H 1150 2955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 3000 50  0001 C CNN
+F 3 "~" H 1050 3000 50  0001 C CNN
+	1    1050 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5BD4EDC1
+P 1050 3250
+F 0 "H4" H 1150 3296 50  0000 L CNN
+F 1 "MountingHole" H 1150 3205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1050 3250 50  0001 C CNN
+F 3 "~" H 1050 3250 50  0001 C CNN
+	1    1050 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
