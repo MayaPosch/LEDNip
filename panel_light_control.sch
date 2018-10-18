@@ -1116,7 +1116,7 @@ U 1 1 5BD01FFA
 P 10300 3450
 F 0 "J6" H 10380 3442 50  0000 L CNN
 F 1 "Conn_01x04" H 10380 3351 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 10300 3450 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4_1x04_P5.00mm_Horizontal" H 10300 3450 50  0001 C CNN
 F 3 "~" H 10300 3450 50  0001 C CNN
 	1    10300 3450
 	1    0    0    -1  

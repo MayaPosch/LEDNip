@@ -1617,4 +1617,12 @@ Wire Wire Line
 	10550 4500 10550 5450
 Text Notes 8100 4200 0    50   ~ 0
 49.9 Ohm, 1%
+Text Label 9050 4550 0    50   ~ 0
+TXP
+Text Label 9050 4650 0    50   ~ 0
+TXN
+Text Label 9050 4750 0    50   ~ 0
+RXP
+Text Label 9050 4850 0    50   ~ 0
+RXN
 $EndSCHEMATC

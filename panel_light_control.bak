@@ -574,7 +574,7 @@ F 3 "~" H 3100 7150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 2700 6850 0    50   Input ~ 0
-+5V
++12V
 $Comp
 L power:GND #PWR07
 U 1 1 5BC2D399
@@ -1116,7 +1116,7 @@ U 1 1 5BD01FFA
 P 10300 3450
 F 0 "J6" H 10380 3442 50  0000 L CNN
 F 1 "Conn_01x04" H 10380 3351 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 10300 3450 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4_1x04_P5.00mm_Horizontal" H 10300 3450 50  0001 C CNN
 F 3 "~" H 10300 3450 50  0001 C CNN
 	1    10300 3450
 	1    0    0    -1  
