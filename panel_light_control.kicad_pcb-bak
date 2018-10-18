@@ -442,7 +442,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3_DIN965 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5BD4E209)
-    (at 60.706 166.6113)
+    (at 77.9145 159.7279)
     (descr "Mounting Hole 3.2mm, no annular, M3, DIN965")
     (tags "mounting hole 3.2mm no annular m3 din965")
     (path /5BD4EBE3)
