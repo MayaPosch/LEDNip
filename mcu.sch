@@ -394,8 +394,8 @@ $Comp
 L Device:C_Small C36
 U 1 1 5BDB7E59
 P 9850 1100
-F 0 "C36" H 9800 950 50  0000 R CNN
-F 1 "100nF" H 9800 1050 50  0000 R CNN
+F 0 "C36" H 9650 950 50  0000 R CNN
+F 1 "100nF" H 9700 1050 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9850 1100 50  0001 C CNN
 F 3 "~" H 9850 1100 50  0001 C CNN
 	1    9850 1100
@@ -404,23 +404,23 @@ $EndComp
 $Comp
 L Device:C_Small C35
 U 1 1 5BDE1B23
-P 9550 1200
-F 0 "C35" H 9550 1300 50  0000 R CNN
-F 1 "1uF" H 9550 1400 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9550 1200 50  0001 C CNN
-F 3 "~" H 9550 1200 50  0001 C CNN
-	1    9550 1200
+P 9450 1200
+F 0 "C35" H 9450 1300 50  0000 R CNN
+F 1 "1uF" H 9450 1400 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9450 1200 50  0001 C CNN
+F 3 "~" H 9450 1200 50  0001 C CNN
+	1    9450 1200
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C_Small C33
 U 1 1 5BDE1B7D
-P 9400 1200
-F 0 "C33" H 9308 1154 50  0000 R CNN
-F 1 "470pF" H 9308 1245 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9400 1200 50  0001 C CNN
-F 3 "~" H 9400 1200 50  0001 C CNN
-	1    9400 1200
+P 9300 1200
+F 0 "C33" H 9208 1154 50  0000 R CNN
+F 1 "470pF" H 9208 1245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9300 1200 50  0001 C CNN
+F 3 "~" H 9300 1200 50  0001 C CNN
+	1    9300 1200
 	1    0    0    1   
 $EndComp
 $Comp
@@ -545,39 +545,16 @@ Wire Wire Line
 	10300 5350 10300 5450
 Text GLabel 9200 5450 0    50   Input ~ 0
 LED_GRN-
-$Comp
-L Device:C_Small C38
-U 1 1 5BF1D03C
-P 10750 4950
-F 0 "C38" H 10750 5400 50  0000 R CNN
-F 1 "22nF" H 10800 5300 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10750 4950 50  0001 C CNN
-F 3 "~" H 10750 4950 50  0001 C CNN
-	1    10750 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9300 5250 8900 5250
 Wire Wire Line
 	8900 4700 10600 4700
-$Comp
-L power:GND #PWR0108
-U 1 1 5BF30757
-P 10750 5250
-F 0 "#PWR0108" H 10750 5000 50  0001 C CNN
-F 1 "GND" H 10755 5077 50  0000 C CNN
-F 2 "" H 10750 5250 50  0001 C CNN
-F 3 "" H 10750 5250 50  0001 C CNN
-	1    10750 5250
-	1    0    0    -1  
-$EndComp
 Text GLabel 10500 4550 0    50   Input ~ 0
-VDDA
+PHY_VDDA
 Wire Wire Line
 	10500 4550 10600 4550
 Wire Wire Line
 	10600 4550 10600 4700
-Connection ~ 10750 4700
 Text GLabel 10400 2900 2    50   Output ~ 0
 LED_GRN-
 Text GLabel 10400 3000 2    50   Output ~ 0
@@ -640,27 +617,27 @@ Text GLabel 1500 3000 0    50   Output ~ 0
 CAN_STBY
 Wire Wire Line
 	1500 3300 1600 3300
-Text GLabel 1500 2100 0    50   Input ~ 0
+Text GLabel 1500 2100 0    50   Input ~ 10
 RMII_REFCLKO
-Text GLabel 1500 2700 0    50   Input ~ 0
+Text GLabel 1500 2700 0    50   Input ~ 10
 RMII_CRS
-Text GLabel 1500 5800 0    50   Input ~ 0
+Text GLabel 1500 5800 0    50   Input ~ 10
 RMII_RXD0
-Text GLabel 1500 5900 0    50   Input ~ 0
+Text GLabel 1500 5900 0    50   Input ~ 10
 RMII_RXD1
-Text GLabel 1350 4800 0    50   Input ~ 0
+Text GLabel 1350 4800 0    50   Input ~ 10
 RMII_TXEN
-Text GLabel 1050 4900 0    50   Output ~ 0
+Text GLabel 1050 4900 0    50   Output ~ 10
 RMII_TXD0
-Text GLabel 1050 5000 0    50   Output ~ 0
+Text GLabel 1050 5000 0    50   Output ~ 10
 RMII_TXD1
 Text GLabel 1500 2300 0    50   Output ~ 0
 LAN_RST
-Text GLabel 1500 2200 0    50   Input ~ 0
+Text GLabel 1500 2200 0    50   Input ~ 10
 RMII_MDIO
-Text GLabel 1500 5500 0    50   Input ~ 0
+Text GLabel 1500 5500 0    50   Input ~ 10
 RMII_MDC
-Text GLabel 1500 2600 0    50   Input ~ 0
+Text GLabel 1500 2600 0    50   Input ~ 10
 RMII_RXER
 Wire Wire Line
 	1500 2400 1600 2400
@@ -1160,12 +1137,6 @@ Wire Wire Line
 	10200 5150 10600 5150
 Wire Wire Line
 	10600 5150 10600 4700
-Wire Wire Line
-	10750 4700 10600 4700
-Wire Wire Line
-	10750 4700 10750 4850
-Wire Wire Line
-	10750 5050 10750 5150
 Connection ~ 10600 4700
 $Comp
 L power:GND #PWR015
@@ -1652,29 +1623,13 @@ Wire Wire Line
 Wire Wire Line
 	9850 1200 9850 1450
 Wire Wire Line
-	9550 1100 9550 1000
-Wire Wire Line
-	9550 1000 9400 1000
-Wire Wire Line
 	8850 1000 8850 1400
 Wire Wire Line
-	9400 1100 9400 1000
-Connection ~ 9400 1000
-Wire Wire Line
-	9400 1000 8850 1000
-Wire Wire Line
-	9050 900  9850 900 
+	9050 900  9700 900 
 Connection ~ 9050 900 
-Wire Wire Line
-	9550 1300 9550 1450
-Wire Wire Line
-	9550 1450 9850 1450
 Connection ~ 9850 1450
 Wire Wire Line
-	9400 1300 9400 1450
-Wire Wire Line
-	9400 1450 9550 1450
-Connection ~ 9550 1450
+	9300 1300 9300 1450
 Text GLabel 10000 650  2    50   Input ~ 0
 PYH_VDDA
 Wire Wire Line
@@ -1702,28 +1657,49 @@ $EndComp
 Wire Wire Line
 	10300 5450 10300 5650
 Connection ~ 10300 5450
-$Comp
-L Device:C_Small C25
-U 1 1 5E94BF88
-P 10900 4950
-F 0 "C25" H 10950 5400 50  0000 R CNN
-F 1 "22nF" H 11000 5300 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10900 4950 50  0001 C CNN
-F 3 "~" H 10900 4950 50  0001 C CNN
-	1    10900 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10900 5050 10900 5150
-Wire Wire Line
-	10900 5150 10750 5150
-Connection ~ 10750 5150
-Wire Wire Line
-	10750 5150 10750 5250
-Wire Wire Line
-	10900 4850 10900 4700
-Wire Wire Line
-	10900 4700 10750 4700
 Text Label 9250 1000 0    50   ~ 0
 VDDCR
+$Comp
+L Device:C_Small C27
+U 1 1 5BCFD8F3
+P 9700 1100
+F 0 "C27" H 9500 1200 50  0000 R CNN
+F 1 "100nF" H 9500 1300 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9700 1100 50  0001 C CNN
+F 3 "~" H 9700 1100 50  0001 C CNN
+	1    9700 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9700 1000 9700 900 
+Connection ~ 9700 900 
+Wire Wire Line
+	9700 900  9850 900 
+Wire Wire Line
+	9700 1200 9700 1450
+Connection ~ 9700 1450
+Wire Wire Line
+	9700 1450 9850 1450
+Wire Wire Line
+	9300 1450 9450 1450
+Wire Wire Line
+	9450 1300 9450 1450
+Connection ~ 9450 1450
+Wire Wire Line
+	9450 1450 9700 1450
+Wire Wire Line
+	8850 1000 9300 1000
+Wire Wire Line
+	9450 1000 9450 1100
+Wire Wire Line
+	9300 1100 9300 1000
+Connection ~ 9300 1000
+Wire Wire Line
+	9300 1000 9450 1000
+Text Label 9150 900  0    50   ~ 0
+PHY_VDDA
+Text Label 10100 1750 0    50   ~ 0
+PHY_VDDA
+Text Label 9350 4700 0    50   ~ 0
+PHY_VDDA
 $EndSCHEMATC
