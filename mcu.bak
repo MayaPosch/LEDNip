@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:panel_light_control-cache
-EELAYER 26 0
+EELAYER 28 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1969,19 +1969,6 @@ PHY_VDDA
 Text GLabel 3500 2800 3    50   Input ~ 0
 +3.3V
 $Comp
-L Device:LED_RCBG D5
-U 1 1 5BD4129E
-P 5650 1250
-F 0 "D5" H 5650 783 50  0000 C CNN
-F 1 "LED_SYSTEM" H 5650 874 50  0000 C CNN
-F 2 "LED_SMD:LED_Cree-PLCC4_2x2mm_CW" H 5650 1200 50  0001 C CNN
-F 3 "~" H 5650 1200 50  0001 C CNN
-F 4 "ASMB-KTF0-0A306 " H 5650 1250 50  0001 C CNN "MPN"
-F 5 "630-ASMB-KTF0-0A306 " H 5650 1250 50  0001 C CNN "Mouser"
-	1    5650 1250
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:LED_Small D6
 U 1 1 5BD41B70
 P 5650 1900
@@ -2051,8 +2038,6 @@ Text GLabel 3550 4900 2    50   Output ~ 0
 LED_SYSTEM_R
 Text GLabel 3550 4800 2    50   Output ~ 0
 LED_SYSTEM_G
-Text GLabel 5050 1450 0    50   Output ~ 0
-LED_SYSTEM_R
 $Comp
 L power:GND #PWR0113
 U 1 1 5BDB6D4F
@@ -2068,8 +2053,6 @@ F 3 "" H 5950 3700 50  0001 C CNN
 	1    5950 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 1250 5950 1250
 Wire Wire Line
 	5750 1900 5950 1900
 Wire Wire Line
@@ -2201,11 +2184,6 @@ Wire Wire Line
 	5550 3300 5450 3300
 Wire Wire Line
 	5450 3650 5550 3650
-Connection ~ 5950 1900
-Text GLabel 5050 1250 0    50   Output ~ 0
-LED_SYSTEM_G
-Text GLabel 5050 1050 0    50   Output ~ 0
-LED_SYSTEM_B
 Text GLabel 3550 4600 2    50   Output ~ 0
 LED_CAN
 Text GLabel 3550 4700 2    50   Output ~ 0
@@ -2242,65 +2220,6 @@ Wire Wire Line
 	5250 3300 5200 3300
 Wire Wire Line
 	5200 3650 5250 3650
-Wire Wire Line
-	5950 1250 5950 1900
-$Comp
-L Device:R_Small R41
-U 1 1 5C185C5D
-P 5300 1450
-AR Path="/5BBC4BB7/5C185C5D" Ref="R41"  Part="1" 
-AR Path="/5C1EFDBE/5C185C5D" Ref="R?"  Part="1" 
-AR Path="/5C211DD3/5C185C5D" Ref="R?"  Part="1" 
-AR Path="/5C211FC6/5C185C5D" Ref="R?"  Part="1" 
-F 0 "R41" V 5450 1350 50  0000 L CNN
-F 1 "120R" V 5359 1405 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1450 50  0001 C CNN
-F 3 "~" H 5300 1450 50  0001 C CNN
-	1    5300 1450
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R40
-U 1 1 5C185CFF
-P 5300 1250
-AR Path="/5BBC4BB7/5C185CFF" Ref="R40"  Part="1" 
-AR Path="/5C1EFDBE/5C185CFF" Ref="R?"  Part="1" 
-AR Path="/5C211DD3/5C185CFF" Ref="R?"  Part="1" 
-AR Path="/5C211FC6/5C185CFF" Ref="R?"  Part="1" 
-F 0 "R40" V 5450 1150 50  0000 L CNN
-F 1 "120R" V 5359 1205 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1250 50  0001 C CNN
-F 3 "~" H 5300 1250 50  0001 C CNN
-	1    5300 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R39
-U 1 1 5C185D99
-P 5300 1050
-AR Path="/5BBC4BB7/5C185D99" Ref="R39"  Part="1" 
-AR Path="/5C1EFDBE/5C185D99" Ref="R?"  Part="1" 
-AR Path="/5C211DD3/5C185D99" Ref="R?"  Part="1" 
-AR Path="/5C211FC6/5C185D99" Ref="R?"  Part="1" 
-F 0 "R39" V 5450 950 50  0000 L CNN
-F 1 "120R" V 5359 1005 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1050 50  0001 C CNN
-F 3 "~" H 5300 1050 50  0001 C CNN
-	1    5300 1050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5050 1050 5200 1050
-Wire Wire Line
-	5050 1250 5200 1250
-Wire Wire Line
-	5050 1450 5200 1450
-Wire Wire Line
-	5450 1450 5400 1450
-Wire Wire Line
-	5400 1250 5450 1250
-Wire Wire Line
-	5450 1050 5400 1050
 Text GLabel 3550 4500 2    50   Output ~ 0
 LED_R
 Text GLabel 3550 4400 2    50   Output ~ 0
