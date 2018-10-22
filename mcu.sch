@@ -1123,15 +1123,6 @@ NoConn ~ 3400 5600
 NoConn ~ 3400 5500
 NoConn ~ 3400 5400
 NoConn ~ 3400 5200
-NoConn ~ 3400 4900
-NoConn ~ 3400 4800
-NoConn ~ 3400 4700
-NoConn ~ 3400 4600
-NoConn ~ 3400 4500
-NoConn ~ 3400 4400
-NoConn ~ 3400 4300
-NoConn ~ 3400 4200
-NoConn ~ 3400 4100
 NoConn ~ 3400 4000
 NoConn ~ 3400 3900
 NoConn ~ 3400 3800
@@ -1977,4 +1968,357 @@ Text Label 9350 4700 0    50   ~ 0
 PHY_VDDA
 Text GLabel 3500 2800 3    50   Input ~ 0
 +3.3V
+$Comp
+L Device:LED_RCBG D5
+U 1 1 5BD4129E
+P 5650 1250
+F 0 "D5" H 5650 783 50  0000 C CNN
+F 1 "LED_SYSTEM" H 5650 874 50  0000 C CNN
+F 2 "LED_SMD:LED_Cree-PLCC4_2x2mm_CW" H 5650 1200 50  0001 C CNN
+F 3 "~" H 5650 1200 50  0001 C CNN
+F 4 "ASMB-KTF0-0A306 " H 5650 1250 50  0001 C CNN "MPN"
+F 5 "630-ASMB-KTF0-0A306 " H 5650 1250 50  0001 C CNN "Mouser"
+	1    5650 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D6
+U 1 1 5BD41B70
+P 5650 1900
+F 0 "D6" H 5650 1695 50  0000 C CNN
+F 1 "LED_CAN" H 5650 1786 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 1900 50  0001 C CNN
+F 3 "~" V 5650 1900 50  0001 C CNN
+	1    5650 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D7
+U 1 1 5BD41DD0
+P 5650 2250
+F 0 "D7" H 5650 2045 50  0000 C CNN
+F 1 "LED_R" H 5650 2136 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 2250 50  0001 C CNN
+F 3 "~" V 5650 2250 50  0001 C CNN
+	1    5650 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D10
+U 1 1 5BD42765
+P 5650 3300
+F 0 "D10" H 5650 3095 50  0000 C CNN
+F 1 "LED_WarmWhite" H 5650 3186 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 3300 50  0001 C CNN
+F 3 "~" V 5650 3300 50  0001 C CNN
+	1    5650 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D11
+U 1 1 5BD428A2
+P 5650 3650
+F 0 "D11" H 5650 3445 50  0000 C CNN
+F 1 "LED_ColdWhite" H 5650 3536 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 3650 50  0001 C CNN
+F 3 "~" V 5650 3650 50  0001 C CNN
+	1    5650 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D8
+U 1 1 5BD5AFDF
+P 5650 2600
+F 0 "D8" H 5650 2395 50  0000 C CNN
+F 1 "LED_G" H 5650 2486 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 2600 50  0001 C CNN
+F 3 "~" V 5650 2600 50  0001 C CNN
+	1    5650 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D9
+U 1 1 5BD72E90
+P 5650 2950
+F 0 "D9" H 5650 2745 50  0000 C CNN
+F 1 "LED_B" H 5650 2836 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" V 5650 2950 50  0001 C CNN
+F 3 "~" V 5650 2950 50  0001 C CNN
+	1    5650 2950
+	-1   0    0    1   
+$EndComp
+Text GLabel 3550 4900 2    50   Output ~ 0
+LED_SYSTEM_R
+Text GLabel 3550 4800 2    50   Output ~ 0
+LED_SYSTEM_G
+Text GLabel 5050 1450 0    50   Output ~ 0
+LED_SYSTEM_R
+$Comp
+L power:GND #PWR0113
+U 1 1 5BDB6D4F
+P 5950 3700
+AR Path="/5BBC4BB7/5BDB6D4F" Ref="#PWR0113"  Part="1" 
+AR Path="/5C1EFDBE/5BDB6D4F" Ref="#PWR?"  Part="1" 
+AR Path="/5C211DD3/5BDB6D4F" Ref="#PWR?"  Part="1" 
+AR Path="/5C211FC6/5BDB6D4F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0113" H 5950 3450 50  0001 C CNN
+F 1 "GND" H 5955 3527 50  0000 C CNN
+F 2 "" H 5950 3700 50  0001 C CNN
+F 3 "" H 5950 3700 50  0001 C CNN
+	1    5950 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1250 5950 1250
+Wire Wire Line
+	5750 1900 5950 1900
+Wire Wire Line
+	5750 2250 5950 2250
+Wire Wire Line
+	5950 1900 5950 2250
+Connection ~ 5950 2250
+Wire Wire Line
+	5950 2250 5950 2600
+Wire Wire Line
+	5750 2600 5950 2600
+Connection ~ 5950 2600
+Wire Wire Line
+	5950 2600 5950 2950
+Wire Wire Line
+	5750 2950 5950 2950
+Connection ~ 5950 2950
+Wire Wire Line
+	5950 2950 5950 3300
+Wire Wire Line
+	5750 3300 5950 3300
+Connection ~ 5950 3300
+Wire Wire Line
+	5950 3300 5950 3650
+Wire Wire Line
+	5750 3650 5950 3650
+Connection ~ 5950 3650
+Wire Wire Line
+	5950 3650 5950 3700
+$Comp
+L Device:R_Small R42
+U 1 1 5BE6601F
+P 5350 1900
+AR Path="/5BBC4BB7/5BE6601F" Ref="R42"  Part="1" 
+AR Path="/5C1EFDBE/5BE6601F" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE6601F" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE6601F" Ref="R?"  Part="1" 
+F 0 "R42" V 5500 1800 50  0000 L CNN
+F 1 "120R" V 5409 1855 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 1900 50  0001 C CNN
+F 3 "~" H 5350 1900 50  0001 C CNN
+	1    5350 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R43
+U 1 1 5BE666C7
+P 5350 2250
+AR Path="/5BBC4BB7/5BE666C7" Ref="R43"  Part="1" 
+AR Path="/5C1EFDBE/5BE666C7" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE666C7" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE666C7" Ref="R?"  Part="1" 
+F 0 "R43" V 5500 2150 50  0000 L CNN
+F 1 "120R" V 5409 2205 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 2250 50  0001 C CNN
+F 3 "~" H 5350 2250 50  0001 C CNN
+	1    5350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R44
+U 1 1 5BE6675F
+P 5350 2600
+AR Path="/5BBC4BB7/5BE6675F" Ref="R44"  Part="1" 
+AR Path="/5C1EFDBE/5BE6675F" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE6675F" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE6675F" Ref="R?"  Part="1" 
+F 0 "R44" V 5500 2500 50  0000 L CNN
+F 1 "120R" V 5409 2555 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 2600 50  0001 C CNN
+F 3 "~" H 5350 2600 50  0001 C CNN
+	1    5350 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R45
+U 1 1 5BE667F7
+P 5350 2950
+AR Path="/5BBC4BB7/5BE667F7" Ref="R45"  Part="1" 
+AR Path="/5C1EFDBE/5BE667F7" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE667F7" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE667F7" Ref="R?"  Part="1" 
+F 0 "R45" V 5500 2850 50  0000 L CNN
+F 1 "120R" V 5409 2905 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 2950 50  0001 C CNN
+F 3 "~" H 5350 2950 50  0001 C CNN
+	1    5350 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R46
+U 1 1 5BE668D5
+P 5350 3300
+AR Path="/5BBC4BB7/5BE668D5" Ref="R46"  Part="1" 
+AR Path="/5C1EFDBE/5BE668D5" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE668D5" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE668D5" Ref="R?"  Part="1" 
+F 0 "R46" V 5500 3200 50  0000 L CNN
+F 1 "120R" V 5409 3255 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 3300 50  0001 C CNN
+F 3 "~" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R47
+U 1 1 5BE66977
+P 5350 3650
+AR Path="/5BBC4BB7/5BE66977" Ref="R47"  Part="1" 
+AR Path="/5C1EFDBE/5BE66977" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BE66977" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BE66977" Ref="R?"  Part="1" 
+F 0 "R47" V 5500 3550 50  0000 L CNN
+F 1 "120R" V 5409 3605 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5350 3650 50  0001 C CNN
+F 3 "~" H 5350 3650 50  0001 C CNN
+	1    5350 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 1900 5550 1900
+Wire Wire Line
+	5450 2250 5550 2250
+Wire Wire Line
+	5550 2600 5450 2600
+Wire Wire Line
+	5450 2950 5550 2950
+Wire Wire Line
+	5550 3300 5450 3300
+Wire Wire Line
+	5450 3650 5550 3650
+Connection ~ 5950 1900
+Text GLabel 5050 1250 0    50   Output ~ 0
+LED_SYSTEM_G
+Text GLabel 5050 1050 0    50   Output ~ 0
+LED_SYSTEM_B
+Text GLabel 3550 4600 2    50   Output ~ 0
+LED_CAN
+Text GLabel 3550 4700 2    50   Output ~ 0
+LED_SYSTEM_B
+Wire Wire Line
+	3400 4600 3550 4600
+Wire Wire Line
+	3550 4700 3400 4700
+Wire Wire Line
+	3400 4800 3550 4800
+Wire Wire Line
+	3550 4900 3400 4900
+Text GLabel 5200 2250 0    50   Output ~ 0
+LED_R
+Text GLabel 5200 1900 0    50   Output ~ 0
+LED_CAN
+Text GLabel 5200 2600 0    50   Input ~ 0
+LED_G
+Text GLabel 5200 2950 0    50   Input ~ 0
+LED_B
+Text GLabel 5200 3300 0    50   Input ~ 0
+LED_WW
+Text GLabel 5200 3650 0    50   Input ~ 0
+LED_CW
+Wire Wire Line
+	5250 1900 5200 1900
+Wire Wire Line
+	5200 2250 5250 2250
+Wire Wire Line
+	5250 2600 5200 2600
+Wire Wire Line
+	5200 2950 5250 2950
+Wire Wire Line
+	5250 3300 5200 3300
+Wire Wire Line
+	5200 3650 5250 3650
+Wire Wire Line
+	5950 1250 5950 1900
+$Comp
+L Device:R_Small R41
+U 1 1 5C185C5D
+P 5300 1450
+AR Path="/5BBC4BB7/5C185C5D" Ref="R41"  Part="1" 
+AR Path="/5C1EFDBE/5C185C5D" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5C185C5D" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5C185C5D" Ref="R?"  Part="1" 
+F 0 "R41" V 5450 1350 50  0000 L CNN
+F 1 "120R" V 5359 1405 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1450 50  0001 C CNN
+F 3 "~" H 5300 1450 50  0001 C CNN
+	1    5300 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R40
+U 1 1 5C185CFF
+P 5300 1250
+AR Path="/5BBC4BB7/5C185CFF" Ref="R40"  Part="1" 
+AR Path="/5C1EFDBE/5C185CFF" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5C185CFF" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5C185CFF" Ref="R?"  Part="1" 
+F 0 "R40" V 5450 1150 50  0000 L CNN
+F 1 "120R" V 5359 1205 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1250 50  0001 C CNN
+F 3 "~" H 5300 1250 50  0001 C CNN
+	1    5300 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R39
+U 1 1 5C185D99
+P 5300 1050
+AR Path="/5BBC4BB7/5C185D99" Ref="R39"  Part="1" 
+AR Path="/5C1EFDBE/5C185D99" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5C185D99" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5C185D99" Ref="R?"  Part="1" 
+F 0 "R39" V 5450 950 50  0000 L CNN
+F 1 "120R" V 5359 1005 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5300 1050 50  0001 C CNN
+F 3 "~" H 5300 1050 50  0001 C CNN
+	1    5300 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 1050 5200 1050
+Wire Wire Line
+	5050 1250 5200 1250
+Wire Wire Line
+	5050 1450 5200 1450
+Wire Wire Line
+	5450 1450 5400 1450
+Wire Wire Line
+	5400 1250 5450 1250
+Wire Wire Line
+	5450 1050 5400 1050
+Text GLabel 3550 4500 2    50   Output ~ 0
+LED_R
+Text GLabel 3550 4400 2    50   Output ~ 0
+LED_G
+Text GLabel 3550 4300 2    50   Output ~ 0
+LED_B
+Text GLabel 3550 4200 2    50   Output ~ 0
+LED_WW
+Text GLabel 3550 4100 2    50   Output ~ 0
+LED_CW
+Wire Wire Line
+	3550 4100 3400 4100
+Wire Wire Line
+	3400 4200 3550 4200
+Wire Wire Line
+	3550 4300 3400 4300
+Wire Wire Line
+	3400 4400 3550 4400
+Wire Wire Line
+	3550 4500 3400 4500
 $EndSCHEMATC
