@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:panel_light_control-cache
-EELAYER 28 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -364,7 +364,7 @@ U 5 1 5BC1F844
 P 8450 1000
 F 0 "U2" H 8408 1046 50  0000 L CNN
 F 1 "LM324" H 8408 955 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8400 1100 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8400 1100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8500 1200 50  0001 C CNN
 	5    8450 1000
 	-1   0    0    -1  
@@ -406,7 +406,7 @@ U 4 1 5BC3AA2E
 P 7750 1100
 F 0 "U2" H 7750 1300 50  0000 C CNN
 F 1 "LM324" H 7700 1100 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7700 1200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 1200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 1300 50  0001 C CNN
 	4    7750 1100
 	1    0    0    -1  
@@ -442,7 +442,7 @@ U 2 1 5BCB6EE3
 P 7750 3800
 F 0 "U2" H 7750 4000 50  0000 C CNN
 F 1 "LM324" H 7700 3800 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7700 3900 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 3900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 4000 50  0001 C CNN
 	2    7750 3800
 	1    0    0    -1  
@@ -1195,7 +1195,7 @@ U 3 1 5CE1E150
 P 7750 5400
 F 0 "U2" H 7750 5600 50  0000 C CNN
 F 1 "LM324" H 7700 5400 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7700 5500 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 5500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 5600 50  0001 C CNN
 	3    7750 5400
 	1    0    0    -1  
@@ -1398,7 +1398,7 @@ U 1 1 5CE38662
 P 7750 2250
 F 0 "U2" H 7750 2450 50  0000 C CNN
 F 1 "LM324" H 7700 2250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7700 2350 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 2350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 2450 50  0001 C CNN
 	1    7750 2250
 	1    0    0    -1  
@@ -1879,10 +1879,10 @@ Wire Wire Line
 	4600 1200 4300 1200
 Connection ~ 2600 2300
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0113
 U 1 1 5C2605FC
 P 7100 4650
-F 0 "#PWR?" H 7100 4400 50  0001 C CNN
+F 0 "#PWR0113" H 7100 4400 50  0001 C CNN
 F 1 "GND" H 7105 4477 50  0000 C CNN
 F 2 "" H 7100 4650 50  0001 C CNN
 F 3 "" H 7100 4650 50  0001 C CNN
