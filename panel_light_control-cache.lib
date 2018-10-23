@@ -689,16 +689,15 @@ X OUT 3 300 0 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# Regulator_Switching_R-783.3-1.0
+# Regulator_Switching_R-78B12-2.0
 #
-DEF Regulator_Switching_R-783.3-1.0 U 0 10 Y Y 1 F N
+DEF Regulator_Switching_R-78B12-2.0 U 0 10 Y Y 1 F N
 F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Switching_R-783.3-1.0" 0 125 50 H V L CNN
-F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" 50 -250 50 H I L CIN
+F1 "Regulator_Switching_R-78B12-2.0" 0 125 50 H V L CNN
+F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
 F3 "" 0 0 50 H I C CNN
-ALIAS R-78E3.3-0.5 R-78E9.0-0.5 R-78E12-0.5 R-78E15-0.5 R-78E5.0-1.0 R-78E3.3-1.0 R-78C1.8-1.0 R-78C5.0-1.0 R-78C3.3-1.0 R-78C9.0-1.0 R-78C12-1.0 R-78C15-1.0 R-781.8-1.0 R-782.5-1.0 R-783.3-1.0 R-785.0-1.0 R-781.5-0.5 R-781.8-0.5 R-782.5-0.5 R-783.3-0.5 R-785.0-0.5 R-786.5-0.5 R-7812-0.5 R-7815-0.5
 $FPLIST
- Converter*DCDC*RECOM*R*78E*0.5*
+ Converter*DCDC*RECOM*R*78B*2.0*
 $ENDFPLIST
 DRAW
 S -200 75 200 -200 0 1 10 f
@@ -708,11 +707,11 @@ X OUT 3 300 0 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# Regulator_Switching_R-78B12-2.0
+# Regulator_Switching_R-78B3.3-2.0
 #
-DEF Regulator_Switching_R-78B12-2.0 U 0 10 Y Y 1 F N
+DEF Regulator_Switching_R-78B3.3-2.0 U 0 10 Y Y 1 F N
 F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Switching_R-78B12-2.0" 0 125 50 H V L CNN
+F1 "Regulator_Switching_R-78B3.3-2.0" 0 125 50 H V L CNN
 F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
 F3 "" 0 0 50 H I C CNN
 ALIAS R-78B1.5-2.0 R-78B1.8-2.0 R-78B12-2.0 R-78B15-2.0 R-78B2.5-2.0 R-78B3.3-2.0 R-78B5.0-2.0 R-78B9.0-2.0
