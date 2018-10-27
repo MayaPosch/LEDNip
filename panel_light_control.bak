@@ -130,10 +130,10 @@ F 9 "LDD-1000H" H 3900 4950 50  0001 L CNN "Arrow Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B12-2.0 PS1
+L Regulator_Switching:R-78B12-2.0 PS12
 U 1 1 5BB902DF
 P 3800 1200
-F 0 "PS1" H 4100 1100 50  0000 C CNN
+F 0 "PS12" H 4100 1100 50  0000 C CNN
 F 1 "R-78B12-2.0" H 3800 1350 50  0000 C CNN
 F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" H 4750 1300 50  0001 L CNN
 F 3 "https://www.recom-power.com/pdf/Innoline/R-78Bxx-2.0.pdf" H 4750 1200 50  0001 L CNN
@@ -149,10 +149,10 @@ F 11 "919-R-78B12-2.0" H 3800 1200 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B3.3-2.0 PS2
+L Regulator_Switching:R-78B3.3-2.0 PS33
 U 1 1 5BB90449
 P 3800 2650
-F 0 "PS2" H 4100 2550 50  0000 C CNN
+F 0 "PS33" H 4100 2550 50  0000 C CNN
 F 1 "R-78B3.3-1.0" H 3800 2800 50  0000 C CNN
 F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" H 4850 2750 50  0001 L CNN
 F 3 "" H 4850 2650 50  0001 L CNN
@@ -1543,18 +1543,6 @@ LED_R
 Wire Wire Line
 	8950 1850 9150 1850
 Wire Wire Line
-	7450 2150 7150 2150
-Connection ~ 7150 2150
-Wire Wire Line
-	7150 2150 7150 2300
-Wire Wire Line
-	6700 2150 6800 2150
-Wire Wire Line
-	6800 2300 6800 2150
-Connection ~ 6800 2150
-Wire Wire Line
-	6800 2150 7150 2150
-Wire Wire Line
 	6800 2600 6800 2700
 Wire Wire Line
 	6800 2700 7150 2700
@@ -1985,4 +1973,16 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1700 1450 50  0001 C CNN
 	1    1700 1450
 	0    -1   1    0   
 $EndComp
+Wire Wire Line
+	6800 2150 6700 2150
+Wire Wire Line
+	6800 2150 6800 2300
+Wire Wire Line
+	6800 2150 7150 2150
+Wire Wire Line
+	7150 2150 7150 2300
+Connection ~ 6800 2150
+Wire Wire Line
+	7150 2150 7450 2150
+Connection ~ 7150 2150
 $EndSCHEMATC

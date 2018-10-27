@@ -51,10 +51,10 @@ F 3 "" H 1700 1900 50  0001 C CNN
 $EndComp
 Connection ~ 2000 1200
 $Comp
-L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS4
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS2
 U 1 1 5BB7E2A0
 P 2650 7000
-F 0 "PS4" H 3350 7265 50  0000 C CNN
+F 0 "PS2" H 3350 7265 50  0000 C CNN
 F 1 "LDD-1000H" H 3350 7174 50  0000 C CNN
 F 2 "SamacSys_Parts:LDD-700H" H 3900 7100 50  0001 L CNN
 F 3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" H 3900 7000 50  0001 L CNN
@@ -113,10 +113,10 @@ F 3 "~" H 4300 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS3
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS1
 U 1 1 5BB8F859
 P 2650 5850
-F 0 "PS3" H 3350 6115 50  0000 C CNN
+F 0 "PS1" H 3350 6115 50  0000 C CNN
 F 1 "LDD-1000H" H 3350 6024 50  0000 C CNN
 F 2 "SamacSys_Parts:LDD-700H" H 3900 5950 50  0001 L CNN
 F 3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" H 3900 5850 50  0001 L CNN
@@ -130,10 +130,10 @@ F 9 "LDD-1000H" H 3900 4950 50  0001 L CNN "Arrow Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B12-2.0 PS1
+L Regulator_Switching:R-78B12-2.0 PS12
 U 1 1 5BB902DF
 P 3800 1200
-F 0 "PS1" H 4100 1100 50  0000 C CNN
+F 0 "PS12" H 4100 1100 50  0000 C CNN
 F 1 "R-78B12-2.0" H 3800 1350 50  0000 C CNN
 F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" H 4750 1300 50  0001 L CNN
 F 3 "https://www.recom-power.com/pdf/Innoline/R-78Bxx-2.0.pdf" H 4750 1200 50  0001 L CNN
@@ -149,10 +149,10 @@ F 11 "919-R-78B12-2.0" H 3800 1200 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B3.3-2.0 PS2
+L Regulator_Switching:R-78B3.3-2.0 PS33
 U 1 1 5BB90449
 P 3800 2650
-F 0 "PS2" H 4100 2550 50  0000 C CNN
+F 0 "PS33" H 4100 2550 50  0000 C CNN
 F 1 "R-78B3.3-1.0" H 3800 2800 50  0000 C CNN
 F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" H 4850 2750 50  0001 L CNN
 F 3 "" H 4850 2650 50  0001 L CNN
