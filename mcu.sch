@@ -131,10 +131,6 @@ Text GLabel 5050 5500 0    50   Input ~ 0
 CAN_STBY
 Wire Wire Line
 	5050 5500 5250 5500
-Wire Wire Line
-	6250 5200 6350 5200
-Wire Wire Line
-	6250 5400 6350 5400
 $Comp
 L Device:C_Small C34
 U 1 1 5BBDDD9A
@@ -179,16 +175,16 @@ Wire Wire Line
 $Comp
 L Device:R_Small R30
 U 1 1 5BBE7B3D
-P 6350 5300
+P 6350 5600
 AR Path="/5BBC4BB7/5BBE7B3D" Ref="R30"  Part="1" 
 AR Path="/5C1EFDBE/5BBE7B3D" Ref="R?"  Part="1" 
 AR Path="/5C211DD3/5BBE7B3D" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5BBE7B3D" Ref="R?"  Part="1" 
-F 0 "R30" H 6409 5346 50  0000 L CNN
-F 1 "120R" H 6409 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6350 5300 50  0001 C CNN
-F 3 "~" H 6350 5300 50  0001 C CNN
-	1    6350 5300
+F 0 "R30" H 6409 5646 50  0000 L CNN
+F 1 "120R" H 6409 5555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6350 5600 50  0001 C CNN
+F 3 "~" H 6350 5600 50  0001 C CNN
+	1    6350 5600
 	1    0    0    -1  
 $EndComp
 Text GLabel 1450 700  0    50   Input ~ 0
@@ -1441,15 +1437,9 @@ F 3 "" H 7400 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7400 4700 7400 4800
-Wire Wire Line
-	6350 5200 6650 5200
-Connection ~ 6350 5200
 Connection ~ 6650 5200
 Wire Wire Line
 	6650 5200 6650 5900
-Wire Wire Line
-	6350 5400 6750 5400
-Connection ~ 6350 5400
 Connection ~ 6750 5400
 Wire Wire Line
 	6750 5400 6750 4900
@@ -2472,4 +2462,29 @@ $EndComp
 Wire Wire Line
 	4950 3150 4950 3050
 Connection ~ 4950 3050
+Wire Wire Line
+	6250 5400 6750 5400
+Wire Wire Line
+	6250 5200 6350 5200
+Wire Wire Line
+	6350 5500 6350 5200
+Connection ~ 6350 5200
+Wire Wire Line
+	6350 5200 6650 5200
+$Comp
+L Connector_Generic:Conn_01x02 TERM1
+U 1 1 5BDBFB79
+P 6150 5900
+F 0 "TERM1" H 6150 5700 50  0000 C CNN
+F 1 "Conn_01x02" H 6150 5600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 6150 5900 50  0001 C CNN
+F 3 "~" H 6150 5900 50  0001 C CNN
+	1    6150 5900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5700 6350 5900
+Wire Wire Line
+	6350 6000 6750 6000
+Connection ~ 6750 6000
 $EndSCHEMATC

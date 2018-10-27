@@ -51,10 +51,10 @@ F 3 "" H 1700 1900 50  0001 C CNN
 $EndComp
 Connection ~ 2000 1200
 $Comp
-L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS4
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS2
 U 1 1 5BB7E2A0
 P 2650 7000
-F 0 "PS4" H 3350 7265 50  0000 C CNN
+F 0 "PS2" H 3350 7265 50  0000 C CNN
 F 1 "LDD-1000H" H 3350 7174 50  0000 C CNN
 F 2 "SamacSys_Parts:LDD-700H" H 3900 7100 50  0001 L CNN
 F 3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" H 3900 7000 50  0001 L CNN
@@ -113,10 +113,10 @@ F 3 "~" H 4300 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS3
+L panel_light_control-rescue:LDD-1000H-SamacSys_Parts PS1
 U 1 1 5BB8F859
 P 2650 5850
-F 0 "PS3" H 3350 6115 50  0000 C CNN
+F 0 "PS1" H 3350 6115 50  0000 C CNN
 F 1 "LDD-1000H" H 3350 6024 50  0000 C CNN
 F 2 "SamacSys_Parts:LDD-700H" H 3900 5950 50  0001 L CNN
 F 3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" H 3900 5850 50  0001 L CNN
@@ -1985,4 +1985,10 @@ Connection ~ 6800 2150
 Wire Wire Line
 	7150 2150 7450 2150
 Connection ~ 7150 2150
+Text Label 1250 1200 0    50   ~ 0
+VIN
+Text Label 2850 1200 0    50   ~ 0
+24V_FLT
+Text Label 3300 2350 0    50   ~ 0
+12V_FLT
 $EndSCHEMATC

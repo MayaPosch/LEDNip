@@ -1985,4 +1985,10 @@ Connection ~ 6800 2150
 Wire Wire Line
 	7150 2150 7450 2150
 Connection ~ 7150 2150
+Text Label 1250 1200 0    50   ~ 0
+VIN
+Text Label 2850 1200 0    50   ~ 0
+24V_FLT
+Text Label 3300 2350 0    50   ~ 0
+12V_FLT
 $EndSCHEMATC
