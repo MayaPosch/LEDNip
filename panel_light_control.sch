@@ -1543,18 +1543,6 @@ LED_R
 Wire Wire Line
 	8950 1850 9150 1850
 Wire Wire Line
-	7450 2150 7150 2150
-Connection ~ 7150 2150
-Wire Wire Line
-	7150 2150 7150 2300
-Wire Wire Line
-	6700 2150 6800 2150
-Wire Wire Line
-	6800 2300 6800 2150
-Connection ~ 6800 2150
-Wire Wire Line
-	6800 2150 7150 2150
-Wire Wire Line
 	6800 2600 6800 2700
 Wire Wire Line
 	6800 2700 7150 2700
@@ -1985,4 +1973,16 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1700 1450 50  0001 C CNN
 	1    1700 1450
 	0    -1   1    0   
 $EndComp
+Wire Wire Line
+	6800 2150 6700 2150
+Wire Wire Line
+	6800 2150 6800 2300
+Wire Wire Line
+	6800 2150 7150 2150
+Wire Wire Line
+	7150 2150 7150 2300
+Connection ~ 6800 2150
+Wire Wire Line
+	7150 2150 7450 2150
+Connection ~ 7150 2150
 $EndSCHEMATC

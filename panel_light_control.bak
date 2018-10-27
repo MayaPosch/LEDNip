@@ -402,7 +402,7 @@ Wire Wire Line
 	8950 600  8950 900 
 $Comp
 L Amplifier_Operational:LM324 U2
-U 2 1 5BC3AA2E
+U 3 1 5BC3AA2E
 P 7750 1100
 F 0 "U2" H 7750 1300 50  0000 C CNN
 F 1 "LM324" H 7700 1100 50  0000 C CNN
@@ -410,7 +410,7 @@ F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 1200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 1300 50  0001 C CNN
 F 4 "LM324ADR" H 7750 1100 50  0001 C CNN "MPN"
 F 5 "595-LM324ADR" H 7750 1100 50  0001 C CNN "Mouser"
-	2    7750 1100
+	3    7750 1100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -440,7 +440,7 @@ Wire Wire Line
 	7350 1200 7450 1200
 $Comp
 L Amplifier_Operational:LM324 U2
-U 4 1 5BCB6EE3
+U 1 1 5BCB6EE3
 P 7750 3800
 F 0 "U2" H 7750 4000 50  0000 C CNN
 F 1 "LM324" H 7700 3800 50  0000 C CNN
@@ -448,7 +448,7 @@ F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 3900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 4000 50  0001 C CNN
 F 4 "LM324ADR" H 7750 3800 50  0001 C CNN "MPN"
 F 5 "595-LM324ADR" H 7750 3800 50  0001 C CNN "Mouser"
-	4    7750 3800
+	1    7750 3800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1193,7 +1193,7 @@ Wire Wire Line
 	8950 4500 8950 4600
 $Comp
 L Amplifier_Operational:LM324 U2
-U 3 1 5CE1E150
+U 2 1 5CE1E150
 P 7750 5400
 F 0 "U2" H 7750 5600 50  0000 C CNN
 F 1 "LM324" H 7700 5400 50  0000 C CNN
@@ -1201,7 +1201,7 @@ F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 5500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 5600 50  0001 C CNN
 F 4 "LM324ADR" H 7750 5400 50  0001 C CNN "MPN"
 F 5 "595-LM324ADR" H 7750 5400 50  0001 C CNN "Mouser"
-	3    7750 5400
+	2    7750 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1398,7 +1398,7 @@ Wire Wire Line
 	8950 6100 8950 6200
 $Comp
 L Amplifier_Operational:LM324 U2
-U 1 1 5CE38662
+U 4 1 5CE38662
 P 7750 2250
 F 0 "U2" H 7750 2450 50  0000 C CNN
 F 1 "LM324" H 7700 2250 50  0000 C CNN
@@ -1406,7 +1406,7 @@ F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7700 2350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7800 2450 50  0001 C CNN
 F 4 "LM324ADR" H 7750 2250 50  0001 C CNN "MPN"
 F 5 "595-LM324ADR" H 7750 2250 50  0001 C CNN "Mouser"
-	1    7750 2250
+	4    7750 2250
 	1    0    0    -1  
 $EndComp
 $Comp
