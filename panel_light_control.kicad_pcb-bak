@@ -6641,7 +6641,7 @@
   (gr_text GND (at 184.785 103.505 180) (layer F.SilkS) (tstamp 5BDB2B50)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
-  (gr_text +24V (at 184.785 91.186 90) (layer F.SilkS) (tstamp 5BDB2B50)
+  (gr_text +24V (at 184.658 92.329) (layer F.SilkS) (tstamp 5BDB2B50)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
   (gr_text BLUE (at 131.7625 61.722) (layer F.SilkS) (tstamp 5BDB2B50)
