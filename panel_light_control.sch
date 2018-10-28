@@ -2191,4 +2191,26 @@ Wire Wire Line
 	10700 900  10600 900 
 Wire Wire Line
 	10700 1300 10600 1300
+$Comp
+L Device:C_Small C?
+U 1 1 5BF468BF
+P 6150 1450
+AR Path="/5BBC4BB7/5BF468BF" Ref="C?"  Part="1" 
+AR Path="/5C1EFDBE/5BF468BF" Ref="C?"  Part="1" 
+AR Path="/5C211DD3/5BF468BF" Ref="C?"  Part="1" 
+AR Path="/5C211FC6/5BF468BF" Ref="C?"  Part="1" 
+F 0 "C?" H 6050 1500 50  0000 R CNN
+F 1 "4.7uF" H 6050 1350 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6150 1450 50  0001 C CNN
+F 3 "~" H 6150 1450 50  0001 C CNN
+	1    6150 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1200 6150 1350
+Wire Wire Line
+	6150 1700 5850 1700
+Wire Wire Line
+	6150 1550 6150 1700
+Connection ~ 5850 1700
 $EndSCHEMATC
