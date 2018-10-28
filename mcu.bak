@@ -2487,4 +2487,23 @@ Wire Wire Line
 Wire Wire Line
 	6350 6000 6750 6000
 Connection ~ 6750 6000
+$Comp
+L SamacSys_Parts:7499011121A J?
+U 1 1 5BE38FEA
+P 11550 4950
+F 0 "J?" H 12000 5215 50  0000 C CNN
+F 1 "7499011121A" H 12000 5124 50  0000 C CNN
+F 2 "7499011121A" H 12300 5050 50  0001 L CNN
+F 3 "https://katalog.we-online.com/pbs/datasheet/7499011121A.pdf" H 12300 4950 50  0001 L CNN
+F 4 "Wurth Elektronik Through Hole RJ45 Connector Female" H 12300 4850 50  0001 L CNN "Description"
+F 5 "13" H 12300 4750 50  0001 L CNN "Height"
+F 6 "Wurth Elektronik" H 12300 4650 50  0001 L CNN "Manufacturer_Name"
+F 7 "7499011121A" H 12300 4550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "1633850" H 12300 4450 50  0001 L CNN "RS Part Number"
+F 9 "http://uk.rs-online.com/web/p/products/1633850" H 12300 4350 50  0001 L CNN "RS Price/Stock"
+F 10 "7499011121A" H 12300 4250 50  0001 L CNN "Arrow Part Number"
+F 11 "http://uk.rs-online.com/web/p/products/1633850" H 12300 4150 50  0001 L CNN "Arrow Price/Stock"
+	1    11550 4950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
