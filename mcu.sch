@@ -64,8 +64,8 @@ AR Path="/5BBC4BB7/5BBD20DE" Ref="U5"  Part="1"
 AR Path="/5C1EFDBE/5BBD20DE" Ref="U?"  Part="1" 
 AR Path="/5C211DD3/5BBD20DE" Ref="U?"  Part="1" 
 AR Path="/5C211FC6/5BBD20DE" Ref="U?"  Part="1" 
-F 0 "U5" H 9550 3600 50  0000 C CNN
-F 1 "LAN8720A" H 9650 3500 50  0000 C CNN
+F 0 "U5" H 9250 1600 50  0000 C CNN
+F 1 "LAN8720A" H 9250 1500 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 9000 1650 50  0001 L CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf" H 8750 1650 50  0001 C CNN
 F 4 "LAN8720A-CP-TR-ABC" H 8950 2600 50  0001 C CNN "MPN"
@@ -340,8 +340,8 @@ F 0 "Y1" V 4350 3350 50  0000 L CNN
 F 1 "Crystal_GND24" V 4250 2950 50  0000 L CNN
 F 2 "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm" H 4000 3400 50  0001 C CNN
 F 3 "~" H 4000 3400 50  0001 C CNN
-F 4 "ABM8-25.000MHZ-10-D1G-T " V 4000 3400 50  0001 C CNN "MPN"
-F 5 "815-ABM8-25-10-D1G-T " V 4000 3400 50  0001 C CNN "Mouser"
+F 4 "ABM8W-25.0000MHZ-4-D1X-T3" V 4050 2300 50  0000 C CNN "MPN"
+F 5 "815-8W25-4D1XT" V 4000 3400 50  0001 C CNN "Mouser"
 	1    4000 3400
 	0    -1   1    0   
 $EndComp
@@ -1630,7 +1630,7 @@ F 3 "" H 4050 2300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 2000 4050 2000
+	3400 2000 3500 2000
 Wire Wire Line
 	4000 3600 4100 3600
 Wire Wire Line
@@ -2506,4 +2506,68 @@ F 3 "" H 9750 5850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9750 5850 9750 5750
+$Comp
+L SamacSys_Parts:SKQYABE010 RST1
+U 1 1 5BE29C94
+P 3600 1500
+F 0 "RST1" H 4000 1300 50  0000 C CNN
+F 1 "SKQYABE010" H 4000 1200 50  0000 C CNN
+F 2 "SamacSys_Parts:SKQYABE010" H 4250 1600 50  0001 L CNN
+F 3 "http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQY/SKQYABE010.html#Dimensions" H 4250 1500 50  0001 L CNN
+F 4 "Switch Tactile 6.1 x 3.7 SMT 2.55N Black Button Tactile Switch, SPST-NO 50 mA Surface Mount" H 4250 1400 50  0001 L CNN "Description"
+F 5 "2" H 4250 1300 50  0001 L CNN "Height"
+F 6 "ALPS" H 4250 1200 50  0001 L CNN "Manufacturer_Name"
+F 7 "SKQYABE010" H 4250 1100 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "9174188" H 4250 1000 50  0001 L CNN "RS Part Number"
+F 9 "http://uk.rs-online.com/web/p/products/9174188" H 4250 900 50  0001 L CNN "RS Price/Stock"
+F 10 "SKQYABE010" H 4250 800 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" H 4250 700 50  0001 L CNN "Arrow Price/Stock"
+F 12 "SKQYABE010" H 3600 1500 50  0001 C CNN "MPN"
+F 13 "688-SKQYAB" H 3600 1500 50  0001 C CNN "Mouser"
+	1    3600 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 2000
+Wire Wire Line
+	3500 2000 4050 2000
+$Comp
+L power:GND #PWR0133
+U 1 1 5BEA740B
+P 4500 1600
+AR Path="/5BBC4BB7/5BEA740B" Ref="#PWR0133"  Part="1" 
+AR Path="/5C1EFDBE/5BEA740B" Ref="#PWR?"  Part="1" 
+AR Path="/5C211DD3/5BEA740B" Ref="#PWR?"  Part="1" 
+AR Path="/5C211FC6/5BEA740B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0133" H 4500 1350 50  0001 C CNN
+F 1 "GND" H 4600 1600 50  0000 C CNN
+F 2 "" H 4500 1600 50  0001 C CNN
+F 3 "" H 4500 1600 50  0001 C CNN
+	1    4500 1600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1500 4500 1500
+Wire Wire Line
+	4500 1500 4500 1600
+$Comp
+L Device:R R54
+U 1 1 5BF06B2A
+P 3500 1750
+AR Path="/5BBC4BB7/5BF06B2A" Ref="R54"  Part="1" 
+AR Path="/5C1EFDBE/5BF06B2A" Ref="R?"  Part="1" 
+AR Path="/5C211DD3/5BF06B2A" Ref="R?"  Part="1" 
+AR Path="/5C211FC6/5BF06B2A" Ref="R?"  Part="1" 
+F 0 "R54" V 3600 1750 50  0000 C CNN
+F 1 "100R" V 3400 1750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 1750 50  0001 C CNN
+F 3 "~" H 3500 1750 50  0001 C CNN
+	1    3500 1750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3500 1900 3500 2000
+Wire Wire Line
+	3600 1500 3500 1500
+Wire Wire Line
+	3500 1500 3500 1600
 $EndSCHEMATC

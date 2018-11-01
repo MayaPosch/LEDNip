@@ -748,6 +748,28 @@ X OUT 3 300 0 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_SKQYABE010
+#
+DEF SamacSys_Parts_SKQYABE010 S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_SKQYABE010" 650 200 50 H V L CNN
+F2 "SKQYABE010" 650 100 50 H I L CNN
+F3 "http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQY/SKQYABE010.html#Dimensions" 650 0 50 H I L CNN
+F4 "Switch Tactile 6.1 x 3.7 SMT 2.55N Black Button Tactile Switch, SPST-NO 50 mA Surface Mount" 650 -100 50 H I L CNN "Description"
+F5 "2" 650 -200 50 H I L CNN "Height"
+F6 "ALPS" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "SKQYABE010" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "9174188" 650 -500 50 H I L CNN "RS Part Number"
+F9 "http://uk.rs-online.com/web/p/products/9174188" 650 -600 50 H I L CNN "RS Price/Stock"
+F10 "SKQYABE010" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 2 2 800 0 200 L 50 50 0 0 B
+ENDDRAW
+ENDDEF
+#
 # Transistor_FET_IRF540N
 #
 DEF Transistor_FET_IRF540N Q 0 0 Y N 1 F N
