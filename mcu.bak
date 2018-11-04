@@ -394,7 +394,7 @@ Wire Wire Line
 Text GLabel 7400 3100 0    50   Output ~ 0
 RMII_REFCLKO
 Text GLabel 7400 3000 0    50   Input ~ 0
-LAN_RST
+PHY_RST
 $Comp
 L Device:R_Small R28
 U 1 1 5BD3F9A6
@@ -652,12 +652,6 @@ Wire Wire Line
 	9300 5250 8900 5250
 Wire Wire Line
 	8900 4700 10600 4700
-Text GLabel 10500 4550 0    50   Input ~ 0
-PHY_VDDA
-Wire Wire Line
-	10500 4550 10600 4550
-Wire Wire Line
-	10600 4550 10600 4700
 Text GLabel 10400 2900 2    50   Output ~ 0
 LED_GRN-
 Text GLabel 10400 3000 2    50   Output ~ 0
@@ -747,7 +741,7 @@ RMII_TXD0
 Text GLabel 1050 5000 0    50   Output ~ 10
 RMII_TXD1
 Text GLabel 1500 2300 0    50   Output ~ 0
-LAN_RST
+PHY_RST
 Text GLabel 1500 2200 0    50   Input ~ 10
 RMII_MDIO
 Text GLabel 1500 5500 0    50   Input ~ 10
@@ -804,7 +798,7 @@ F 3 "" H 2450 7400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1500 2800 1600 2800
-Text Notes 1000 2850 0    50   ~ 0
+Text Notes 750  2850 0    50   ~ 0
 MCO1
 $Comp
 L Device:R R19
@@ -969,14 +963,14 @@ Text GLabel 1350 5100 0    50   Input ~ 0
 SPI1_MISO
 Text GLabel 1450 4700 0    50   Output ~ 0
 SPI1_SCK
-Text GLabel 1450 4400 0    50   Output ~ 0
-SPI1_CS0
 Text GLabel 1450 4300 0    50   Output ~ 0
+SPI1_CS0
+Text GLabel 1450 4200 0    50   Output ~ 0
 SPI1_CS1
 Wire Wire Line
-	1450 4400 1600 4400
+	1450 4300 1600 4300
 Wire Wire Line
-	1600 4300 1450 4300
+	1600 4200 1450 4200
 Wire Wire Line
 	1450 4700 1600 4700
 Wire Wire Line
@@ -1082,10 +1076,10 @@ Wire Wire Line
 	1950 850  1950 950 
 NoConn ~ 1600 2900
 NoConn ~ 1600 2000
-NoConn ~ 1600 3700
+NoConn ~ 3400 4900
 NoConn ~ 1600 3800
 NoConn ~ 1600 3900
-NoConn ~ 1600 4200
+NoConn ~ 1600 4400
 NoConn ~ 1600 5400
 NoConn ~ 1600 5600
 NoConn ~ 1600 5700
@@ -1231,7 +1225,7 @@ AR Path="/5C1EFDBE/5CF93D60" Ref="R?"  Part="1"
 AR Path="/5C211DD3/5CF93D60" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5CF93D60" Ref="R?"  Part="1" 
 F 0 "R21" V 3700 2200 50  0000 C CNN
-F 1 "47k" V 3500 2200 50  0000 C CNN
+F 1 "1k" V 3500 2200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3530 2200 50  0001 C CNN
 F 3 "~" H 3600 2200 50  0001 C CNN
 	1    3600 2200
@@ -1301,7 +1295,6 @@ Wire Wire Line
 	10200 5150 10600 5150
 Wire Wire Line
 	10600 5150 10600 4700
-Connection ~ 10600 4700
 $Comp
 L power:GND #PWR015
 U 1 1 5D207DE0
@@ -1575,14 +1568,6 @@ Connection ~ 2200 1600
 Wire Wire Line
 	2300 1600 2200 1600
 Connection ~ 2300 1600
-Wire Wire Line
-	2400 1600 2300 1600
-Connection ~ 2400 1600
-Wire Wire Line
-	2500 1600 2400 1600
-Connection ~ 2500 1600
-Wire Wire Line
-	2600 1600 2500 1600
 Connection ~ 2600 1600
 Wire Wire Line
 	2700 1600 2600 1600
@@ -2086,11 +2071,11 @@ Wire Wire Line
 Wire Wire Line
 	3550 3200 4000 3200
 Wire Wire Line
-	3550 4900 3400 4900
+	3550 4800 3400 4800
 Wire Wire Line
-	3400 4800 3550 4800
+	3400 4600 3550 4600
 Wire Wire Line
-	3550 4700 3400 4700
+	1450 3700 1600 3700
 Wire Wire Line
 	3400 4400 3550 4400
 Wire Wire Line
@@ -2107,11 +2092,11 @@ Text GLabel 3550 4300 2    50   Output ~ 0
 LED6
 Text GLabel 3550 4100 2    50   Output ~ 0
 LED4
-Text GLabel 3550 4700 2    50   Output ~ 0
+Text GLabel 1450 3700 0    50   Output ~ 0
 LED_SYSTEM_B
-Text GLabel 3550 4800 2    50   Output ~ 0
+Text GLabel 3550 4600 2    50   Output ~ 0
 LED_SYSTEM_G
-Text GLabel 3550 4900 2    50   Output ~ 0
+Text GLabel 3550 4800 2    50   Output ~ 0
 LED_SYSTEM_R
 Text GLabel 3550 3700 2    50   Output ~ 0
 LED0
@@ -2522,6 +2507,8 @@ F 8 "9174188" H 4250 1000 50  0001 L CNN "RS Part Number"
 F 9 "http://uk.rs-online.com/web/p/products/9174188" H 4250 900 50  0001 L CNN "RS Price/Stock"
 F 10 "SKQYABE010" H 4250 800 50  0001 L CNN "Arrow Part Number"
 F 11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" H 4250 700 50  0001 L CNN "Arrow Price/Stock"
+F 12 "SKQYABE010" H 3600 1500 50  0001 C CNN "MPN"
+F 13 "688-SKQYAB" H 3600 1500 50  0001 C CNN "Mouser"
 	1    3600 1500
 	1    0    0    -1  
 $EndComp
@@ -2568,4 +2555,110 @@ Wire Wire Line
 	3600 1500 3500 1500
 Wire Wire Line
 	3500 1500 3500 1600
+Connection ~ 2500 1600
+Connection ~ 2400 1600
+Wire Wire Line
+	2400 1600 2300 1600
+Wire Wire Line
+	2500 1600 2400 1600
+Wire Wire Line
+	2600 1600 2500 1600
+NoConn ~ 3400 4500
+NoConn ~ 3400 4700
+Text Notes 750  3350 0    50   ~ 0
+JTMS/SWDIO
+Text Notes 750  3450 0    50   ~ 0
+JTCK/SWCLK
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5BFBC076
+P 8850 900
+AR Path="/5BFBC076" Ref="#FLG?"  Part="1" 
+AR Path="/5BBC4BB7/5BFBC076" Ref="#FLG0105"  Part="1" 
+F 0 "#FLG0105" H 8850 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 8850 1074 50  0000 C CNN
+F 2 "" H 8850 900 50  0001 C CNN
+F 3 "~" H 8850 900 50  0001 C CNN
+	1    8850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5BFE35F6
+P 9700 800
+AR Path="/5BFE35F6" Ref="#FLG?"  Part="1" 
+AR Path="/5BBC4BB7/5BFE35F6" Ref="#FLG0106"  Part="1" 
+F 0 "#FLG0106" H 9700 875 50  0001 C CNN
+F 1 "PWR_FLAG" H 9700 974 50  0000 C CNN
+F 2 "" H 9700 800 50  0001 C CNN
+F 3 "~" H 9700 800 50  0001 C CNN
+	1    9700 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 800  9700 900 
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C0B7824
+P 4250 2500
+AR Path="/5C0B7824" Ref="#FLG?"  Part="1" 
+AR Path="/5BBC4BB7/5C0B7824" Ref="#FLG0107"  Part="1" 
+F 0 "#FLG0107" H 4250 2575 50  0001 C CNN
+F 1 "PWR_FLAG" H 4250 2674 50  0000 C CNN
+F 2 "" H 4250 2500 50  0001 C CNN
+F 3 "~" H 4250 2500 50  0001 C CNN
+	1    4250 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 2500 3950 2500
+Connection ~ 3950 2500
+Wire Wire Line
+	8850 900  8850 1000
+Connection ~ 8850 1000
+Text GLabel 10450 4550 0    50   Input ~ 0
+PYH_VDDA
+Wire Wire Line
+	10450 4550 10600 4550
+Wire Wire Line
+	10600 4550 10600 4700
+Connection ~ 10600 4700
+Text Notes 700  4250 0    50   ~ 0
+CAN2_RX
+Text Notes 700  4350 0    50   ~ 0
+CAN2_TX
+Text Notes 500  4150 0    50   ~ 0
+slave CAN
+Text Notes 500  6650 0    50   ~ 0
+I2S3_SD
+Text Notes 500  6450 0    50   ~ 0
+I2S3_SCK
+Text Notes 500  6350 0    50   ~ 0
+I2S3_CKIN
+Text Notes 750  2450 0    50   ~ 0
+SPI3_NSS
+Text Notes 500  4750 0    50   ~ 0
+SPI2_SCLK
+Text Notes 500  5250 0    50   ~ 0
+SPI2_MOSI
+Text Notes 500  5150 0    50   ~ 0
+SPI2_MISO
+Text Notes 500  4650 0    50   ~ 0
+SPI2_NSS
+Text Notes 4000 5050 0    50   ~ 0
+TIM1_CH3
+Text Notes 4000 5150 0    50   ~ 0
+TIM1_CH4
+Text Notes 3900 6750 0    50   ~ 0
+TIM4_CH2
+Text Notes 3900 6850 0    50   ~ 0
+TIM4_CH3
+Text Notes 3900 6950 0    50   ~ 0
+TIM4_CH4
+Text Notes 500  3750 0    50   ~ 0
+TIM3_CH3
+Text Notes 4150 4650 0    50   ~ 0
+TIM1_CH1
+Text Notes 4150 4850 0    50   ~ 0
+TIM1_CH2
 $EndSCHEMATC
