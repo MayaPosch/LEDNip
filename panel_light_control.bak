@@ -2232,4 +2232,70 @@ F 3 "~" H 1050 1600 50  0001 C CNN
 	1    1050 1600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint FID1
+U 1 1 5BE3B736
+P 4900 6650
+F 0 "FID1" H 4958 6768 50  0000 L CNN
+F 1 "Fiducial" H 4958 6677 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 6650 50  0001 C CNN
+F 3 "~" H 5100 6650 50  0001 C CNN
+	1    4900 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint FID2
+U 1 1 5BE3EE88
+P 4900 6850
+F 0 "FID2" H 4958 6968 50  0000 L CNN
+F 1 "Fiducial" H 4958 6877 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 6850 50  0001 C CNN
+F 3 "~" H 5100 6850 50  0001 C CNN
+	1    4900 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint FID3
+U 1 1 5BE40FE9
+P 4900 7050
+F 0 "FID3" H 4958 7168 50  0000 L CNN
+F 1 "Fiducial" H 4958 7077 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 7050 50  0001 C CNN
+F 3 "~" H 5100 7050 50  0001 C CNN
+	1    4900 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint FID4
+U 1 1 5BE41C23
+P 4900 7250
+F 0 "FID4" H 4958 7368 50  0000 L CNN
+F 1 "Fiducial" H 4958 7277 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 7250 50  0001 C CNN
+F 3 "~" H 5100 7250 50  0001 C CNN
+	1    4900 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint FID5
+U 1 1 5BE434C9
+P 4900 7450
+F 0 "FID5" H 4958 7568 50  0000 L CNN
+F 1 "Fiducial" H 4958 7477 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 7450 50  0001 C CNN
+F 3 "~" H 5100 7450 50  0001 C CNN
+	1    4900 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint FID6
+U 1 1 5BE45F4A
+P 4900 7650
+F 0 "FID6" H 4958 7768 50  0000 L CNN
+F 1 "Fiducial" H 4958 7677 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5100 7650 50  0001 C CNN
+F 3 "~" H 5100 7650 50  0001 C CNN
+	1    4900 7650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
