@@ -53,6 +53,7 @@ F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 4325 50  0001 C CNN
 F 3 "~" V 7500 4325 50  0001 C CNN
 F 4 "RJHSE-5380 " V 7500 4300 50  0001 C CNN "MPN"
 F 5 "523-RJHSE-5380 " V 7500 4300 50  0001 C CNN "Mouser"
+F 6 "(X)" H 0   0   50  0001 C CNN "stock"
 	1    7500 4300
 	0    1    1    0   
 $EndComp
@@ -70,6 +71,7 @@ F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 9000 1650 50  0001 L
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf" H 8750 1650 50  0001 C CNN
 F 4 "LAN8742A-CZ-TR" H 8950 2600 50  0001 C CNN "MPN"
 F 5 "579-LAN8742A-CZ-TR" H 8950 2600 50  0001 C CNN "Mouser"
+F 6 "(X)" H 0   0   50  0001 C CNN "stock"
 	1    8950 2600
 	1    0    0    -1  
 $EndComp
@@ -145,6 +147,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 5500 4600 50  0001 C CNN
 F 3 "~" H 5500 4600 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5500 4600
 	1    0    0    1   
 $EndComp
@@ -168,6 +171,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 5150 5700 50  0001 C CNN
 F 3 "~" H 5150 5700 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5150 5700
 	1    0    0    1   
 $EndComp
@@ -190,6 +194,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 6350 5600 50  0001 C CNN
 F 3 "~" H 6350 5600 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    6350 5600
 	1    0    0    -1  
 $EndComp
@@ -229,6 +234,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 8300 1100 50  0001 C CNN
 F 3 "~" H 8300 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    8300 1100
 	1    0    0    1   
 $EndComp
@@ -265,6 +271,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 9900 3350 50  0001 C CNN
 F 3 "~" H 9900 3350 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    9900 3350
 	1    0    0    -1  
 $EndComp
@@ -286,6 +293,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 2300 50  0001 C CNN
 F 3 "~" H 7600 2300 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 2300
 	0    1    1    0   
 $EndComp
@@ -303,6 +311,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 2400 50  0001 C CNN
 F 3 "~" H 7600 2400 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 2400
 	0    1    1    0   
 $EndComp
@@ -320,6 +329,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 2600 50  0001 C CNN
 F 3 "~" H 7600 2600 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 2600
 	0    1    1    0   
 $EndComp
@@ -337,6 +347,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 2500 50  0001 C CNN
 F 3 "~" H 7600 2500 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 2500
 	0    1    1    0   
 $EndComp
@@ -406,6 +417,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 3300 50  0001 C CNN
 F 3 "~" H 7600 3300 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 3300
 	0    1    1    0   
 $EndComp
@@ -431,6 +443,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 7900 1700 50  0001 C CNN
 F 3 "~" H 7900 1700 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7900 1700
 	-1   0    0    -1  
 $EndComp
@@ -491,6 +504,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 9850 1100 50  0001 C CNN
 F 3 "~" H 9850 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    9850 1100
 	1    0    0    1   
 $EndComp
@@ -525,6 +539,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 9300 1200 50  0001 C CNN
 F 3 "~" H 9300 1200 50  0001 C CNN
 F 4 "C0603C103K1REAUTO" H 9300 1200 50  0001 C CNN "MPN"
 F 5 "80-C0603C103K1REAUTO" H 9300 1200 50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    9300 1200
 	1    0    0    1   
 $EndComp
@@ -542,6 +557,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 10000 1100 50  0001 C CNN
 F 3 "~" H 10000 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    10000 1100
 	-1   0    0    1   
 $EndComp
@@ -559,6 +575,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 8050 1700 50  0001 C CNN
 F 3 "~" H 8050 1700 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    8050 1700
 	1    0    0    -1  
 $EndComp
@@ -712,6 +729,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 10080 2900 50  0001 C CNN
 F 3 "~" H 10150 2900 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    10150 2900
 	0    1    1    0   
 $EndComp
@@ -729,6 +747,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 10080 3000 50  0001 C CNN
 F 3 "~" H 10150 3000 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    10150 3000
 	0    1    1    0   
 $EndComp
@@ -755,6 +774,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 7530 3100 50  0001 C CNN
 F 3 "~" H 7600 3100 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    7600 3100
 	0    1    1    0   
 $EndComp
@@ -862,6 +882,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 5000 50  0001 C CNN
 F 3 "~" H 1250 5000 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    1250 5000
 	0    1    -1   0   
 $EndComp
@@ -879,6 +900,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 4900 50  0001 C CNN
 F 3 "~" H 1250 4900 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    1250 4900
 	0    1    -1   0   
 $EndComp
@@ -909,6 +931,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 9750 3350 50  0001 C CNN
 F 3 "~" H 9750 3350 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    9750 3350
 	-1   0    0    -1  
 $EndComp
@@ -1049,6 +1072,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 3350 1050 50  0001 C CNN
 F 3 "~" H 3350 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    3350 1050
 	-1   0    0    -1  
 $EndComp
@@ -1068,6 +1092,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 3000 1050 50  0001 C CNN
 F 3 "~" H 3000 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    3000 1050
 	-1   0    0    -1  
 $EndComp
@@ -1089,6 +1114,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 2650 1050 50  0001 C CNN
 F 3 "~" H 2650 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    2650 1050
 	-1   0    0    -1  
 $EndComp
@@ -1110,6 +1136,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 2300 1050 50  0001 C CNN
 F 3 "~" H 2300 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    2300 1050
 	-1   0    0    -1  
 $EndComp
@@ -1131,6 +1158,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 1950 1050 50  0001 C CNN
 F 3 "~" H 1950 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    1950 1050
 	-1   0    0    -1  
 $EndComp
@@ -1171,6 +1199,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 1050 50  0001 C CNN
 F 3 "~" H 3700 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    3700 1050
 	-1   0    0    -1  
 $EndComp
@@ -1246,6 +1275,7 @@ F 2 "Capacitor_SMD:C_0805_2012Metric" H 1600 1050 50  0001 C CNN
 F 3 "~" H 1600 1050 50  0001 C CNN
 F 4 "GRM21BR71A475KE51L" H 0   0   50  0001 C CNN "MPN"
 F 5 "81-GRM21BR71A475KE1L" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    1600 1050
 	-1   0    0    -1  
 $EndComp
@@ -1283,6 +1313,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 2150 50  0001 C CNN
 F 3 "~" H 4050 2150 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    4050 2150
 	-1   0    0    -1  
 $EndComp
@@ -1304,6 +1335,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 3530 2200 50  0001 C CNN
 F 3 "~" H 3600 2200 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    3600 2200
 	0    1    -1   0   
 $EndComp
@@ -1532,6 +1564,7 @@ F 6 "HR911105A" H 10050 4650 50  0001 L CNN "Manufacturer_Part_Number"
 F 7 "HR911105A" H 10050 4350 50  0001 L CNN "Arrow Part Number"
 F 8 "HR911105A" H 9300 5050 50  0001 C CNN "AliExpress"
 F 9 "710-7499011121A (WE near match)" H 9300 5050 50  0001 C CNN "Mouser"
+F 10 "X" H 0   0   50  0001 C CNN "stock"
 	1    9300 5050
 	1    0    0    -1  
 $EndComp
@@ -1775,6 +1808,7 @@ F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 5425 50  0001 C CNN
 F 3 "~" V 7500 5425 50  0001 C CNN
 F 4 "RJHSE-5380 " V 7500 5400 50  0001 C CNN "MPN"
 F 5 "523-RJHSE-5380 " V 7500 5400 50  0001 C CNN "Mouser"
+F 6 "(X)" H 0   0   50  0001 C CNN "stock"
 	1    7500 5400
 	0    1    1    0   
 $EndComp
@@ -1942,6 +1976,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 9700 1100 50  0001 C CNN
 F 3 "~" H 9700 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    9700 1100
 	-1   0    0    1   
 $EndComp
@@ -2008,6 +2043,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 950 50  0001 C CNN
 F 3 "~" H 5550 950 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 950 
 	0    -1   1    0   
 $EndComp
@@ -2027,6 +2063,7 @@ F 2 "Capacitor_SMD:C_0805_2012Metric" H 1250 1050 50  0001 C CNN
 F 3 "~" H 1250 1050 50  0001 C CNN
 F 4 "GRM21BR71A475KE51L" H 0   0   50  0001 C CNN "MPN"
 F 5 "81-GRM21BR71A475KE1L" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    1250 1050
 	-1   0    0    -1  
 $EndComp
@@ -2078,6 +2115,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 7150 50  0001 C CNN
 F 3 "~" H 5550 7150 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 7150
 	0    1    1    0   
 $EndComp
@@ -2096,6 +2134,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 6950 50  0001 C CNN
 F 3 "~" H 5550 6950 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 6950
 	0    1    1    0   
 $EndComp
@@ -2114,6 +2153,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 6750 50  0001 C CNN
 F 3 "~" H 5550 6750 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 6750
 	0    1    1    0   
 $EndComp
@@ -2233,6 +2273,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 1250 50  0001 C CNN
 F 3 "~" H 5550 1250 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 1250
 	0    -1   1    0   
 $EndComp
@@ -2267,6 +2308,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 1550 50  0001 C CNN
 F 3 "~" H 5550 1550 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 1550
 	0    -1   1    0   
 $EndComp
@@ -2301,6 +2343,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 1850 50  0001 C CNN
 F 3 "~" H 5550 1850 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 1850
 	0    -1   1    0   
 $EndComp
@@ -2335,6 +2378,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 2150 50  0001 C CNN
 F 3 "~" H 5550 2150 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 2150
 	0    -1   1    0   
 $EndComp
@@ -2369,6 +2413,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 2450 50  0001 C CNN
 F 3 "~" H 5550 2450 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 2450
 	0    -1   1    0   
 $EndComp
@@ -2403,6 +2448,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 2750 50  0001 C CNN
 F 3 "~" H 5550 2750 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 2750
 	0    -1   1    0   
 $EndComp
@@ -2437,6 +2483,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 3050 50  0001 C CNN
 F 3 "~" H 5550 3050 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 3050
 	0    -1   1    0   
 $EndComp
@@ -2471,6 +2518,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 3750 50  0001 C CNN
 F 3 "~" H 5550 3750 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    5550 3750
 	0    -1   1    0   
 $EndComp
@@ -2584,6 +2632,7 @@ F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 6150 5900 50 
 F 3 "~" H 6150 5900 50  0001 C CNN
 F 4 "455-1719-ND " H 0   0   50  0001 C CNN "DigiKey"
 F 5 "S2B-PH-K-S(LF)(SN)‎" H 0   0   50  0001 C CNN "MPN"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    6150 5900
 	-1   0    0    -1  
 $EndComp
@@ -2627,6 +2676,7 @@ F 10 "SKQYABE010" H 4250 800 50  0001 L CNN "Arrow Part Number"
 F 11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" H 4250 700 50  0001 L CNN "Arrow Price/Stock"
 F 12 "SKQYABE010" H 3600 1500 50  0001 C CNN "MPN"
 F 13 "688-SKQYAB" H 3600 1500 50  0001 C CNN "Mouser"
+F 14 "X" H 0   0   50  0001 C CNN "stock"
 	1    3600 1500
 	1    0    0    -1  
 $EndComp
@@ -2666,6 +2716,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 1750 50  0001 C CNN
 F 3 "~" H 3500 1750 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
 	1    3500 1750
 	1    0    0    1   
 $EndComp
