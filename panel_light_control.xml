@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>S:\repos\led_lighting_panel\panel_light_control.sch</source>
-    <date>16/11/2018 03:18:00</date>
+    <date>24/11/2018 19:04:44</date>
     <tool>Eeschema (6.0.0-rc1-dev-985-g576a0af29)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -37,8 +37,9 @@
       <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="DigiKey">455-1719-ND </field>
-        <field name="MPN">S2B-PH-K-S(LF)(SN)‎</field>
+        <field name="MPN">31320102</field>
+        <field name="Mouser">571-796644-2</field>
+        <field name="Reichelt">AKL 320-02</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -51,6 +52,8 @@
       <fields>
         <field name="MPN">GMK325BJ226MM-P</field>
         <field name="Mouser">963-GMK325BJ226MM-P</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -105,6 +108,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -166,6 +171,8 @@
       <fields>
         <field name="DigiKey">455-1721-ND‎</field>
         <field name="MPN">S4B-PH-K-S(LF)(SN)‎ </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -202,6 +209,8 @@
       <fields>
         <field name="DigiKey">455-1723-ND‎</field>
         <field name="MPN">S6B-PH-K-S(LF)(SN)‎ </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -226,6 +235,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -238,6 +249,8 @@
       <fields>
         <field name="MPN">RC0603FR-0733KL</field>
         <field name="Mouser">603-RC0603FR-0733KL</field>
+        <field name="box no">16</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -250,6 +263,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -274,6 +289,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -286,6 +303,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -298,6 +317,8 @@
       <fields>
         <field name="MPN">C0603C103K1REAUTO</field>
         <field name="Mouser">80-C0603C103K1REAUTO</field>
+        <field name="box no">5</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -308,8 +329,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -322,6 +344,8 @@
       <fields>
         <field name="MPN">IRF540NPBF</field>
         <field name="Mouser">942-IRF540NPBF</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Transistor_FET" part="IRF540N" description="33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"/>
       <sheetpath names="/" tstamps="/"/>
@@ -359,6 +383,8 @@
       <fields>
         <field name="DigiKey">455-1721-ND‎</field>
         <field name="MPN">S4B-PH-K-S(LF)(SN)‎ </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -383,6 +409,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -395,6 +423,8 @@
       <fields>
         <field name="DigiKey">455-1727-ND‎</field>
         <field name="MPN">S10B-PH-K-S(LF)(SN)‎ </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -407,6 +437,8 @@
       <fields>
         <field name="DigiKey">455-1724-ND‎</field>
         <field name="MPN">S7B-PH-K-S(LF)(SN)‎ </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -419,6 +451,8 @@
       <fields>
         <field name="DigiKey">455-1724-ND‎</field>
         <field name="MPN">S7B-PH-K-S(LF)(SN)</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -440,6 +474,10 @@
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BD4EBE3</tstamp>
@@ -448,6 +486,10 @@
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BD4EC9B</tstamp>
@@ -456,6 +498,10 @@
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BD4ED2F</tstamp>
@@ -464,6 +510,10 @@
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BD4EDC1</tstamp>
@@ -475,6 +525,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -487,6 +539,8 @@
       <fields>
         <field name="MPN">RC0603FR-0733KL</field>
         <field name="Mouser">603-RC0603FR-0733KL</field>
+        <field name="box no">16</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -499,6 +553,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -523,6 +579,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -535,6 +593,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -547,6 +607,8 @@
       <fields>
         <field name="MPN">C0603C103K1REAUTO</field>
         <field name="Mouser">80-C0603C103K1REAUTO</field>
+        <field name="box no">5</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -557,8 +619,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -571,6 +634,8 @@
       <fields>
         <field name="MPN">IRF540NPBF</field>
         <field name="Mouser">942-IRF540NPBF</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Transistor_FET" part="IRF540N" description="33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"/>
       <sheetpath names="/" tstamps="/"/>
@@ -595,6 +660,8 @@
       <fields>
         <field name="MPN">RC0603FR-0733KL</field>
         <field name="Mouser">603-RC0603FR-0733KL</field>
+        <field name="box no">16</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -607,6 +674,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -631,6 +700,8 @@
       <fields>
         <field name="MPN">RC0603FR-072K2L</field>
         <field name="Mouser">603-RC0603FR-072K2L </field>
+        <field name="box no">17</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -643,6 +714,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -655,6 +728,8 @@
       <fields>
         <field name="MPN">C0603C103K1REAUTO</field>
         <field name="Mouser">80-C0603C103K1REAUTO</field>
+        <field name="box no">5</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -665,8 +740,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -679,6 +755,8 @@
       <fields>
         <field name="MPN">IRF540NPBF</field>
         <field name="Mouser">942-IRF540NPBF</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Transistor_FET" part="IRF540N" description="33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"/>
       <sheetpath names="/" tstamps="/"/>
@@ -715,6 +793,8 @@
       <fields>
         <field name="MPN">GMK325BJ226MM-P</field>
         <field name="Mouser">963-GMK325BJ226MM-P</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -727,6 +807,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -739,6 +821,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -751,6 +835,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -775,6 +861,8 @@
       <fields>
         <field name="MPN">GMK325BJ226MM-P</field>
         <field name="Mouser">963-GMK325BJ226MM-P</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -787,6 +875,8 @@
       <fields>
         <field name="MPN">GMK325BJ226MM-P</field>
         <field name="Mouser">963-GMK325BJ226MM-P</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -811,6 +901,8 @@
       <fields>
         <field name="MPN">GMK325BJ226MM-P</field>
         <field name="Mouser">963-GMK325BJ226MM-P</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -835,6 +927,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -847,6 +941,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -859,6 +955,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -883,6 +981,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -895,6 +995,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -907,6 +1009,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -919,6 +1023,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -931,6 +1037,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -943,6 +1051,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -955,6 +1065,8 @@
       <fields>
         <field name="MPN">GRM21BR71A475KE51L</field>
         <field name="Mouser">81-GRM21BR71A475KE1L</field>
+        <field name="box no">3</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -964,6 +1076,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE3B736</tstamp>
@@ -972,6 +1088,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE3EE88</tstamp>
@@ -980,6 +1100,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE40FE9</tstamp>
@@ -988,6 +1112,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE41C23</tstamp>
@@ -996,6 +1124,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE434C9</tstamp>
@@ -1004,6 +1136,10 @@
       <value>Fiducial</value>
       <footprint>Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BE45F4A</tstamp>
@@ -1015,6 +1151,7 @@
       <fields>
         <field name="MPN">MCP2562-E/P </field>
         <field name="Mouser">579-MCP2562-E/P</field>
+        <field name="box no">E</field>
       </fields>
       <libsource lib="Interface_CAN_LIN" part="MCP2562-E-P" description="High-Speed CAN Transceiver, 1Mbps, 5V supply, Vio pin, -40C to +125C, DIP8 package"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1027,6 +1164,8 @@
       <fields>
         <field name="MPN">RJHSE-5380 </field>
         <field name="Mouser">523-RJHSE-5380 </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1039,6 +1178,7 @@
       <fields>
         <field name="MPN">LAN8742A-CZ-TR</field>
         <field name="Mouser">579-LAN8742A-CZ-TR</field>
+        <field name="box no">E</field>
       </fields>
       <libsource lib="Interface_Ethernet" part="LAN8720A" description="LAN8720 Ethernet PHY with RMII interface"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1051,6 +1191,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1063,6 +1205,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1075,6 +1219,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1087,6 +1233,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1097,8 +1245,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1111,6 +1260,8 @@
       <fields>
         <field name="MPN">RC0603FR-0712KL</field>
         <field name="Mouser">603-RC0603FR-0712KL</field>
+        <field name="box no">20</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1123,6 +1274,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1135,6 +1288,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1147,6 +1302,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1159,6 +1316,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1171,6 +1330,7 @@
       <fields>
         <field name="MPN">ABM8W-12.0000MHZ-8-K1Z-T3</field>
         <field name="Mouser">815-8W12-8K1ZT</field>
+        <field name="box no">E</field>
       </fields>
       <libsource lib="Device" part="Crystal_GND24" description="Four pin crystal, GND on pins 2 and 4"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1195,6 +1355,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1207,6 +1369,8 @@
       <fields>
         <field name="MPN">RC0603FR-0712KL</field>
         <field name="Mouser">603-RC0603FR-0712KL</field>
+        <field name="box no">20</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1231,6 +1395,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1241,8 +1407,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1255,6 +1422,8 @@
       <fields>
         <field name="MPN">C0603C103K1REAUTO</field>
         <field name="Mouser">80-C0603C103K1REAUTO</field>
+        <field name="box no">5</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1267,6 +1436,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1279,6 +1450,8 @@
       <fields>
         <field name="MPN">RC0603FR-0712KL</field>
         <field name="Mouser">603-RC0603FR-0712KL</field>
+        <field name="box no">20</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1339,6 +1512,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1351,6 +1526,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1363,6 +1540,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1375,6 +1554,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1387,6 +1568,8 @@
       <fields>
         <field name="MPN">RC0603JR-0722RL</field>
         <field name="Mouser">603-RC0603JR-0722RL</field>
+        <field name="box no">19</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1399,6 +1582,8 @@
       <fields>
         <field name="MPN">RC0603FR-0712KL</field>
         <field name="Mouser">603-RC0603FR-0712KL</field>
+        <field name="box no">20</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1411,6 +1596,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1423,6 +1610,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1435,6 +1624,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1447,6 +1638,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1459,6 +1652,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1471,6 +1666,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1481,8 +1678,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1493,8 +1691,9 @@
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">885012106011</field>
-        <field name="Mouser">710-885012106011 </field>
+        <field name="MPN">C0603C225K9RACTU</field>
+        <field name="Mouser">80-C0603C225K9R</field>
+        <field name="box no">4</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1507,6 +1706,8 @@
       <fields>
         <field name="MPN">GRM21BR71A475KE51L</field>
         <field name="Mouser">81-GRM21BR71A475KE1L</field>
+        <field name="box no">3</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1519,6 +1720,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1531,6 +1734,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1559,6 +1764,8 @@
         <field name="Manufacturer_Name">Hanrun Electronics</field>
         <field name="Manufacturer_Part_Number">HR911105A</field>
         <field name="Mouser">710-7499011121A (WE near match)</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="panel_light_control-rescue" part="HR911105A-SamacSys_Parts" description=""/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1583,6 +1790,8 @@
       <fields>
         <field name="MPN">RJHSE-5380 </field>
         <field name="Mouser">523-RJHSE-5380 </field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1595,6 +1804,8 @@
       <fields>
         <field name="MPN">C0603C104K5RECAUTO</field>
         <field name="Mouser">80-C0603C104K5REAUTO</field>
+        <field name="box no">2</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1619,6 +1830,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1631,6 +1844,8 @@
       <fields>
         <field name="MPN">GRM21BR71A475KE51L</field>
         <field name="Mouser">81-GRM21BR71A475KE1L</field>
+        <field name="box no">3</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1655,6 +1870,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1667,6 +1884,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1679,6 +1898,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1703,6 +1924,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1727,6 +1950,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1751,6 +1976,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1775,6 +2002,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1799,6 +2028,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1823,6 +2054,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1847,6 +2080,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1871,6 +2106,8 @@
       <fields>
         <field name="MPN">RC0603FR-071KL</field>
         <field name="Mouser">603-RC0603FR-071KL</field>
+        <field name="box no">21</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1883,6 +2120,8 @@
       <fields>
         <field name="DigiKey">455-1719-ND </field>
         <field name="MPN">S2B-PH-K-S(LF)(SN)‎</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1903,6 +2142,8 @@
         <field name="Mouser">688-SKQYAB</field>
         <field name="RS Part Number">9174188</field>
         <field name="RS Price/Stock">http://uk.rs-online.com/web/p/products/9174188</field>
+        <field name="box no">E</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="SamacSys_Parts" part="SKQYABE010" description="Switch Tactile 6.1 x 3.7 SMT 2.55N Black Button Tactile Switch, SPST-NO 50 mA Surface Mount"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1915,6 +2156,8 @@
       <fields>
         <field name="MPN">RC0603FR-07120RL</field>
         <field name="Mouser">603-RC0603FR-07120RL</field>
+        <field name="box no">18</field>
+        <field name="stock">X</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/MCU/" tstamps="/5BBC4BB7/"/>
@@ -1976,11 +2219,12 @@
         <pin num="14" name="~" type="output"/>
       </pins>
     </libpart>
-    <libpart lib="Connector" part="RJ34_Shielded">
+    <libpart lib="Connector" part="8P8C_Shielded">
       <aliases>
         <alias>RJ31_Shielded</alias>
         <alias>RJ32_Shielded</alias>
         <alias>RJ33_Shielded</alias>
+        <alias>RJ34_Shielded</alias>
         <alias>RJ35_Shielded</alias>
         <alias>RJ41_Shielded</alias>
         <alias>RJ45_Shielded</alias>
@@ -2003,7 +2247,7 @@
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">RJ34_Shielded</field>
+        <field name="Value">8P8C_Shielded</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -2731,139 +2975,139 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(Q1-Pad1)">
-      <node ref="Q1" pin="1"/>
-      <node ref="R4" pin="1"/>
-    </net>
-    <net code="2" name="Net-(C4-Pad1)">
-      <node ref="U2" pin="14"/>
-      <node ref="R4" pin="2"/>
-      <node ref="C4" pin="1"/>
-    </net>
-    <net code="3" name="Net-(C4-Pad2)">
-      <node ref="R3" pin="1"/>
-      <node ref="U2" pin="13"/>
-      <node ref="C4" pin="2"/>
-      <node ref="R5" pin="1"/>
-    </net>
-    <net code="4" name="GND">
-      <node ref="J11" pin="SH"/>
-      <node ref="C31" pin="1"/>
-      <node ref="J11" pin="3"/>
-      <node ref="J13" pin="16"/>
-      <node ref="C32" pin="1"/>
-      <node ref="C40" pin="2"/>
-      <node ref="J13" pin="15"/>
-      <node ref="J13" pin="8"/>
-      <node ref="C39" pin="2"/>
-      <node ref="U5" pin="25"/>
-      <node ref="C43" pin="2"/>
-      <node ref="I2C1" pin="2"/>
-      <node ref="C38" pin="2"/>
-      <node ref="U4" pin="2"/>
-      <node ref="LED10" pin="2"/>
-      <node ref="C15" pin="2"/>
-      <node ref="C42" pin="2"/>
-      <node ref="C47" pin="2"/>
-      <node ref="C19" pin="2"/>
-      <node ref="R21" pin="1"/>
-      <node ref="C23" pin="2"/>
-      <node ref="C46" pin="2"/>
-      <node ref="C29" pin="2"/>
-      <node ref="C14" pin="2"/>
-      <node ref="J1" pin="1"/>
-      <node ref="Y1" pin="2"/>
-      <node ref="Y1" pin="4"/>
-      <node ref="C34" pin="1"/>
-      <node ref="C25" pin="2"/>
-      <node ref="J13" pin="11"/>
-      <node ref="J13" pin="10"/>
-      <node ref="C30" pin="1"/>
-      <node ref="R33" pin="2"/>
-      <node ref="C41" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="R8" pin="2"/>
-      <node ref="PS2" pin="2"/>
-      <node ref="RST1" pin="2"/>
-      <node ref="C27" pin="1"/>
-      <node ref="PANEL1" pin="MP"/>
-      <node ref="PANEL2" pin="MP"/>
-      <node ref="LED1" pin="1"/>
-      <node ref="PS33" pin="2"/>
-      <node ref="PS12" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="LED0" pin="1"/>
-      <node ref="C3" pin="2"/>
-      <node ref="LED9" pin="2"/>
-      <node ref="PS1" pin="1"/>
-      <node ref="C7" pin="2"/>
-      <node ref="PS1" pin="2"/>
-      <node ref="C8" pin="1"/>
-      <node ref="PS2" pin="1"/>
-      <node ref="R17" pin="2"/>
-      <node ref="DBG1" pin="6"/>
-      <node ref="C36" pin="1"/>
-      <node ref="C22" pin="2"/>
-      <node ref="LED6" pin="1"/>
-      <node ref="U2" pin="10"/>
-      <node ref="LED5" pin="1"/>
-      <node ref="C5" pin="1"/>
-      <node ref="U2" pin="11"/>
-      <node ref="LED8" pin="1"/>
-      <node ref="LED2" pin="1"/>
-      <node ref="LED3" pin="1"/>
-      <node ref="LED4" pin="1"/>
-      <node ref="C35" pin="1"/>
-      <node ref="C33" pin="1"/>
-      <node ref="C37" pin="1"/>
-      <node ref="LED7" pin="1"/>
-      <node ref="JTAG1" pin="6"/>
-      <node ref="J2" pin="SH"/>
-      <node ref="J2" pin="3"/>
-      <node ref="C28" pin="2"/>
-      <node ref="UART1" pin="3"/>
-      <node ref="C21" pin="2"/>
-      <node ref="R2" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="R6" pin="2"/>
-      <node ref="C17" pin="2"/>
-      <node ref="SPI0" pin="8"/>
-      <node ref="R31" pin="2"/>
-      <node ref="C20" pin="2"/>
-      <node ref="U3" pin="20"/>
-      <node ref="D12" pin="2"/>
-      <node ref="U3" pin="74"/>
-      <node ref="C13" pin="2"/>
-      <node ref="C24" pin="2"/>
-      <node ref="C18" pin="2"/>
-      <node ref="C16" pin="2"/>
-      <node ref="SPI1" pin="6"/>
-      <node ref="C45" pin="2"/>
-      <node ref="R18" pin="2"/>
-      <node ref="R10" pin="2"/>
-      <node ref="U1" pin="2"/>
-      <node ref="C12" pin="2"/>
-      <node ref="C26" pin="2"/>
-      <node ref="C44" pin="2"/>
-      <node ref="U3" pin="10"/>
-      <node ref="U3" pin="27"/>
-      <node ref="C9" pin="1"/>
-    </net>
-    <net code="5" name="Net-(Q1-Pad3)">
+    <net code="1" name="Net-(Q1-Pad3)">
       <node ref="R6" pin="1"/>
       <node ref="Q1" pin="3"/>
       <node ref="R5" pin="2"/>
     </net>
-    <net code="6" name="Net-(Q3-Pad3)">
-      <node ref="Q3" pin="3"/>
-      <node ref="R16" pin="2"/>
-      <node ref="R18" pin="1"/>
+    <net code="2" name="Net-(C4-Pad1)">
+      <node ref="U2" pin="14"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R4" pin="2"/>
     </net>
-    <net code="7" name="Net-(C1-Pad2)">
+    <net code="3" name="GND">
+      <node ref="R17" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="PS1" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="PS1" pin="1"/>
+      <node ref="LED9" pin="2"/>
+      <node ref="LED4" pin="1"/>
+      <node ref="LED3" pin="1"/>
+      <node ref="DBG1" pin="6"/>
+      <node ref="LED2" pin="1"/>
+      <node ref="C27" pin="1"/>
+      <node ref="LED1" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="PS2" pin="2"/>
+      <node ref="RST1" pin="2"/>
+      <node ref="PS2" pin="1"/>
+      <node ref="PANEL1" pin="MP"/>
+      <node ref="PANEL2" pin="MP"/>
+      <node ref="C2" pin="2"/>
+      <node ref="PS12" pin="2"/>
+      <node ref="PS33" pin="2"/>
+      <node ref="LED0" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J11" pin="3"/>
+      <node ref="D12" pin="2"/>
+      <node ref="U4" pin="2"/>
+      <node ref="C43" pin="2"/>
+      <node ref="SPI0" pin="8"/>
+      <node ref="R33" pin="2"/>
+      <node ref="C39" pin="2"/>
+      <node ref="C32" pin="1"/>
+      <node ref="C40" pin="2"/>
+      <node ref="U5" pin="25"/>
+      <node ref="C31" pin="1"/>
+      <node ref="J11" pin="SH"/>
+      <node ref="C36" pin="1"/>
+      <node ref="C37" pin="1"/>
+      <node ref="C33" pin="1"/>
+      <node ref="C35" pin="1"/>
+      <node ref="U2" pin="11"/>
+      <node ref="LED10" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U2" pin="10"/>
+      <node ref="C22" pin="2"/>
+      <node ref="J2" pin="3"/>
+      <node ref="J2" pin="SH"/>
+      <node ref="U3" pin="27"/>
+      <node ref="U3" pin="10"/>
+      <node ref="U3" pin="20"/>
+      <node ref="U3" pin="74"/>
+      <node ref="UART1" pin="3"/>
+      <node ref="C21" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="I2C1" pin="2"/>
+      <node ref="J13" pin="16"/>
+      <node ref="J13" pin="15"/>
+      <node ref="LED6" pin="1"/>
+      <node ref="LED8" pin="1"/>
+      <node ref="LED7" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="J13" pin="8"/>
+      <node ref="LED5" pin="1"/>
+      <node ref="SPI1" pin="6"/>
+      <node ref="JTAG1" pin="6"/>
+      <node ref="J13" pin="11"/>
+      <node ref="J13" pin="10"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R31" pin="2"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="C45" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C44" pin="2"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R18" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C30" pin="1"/>
+      <node ref="C41" pin="2"/>
+      <node ref="R21" pin="1"/>
+      <node ref="C23" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C47" pin="2"/>
+      <node ref="C42" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C29" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C34" pin="1"/>
+      <node ref="C18" pin="2"/>
+      <node ref="Y1" pin="4"/>
+      <node ref="C46" pin="2"/>
+      <node ref="C25" pin="2"/>
+    </net>
+    <net code="4" name="Net-(C1-Pad2)">
+      <node ref="C1" pin="2"/>
+      <node ref="R2" pin="1"/>
       <node ref="R1" pin="1"/>
       <node ref="U2" pin="12"/>
-      <node ref="R2" pin="1"/>
-      <node ref="C1" pin="2"/>
+    </net>
+    <net code="5" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="6" name="Net-(C4-Pad2)">
+      <node ref="U2" pin="13"/>
+      <node ref="R5" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="7" name="Net-(Q3-Pad3)">
+      <node ref="R18" pin="1"/>
+      <node ref="R16" pin="2"/>
+      <node ref="Q3" pin="3"/>
     </net>
     <net code="8" name="PWM_R">
       <node ref="U3" pin="60"/>
@@ -2871,34 +3115,34 @@
       <node ref="R1" pin="2"/>
     </net>
     <net code="9" name="+12V">
-      <node ref="U1" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R3" pin="2"/>
       <node ref="C40" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="J6" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="U1" pin="1"/>
       <node ref="R12" pin="2"/>
       <node ref="PS12" pin="3"/>
-      <node ref="C6" pin="1"/>
-      <node ref="L2" pin="1"/>
-      <node ref="D4" pin="1"/>
-      <node ref="R3" pin="2"/>
-      <node ref="J6" pin="1"/>
-      <node ref="R11" pin="2"/>
       <node ref="C5" pin="2"/>
-      <node ref="U2" pin="4"/>
-      <node ref="D1" pin="2"/>
+      <node ref="L2" pin="1"/>
       <node ref="C43" pin="1"/>
+      <node ref="U2" pin="4"/>
     </net>
     <net code="10" name="LED_R">
       <node ref="J6" pin="2"/>
       <node ref="Q1" pin="2"/>
     </net>
     <net code="11" name="Net-(Q2-Pad3)">
-      <node ref="R14" pin="2"/>
-      <node ref="R17" pin="1"/>
       <node ref="Q2" pin="3"/>
+      <node ref="R17" pin="1"/>
+      <node ref="R14" pin="2"/>
     </net>
     <net code="12" name="Net-(C10-Pad1)">
-      <node ref="U2" pin="1"/>
-      <node ref="C10" pin="1"/>
       <node ref="R13" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U2" pin="1"/>
     </net>
     <net code="13" name="Net-(C10-Pad2)">
       <node ref="C10" pin="2"/>
@@ -2906,99 +3150,99 @@
       <node ref="R14" pin="1"/>
       <node ref="U2" pin="2"/>
     </net>
-    <net code="14" name="Net-(C11-Pad1)">
+    <net code="14" name="Net-(C9-Pad2)">
+      <node ref="C9" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U2" pin="5"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="15" name="Net-(C11-Pad1)">
       <node ref="R15" pin="2"/>
       <node ref="C11" pin="1"/>
       <node ref="U2" pin="7"/>
     </net>
-    <net code="15" name="Net-(C9-Pad2)">
-      <node ref="R9" pin="1"/>
-      <node ref="C9" pin="2"/>
-      <node ref="R10" pin="1"/>
-      <node ref="U2" pin="5"/>
-    </net>
     <net code="16" name="PWM_B">
       <node ref="R9" pin="2"/>
-      <node ref="R39" pin="2"/>
       <node ref="U3" pin="62"/>
+      <node ref="R39" pin="2"/>
     </net>
     <net code="17" name="Net-(C8-Pad2)">
       <node ref="C8" pin="2"/>
-      <node ref="U2" pin="3"/>
-      <node ref="R7" pin="1"/>
       <node ref="R8" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="U2" pin="3"/>
     </net>
-    <net code="18" name="Net-(Q3-Pad1)">
-      <node ref="R15" pin="1"/>
-      <node ref="Q3" pin="1"/>
-    </net>
-    <net code="19" name="LED_B">
-      <node ref="J6" pin="4"/>
+    <net code="18" name="LED_B">
       <node ref="Q3" pin="2"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="19" name="Net-(Q3-Pad1)">
+      <node ref="Q3" pin="1"/>
+      <node ref="R15" pin="1"/>
     </net>
     <net code="20" name="Net-(C11-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="R16" pin="1"/>
       <node ref="C11" pin="2"/>
       <node ref="U2" pin="6"/>
-      <node ref="R16" pin="1"/>
-      <node ref="R12" pin="1"/>
     </net>
     <net code="21" name="+3.3V">
-      <node ref="C20" pin="1"/>
-      <node ref="C17" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="C30" pin="2"/>
-      <node ref="U4" pin="5"/>
-      <node ref="C31" pin="2"/>
       <node ref="C32" pin="2"/>
+      <node ref="C30" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C31" pin="2"/>
+      <node ref="U4" pin="5"/>
       <node ref="U5" pin="9"/>
-      <node ref="R29" pin="1"/>
-      <node ref="R28" pin="1"/>
       <node ref="L1" pin="2"/>
-      <node ref="U3" pin="19"/>
-      <node ref="C24" pin="1"/>
+      <node ref="R28" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="C20" pin="1"/>
+      <node ref="C28" pin="1"/>
       <node ref="C26" pin="1"/>
+      <node ref="C24" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="U3" pin="28"/>
       <node ref="U3" pin="21"/>
       <node ref="U3" pin="22"/>
       <node ref="U3" pin="75"/>
       <node ref="U3" pin="50"/>
-      <node ref="U3" pin="28"/>
+      <node ref="U3" pin="19"/>
       <node ref="U3" pin="11"/>
       <node ref="U3" pin="100"/>
-      <node ref="C28" pin="1"/>
-      <node ref="C15" pin="1"/>
-      <node ref="C29" pin="1"/>
+      <node ref="R29" pin="1"/>
+      <node ref="C2" pin="1"/>
       <node ref="SPI0" pin="9"/>
-      <node ref="D2" pin="2"/>
-      <node ref="PS33" pin="3"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C46" pin="1"/>
-      <node ref="C14" pin="1"/>
       <node ref="I2C1" pin="1"/>
+      <node ref="C14" pin="1"/>
       <node ref="SPI1" pin="7"/>
-      <node ref="JTAG1" pin="7"/>
       <node ref="C45" pin="1"/>
+      <node ref="JTAG1" pin="7"/>
       <node ref="C44" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="PS33" pin="3"/>
+      <node ref="C46" pin="1"/>
+      <node ref="D2" pin="2"/>
     </net>
     <net code="22" name="+5V">
-      <node ref="UART1" pin="4"/>
-      <node ref="C12" pin="1"/>
       <node ref="U1" pin="3"/>
-      <node ref="C16" pin="1"/>
-      <node ref="C13" pin="1"/>
+      <node ref="C12" pin="1"/>
       <node ref="D4" pin="2"/>
+      <node ref="UART1" pin="4"/>
       <node ref="U4" pin="3"/>
-      <node ref="SPI0" pin="10"/>
       <node ref="C34" pin="2"/>
       <node ref="C47" pin="1"/>
+      <node ref="SPI0" pin="10"/>
+      <node ref="C13" pin="1"/>
+      <node ref="C16" pin="1"/>
     </net>
-    <net code="23" name="Net-(FID1-Pad1)">
+    <net code="23" name="Net-(FID3-Pad1)">
+      <node ref="FID3" pin="1"/>
+    </net>
+    <net code="24" name="Net-(FID1-Pad1)">
       <node ref="FID1" pin="1"/>
     </net>
-    <net code="24" name="Net-(FID2-Pad1)">
+    <net code="25" name="Net-(FID2-Pad1)">
       <node ref="FID2" pin="1"/>
-    </net>
-    <net code="25" name="Net-(FID3-Pad1)">
-      <node ref="FID3" pin="1"/>
     </net>
     <net code="26" name="Net-(FID4-Pad1)">
       <node ref="FID4" pin="1"/>
@@ -3009,370 +3253,370 @@
     <net code="28" name="Net-(FID6-Pad1)">
       <node ref="FID6" pin="1"/>
     </net>
-    <net code="33" name="PWM_G">
-      <node ref="R40" pin="2"/>
+    <net code="35" name="Net-(LED10-Pad1)">
+      <node ref="R41" pin="1"/>
+      <node ref="LED10" pin="1"/>
+    </net>
+    <net code="36" name="PWM_G">
       <node ref="R7" pin="2"/>
       <node ref="U3" pin="61"/>
+      <node ref="R40" pin="2"/>
     </net>
-    <net code="34" name="Net-(LED10-Pad1)">
-      <node ref="LED10" pin="1"/>
-      <node ref="R41" pin="1"/>
-    </net>
-    <net code="35" name="Net-(LED10-Pad4)">
-      <node ref="R40" pin="1"/>
-      <node ref="LED10" pin="4"/>
-    </net>
-    <net code="36" name="Net-(LED10-Pad3)">
-      <node ref="R39" pin="1"/>
+    <net code="37" name="Net-(LED10-Pad3)">
       <node ref="LED10" pin="3"/>
+      <node ref="R39" pin="1"/>
     </net>
-    <net code="37" name="DBG_RX">
+    <net code="38" name="Net-(LED10-Pad4)">
+      <node ref="LED10" pin="4"/>
+      <node ref="R40" pin="1"/>
+    </net>
+    <net code="39" name="DBG_RX">
       <node ref="U3" pin="87"/>
       <node ref="DBG1" pin="5"/>
     </net>
-    <net code="38" name="Net-(U2-Pad8)">
-      <node ref="U2" pin="9"/>
+    <net code="40" name="Net-(U2-Pad8)">
       <node ref="U2" pin="8"/>
+      <node ref="U2" pin="9"/>
     </net>
-    <net code="39" name="Panel_Y+">
+    <net code="41" name="Panel_Y+">
+      <node ref="PS2" pin="14"/>
       <node ref="PANEL2" pin="1"/>
       <node ref="PS2" pin="13"/>
-      <node ref="PS2" pin="14"/>
     </net>
-    <net code="40" name="Panel_Y-">
-      <node ref="PS2" pin="12"/>
+    <net code="42" name="Panel_Y-">
       <node ref="PS2" pin="11"/>
+      <node ref="PS2" pin="12"/>
       <node ref="PANEL2" pin="2"/>
     </net>
-    <net code="41" name="DBG_TX">
-      <node ref="DBG1" pin="4"/>
+    <net code="43" name="DBG_TX">
       <node ref="U3" pin="86"/>
+      <node ref="DBG1" pin="4"/>
     </net>
-    <net code="42" name="Net-(Q2-Pad1)">
-      <node ref="R13" pin="1"/>
+    <net code="44" name="Net-(Q2-Pad1)">
       <node ref="Q2" pin="1"/>
+      <node ref="R13" pin="1"/>
     </net>
-    <net code="43" name="Panel_D2">
+    <net code="45" name="Panel_W+">
+      <node ref="PS1" pin="13"/>
+      <node ref="PANEL1" pin="1"/>
+      <node ref="PS1" pin="14"/>
+    </net>
+    <net code="46" name="/12V_FLT">
+      <node ref="PS33" pin="1"/>
+      <node ref="L2" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C39" pin="1"/>
+      <node ref="C41" pin="1"/>
+    </net>
+    <net code="47" name="/24V_FLT">
+      <node ref="L3" pin="2"/>
+      <node ref="C38" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="PS12" pin="1"/>
+      <node ref="C42" pin="1"/>
+    </net>
+    <net code="48" name="Panel_W-">
+      <node ref="PS1" pin="12"/>
+      <node ref="PS1" pin="11"/>
+      <node ref="PANEL1" pin="2"/>
+    </net>
+    <net code="49" name="Panel_D1">
+      <node ref="U3" pin="44"/>
+      <node ref="PS1" pin="22"/>
+    </net>
+    <net code="50" name="Panel_D2">
       <node ref="U3" pin="45"/>
       <node ref="PS2" pin="22"/>
     </net>
-    <net code="44" name="Panel_W+">
-      <node ref="PANEL1" pin="1"/>
-      <node ref="PS1" pin="13"/>
-      <node ref="PS1" pin="14"/>
-    </net>
-    <net code="45" name="/24V_FLT">
-      <node ref="PS12" pin="1"/>
-      <node ref="C38" pin="1"/>
-      <node ref="L3" pin="2"/>
-      <node ref="D1" pin="1"/>
-      <node ref="C42" pin="1"/>
-    </net>
-    <net code="46" name="/12V_FLT">
-      <node ref="C39" pin="1"/>
-      <node ref="C41" pin="1"/>
-      <node ref="L2" pin="2"/>
-      <node ref="D2" pin="1"/>
-      <node ref="PS33" pin="1"/>
-    </net>
-    <net code="47" name="Panel_W-">
-      <node ref="PS1" pin="11"/>
-      <node ref="PS1" pin="12"/>
-      <node ref="PANEL1" pin="2"/>
-    </net>
-    <net code="48" name="Panel_D1">
-      <node ref="PS1" pin="22"/>
-      <node ref="U3" pin="44"/>
-    </net>
-    <net code="49" name="I2C_SCL">
-      <node ref="I2C1" pin="4"/>
+    <net code="51" name="I2C_SCL">
       <node ref="U3" pin="95"/>
+      <node ref="I2C1" pin="4"/>
     </net>
-    <net code="50" name="I2C_SDA">
-      <node ref="U3" pin="96"/>
+    <net code="52" name="I2C_SDA">
       <node ref="I2C1" pin="3"/>
+      <node ref="U3" pin="96"/>
     </net>
-    <net code="51" name="SPI1_CS1">
+    <net code="53" name="SPI1_CS1">
       <node ref="SPI1" pin="5"/>
       <node ref="U3" pin="91"/>
     </net>
-    <net code="52" name="I2S_WS">
+    <net code="54" name="I2S_WS">
       <node ref="U3" pin="29"/>
       <node ref="SPI0" pin="7"/>
     </net>
-    <net code="53" name="+24V">
-      <node ref="D12" pin="1"/>
-      <node ref="F1" pin="1"/>
-      <node ref="PS1" pin="24"/>
-      <node ref="PS1" pin="23"/>
+    <net code="55" name="+24V">
+      <node ref="C3" pin="1"/>
       <node ref="PS2" pin="23"/>
       <node ref="PS2" pin="24"/>
       <node ref="C25" pin="1"/>
-      <node ref="C3" pin="1"/>
+      <node ref="F1" pin="1"/>
       <node ref="L3" pin="1"/>
+      <node ref="D12" pin="1"/>
+      <node ref="PS1" pin="23"/>
+      <node ref="PS1" pin="24"/>
     </net>
-    <net code="54" name="/VIN">
-      <node ref="J1" pin="2"/>
+    <net code="56" name="/VIN">
       <node ref="F1" pin="2"/>
+      <node ref="J1" pin="2"/>
     </net>
-    <net code="55" name="I2S_MCK">
-      <node ref="SPI0" pin="6"/>
-      <node ref="U3" pin="64"/>
-    </net>
-    <net code="56" name="SPI0_CS1">
-      <node ref="SPI0" pin="5"/>
-      <node ref="U3" pin="65"/>
-    </net>
-    <net code="57" name="SPI1_SCK">
-      <node ref="SPI1" pin="3"/>
-      <node ref="U3" pin="47"/>
-    </net>
-    <net code="58" name="SPI1_MOSI">
-      <node ref="SPI1" pin="1"/>
-      <node ref="U3" pin="54"/>
-    </net>
-    <net code="59" name="SPI1_MISO">
-      <node ref="U3" pin="53"/>
-      <node ref="SPI1" pin="2"/>
-    </net>
-    <net code="60" name="SPI1_CS0">
+    <net code="57" name="SPI1_CS0">
       <node ref="SPI1" pin="4"/>
       <node ref="U3" pin="92"/>
     </net>
-    <net code="61" name="EXT_RX">
-      <node ref="UART1" pin="2"/>
-      <node ref="U3" pin="56"/>
+    <net code="58" name="SPI0_CS1">
+      <node ref="U3" pin="65"/>
+      <node ref="SPI0" pin="5"/>
     </net>
-    <net code="62" name="DBG_CK">
-      <node ref="DBG1" pin="1"/>
+    <net code="59" name="I2S_MCK">
+      <node ref="U3" pin="64"/>
+      <node ref="SPI0" pin="6"/>
+    </net>
+    <net code="60" name="SPI1_MOSI">
+      <node ref="SPI1" pin="1"/>
+      <node ref="U3" pin="54"/>
+    </net>
+    <net code="61" name="SPI1_MISO">
+      <node ref="U3" pin="53"/>
+      <node ref="SPI1" pin="2"/>
+    </net>
+    <net code="62" name="SPI1_SCK">
+      <node ref="SPI1" pin="3"/>
+      <node ref="U3" pin="47"/>
+    </net>
+    <net code="63" name="LED_G">
+      <node ref="J6" pin="3"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="64" name="DBG_CK">
       <node ref="U3" pin="88"/>
+      <node ref="DBG1" pin="1"/>
     </net>
-    <net code="63" name="DBG_CTS">
+    <net code="65" name="DBG_CTS">
       <node ref="DBG1" pin="2"/>
       <node ref="U3" pin="84"/>
     </net>
-    <net code="64" name="DBG_RTS">
+    <net code="66" name="DBG_RTS">
       <node ref="U3" pin="85"/>
       <node ref="DBG1" pin="3"/>
     </net>
-    <net code="65" name="LED_G">
-      <node ref="Q2" pin="2"/>
-      <node ref="J6" pin="3"/>
-    </net>
-    <net code="66" name="EXT_TX">
+    <net code="67" name="EXT_TX">
       <node ref="U3" pin="55"/>
       <node ref="UART1" pin="1"/>
     </net>
-    <net code="67" name="JTDI">
-      <node ref="U3" pin="77"/>
-      <node ref="JTAG1" pin="3"/>
+    <net code="68" name="EXT_RX">
+      <node ref="U3" pin="56"/>
+      <node ref="UART1" pin="2"/>
     </net>
-    <net code="68" name="JTMS">
-      <node ref="U3" pin="72"/>
-      <node ref="JTAG1" pin="1"/>
-    </net>
-    <net code="69" name="JTCK">
-      <node ref="U3" pin="76"/>
-      <node ref="JTAG1" pin="2"/>
-    </net>
-    <net code="70" name="JTDO">
+    <net code="69" name="JTDO">
       <node ref="JTAG1" pin="4"/>
       <node ref="U3" pin="89"/>
     </net>
-    <net code="71" name="JTRST">
-      <node ref="U3" pin="90"/>
-      <node ref="JTAG1" pin="5"/>
+    <net code="70" name="JTMS">
+      <node ref="U3" pin="72"/>
+      <node ref="JTAG1" pin="1"/>
     </net>
-    <net code="72" name="SPI0_MOSI">
+    <net code="71" name="JTCK">
+      <node ref="JTAG1" pin="2"/>
+      <node ref="U3" pin="76"/>
+    </net>
+    <net code="72" name="JTDI">
+      <node ref="JTAG1" pin="3"/>
+      <node ref="U3" pin="77"/>
+    </net>
+    <net code="73" name="JTRST">
+      <node ref="JTAG1" pin="5"/>
+      <node ref="U3" pin="90"/>
+    </net>
+    <net code="74" name="SPI0_MOSI">
       <node ref="SPI0" pin="1"/>
       <node ref="U3" pin="80"/>
     </net>
-    <net code="73" name="SPI0_MISO">
+    <net code="75" name="SPI0_MISO">
       <node ref="U3" pin="79"/>
       <node ref="SPI0" pin="2"/>
     </net>
-    <net code="74" name="SPI0_SCK">
-      <node ref="SPI0" pin="3"/>
+    <net code="76" name="SPI0_SCK">
       <node ref="U3" pin="78"/>
+      <node ref="SPI0" pin="3"/>
     </net>
-    <net code="75" name="SPI0_CS0">
-      <node ref="U3" pin="66"/>
+    <net code="77" name="SPI0_CS0">
       <node ref="SPI0" pin="4"/>
+      <node ref="U3" pin="66"/>
     </net>
-    <net code="76" name="Net-(J2-Pad4)">
+    <net code="78" name="Net-(J2-Pad4)">
       <node ref="J2" pin="4"/>
     </net>
-    <net code="77" name="Net-(J2-Pad5)">
+    <net code="79" name="Net-(J2-Pad5)">
       <node ref="J2" pin="5"/>
     </net>
-    <net code="78" name="Net-(J2-Pad6)">
+    <net code="80" name="Net-(J2-Pad6)">
       <node ref="J2" pin="6"/>
     </net>
-    <net code="79" name="Net-(J2-Pad7)">
+    <net code="81" name="Net-(J2-Pad7)">
       <node ref="J2" pin="7"/>
     </net>
-    <net code="80" name="Net-(J2-Pad8)">
+    <net code="82" name="Net-(J2-Pad8)">
       <node ref="J2" pin="8"/>
     </net>
-    <net code="81" name="Net-(C21-Pad1)">
+    <net code="83" name="Net-(C21-Pad1)">
       <node ref="Y1" pin="3"/>
       <node ref="C21" pin="1"/>
       <node ref="U3" pin="13"/>
     </net>
-    <net code="82" name="Net-(U3-Pad99)">
+    <net code="84" name="Net-(U3-Pad99)">
       <node ref="U3" pin="99"/>
     </net>
-    <net code="83" name="Net-(U3-Pad6)">
+    <net code="85" name="Net-(U3-Pad6)">
       <node ref="U3" pin="6"/>
     </net>
-    <net code="84" name="PHY_AD0">
+    <net code="86" name="PHY_AD0">
       <node ref="R24" pin="2"/>
       <node ref="U3" pin="31"/>
     </net>
-    <net code="85" name="PHY_RST">
+    <net code="87" name="PHY_RST">
       <node ref="U3" pin="26"/>
       <node ref="R29" pin="2"/>
       <node ref="U5" pin="15"/>
     </net>
-    <net code="86" name="Net-(R35-Pad2)">
+    <net code="88" name="Net-(R35-Pad2)">
       <node ref="U5" pin="3"/>
       <node ref="R35" pin="2"/>
     </net>
-    <net code="87" name="RX_P">
+    <net code="89" name="RX_P">
       <node ref="R37" pin="2"/>
       <node ref="U5" pin="23"/>
       <node ref="J13" pin="3"/>
     </net>
-    <net code="88" name="RX_N">
+    <net code="90" name="RX_N">
       <node ref="R38" pin="2"/>
       <node ref="U5" pin="22"/>
       <node ref="J13" pin="6"/>
     </net>
-    <net code="89" name="Net-(J13-Pad7)">
+    <net code="91" name="Net-(J13-Pad7)">
       <node ref="J13" pin="7"/>
     </net>
-    <net code="90" name="LED_GRN-">
+    <net code="92" name="LED_GRN-">
       <node ref="R35" pin="1"/>
       <node ref="J13" pin="9"/>
     </net>
-    <net code="91" name="LED0">
+    <net code="93" name="LED0">
       <node ref="R42" pin="2"/>
       <node ref="U3" pin="97"/>
     </net>
-    <net code="92" name="LED1">
+    <net code="94" name="LED1">
       <node ref="R43" pin="2"/>
       <node ref="U3" pin="98"/>
     </net>
-    <net code="93" name="LED2">
+    <net code="95" name="LED2">
       <node ref="R44" pin="2"/>
       <node ref="U3" pin="1"/>
     </net>
-    <net code="94" name="LED3">
+    <net code="96" name="LED3">
       <node ref="U3" pin="2"/>
       <node ref="R45" pin="2"/>
     </net>
-    <net code="95" name="LED4">
+    <net code="97" name="LED4">
       <node ref="U3" pin="3"/>
       <node ref="R46" pin="2"/>
     </net>
-    <net code="96" name="LED5">
+    <net code="98" name="LED5">
       <node ref="R47" pin="2"/>
       <node ref="U3" pin="4"/>
     </net>
-    <net code="97" name="Net-(LED6-Pad2)">
+    <net code="99" name="Net-(LED6-Pad2)">
       <node ref="LED6" pin="2"/>
       <node ref="R51" pin="1"/>
     </net>
-    <net code="98" name="Net-(LED4-Pad2)">
+    <net code="100" name="Net-(LED4-Pad2)">
       <node ref="LED4" pin="2"/>
       <node ref="R46" pin="1"/>
     </net>
-    <net code="99" name="Net-(LED5-Pad2)">
+    <net code="101" name="Net-(LED5-Pad2)">
       <node ref="R47" pin="1"/>
       <node ref="LED5" pin="2"/>
     </net>
-    <net code="100" name="LED6">
+    <net code="102" name="LED6">
       <node ref="U3" pin="5"/>
       <node ref="R51" pin="2"/>
     </net>
-    <net code="101" name="Net-(LED7-Pad2)">
+    <net code="103" name="Net-(LED7-Pad2)">
       <node ref="LED7" pin="2"/>
       <node ref="R52" pin="1"/>
     </net>
-    <net code="102" name="LED7">
+    <net code="104" name="LED7">
       <node ref="R52" pin="2"/>
       <node ref="U3" pin="38"/>
     </net>
-    <net code="103" name="Net-(LED8-Pad2)">
+    <net code="105" name="Net-(LED8-Pad2)">
       <node ref="R53" pin="1"/>
       <node ref="LED8" pin="2"/>
     </net>
-    <net code="104" name="Net-(R54-Pad2)">
+    <net code="106" name="Net-(R54-Pad2)">
       <node ref="R54" pin="2"/>
       <node ref="RST1" pin="1"/>
     </net>
-    <net code="105" name="Net-(U3-Pad39)">
+    <net code="107" name="Net-(U3-Pad39)">
       <node ref="U3" pin="39"/>
     </net>
-    <net code="106" name="Net-(U3-Pad41)">
+    <net code="108" name="Net-(U3-Pad41)">
       <node ref="U3" pin="41"/>
     </net>
-    <net code="107" name="Net-(C19-Pad1)">
+    <net code="109" name="Net-(C19-Pad1)">
       <node ref="U3" pin="73"/>
       <node ref="C19" pin="1"/>
       <node ref="C23" pin="1"/>
       <node ref="U3" pin="49"/>
     </net>
-    <net code="116" name="Net-(J11-Pad1)">
+    <net code="118" name="Net-(J11-Pad1)">
       <node ref="R30" pin="1"/>
       <node ref="U4" pin="7"/>
       <node ref="J11" pin="1"/>
       <node ref="J2" pin="1"/>
     </net>
-    <net code="117" name="Net-(R30-Pad2)">
+    <net code="119" name="Net-(R30-Pad2)">
       <node ref="R30" pin="2"/>
       <node ref="TERM1" pin="1"/>
     </net>
-    <net code="118" name="Net-(J11-Pad2)">
+    <net code="120" name="Net-(J11-Pad2)">
       <node ref="U4" pin="6"/>
       <node ref="J11" pin="2"/>
       <node ref="J2" pin="2"/>
       <node ref="TERM1" pin="2"/>
     </net>
-    <net code="119" name="Net-(LED0-Pad2)">
+    <net code="121" name="Net-(LED0-Pad2)">
       <node ref="LED0" pin="2"/>
       <node ref="R42" pin="1"/>
     </net>
-    <net code="120" name="Net-(LED9-Pad1)">
+    <net code="122" name="Net-(LED9-Pad1)">
       <node ref="LED9" pin="1"/>
       <node ref="R50" pin="1"/>
     </net>
-    <net code="121" name="LED_SYSTEM_R">
+    <net code="123" name="LED_SYSTEM_R">
       <node ref="U3" pin="42"/>
       <node ref="R50" pin="2"/>
     </net>
-    <net code="122" name="Net-(LED9-Pad4)">
+    <net code="124" name="Net-(LED9-Pad4)">
       <node ref="LED9" pin="4"/>
       <node ref="R49" pin="1"/>
     </net>
-    <net code="123" name="LED_SYSTEM_G">
+    <net code="125" name="LED_SYSTEM_G">
       <node ref="R49" pin="2"/>
       <node ref="U3" pin="40"/>
     </net>
-    <net code="124" name="Net-(LED9-Pad3)">
+    <net code="126" name="Net-(LED9-Pad3)">
       <node ref="LED9" pin="3"/>
       <node ref="R48" pin="1"/>
     </net>
-    <net code="125" name="LED_SYSTEM_B">
+    <net code="127" name="LED_SYSTEM_B">
       <node ref="U3" pin="35"/>
       <node ref="R48" pin="2"/>
     </net>
-    <net code="126" name="/MCU/VDDCR">
+    <net code="128" name="/MCU/VDDCR">
       <node ref="C35" pin="2"/>
       <node ref="U5" pin="6"/>
       <node ref="C33" pin="2"/>
     </net>
-    <net code="127" name="PYH_VDDA">
+    <net code="129" name="PYH_VDDA">
       <node ref="R38" pin="1"/>
       <node ref="R34" pin="1"/>
       <node ref="R32" pin="1"/>
@@ -3386,218 +3630,218 @@
       <node ref="L1" pin="1"/>
       <node ref="U5" pin="1"/>
     </net>
-    <net code="128" name="Net-(LED1-Pad2)">
+    <net code="130" name="Net-(LED1-Pad2)">
       <node ref="LED1" pin="2"/>
       <node ref="R43" pin="1"/>
     </net>
-    <net code="129" name="LED_CAN">
+    <net code="131" name="LED_CAN">
       <node ref="R53" pin="2"/>
       <node ref="U3" pin="46"/>
     </net>
-    <net code="130" name="Net-(LED2-Pad2)">
+    <net code="132" name="Net-(LED2-Pad2)">
       <node ref="R44" pin="1"/>
       <node ref="LED2" pin="2"/>
     </net>
-    <net code="131" name="Net-(LED3-Pad2)">
+    <net code="133" name="Net-(LED3-Pad2)">
       <node ref="LED3" pin="2"/>
       <node ref="R45" pin="1"/>
     </net>
-    <net code="132" name="TX_P">
+    <net code="134" name="TX_P">
       <node ref="U5" pin="21"/>
       <node ref="R32" pin="2"/>
       <node ref="J13" pin="1"/>
     </net>
-    <net code="133" name="TX_N">
+    <net code="135" name="TX_N">
       <node ref="J13" pin="2"/>
       <node ref="R34" pin="2"/>
       <node ref="U5" pin="20"/>
     </net>
-    <net code="134" name="Net-(C22-Pad1)">
+    <net code="136" name="Net-(C22-Pad1)">
       <node ref="Y1" pin="1"/>
       <node ref="C22" pin="1"/>
       <node ref="U3" pin="12"/>
     </net>
-    <net code="135" name="Net-(R27-Pad1)">
+    <net code="137" name="Net-(R27-Pad1)">
       <node ref="R27" pin="1"/>
       <node ref="U5" pin="5"/>
     </net>
-    <net code="136" name="RMII_REFCLKO">
+    <net code="138" name="RMII_REFCLKO">
       <node ref="R26" pin="2"/>
       <node ref="U3" pin="24"/>
     </net>
-    <net code="137" name="Net-(R22-Pad1)">
+    <net code="139" name="Net-(R22-Pad1)">
       <node ref="R22" pin="1"/>
       <node ref="U5" pin="8"/>
     </net>
-    <net code="138" name="Net-(R23-Pad1)">
+    <net code="140" name="Net-(R23-Pad1)">
       <node ref="U5" pin="7"/>
       <node ref="R23" pin="1"/>
     </net>
-    <net code="139" name="Net-(R24-Pad1)">
+    <net code="141" name="Net-(R24-Pad1)">
       <node ref="R24" pin="1"/>
       <node ref="U5" pin="10"/>
     </net>
-    <net code="140" name="Net-(R25-Pad1)">
+    <net code="142" name="Net-(R25-Pad1)">
       <node ref="R25" pin="1"/>
       <node ref="U5" pin="11"/>
     </net>
-    <net code="141" name="Net-(R26-Pad1)">
+    <net code="143" name="Net-(R26-Pad1)">
       <node ref="U5" pin="14"/>
       <node ref="R26" pin="1"/>
     </net>
-    <net code="142" name="CAN_RX">
+    <net code="144" name="CAN_RX">
       <node ref="U4" pin="4"/>
       <node ref="U3" pin="70"/>
     </net>
-    <net code="143" name="CAN_TX">
+    <net code="145" name="CAN_TX">
       <node ref="U4" pin="1"/>
       <node ref="U3" pin="71"/>
     </net>
-    <net code="144" name="RMII_CRS">
+    <net code="146" name="RMII_CRS">
       <node ref="U3" pin="32"/>
       <node ref="R25" pin="2"/>
     </net>
-    <net code="145" name="RMII_RXD0">
+    <net code="147" name="RMII_RXD0">
       <node ref="R22" pin="2"/>
       <node ref="U3" pin="33"/>
     </net>
-    <net code="146" name="RMII_RXD1">
+    <net code="148" name="RMII_RXD1">
       <node ref="U3" pin="34"/>
       <node ref="R23" pin="2"/>
     </net>
-    <net code="147" name="RMII_TXEN">
+    <net code="149" name="RMII_TXEN">
       <node ref="U3" pin="48"/>
       <node ref="U5" pin="16"/>
     </net>
-    <net code="148" name="RMII_TXD0">
+    <net code="150" name="RMII_TXD0">
       <node ref="U5" pin="17"/>
       <node ref="R20" pin="2"/>
     </net>
-    <net code="149" name="RMII_MDIO">
+    <net code="151" name="RMII_MDIO">
       <node ref="R28" pin="2"/>
       <node ref="U3" pin="25"/>
       <node ref="U5" pin="12"/>
     </net>
-    <net code="150" name="RMII_MDC">
+    <net code="152" name="RMII_MDC">
       <node ref="U3" pin="16"/>
       <node ref="U5" pin="13"/>
     </net>
-    <net code="151" name="LED_YLW-">
+    <net code="153" name="LED_YLW-">
       <node ref="J13" pin="12"/>
       <node ref="R36" pin="1"/>
     </net>
-    <net code="152" name="Net-(U5-Pad4)">
+    <net code="154" name="Net-(U5-Pad4)">
       <node ref="U5" pin="4"/>
     </net>
-    <net code="153" name="Net-(J11-Pad4)">
+    <net code="155" name="Net-(J11-Pad4)">
       <node ref="J11" pin="4"/>
     </net>
-    <net code="154" name="Net-(J11-Pad5)">
+    <net code="156" name="Net-(J11-Pad5)">
       <node ref="J11" pin="5"/>
     </net>
-    <net code="155" name="Net-(J11-Pad6)">
+    <net code="157" name="Net-(J11-Pad6)">
       <node ref="J11" pin="6"/>
     </net>
-    <net code="156" name="Net-(J11-Pad7)">
+    <net code="158" name="Net-(J11-Pad7)">
       <node ref="J11" pin="7"/>
     </net>
-    <net code="157" name="Net-(J11-Pad8)">
+    <net code="159" name="Net-(J11-Pad8)">
       <node ref="J11" pin="8"/>
     </net>
-    <net code="158" name="Net-(R33-Pad1)">
+    <net code="160" name="Net-(R33-Pad1)">
       <node ref="R33" pin="1"/>
       <node ref="U5" pin="24"/>
     </net>
-    <net code="159" name="Net-(R21-Pad2)">
+    <net code="161" name="Net-(R21-Pad2)">
       <node ref="R21" pin="2"/>
       <node ref="U3" pin="94"/>
     </net>
-    <net code="160" name="Net-(U3-Pad23)">
+    <net code="162" name="Net-(U3-Pad23)">
       <node ref="U3" pin="23"/>
     </net>
-    <net code="161" name="CAN_STBY">
+    <net code="163" name="CAN_STBY">
       <node ref="U3" pin="69"/>
       <node ref="U4" pin="8"/>
     </net>
-    <net code="162" name="Net-(U3-Pad30)">
+    <net code="164" name="Net-(U3-Pad30)">
       <node ref="U3" pin="30"/>
     </net>
-    <net code="163" name="25MHz">
+    <net code="165" name="25MHz">
       <node ref="R27" pin="2"/>
       <node ref="U3" pin="67"/>
     </net>
-    <net code="164" name="Net-(U3-Pad68)">
+    <net code="166" name="Net-(U3-Pad68)">
       <node ref="U3" pin="68"/>
     </net>
-    <net code="165" name="Net-(U3-Pad36)">
+    <net code="167" name="Net-(U3-Pad36)">
       <node ref="U3" pin="36"/>
     </net>
-    <net code="166" name="Net-(U3-Pad57)">
+    <net code="168" name="Net-(U3-Pad57)">
       <node ref="U3" pin="57"/>
     </net>
-    <net code="167" name="Net-(U3-Pad83)">
+    <net code="169" name="Net-(U3-Pad83)">
       <node ref="U3" pin="83"/>
     </net>
-    <net code="168" name="Net-(U3-Pad82)">
+    <net code="170" name="Net-(U3-Pad82)">
       <node ref="U3" pin="82"/>
     </net>
-    <net code="169" name="Net-(U3-Pad81)">
+    <net code="171" name="Net-(U3-Pad81)">
       <node ref="U3" pin="81"/>
     </net>
-    <net code="170" name="Net-(C18-Pad1)">
+    <net code="172" name="Net-(C18-Pad1)">
       <node ref="C18" pin="1"/>
       <node ref="U3" pin="14"/>
       <node ref="R54" pin="1"/>
     </net>
-    <net code="171" name="Net-(U3-Pad58)">
+    <net code="173" name="Net-(U3-Pad58)">
       <node ref="U3" pin="58"/>
     </net>
-    <net code="172" name="Net-(U3-Pad59)">
+    <net code="174" name="Net-(U3-Pad59)">
       <node ref="U3" pin="59"/>
     </net>
-    <net code="173" name="Net-(U3-Pad43)">
+    <net code="175" name="Net-(U3-Pad43)">
       <node ref="U3" pin="43"/>
     </net>
-    <net code="174" name="Net-(U3-Pad37)">
+    <net code="176" name="Net-(U3-Pad37)">
       <node ref="U3" pin="37"/>
     </net>
-    <net code="175" name="Net-(U3-Pad93)">
+    <net code="177" name="Net-(U3-Pad93)">
       <node ref="U3" pin="93"/>
     </net>
-    <net code="176" name="Net-(U3-Pad15)">
+    <net code="178" name="Net-(U3-Pad15)">
       <node ref="U3" pin="15"/>
     </net>
-    <net code="177" name="Net-(U3-Pad7)">
+    <net code="179" name="Net-(U3-Pad7)">
       <node ref="U3" pin="7"/>
     </net>
-    <net code="178" name="Net-(U3-Pad8)">
+    <net code="180" name="Net-(U3-Pad8)">
       <node ref="U3" pin="8"/>
     </net>
-    <net code="179" name="Net-(U3-Pad9)">
+    <net code="181" name="Net-(U3-Pad9)">
       <node ref="U3" pin="9"/>
     </net>
-    <net code="180" name="Net-(U3-Pad17)">
+    <net code="182" name="Net-(U3-Pad17)">
       <node ref="U3" pin="17"/>
     </net>
-    <net code="181" name="Net-(U3-Pad18)">
+    <net code="183" name="Net-(U3-Pad18)">
       <node ref="U3" pin="18"/>
     </net>
-    <net code="182" name="Net-(U3-Pad63)">
+    <net code="184" name="Net-(U3-Pad63)">
       <node ref="U3" pin="63"/>
     </net>
-    <net code="183" name="Net-(R19-Pad1)">
+    <net code="185" name="Net-(R19-Pad1)">
       <node ref="U3" pin="52"/>
       <node ref="R19" pin="1"/>
     </net>
-    <net code="184" name="RMII_TXD1">
+    <net code="186" name="RMII_TXD1">
       <node ref="R19" pin="2"/>
       <node ref="U5" pin="18"/>
     </net>
-    <net code="185" name="Net-(R20-Pad1)">
+    <net code="187" name="Net-(R20-Pad1)">
       <node ref="U3" pin="51"/>
       <node ref="R20" pin="1"/>
     </net>
-    <net code="186" name="Net-(R31-Pad1)">
+    <net code="188" name="Net-(R31-Pad1)">
       <node ref="R36" pin="2"/>
       <node ref="R31" pin="1"/>
       <node ref="U5" pin="2"/>

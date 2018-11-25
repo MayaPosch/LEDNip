@@ -28,6 +28,7 @@ F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5750 4800 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 5750 5300 50  0001 C CNN
 F 4 "MCP2562-E/P " H 5750 5300 50  0001 C CNN "MPN"
 F 5 "579-MCP2562-E/P" H 5750 5300 50  0001 C CNN "Mouser"
+F 6 "E" H 0   0   50  0001 C CNN "box no"
 	1    5750 5300
 	1    0    0    -1  
 $EndComp
@@ -53,7 +54,8 @@ F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 4325 50  0001 C CNN
 F 3 "~" V 7500 4325 50  0001 C CNN
 F 4 "RJHSE-5380 " V 7500 4300 50  0001 C CNN "MPN"
 F 5 "523-RJHSE-5380 " V 7500 4300 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    7500 4300
 	0    1    1    0   
 $EndComp
@@ -71,7 +73,7 @@ F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 9000 1650 50  0001 L
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf" H 8750 1650 50  0001 C CNN
 F 4 "LAN8742A-CZ-TR" H 8950 2600 50  0001 C CNN "MPN"
 F 5 "579-LAN8742A-CZ-TR" H 8950 2600 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "E" H 0   0   50  0001 C CNN "box no"
 	1    8950 2600
 	1    0    0    -1  
 $EndComp
@@ -148,6 +150,7 @@ F 3 "~" H 5500 4600 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    5500 4600
 	1    0    0    1   
 $EndComp
@@ -172,6 +175,7 @@ F 3 "~" H 5150 5700 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    5150 5700
 	1    0    0    1   
 $EndComp
@@ -195,6 +199,7 @@ F 3 "~" H 6350 5600 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    6350 5600
 	1    0    0    -1  
 $EndComp
@@ -235,6 +240,7 @@ F 3 "~" H 8300 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    8300 1100
 	1    0    0    1   
 $EndComp
@@ -252,8 +258,9 @@ F 0 "C32" H 8358 1054 50  0000 R CNN
 F 1 "2.2uF" H 8358 1145 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8450 1100 50  0001 C CNN
 F 3 "~" H 8450 1100 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    8450 1100
 	-1   0    0    1   
 $EndComp
@@ -272,6 +279,7 @@ F 3 "~" H 9900 3350 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "20" H 0   0   50  0001 C CNN "box no"
 	1    9900 3350
 	1    0    0    -1  
 $EndComp
@@ -294,6 +302,7 @@ F 3 "~" H 7600 2300 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 2300
 	0    1    1    0   
 $EndComp
@@ -312,6 +321,7 @@ F 3 "~" H 7600 2400 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 2400
 	0    1    1    0   
 $EndComp
@@ -330,6 +340,7 @@ F 3 "~" H 7600 2600 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 2600
 	0    1    1    0   
 $EndComp
@@ -348,6 +359,7 @@ F 3 "~" H 7600 2500 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 2500
 	0    1    1    0   
 $EndComp
@@ -373,6 +385,7 @@ F 2 "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm" H 4000 3400 50  0001 C CN
 F 3 "~" H 4000 3400 50  0001 C CNN
 F 4 "ABM8W-12.0000MHZ-8-K1Z-T3" V 4050 2300 50  0000 C CNN "MPN"
 F 5 "815-8W12-8K1ZT" V 4000 3400 50  0001 C CNN "Mouser"
+F 6 "E" H 0   0   50  0001 C CNN "box no"
 	1    4000 3400
 	0    -1   1    0   
 $EndComp
@@ -418,6 +431,7 @@ F 3 "~" H 7600 3300 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 3300
 	0    1    1    0   
 $EndComp
@@ -444,6 +458,7 @@ F 3 "~" H 7900 1700 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "20" H 0   0   50  0001 C CNN "box no"
 	1    7900 1700
 	-1   0    0    -1  
 $EndComp
@@ -505,6 +520,7 @@ F 3 "~" H 9850 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9850 1100
 	1    0    0    1   
 $EndComp
@@ -520,8 +536,9 @@ F 0 "C35" H 9450 1300 50  0000 R CNN
 F 1 "2.2uF" H 9450 1400 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9450 1200 50  0001 C CNN
 F 3 "~" H 9450 1200 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    9450 1200
 	-1   0    0    1   
 $EndComp
@@ -540,6 +557,7 @@ F 3 "~" H 9300 1200 50  0001 C CNN
 F 4 "C0603C103K1REAUTO" H 9300 1200 50  0001 C CNN "MPN"
 F 5 "80-C0603C103K1REAUTO" H 9300 1200 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "5" H 0   0   50  0001 C CNN "box no"
 	1    9300 1200
 	1    0    0    1   
 $EndComp
@@ -558,6 +576,7 @@ F 3 "~" H 10000 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    10000 1100
 	-1   0    0    1   
 $EndComp
@@ -576,6 +595,7 @@ F 3 "~" H 8050 1700 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "20" H 0   0   50  0001 C CNN "box no"
 	1    8050 1700
 	1    0    0    -1  
 $EndComp
@@ -730,6 +750,7 @@ F 3 "~" H 10150 2900 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    10150 2900
 	0    1    1    0   
 $EndComp
@@ -748,6 +769,7 @@ F 3 "~" H 10150 3000 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    10150 3000
 	0    1    1    0   
 $EndComp
@@ -775,6 +797,7 @@ F 3 "~" H 7600 3100 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    7600 3100
 	0    1    1    0   
 $EndComp
@@ -883,6 +906,7 @@ F 3 "~" H 1250 5000 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    1250 5000
 	0    1    -1   0   
 $EndComp
@@ -901,6 +925,7 @@ F 3 "~" H 1250 4900 50  0001 C CNN
 F 4 "RC0603JR-0722RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603JR-0722RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "19" H 0   0   50  0001 C CNN "box no"
 	1    1250 4900
 	0    1    -1   0   
 $EndComp
@@ -932,6 +957,7 @@ F 3 "~" H 9750 3350 50  0001 C CNN
 F 4 "RC0603FR-0712KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0712KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "20" H 0   0   50  0001 C CNN "box no"
 	1    9750 3350
 	-1   0    0    -1  
 $EndComp
@@ -1073,6 +1099,7 @@ F 3 "~" H 3350 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    3350 1050
 	-1   0    0    -1  
 $EndComp
@@ -1093,6 +1120,7 @@ F 3 "~" H 3000 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    3000 1050
 	-1   0    0    -1  
 $EndComp
@@ -1115,6 +1143,7 @@ F 3 "~" H 2650 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    2650 1050
 	-1   0    0    -1  
 $EndComp
@@ -1137,6 +1166,7 @@ F 3 "~" H 2300 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    2300 1050
 	-1   0    0    -1  
 $EndComp
@@ -1159,6 +1189,7 @@ F 3 "~" H 1950 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    1950 1050
 	-1   0    0    -1  
 $EndComp
@@ -1200,6 +1231,7 @@ F 3 "~" H 3700 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    3700 1050
 	-1   0    0    -1  
 $EndComp
@@ -1218,8 +1250,9 @@ F 0 "C19" H 3850 2750 50  0000 R CNN
 F 1 "2.2uF" H 3850 2650 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3950 2700 50  0001 C CNN
 F 3 "~" H 3950 2700 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    3950 2700
 	-1   0    0    -1  
 $EndComp
@@ -1235,8 +1268,9 @@ F 0 "C23" H 3700 2750 50  0000 R CNN
 F 1 "2.2uF" H 3700 2650 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3800 2700 50  0001 C CNN
 F 3 "~" H 3800 2700 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    3800 2700
 	1    0    0    -1  
 $EndComp
@@ -1276,6 +1310,7 @@ F 3 "~" H 1600 1050 50  0001 C CNN
 F 4 "GRM21BR71A475KE51L" H 0   0   50  0001 C CNN "MPN"
 F 5 "81-GRM21BR71A475KE1L" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "3" H 0   0   50  0001 C CNN "box no"
 	1    1600 1050
 	-1   0    0    -1  
 $EndComp
@@ -1314,6 +1349,7 @@ F 3 "~" H 4050 2150 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    4050 2150
 	-1   0    0    -1  
 $EndComp
@@ -1336,6 +1372,7 @@ F 3 "~" H 3600 2200 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    3600 2200
 	0    1    -1   0   
 $EndComp
@@ -1565,6 +1602,7 @@ F 7 "HR911105A" H 10050 4350 50  0001 L CNN "Arrow Part Number"
 F 8 "HR911105A" H 9300 5050 50  0001 C CNN "AliExpress"
 F 9 "710-7499011121A (WE near match)" H 9300 5050 50  0001 C CNN "Mouser"
 F 10 "X" H 0   0   50  0001 C CNN "stock"
+F 11 "E" H 0   0   50  0001 C CNN "box no"
 	1    9300 5050
 	1    0    0    -1  
 $EndComp
@@ -1808,7 +1846,8 @@ F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 5425 50  0001 C CNN
 F 3 "~" V 7500 5425 50  0001 C CNN
 F 4 "RJHSE-5380 " V 7500 5400 50  0001 C CNN "MPN"
 F 5 "523-RJHSE-5380 " V 7500 5400 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    7500 5400
 	0    1    1    0   
 $EndComp
@@ -1977,6 +2016,7 @@ F 3 "~" H 9700 1100 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9700 1100
 	-1   0    0    1   
 $EndComp
@@ -2044,6 +2084,7 @@ F 3 "~" H 5550 950 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 950 
 	0    -1   1    0   
 $EndComp
@@ -2064,6 +2105,7 @@ F 3 "~" H 1250 1050 50  0001 C CNN
 F 4 "GRM21BR71A475KE51L" H 0   0   50  0001 C CNN "MPN"
 F 5 "81-GRM21BR71A475KE1L" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "3" H 0   0   50  0001 C CNN "box no"
 	1    1250 1050
 	-1   0    0    -1  
 $EndComp
@@ -2088,13 +2130,13 @@ L Device:LED_RCBG LED9
 U 1 1 5BD65DAE
 P 5900 6950
 AR Path="/5BBC4BB7/5BD65DAE" Ref="LED9"  Part="1" 
-AR Path="/5BD65DAE" Ref="D?"  Part="1" 
+AR Path="/5BD65DAE" Ref="LED?"  Part="1" 
 F 0 "LED9" H 5900 6483 50  0000 C CNN
 F 1 "RGB-PLCC4" H 5900 6574 50  0000 C CNN
 F 2 "LED_SMD:LED_Cree-PLCC4_2x2mm_CW" H 5900 6900 50  0001 C CNN
 F 3 "~" H 5900 6900 50  0001 C CNN
-F 4 "ASMB-KTF0-0A306 " H 5900 6950 50  0001 C CNN "MPN"
-F 5 "630-ASMB-KTF0-0A306 " H 5900 6950 50  0001 C CNN "Mouser"
+F 4 "RD1616-63RGBC-C2CA or DL-PCB0606RGBC-C2" H 5900 6950 50  0001 C CNN "MPN"
+F 5 "630-ASMB-KTF0-0A306 (WRONG PART)" H 5900 6950 50  0001 C CNN "Mouser"
 	1    5900 6950
 	-1   0    0    1   
 $EndComp
@@ -2116,6 +2158,7 @@ F 3 "~" H 5550 7150 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 7150
 	0    1    1    0   
 $EndComp
@@ -2135,6 +2178,7 @@ F 3 "~" H 5550 6950 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 6950
 	0    1    1    0   
 $EndComp
@@ -2154,6 +2198,7 @@ F 3 "~" H 5550 6750 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    5550 6750
 	0    1    1    0   
 $EndComp
@@ -2274,6 +2319,7 @@ F 3 "~" H 5550 1250 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 1250
 	0    -1   1    0   
 $EndComp
@@ -2309,6 +2355,7 @@ F 3 "~" H 5550 1550 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 1550
 	0    -1   1    0   
 $EndComp
@@ -2344,6 +2391,7 @@ F 3 "~" H 5550 1850 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 1850
 	0    -1   1    0   
 $EndComp
@@ -2379,6 +2427,7 @@ F 3 "~" H 5550 2150 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 2150
 	0    -1   1    0   
 $EndComp
@@ -2414,6 +2463,7 @@ F 3 "~" H 5550 2450 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 2450
 	0    -1   1    0   
 $EndComp
@@ -2449,6 +2499,7 @@ F 3 "~" H 5550 2750 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 2750
 	0    -1   1    0   
 $EndComp
@@ -2484,6 +2535,7 @@ F 3 "~" H 5550 3050 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 3050
 	0    -1   1    0   
 $EndComp
@@ -2519,6 +2571,7 @@ F 3 "~" H 5550 3750 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    5550 3750
 	0    -1   1    0   
 $EndComp
@@ -2633,6 +2686,7 @@ F 3 "~" H 6150 5900 50  0001 C CNN
 F 4 "455-1719-ND " H 0   0   50  0001 C CNN "DigiKey"
 F 5 "S2B-PH-K-S(LF)(SN)‎" H 0   0   50  0001 C CNN "MPN"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    6150 5900
 	-1   0    0    -1  
 $EndComp
@@ -2677,6 +2731,7 @@ F 11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" H 4250 700 50 
 F 12 "SKQYABE010" H 3600 1500 50  0001 C CNN "MPN"
 F 13 "688-SKQYAB" H 3600 1500 50  0001 C CNN "Mouser"
 F 14 "X" H 0   0   50  0001 C CNN "stock"
+F 15 "E" H 0   0   50  0001 C CNN "box no"
 	1    3600 1500
 	1    0    0    -1  
 $EndComp
@@ -2717,6 +2772,7 @@ F 3 "~" H 3500 1750 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    3500 1750
 	1    0    0    1   
 $EndComp
@@ -2845,4 +2901,6 @@ F 5 "575-1104730841001000" H 6150 4350 50  0001 C CNN "Mouser"
 	1    6150 4350
 	1    0    0    -1  
 $EndComp
+Text Notes 5150 6550 0    50   ~ 0
+WRONG PART\nNEXT REV: 630-ASMB-TTF0-0A20B
 $EndSCHEMATC

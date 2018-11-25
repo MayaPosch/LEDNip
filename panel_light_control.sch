@@ -23,7 +23,8 @@ F 1 "Conn_01x02" H 900 1000 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 1000 1300 50  0001 C CNN
 F 3 "~" H 1000 1300 50  0001 C CNN
 F 4 "31320102" H 0   0   50  0001 C CNN "MPN"
-F 5 "AKL 320-04" H 0   0   50  0001 C CNN "Reichelt"
+F 5 "AKL 320-02" H 0   0   50  0001 C CNN "Reichelt"
+F 6 "571-796644-2" H 1000 1300 50  0001 C CNN "Mouser"
 	1    1000 1300
 	-1   0    0    1   
 $EndComp
@@ -38,6 +39,7 @@ F 3 "~" H 2000 1450 50  0001 C CNN
 F 4 "GMK325BJ226MM-P" H 2000 1450 50  0001 C CNN "MPN"
 F 5 "963-GMK325BJ226MM-P" H 2000 1450 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    2000 1450
 	1    0    0    -1  
 $EndComp
@@ -69,7 +71,6 @@ F 8 "http://www.alliedelec.com/mean-well-usa-ldd-1000h/70345763/" H 2750 5950 50
 F 9 "LDD-1000H" H 2750 5850 50  0001 L CNN "Arrow Part Number"
 F 10 "709-LDD-1000H" H 1500 6750 50  0001 C CNN "Mouser"
 F 11 "LDD-1000H" H 0   0   50  0001 C CNN "MPN"
-F 12 "(2)" H 0   0   50  0001 C CNN "stock"
 	1    1500 6750
 	1    0    0    -1  
 $EndComp
@@ -118,6 +119,7 @@ F 3 "~" H 4300 2900 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    4300 2900
 	1    0    0    -1  
 $EndComp
@@ -137,7 +139,6 @@ F 8 "http://www.alliedelec.com/mean-well-usa-ldd-1000h/70345763/" H 2750 4800 50
 F 9 "LDD-1000H" H 2750 4700 50  0001 L CNN "Arrow Part Number"
 F 10 "709-LDD-1000H" H 1500 5600 50  0001 C CNN "Mouser"
 F 11 "LDD-1000H" H 0   0   50  0001 C CNN "MPN"
-F 12 "(2)" H 0   0   50  0001 C CNN "stock"
 	1    1500 5600
 	1    0    0    -1  
 $EndComp
@@ -214,6 +215,7 @@ F 3 "~" H 10600 4250 50  0001 C CNN
 F 4 "S4B-PH-K-S(LF)(SN)‎ " H 10600 4250 50  0001 C CNN "MPN"
 F 5 "455-1721-ND‎" H 10600 4250 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 4250
 	1    0    0    -1  
 $EndComp
@@ -359,6 +361,7 @@ F 3 "~" H 10600 3050 50  0001 C CNN
 F 4 "S6B-PH-K-S(LF)(SN)‎ " H 10600 3050 50  0001 C CNN "MPN"
 F 5 "455-1723-ND‎" H 10600 3050 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 3050
 	1    0    0    -1  
 $EndComp
@@ -401,6 +404,7 @@ F 3 "~" H 8500 1050 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    8500 1050
 	-1   0    0    1   
 $EndComp
@@ -486,6 +490,7 @@ F 3 "~" H 5800 3750 50  0001 C CNN
 F 4 "RC0603FR-0733KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0733KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "16" H 0   0   50  0001 C CNN "box no"
 	1    5800 3750
 	0    1    1    0   
 $EndComp
@@ -500,6 +505,7 @@ F 3 "~" H 6400 4050 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    6400 4050
 	-1   0    0    -1  
 $EndComp
@@ -527,6 +533,7 @@ F 3 "~" H 7200 4150 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    7200 4150
 	0    -1   -1   0   
 $EndComp
@@ -541,6 +548,7 @@ F 3 "~" H 7650 3850 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    7650 3850
 	0    1    1    0   
 $EndComp
@@ -555,6 +563,7 @@ F 3 "~" H 7000 4350 50  0001 C CNN
 F 4 "C0603C103K1REAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C103K1REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "5" H 0   0   50  0001 C CNN "box no"
 	1    7000 4350
 	0    1    -1   0   
 $EndComp
@@ -566,8 +575,9 @@ F 0 "C8" H 5935 4004 50  0000 R CNN
 F 1 "2.2uF" H 5935 4095 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6088 3900 50  0001 C CNN
 F 3 "~" H 6050 4050 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    6050 4050
 	1    0    0    1   
 $EndComp
@@ -581,7 +591,8 @@ F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8350 3775 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 8100 3850 50  0001 L CNN
 F 4 "IRF540NPBF" H 8100 3850 50  0001 C CNN "MPN"
 F 5 "942-IRF540NPBF" H 8100 3850 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    8100 3850
 	1    0    0    -1  
 $EndComp
@@ -675,6 +686,7 @@ F 3 "~" H 10600 3700 50  0001 C CNN
 F 4 "S4B-PH-K-S(LF)(SN)‎ " H 10600 3700 50  0001 C CNN "MPN"
 F 5 "455-1721-ND‎" H 10600 3700 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 3700
 	1    0    0    -1  
 $EndComp
@@ -722,7 +734,6 @@ F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5475 1050 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5450 1150 50  0001 C CNN
 F 4 "L7805CV" H 0   0   50  0001 C CNN "MPN"
 F 5 "511-L7805CV" H 0   0   50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
 	1    5450 1200
 	1    0    0    -1  
 $EndComp
@@ -737,6 +748,7 @@ F 3 "~" H 5850 1450 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    5850 1450
 	1    0    0    -1  
 $EndComp
@@ -793,6 +805,7 @@ F 3 "~" H 10600 5100 50  0001 C CNN
 F 4 "S10B-PH-K-S(LF)(SN)‎ " H 10600 5100 50  0001 C CNN "MPN"
 F 5 "455-1727-ND‎" H 10600 5100 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 5100
 	1    0    0    -1  
 $EndComp
@@ -830,6 +843,7 @@ F 3 "~" H 10600 2250 50  0001 C CNN
 F 4 "S7B-PH-K-S(LF)(SN)‎ " H 10600 2250 50  0001 C CNN "MPN"
 F 5 "455-1724-ND‎" H 10600 2250 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 2250
 	1    0    0    -1  
 $EndComp
@@ -895,6 +909,7 @@ F 3 "~" H 10600 6150 50  0001 C CNN
 F 4 "S7B-PH-K-S(LF)(SN)" H 10600 6150 50  0001 C CNN "MPN"
 F 5 "455-1724-ND‎" H 10600 6150 50  0001 C CNN "DigiKey"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    10600 6150
 	1    0    0    -1  
 $EndComp
@@ -972,6 +987,7 @@ F 1 "MountingHole" H 6100 6605 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6000 6650 50  0001 C CNN
 F 3 "~" H 6000 6650 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    6000 6650
 	1    0    0    -1  
 $EndComp
@@ -984,6 +1000,7 @@ F 1 "MountingHole" H 6100 6855 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6000 6900 50  0001 C CNN
 F 3 "~" H 6000 6900 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    6000 6900
 	1    0    0    -1  
 $EndComp
@@ -996,6 +1013,7 @@ F 1 "MountingHole" H 6100 7105 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6000 7150 50  0001 C CNN
 F 3 "~" H 6000 7150 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    6000 7150
 	1    0    0    -1  
 $EndComp
@@ -1008,6 +1026,7 @@ F 1 "MountingHole" H 6100 7355 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6000 7400 50  0001 C CNN
 F 3 "~" H 6000 7400 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    6000 7400
 	1    0    0    -1  
 $EndComp
@@ -1024,6 +1043,7 @@ F 3 "~" H 4300 1450 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    4300 1450
 	-1   0    0    -1  
 $EndComp
@@ -1239,6 +1259,7 @@ F 3 "~" H 5800 5350 50  0001 C CNN
 F 4 "RC0603FR-0733KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0733KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "16" H 0   0   50  0001 C CNN "box no"
 	1    5800 5350
 	0    1    1    0   
 $EndComp
@@ -1253,6 +1274,7 @@ F 3 "~" H 6400 5650 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    6400 5650
 	-1   0    0    -1  
 $EndComp
@@ -1280,6 +1302,7 @@ F 3 "~" H 7200 5750 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    7200 5750
 	0    -1   -1   0   
 $EndComp
@@ -1294,6 +1317,7 @@ F 3 "~" H 7650 5450 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    7650 5450
 	0    1    1    0   
 $EndComp
@@ -1308,6 +1332,7 @@ F 3 "~" H 7000 5950 50  0001 C CNN
 F 4 "C0603C103K1REAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C103K1REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "5" H 0   0   50  0001 C CNN "box no"
 	1    7000 5950
 	0    1    -1   0   
 $EndComp
@@ -1319,8 +1344,9 @@ F 0 "C9" H 5935 5604 50  0000 R CNN
 F 1 "2.2uF" H 5935 5695 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6088 5500 50  0001 C CNN
 F 3 "~" H 6050 5650 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    6050 5650
 	1    0    0    1   
 $EndComp
@@ -1334,7 +1360,8 @@ F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8350 5375 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 8100 5450 50  0001 L CNN
 F 4 "IRF540NPBF" H 8100 5450 50  0001 C CNN "MPN"
 F 5 "942-IRF540NPBF" H 8100 5450 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    8100 5450
 	1    0    0    -1  
 $EndComp
@@ -1468,6 +1495,7 @@ F 3 "~" H 5800 2200 50  0001 C CNN
 F 4 "RC0603FR-0733KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-0733KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "16" H 0   0   50  0001 C CNN "box no"
 	1    5800 2200
 	0    1    1    0   
 $EndComp
@@ -1482,6 +1510,7 @@ F 3 "~" H 6400 2500 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    6400 2500
 	-1   0    0    -1  
 $EndComp
@@ -1509,6 +1538,7 @@ F 3 "~" H 7200 2600 50  0001 C CNN
 F 4 "RC0603FR-072K2L" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-072K2L " H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "17" H 0   0   50  0001 C CNN "box no"
 	1    7200 2600
 	0    -1   -1   0   
 $EndComp
@@ -1523,6 +1553,7 @@ F 3 "~" H 7650 2300 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    7650 2300
 	0    1    1    0   
 $EndComp
@@ -1537,6 +1568,7 @@ F 3 "~" H 7000 2800 50  0001 C CNN
 F 4 "C0603C103K1REAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C103K1REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "5" H 0   0   50  0001 C CNN "box no"
 	1    7000 2800
 	0    1    -1   0   
 $EndComp
@@ -1548,8 +1580,9 @@ F 0 "C1" H 5935 2454 50  0000 R CNN
 F 1 "2.2uF" H 5935 2545 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6088 2350 50  0001 C CNN
 F 3 "~" H 6050 2500 50  0001 C CNN
-F 4 "885012106011" H 0   0   50  0001 C CNN "MPN"
-F 5 "710-885012106011 " H 0   0   50  0001 C CNN "Mouser"
+F 4 "C0603C225K9RACTU" H 0   0   50  0001 C CNN "MPN"
+F 5 "80-C0603C225K9R" H 0   0   50  0001 C CNN "Mouser"
+F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    6050 2500
 	1    0    0    1   
 $EndComp
@@ -1563,7 +1596,8 @@ F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8350 2225 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 8100 2300 50  0001 L CNN
 F 4 "IRF540NPBF" H 8100 2300 50  0001 C CNN "MPN"
 F 5 "942-IRF540NPBF" H 8100 2300 50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
+F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    8100 2300
 	1    0    0    -1  
 $EndComp
@@ -1711,6 +1745,7 @@ F 3 "~" H 2300 1450 50  0001 C CNN
 F 4 "GMK325BJ226MM-P" H 2300 1450 50  0001 C CNN "MPN"
 F 5 "963-GMK325BJ226MM-P" H 2300 1450 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    2300 1450
 	1    0    0    -1  
 $EndComp
@@ -1725,6 +1760,7 @@ F 3 "~" H 3300 1450 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    3300 1450
 	1    0    0    -1  
 $EndComp
@@ -1757,6 +1793,7 @@ F 3 "~" H 3300 2900 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    3300 2900
 	1    0    0    -1  
 $EndComp
@@ -1786,6 +1823,7 @@ F 3 "~" H 5050 1450 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    5050 1450
 	1    0    0    -1  
 $EndComp
@@ -1837,6 +1875,7 @@ F 3 "~" H 3000 1450 50  0001 C CNN
 F 4 "GMK325BJ226MM-P" H 3000 1450 50  0001 C CNN "MPN"
 F 5 "963-GMK325BJ226MM-P" H 3000 1450 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    3000 1450
 	-1   0    0    -1  
 $EndComp
@@ -1869,6 +1908,7 @@ F 3 "~" H 3000 2900 50  0001 C CNN
 F 4 "GMK325BJ226MM-P" H 3000 2900 50  0001 C CNN "MPN"
 F 5 "963-GMK325BJ226MM-P" H 3000 2900 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    3000 2900
 	-1   0    0    -1  
 $EndComp
@@ -1913,6 +1953,7 @@ F 3 "~" H 4600 1450 50  0001 C CNN
 F 4 "GMK325BJ226MM-P" H 4600 1450 50  0001 C CNN "MPN"
 F 5 "963-GMK325BJ226MM-P" H 4600 1450 50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    4600 1450
 	1    0    0    -1  
 $EndComp
@@ -1957,8 +1998,8 @@ F 0 "LED10" H 3750 3933 50  0000 C CNN
 F 1 "RGB-PLCC4" H 3750 4024 50  0000 C CNN
 F 2 "LED_SMD:LED_Cree-PLCC4_2x2mm_CW" H 3750 4350 50  0001 C CNN
 F 3 "~" H 3750 4350 50  0001 C CNN
-F 4 "ASMB-KTF0-0A306 " H 3750 4400 50  0001 C CNN "MPN"
-F 5 "630-ASMB-KTF0-0A306 " H 3750 4400 50  0001 C CNN "Mouser"
+F 4 "RD1616-63RGBC-C2CA or DL-PCB0606RGBC-C2" H 3750 4400 50  0001 C CNN "MPN"
+F 5 "630-ASMB-KTF0-0A306 (WRONG PART)" H 3750 4400 50  0001 C CNN "Mouser"
 	1    3750 4400
 	-1   0    0    1   
 $EndComp
@@ -1980,6 +2021,7 @@ F 3 "~" H 3400 4600 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    3400 4600
 	0    1    1    0   
 $EndComp
@@ -1999,6 +2041,7 @@ F 3 "~" H 3400 4400 50  0001 C CNN
 F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "21" H 0   0   50  0001 C CNN "box no"
 	1    3400 4400
 	0    1    1    0   
 $EndComp
@@ -2018,6 +2061,7 @@ F 3 "~" H 3400 4200 50  0001 C CNN
 F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
 F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "18" H 0   0   50  0001 C CNN "box no"
 	1    3400 4200
 	0    1    1    0   
 $EndComp
@@ -2062,7 +2106,6 @@ F 2 "Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_AnodeUp" H 1700 1275 50  0001 C CN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1700 1450 50  0001 C CNN
 F 4 "1N4004-T" H 0   0   50  0001 C CNN "MPN"
 F 5 "621-1N4004" H 0   0   50  0001 C CNN "Mouser"
-F 6 "(X)" H 0   0   50  0001 C CNN "stock"
 	1    1700 1450
 	0    -1   1    0   
 $EndComp
@@ -2112,6 +2155,7 @@ F 3 "~" H 9500 5900 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9500 5900
 	-1   0    0    -1  
 $EndComp
@@ -2143,6 +2187,7 @@ F 3 "~" H 9500 4850 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9500 4850
 	-1   0    0    -1  
 $EndComp
@@ -2174,6 +2219,7 @@ F 3 "~" H 9150 3500 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9150 3500
 	-1   0    0    -1  
 $EndComp
@@ -2205,6 +2251,7 @@ F 3 "~" H 9200 4850 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9200 4850
 	-1   0    0    -1  
 $EndComp
@@ -2236,6 +2283,7 @@ F 3 "~" H 9550 2200 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9550 2200
 	-1   0    0    -1  
 $EndComp
@@ -2265,6 +2313,7 @@ F 3 "~" H 9550 3850 50  0001 C CNN
 F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
 F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    9550 3850
 	-1   0    0    -1  
 $EndComp
@@ -2318,6 +2367,7 @@ F 3 "~" H 6150 1450 50  0001 C CNN
 F 4 "GRM21BR71A475KE51L" H 0   0   50  0001 C CNN "MPN"
 F 5 "81-GRM21BR71A475KE1L" H 0   0   50  0001 C CNN "Mouser"
 F 6 "X" H 0   0   50  0001 C CNN "stock"
+F 7 "3" H 0   0   50  0001 C CNN "box no"
 	1    6150 1450
 	-1   0    0    -1  
 $EndComp
@@ -2379,6 +2429,7 @@ F 1 "Fiducial" H 5508 6627 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 6600 50  0001 C CNN
 F 3 "~" H 5650 6600 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 6600
 	1    0    0    -1  
 $EndComp
@@ -2391,6 +2442,7 @@ F 1 "Fiducial" H 5508 6827 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 6800 50  0001 C CNN
 F 3 "~" H 5650 6800 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 6800
 	1    0    0    -1  
 $EndComp
@@ -2403,6 +2455,7 @@ F 1 "Fiducial" H 5508 7027 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 7000 50  0001 C CNN
 F 3 "~" H 5650 7000 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 7000
 	1    0    0    -1  
 $EndComp
@@ -2415,6 +2468,7 @@ F 1 "Fiducial" H 5508 7227 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 7200 50  0001 C CNN
 F 3 "~" H 5650 7200 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 7200
 	1    0    0    -1  
 $EndComp
@@ -2427,6 +2481,7 @@ F 1 "Fiducial" H 5508 7427 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 7400 50  0001 C CNN
 F 3 "~" H 5650 7400 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 7400
 	1    0    0    -1  
 $EndComp
@@ -2439,6 +2494,7 @@ F 1 "Fiducial" H 5508 7627 50  0000 L CNN
 F 2 "Fiducial:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 5650 7600 50  0001 C CNN
 F 3 "~" H 5650 7600 50  0001 C CNN
 F 4 "X" H 0   0   50  0001 C CNN "stock"
+F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    5450 7600
 	1    0    0    -1  
 $EndComp
@@ -2446,8 +2502,8 @@ $Comp
 L Connector_Generic:Conn_01x04 #PlugJ6
 U 1 1 5BFA32E0
 P 11050 1500
-F 0 "#PlugJ6" H 11130 1492 50  0000 L CNN
-F 1 "Conn_01x04" H 11130 1401 50  0000 L CNN
+F 0 "#PlugJ6" H 10850 1200 50  0000 L CNN
+F 1 "Conn_01x04" H 10750 1100 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4_1x04_P5.00mm_Horizontal" H 11050 1500 50  0001 C CNN
 F 3 "~" H 11050 1500 50  0001 C CNN
 F 4 "31349104" H 11050 1500 50  0001 C CNN "MPN"
@@ -2456,4 +2512,19 @@ F 6 "RIA CONNECT" H 11050 1500 50  0001 C CNN "Manufacturer"
 	1    11050 1500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 #PlugJ1
+U 1 1 5BF19748
+P 600 1300
+F 0 "#PlugJ1" H 550 1500 50  0000 C CNN
+F 1 "Conn_01x02" H 500 1600 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 600 1300 50  0001 C CNN
+F 3 "~" H 600 1300 50  0001 C CNN
+F 4 "31349104" H -400 0   50  0001 C CNN "MPN"
+F 5 "AKL 349-02" H -400 0   50  0001 C CNN "Reichelt"
+	1    600  1300
+	-1   0    0    1   
+$EndComp
+Text Notes 3450 3700 0    50   ~ 0
+WRONG PART\nNEXT REV: 630-ASMB-TTF0-0A20B
 $EndSCHEMATC
