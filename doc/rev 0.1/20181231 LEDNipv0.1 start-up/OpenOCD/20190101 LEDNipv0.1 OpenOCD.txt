@@ -1,0 +1,168 @@
+~~~ setting up the makefile and completing the OpenOCD configuration for development ~~~
+
+http://openocd.org/doc/html/Config-File-Guidelines.html 
+	"6 Config File Guidelines
+	This chapter is aimed at any user who needs to write a config file, including 
+	developers and integrators of OpenOCD and any user who needs to get a new board 
+	working smoothly. It provides guidelines for creating those files. "
+	
+	
+JTAG SRST and TRST
+https://en.wikipedia.org/wiki/JTAG
+	"The TRST pin is an optional active-low reset to the test logic, 
+	usually asynchronous, but sometimes synchronous, depending on the chip. If the pin is not available, 
+	the test logic can be reset by switching to the reset state synchronously, using TCK and TMS. 
+	Note that resetting test logic doesn't necessarily imply resetting anything else. 
+	There are generally some processor-specific JTAG operations which can reset all or part 
+	of the chip being debugged."
+
+	"JTAG platforms often add signals to the handful defined by the IEEE 1149.1 specification. 
+	A System Reset (SRST) signal is quite common, letting debuggers reset the whole system, 
+	not just the parts with JTAG support. Sometimes there are event signals used to trigger activity 
+	by the host or by the device being monitored through JTAG; or, perhaps, additional control lines."
+	
+
+
+CubeMX:
+* "auto-generated code came with a nearly perfect makefile already"
+* "just adding the flashing section now"
+
+* meanwhile, looking at the stm32f4x.cfg is enlightening:
+OpenOCD-20181130/share/openocd/scripts/target/
+	
+	"
+	$_TARGETNAME configure -event reset-init {
+		# Configure PLL to boost clock to HSI x 4 (64 MHz)
+		mww 0x40023804 0x08012008   ;# RCC_PLLCFGR 16 Mhz /8 (M) * 128 (N) /4(P)
+		mww 0x40023C00 0x00000102   ;# FLASH_ACR = PRFTBE | 2(Latency)
+		mmw 0x40023800 0x01000000 0 ;# RCC_CR |= PLLON
+		sleep 10                    ;# Wait for PLL to lock
+		mmw 0x40023808 0x00001000 0 ;# RCC_CFGR |= RCC_CFGR_PPRE1_DIV2
+		mmw 0x40023808 0x00000002 0 ;# RCC_CFGR |= RCC_CFGR_SW_PLL
+
+		# Boost JTAG frequency
+		adapter_khz 8000
+	}
+
+	$_TARGETNAME configure -event reset-start {
+		# Reduce speed since CPU speed will slow down to 16MHz with the reset
+		adapter_khz 2000
+	}
+	"
+	[NOTE] adapter_khz is outside the supported range which has been tested experimentally, so this is flagged for further investigation.
+	
+http://openocd.org/doc/html/Flash-Commands.html
+	Flash Driver: stm32f2x
+    All members of the STM32F2, STM32F4 and STM32F7 microcontroller families from 
+	STMicroelectronics include internal flash and use ARM Cortex-M3/M4/M7 cores. 
+	The driver automatically recognizes a number of these chips using the chip identification 
+	register, and autoconfigures itself. 
+	
+http://openocd.org/doc/html/Flash-Programming.html
+	-c "program filename.elf verify reset exit"
+
+* will have to look up whether reset works with TRST only. 
+* Some code snippets and fragments:
+
+http://openocd.org/doc/html/Reset-Configuration.html
+	"When SRST is not an option you must set up a reset-assert event 
+	handler for your target. For example, some JTAG adapters don’t include the 
+	SRST signal; and some boards have multiple targets, and you won’t always 
+	want to reset everything at once."
+
+https://github.com/openrisc/openOCD/blob/master/tcl/target/fm3.cfg
+	# if srst is not fitted use SYSRESETREQ to
+	# perform a soft reset
+	cortex_m3 reset_config sysresetreq
+
+
+https://sourceforge.net/p/openocd/mailman/message/28347841/
+snippet about reset-assert: 
+	-proc omap4_dbginit {target} {
+	-	# General Cortex A9 debug initialisation
+	-	cortex_a9 dbginit
+	-}
+	-
+	-$_TARGETNAME configure -event reset-assert-post "omap4_dbginit $_TARGETNAME"
+	-
+	 # Assume SRST is unavailable (e.g. TI-14 JTAG), so we must assert reset
+	 # ourselves using PRM_RSTCTRL.  1 is a warm reset, 2 a cold reset.
+	 set PRM_RSTCTRL 0x4A307B00
+	-$_TARGETNAME configure -event reset-assert "$_TARGETNAME mww $PRM_RSTCTRL 0x1"
+	+$_TARGETNAME configure -event reset-assert "$_TARGETNAME mww phys $PRM_RSTCTRL 0x1"
+	+$_CHIPNAME.m30 configure -event reset-assert { }
+	+$_CHIPNAME.m31 configure -event reset-assert { }
+	 
+	-- 
+	1.7.0.4
+
+	
+https://github.com/aliask/ausbubble/blob/master/software/stm32f4/AusBubble/tools/openocd-0.7.0/scripts/target/omap3530.cfg	
+	# Assume SRST is unavailable (e.g. TI-14 JTAG), so we must assert reset
+	# ourselves using PRM_RSTCTRL.  RST_GS (2) is a warm reset, like ICEpick
+	# would issue.  RST_DPLL3 (4) is a cold reset.
+	set PRM_RSTCTRL 0x48307250
+	$_TARGETNAME configure -event reset-assert "$_TARGETNAME mww $PRM_RSTCTRL 2"
+	
+	
+http://manualzilla.com/doc/5989031/safety-manual-for-visionsurround28-super-high
+	"4.3.4.1
+	Software Cold/Warm Reset Generation
+	The system module provides the ability to the software to generate an internal cold or warm reset. This is
+	accomplished by writing appropriate control bits in the PRCM Reset Control Register (PRM_RSTCTRL).
+	Software can utilize this feature to attempt failure recovery. Use of the software cold or warm reset is
+	optional."
+	
+the deep end:
+https://www.st.com/content/ccc/resource/technical/document/reference_manual/3d/6d/5a/66/b4/99/40/d4/DM00031020.pdf/files/DM00031020.pdf/jcr:content/translations/en.DM00031020.pdf
+	"38.4.1 SWJ debug port pins
+	Five pins are used as outputs from the STM32F4xx for the SWJ-DP as 
+	alternate functions of general-purpose I/Os. These pins are available on all packages.
+
+	NJTRST: Internal pull-up
+	•JTDI: Internal pull-up
+	•JTMS/SWDIO: Internal pull-up
+	•TCK/SWCLK: Internal pull-down	
+		
+	38.5 STM32F4xx JTAG TAP connection
+	The STM32F4xx MCUs integrate two serially connected JTAG TAPs, the boundary scan 
+	TAP (IR is 5-bit wide) and the Cortex®-M4 with FPU TAP (IR is 4-bit wide)"
+	
+	p.150
+	"Software reset 
+	The reset source can be identified by checking the reset flags in the 
+	RCC clock control & status register (RCC_CSR).The SYSRESETREQ bit in Cortex®-M4 with 
+	FPU Application Interrupt and Reset Control Register must be set to force a
+	software reset on the device. 
+	Refer to the Cortex®-M4 with FPU technical reference manual for more details."
+	
+	address of Application Interrupt and Reset Control Register (AIRCR)
+
+
+http://infocenter.arm.com/help/topic/com.arm.doc.ddi0439b/DDI0439B_cortex_m4_r0p0_trm.pdf
+http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0337e/ch06s03s02.html
+
+	0xE000ED0C AIRCR RW 0x00000000 a Application Interrupt a nd Reset Control Register	
+
+https://mcuoneclipse.com/2015/07/01/how-to-reset-an-arm-cortex-m-with-software/
+	"So all I need to write a 0x05FA to VECTKEY with a 1 to [SYSRESETREQ to AIRCR] :-)."
+	0x05FA0004 
+	
+other example actually toggling pins:
+http://www.ethernut.de/pdf/openocd-0.5.0.pdf
+	For example, to use pin 6 as SRST (as with an AVR board):
+	$_TARGETNAME configure -event reset-assert \
+	"usb_blaster pin6 1; wait 1; usb_blaster pin6 0"
+
+==============================================================================
+
+
+conclusion:
+
+# Assume SRST is unavailable, so we must assert reset ourselves.
+$_TARGETNAME configure -event reset-assert "$_TARGETNAME mww phys 0xE000ED0C 0x05FA0004"
+
+
+
+turns out, http://openocd.org/doc-release/doxygen/cortex__m_8h.html 
+	#define 	NVIC_AIRCR   0xE000ED0C
