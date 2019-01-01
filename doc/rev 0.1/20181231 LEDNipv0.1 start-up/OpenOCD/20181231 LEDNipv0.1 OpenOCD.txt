@@ -1,0 +1,300 @@
+discovering, testing and flashing the STM32F4 microcontroller
+
+get STM32F4 datasheet:
+https://www.mouser.de/datasheet/2/389/stm32f427vg-956239.pdf
+get STM32F4 programming:
+https://www.st.com/content/ccc/resource/technical/document/programming_manual/6c/3a/cb/e7/e4/ea/44/9b/DM00046982.pdf/files/DM00046982.pdf/jcr:content/translations/en.DM00046982.pdf
+
+"Integrated configurable debug The Cortex-M4 processor implements a complete hardware debug solution. 
+This provides  high system visibility of the processor and memory  through either a tradi tional JTAG port 
+or  a 2-pin  Serial Wire Debug  (SWD) port that is ideal for small package devices.  For system trace the processor 
+integrates an  Instrumentation Trace Macrocell  (ITM)  alongside data watchpoints and a profiling unit. 
+To  enable simple and cost-effective profiling  of the system events these generate, a  Serial Wire Viewer  
+(SWV) can export a stream of  software-generated messages, data trace, and profiling information through a 
+single pin. The optional  Embedded Trace Macrocell ™  (ETM) delivers unriva lled instruction trace  
+capture in an area far smaller than traditional trace units"
+
+get ARM gcc toolchain:
+https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2018q4/gcc-arm-none-eabi-8-2018-q4-major-win32-sha2.exe?revision=169eed21-7cbc-48c6-a289-f39d95bd634c?product=GNU%20Arm%20Embedded%20Toolchain,32-bit,,Windows,8-2018-q4-major
+get the latest OpenOCD: 
+http://gnutoolchains.com/arm-eabi/openocd/
+
+google:
+https://www.kaltpost.de/?page_id=485
+https://www.allaboutcircuits.com/technical-articles/getting-started-with-openocd-using-ft2232h-adapter-for-swd-debugging/
+
+"Be Aware Before Selecting OpenOCD
+Selecting OpenOCD as your debugging tool with an adapter like FT2232H is a very good choice when you don’t have much budget to work with."
+
+FT2232H adapter:
+https://github.com/MisterHW/SerialDev-2232/tree/master/SeriaDev-2232-1A
+
+installing LibUSB driver for FT2232H:
+https://zadig.akeo.ie/
+
+"S:\>openocd -f "C:\projekte\20181231 LEDNip OpenOCD things\OpenOCD\LEDNipv01.cfg"
+Open On-Chip Debugger 0.10.0 (2018-11-30) [https://github.com/sysprogs/openocd]
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.org/doc/doxygen/bugs.html
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+none separate
+cortex_m reset_config sysresetreq
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : clock speed 2000 kHz
+Error: JTAG scan chain interrogation failed: all ones
+Error: Check JTAG interface, timings, target power, etc.
+Error: Trying to use configured scan chain anyway...
+Error: stm32f4x.cpu: IR capture error; saw 0x0f not 0x01
+Warn : Bypassing JTAG setup events due to errors
+Error: Invalid ACK (7) in DAP response
+Error: JTAG-DP STICKY ERROR"
+
+https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf
+https://github.com/arduino/OpenOCD/blob/master/tcl/interface/ftdi/flyswatter.cfg
+
+
+
+------------------
+
+ok, this is not working. Maybe it's time for a slightly more systematic approach.
+Some examples mention interface ft2232. Where did it go?
+
+	openocd -c interface_list
+	"The following debug interfaces are available:
+	1: ftdi
+	2: usb_blaster
+	3: usbprog
+	4: jlink
+	..."
+
+no ft2232.
+
+http://openocd.org/2017/01/openocd-0-10-0-release-is-out/
+	* Deprecated “ft2232″ driver removed (use “ftdi” instead)
+	* GPL-incompatible FTDI D2XX library support dropped (Presto, OpenJTAG and USB-Blaster I are using libftdi only now)
+
+let's try to write a config file again.
+	"interface ftdi"
+	"ftdi_vid_pid 0x0403 0x6010"
+	"ftdi_channel 1"
+
+http://openocd.org/doc-release/pdf/openocd.pdf 
+	"2.1  Choosing a Dongle
+	There are several things you should keep in mind when choosing a dongle.
+
+	1. Transport
+	Does  it  support  the  kind  of  communication  that  you  need?   OpenOCD
+	focusses mostly on JTAG. Your version may also support other ways to communicate
+	with target devices"
+
+Then there is a list of adapters in the guide using FTDI devices. 
+Since the FT2232 has multiple interfaces and multiple modes for each, the pin mapping and mode should be defined (no idea what the defaults are, if any exist).
+
+looking for FT2232: minimodule.cfg
+
+	"interface ftdi
+	ftdi_device_desc "FT2232H MiniModule"
+	ftdi_vid_pid 0x0403 0x6010
+
+	# Every pin set as high impedance except TCK, TDI, TDO and TMS
+	ftdi_layout_init 0x0008 0x000b
+
+	# nSRST defined on pin CN2-13 of the MiniModule (pin ADBUS5 [AD5] on the FT2232H chip)
+	# This choice is arbitrary. Use other GPIO pin if desired.
+	ftdi_layout_signal nSRST -data 0x0020 -oe 0x0020"
+
+here's the ftdi_layout_init. We'll have to look at reset functionality later.
+
+	"# Every pin set as high impedance except TCK, TDI, TDO and TMS"
+	"ftdi_layout_init 0x0008 0x000b"
+
+JTAG reset configuration?
+http://openocd.org/doc/html/Reset-Configuration.html
+	
+and what do the hex values mean anyway? (FT2232 specific low-level configuration register values?)
+https://www.ftdichip.com/Support/Documents/AppNotes/AN_108_Command_Processor_for_MPSSE_and_MCU_Host_Bus_Emulation_Modes.pdf
+https://www.ftdichip.com/Support/Documents/ProgramGuides/D2XX_Programmer's_Guide(FT_000071).pdf 
+
+"The following additional installat ion guides  application notes  and technical notes are also available: 
+ AN_113, “Interfacing FT2232H Hi - Speed Devices  to I2C Bus ”. 
+ AN_109  – “Programming Guide for High Speed FTCI2C DLL” 
+ AN_110  – “Programming Guide for High Speed FTCJTAG DLL” 
+ AN_111  – “Programming Guide for High Speed FTCSPI DLL” 
+ AN1 14  – “ Interfacing FT2232H Hi - Speed Devices To SPI Bus ” 
+ AN135  – MPSSE Basics 
+ AN108  - Command Processor For MPSSE and MCU Host Bus Emulation Modes 
+ TN_104, “Guide to Debugging Customers Failed Driver Installation ”"
+ 
+MPSSE JTAG, anyone? 
+https://www.ftdichip.com/Support/Documents/AppNotes/AN_129_FTDI_Hi_Speed_USB_To_JTAG_Example.pdf
+
+Will we find out what the opcode + operand combinations mean?
+http://openocd.org/doc-release/doxygen/mpsse_8c_source.html
+
+void mpsse_set_data_bits_low_byte(struct mpsse_ctx *ctx, uint8_t data, uint8_t dir)
+...
+  633     buffer_write_byte(ctx, 0x80);
+  634     buffer_write_byte(ctx, data);
+  635     buffer_write_byte(ctx, dir);
+...
+
+so these are the low-level transfers with 0x80 .. 0x83 which we don't have to touch. Good :)
+back to ftdi_layout_init?
+
+https://www.allaboutcircuits.com/technical-articles/getting-started-with-openocd-using-ft2232h-adapter-for-swd-debugging/
+	You should also tell OpenOCD the initial values of the FTDI GPIO data and direction registers through 
+	the ftdi_layout_init command. You should first put the initial values of the channel’s 16 pins, 
+	and then the directions. Knowing that "1" is for selecting direction as output and "0" is for input, 
+	and each channel in ft2232H has 16 pins.
+
+	ftdi_layout_init 0x0018 0x05fb
+	This means:
+	Low output data = 0x18 // 0001 1000
+	Low direction   = 0xfb // 1111 1011
+	High direction  = 0x05 // 0000 0101
+	To see more about adapter configuration, you can refer to OpenOCD manual.
+
+http://openocd.org/doc-release/html/Debug-Adapter-Configuration.html#Interface-Drivers
+
+so: 0x0008 is the output configuration for JTAG, 0x0018 in turn appears to be used for SWD
+and 0x000b is the direction configuration for the four JTAG lines (not including any reset lines).
+thus, 
+
+	ftdi_layout_init 0x0008 0x000b
+	This means:
+	Low output data = 0x08 // 0000 1000
+	Low direction   = 0x0b // 0000 1011 
+	High direction  = 0x00 // 0000 0000
+
+ft2232:
+	ADBUS0 TCK/SK
+	ADBUS1 TDI/DO 
+	ADBUS2 TDO/DI // driven by the D.U.T., thus an input of the FT2232.
+	ADBUS3 TMS/CS
+
+this coincides with the configuration of AN129 p.9, so we did this right (well, copied from the right spot and validated it after the fact)
+
+Assuming MPSSE JTAG and pin directions are properly configured. On to the reset mode.
+
+--------------
+
+reset_config:
+
+at this point no reset line is connected (TCK TDI TDO TMS from the serial-dev board intended for 
+use with MachXO2), but LEDNip0.1 has TRST routed to the debug header.
+
+"In the best case, OpenOCD can hold SRST, then reset the TAPs via TRST and send commands through 
+JTAG to halt the CPU at the reset vector before the 1st instruction is executed. Then when it 
+finally releases the SRST signal, the system is halted under debugger control before any code 
+has executed. This is the behavior required to support the reset halt and reset init commands; 
+after reset init a board-specific script might do things like setting up DRAM. (See Reset Command.)"
+
+	"reset_config trst_only"
+
+	
+let's read up on the functions. http://openocd.org/doc/html/Debug-Adapter-Configuration.html
+
+	"Config Command: ftdi_layout_signal name [-data|-ndata data_mask] [-input|-ninput input_mask] [-oe|-noe oe_mask] [-alias|-nalias name]
+
+	Creates a signal with the specified name, controlled by one or more FTDI GPIO pins via a range 
+	of possible buffer connections. The masks are FTDI GPIO register bitmasks to tell the driver the 
+	connection and type of the output buffer driving the respective signal. data_mask is the bitmask
+	for the pin(s) connected to the data input of the output buffer. -ndata is used with inverting
+	data inputs and -data with non-inverting inputs. The -oe (or -noe) option tells where the output-enable 
+	(or not-output-enable) input to the output buffer is connected. The options -input and -ninput specify
+	the bitmask for pins to be read with the method ftdi_get_signal.
+
+	Both data_mask and oe_mask need not be specified. For example, a simple open-collector transistor 
+	driver would be specified with -oe only. In that case the signal can only be set to drive low or to Hi-Z
+	and the driver will complain if the signal is set to drive high. Which means that if it’s a reset signal,
+	reset_config must be specified as srst_open_drain, not srst_push_pull.
+
+	A special case is provided when -data and -oe is set to the same bitmask. Then the FTDI pin is considered
+	being connected straight to the target without any buffer. The FTDI pin is then switched between output
+	and input as necessary to provide the full set of low, high and Hi-Z characteristics. In all other cases,
+	the pins specified in a signal definition are always driven by the FTDI.
+
+	If -alias or -nalias is used, the signal is created identical (or with data inverted) to an 
+	already specified signal name."
+
+		
+#ADBUS4: TRST
+ftdi_layout_signal nTRST -ndata 0x0010 -oe 0x0010
+
+reset_config trst_only trst_open_drain
+
+==============================================================================
+
+
+To be able to use OpenOCD with a FT2232H breakout to talk to an STM32F4xx, get OpenOCD, plug in the breakout board and use Zadig 
+to make sure the libusb driver is used or swap the FTDI driver for that one. 
+
+Get OpenOCD 0.10.0 [2018-11-30]
+http://gnutoolchains.com/arm-eabi/openocd/
+get Zadig:
+https://zadig.akeo.ie/
+get familiar with your breakout board of choice. Here we're using a Serial-Dev board from
+https://github.com/MisterHW/SerialDev-2232
+
+
+
+Moving on to actually using OpenOCD. For that we construct a config file to be passed to openocd as 
+	openocd.exe -f LEDNipv01.cfg
+
+Key bits of information on the OpenOCD configuration can be found here:
+software side : http://openocd.org/doc-release/pdf/openocd.pdf 
+driver related: https://www.ftdichip.com/Support/Documents/AppNotes/AN_129_FTDI_Hi_Speed_USB_To_JTAG_Example.pdf
+hardware side : https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf
+
+
+We look at 
+	openocd -c interface_list
+and consult the OpenOCD changelog to find that FT2232 is now covered under the "ftdi" interface.
+Thus our config file begins with that interface selection and further specifies the expected FTDI product:
+ 
+	# as of OpenOCD rev. 0.10.0, ft2232 is merged into interface ftdi
+	interface ftdi
+
+	# FT2232 default VID and PID
+	ftdi_vid_pid 0x0403 0x6010
+
+Since the chip has two MPSSE channels and the default one is most likely channel 0, we need to be explicit.
+	
+	# FT2232H has two 16 bit channels. Use the second one (the other should be supported as well).
+	ftdi_channel 1
+
+Next, MPSSE-JTAG needs to be selected and a subset of pins needs to be configured as outputs.
+The nTRST pin is not part of the JTAG special function pins and is realized using GPIO in open-drain mode.  	
+	
+	# Every pin set as high impedance except ADBUS0:TCK, ADBUS1:TDI, ADBUS3:TMS. JTAG transport should be default though.
+	ftdi_layout_init 0x0008 0x000b
+	transport select jtag
+
+	# configure ADBUS4:nTRST open drain 
+	ftdi_layout_signal nTRST -data 0x0010 -oe 0x0010
+	reset_config trst_only trst_open_drain
+
+Since we only use nTRST, the above reset_config must state this explicitly, including the drive mode.
+Finally we specify the target as STM32F4 and increase the JTAG clock speed. 
+
+	# target device is an STM32F427 covered by the family target config.
+	source [find target/stm32f4x.cfg]
+	adapter_khz 4000
+
+The clock speed has a default of 2 MHz and is automatically decreased should problems arise. 
+This concludes our OpenOCD board configuration file.
+
+
+	
+In a test with 20 cm bundled wires (with inferior performance in comparison to 
+ribbon cables where the signal lines are usually interleaved with grounded wires) a maximum clock speed of 7 MHz was achieved. 
+For stable operation with noise immunity, lower clock speeds are desirable.
+
+
+
+	

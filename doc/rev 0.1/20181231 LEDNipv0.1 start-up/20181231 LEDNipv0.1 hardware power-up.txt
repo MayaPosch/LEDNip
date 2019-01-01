@@ -1,0 +1,37 @@
+LEDNip-0.1 commissioning
+
+Step 1:
+3.3V and 0.02A limit to JTAG1 GND|3.3V pins: 3.3V 0.018A -> pass, no shorts
+swap PSU: 3.3V (no precision current measurement)
+
+Step 2:
+12V rail: 2.4V backdriven through freewheeling diode (as expected)
+slowly increase 12V rail to 5V with 0.02A limit, monitoring 3.3V rail
+* current limit not exceeded
+* 3.3V increases from 3.284V to 3.289V (in spec)
+* 12V rail at 4.75V (current limit)
+* 5V rail at 3.9V
+
+increase current limit to 0.05A
+* 12V rail at 5.0V
+* monitor 5V rail, ramd up 12V rail to 12V
+* 5V rail settles in at 5.078V (in spec)
+* 3.3V rail at 3.308V (in spec)
+* 24V rail at 11.48V
+
+remove 3.3V injection
+* rails still in spec
+turn off power supplies
+
+Step 3:
+hook up adjustable power supply to 24V rail
+
+* 24V rail to 3V: no current draw
+* 24V rail to 12V: 2-3mA, 3.3V rail at 0.1V
+* 24V rail to 14V: overcome UVLO, 16mA current draw
+* 12V rail at 12.03V, 5V rail at 5.08V, 3.3V at 3.308V
+* 24V rail to 24V: input current now 9mA
+* 24V rail at 28V: 8mA
+
+power-up test passed.
+
