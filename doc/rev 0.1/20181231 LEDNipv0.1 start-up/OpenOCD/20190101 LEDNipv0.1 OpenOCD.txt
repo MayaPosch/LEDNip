@@ -1,4 +1,4 @@
-~~~ setting up the makefile and completing the OpenOCD configuration for development ~~~
+﻿~~~ setting up the makefile and completing the OpenOCD configuration for development ~~~
 
 http://openocd.org/doc/html/Config-File-Guidelines.html 
 	"6 Config File Guidelines
@@ -138,6 +138,9 @@ https://www.st.com/content/ccc/resource/technical/document/reference_manual/3d/6
 	
 	address of Application Interrupt and Reset Control Register (AIRCR)
 
+https://developer.arm.com/docs/100235/latest/the-cortexm33-peripherals/system-control-block/system-control-block-registers-summary
+https://developer.arm.com/docs/100235/latest/the-cortexm33-peripherals/system-control-block/application-interrupt-and-reset-control-register#wjk1485261189850
+https://www.st.com/content/ccc/resource/technical/document/programming_manual/6c/3a/cb/e7/e4/ea/44/9b/DM00046982.pdf/files/DM00046982.pdf/jcr:content/translations/en.DM00046982.pdf
 
 http://infocenter.arm.com/help/topic/com.arm.doc.ddi0439b/DDI0439B_cortex_m4_r0p0_trm.pdf
 http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0337e/ch06s03s02.html
@@ -153,6 +156,32 @@ http://www.ethernut.de/pdf/openocd-0.5.0.pdf
 	For example, to use pin 6 as SRST (as with an AVR board):
 	$_TARGETNAME configure -event reset-assert \
 	"usb_blaster pin6 1; wait 1; usb_blaster pin6 0"
+
+http://openocd.org/doc-release/doxygen/cortex__m_8h.html#a672585cafad500ab1872512c00dec3b7
+
+	#define AIRCR_SYSRESETREQ   (1 << 2)
+	Definition at line 119 of file cortex_m.h.
+	Referenced by adapter_assert_reset(), and cortex_m_assert_reset().
+
+
+
+answer to "why doesn't it work anymore if one follows the config script guidelines and implements -event reset-assert as a mww to AIRCR?":
+OpenOCD implements lots of fancy things which can hardly be re-implemented as part of the event handler.
+
+	  969     if (target_has_event_action(target, TARGET_EVENT_RESET_ASSERT)) {
+	  970         /* allow scripts to override the reset event */
+	  971 
+	  972         target_handle_event(target, TARGET_EVENT_RESET_ASSERT);
+	  973         register_cache_invalidate(cortex_m->armv7m.arm.core_cache);
+	  974         target->state = TARGET_RESET;
+	  975 
+	  976         return ERROR_OK;
+	  977     }
+	  978 
+
+and below there is lots of code with what actually has to happen for a reset. 
+So essentially - do NOT implement reset-assert event unless you are dealing with an entriely new CPU.
+
 
 ==============================================================================
 

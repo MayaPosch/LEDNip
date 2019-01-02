@@ -272,10 +272,10 @@ $(BUILD_DIR):
 # Flash the firmware to the device.
 # ---
 # This requires OpenOCD to be installed.
+# for details see http://openocd.org/doc/html/Flash-Programming.html
 #######################################
 flash:
-	openocd -f LEDNipv01.cfg
-	
+	openocd -f LEDNipv01.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
 
 #######################################
 # clean up
