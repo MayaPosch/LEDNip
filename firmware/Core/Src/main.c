@@ -64,6 +64,7 @@ SPI_HandleTypeDef hspi2;
 SPI_HandleTypeDef hspi3;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
@@ -110,6 +111,19 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
+
+/* void LedUpdateCallback() {
+	//
+} */
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+   /*  if (htim->Instance == TIM5)
+    {
+        count2++;
+    } */
+}
+
 
 /* USER CODE END PFP */
 
@@ -158,10 +172,71 @@ int main(void)
   MX_LWIP_Init();
   /* USER CODE BEGIN 2 */
   
-  //if(HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1) != HAL_OK)   {
+  // Start all of the PWM channels.
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1) != HAL_OK)   {
     /* PWM Generation Error */
-    //_Error_Handler(__FILE__, __LINE__);
-  //}
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  // Start timer for the LED update function.
+  // Compute the prescaler value to have TIM3 counter clock equal to 10 KHz
+  //uwPrescalerValue = (uint32_t) ((SystemCoreClock) / 10000) - 1;
+  
+  /* Set TIMx instance */
+  htim2.Instance = TIM2;
+   
+  /* Initialize TIM2 peripheral as follows:
+       + Period = 10000 - 1
+       + Prescaler = ((SystemCoreClock/2)/10000) - 1
+       + ClockDivision = 0
+       + Counter direction = Up
+  */
+  //htim2.Init.Period = 10000 - 1;
+  htim2.Init.Period = 62499;
+  //htim2.Init.Prescaler = uwPrescalerValue;
+  htim2.Init.Prescaler = 319;
+  htim2.Init.ClockDivision = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  if(HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  
+  /*##-2- Start the TIM Base generation in interrupt mode ####################*/
+  /* Start Channel1 */
+  if(HAL_TIM_Base_Start_IT(&htim2) != HAL_OK)
+  {
+    /* Starting Error */
+    Error_Handler();
+  }
 
   /* USER CODE END 2 */
 
