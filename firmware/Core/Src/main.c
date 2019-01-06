@@ -153,27 +153,27 @@ static float pwm4 = 0; // LED B
 } */
 
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
    /*  if (htim->Instance == TIM5)
     {
         count2++;
     } */
 	
-	/* The duty cycle value is a percentage of the reload register value (ARR). Rounding is used.*/
-	if (pwm0 > 100.0F) { pwm0 = 0.0F; }
+	// The duty cycle value is a percentage of the reload register value (ARR). Rounding is used.
+	/* if (pwm0 > 100.0F) { pwm0 = 0.0F; }
 	float DC = pwm0;
-	pwm0 += 0.5F;
+	pwm0 += 0.5F; */
 	
-    uint32_t newRegVal = (uint32_t) roundf((float)(htim1.Instance->ARR) * (DC * 0.01F));
+    //uint32_t newRegVal = (uint32_t) roundf((float)(htim1.Instance->ARR) * (DC * 0.01F));
 
-    /*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
-    if (newRegVal > htim1.Instance->ARR){
+    //In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
+    /* if (newRegVal > htim1.Instance->ARR){
         newRegVal = htim1.Instance->ARR;
-    }
+    } */
 
-    /*Assign the new DC count to the capture compare register.*/
-     htim1.Instance->CCR3 = (uint32_t)(roundf(newRegVal));  /*Change CCR1 to appropriate channel, or pass it in with function.*/ 
-}
+    ///Assign the new DC count to the capture compare register.
+     //htim1.Instance->CCR3 = (uint32_t)(roundf(newRegVal));  /*Change CCR1 to appropriate channel, or pass it in with function.*/ 
+//}
 
 
 /* USER CODE END PFP */
@@ -224,17 +224,26 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
   // Start all of the PWM channels.
-  HAL_TIM_Base_Start(&htim1);
-  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_ALL) != HAL_OK)   {
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1) != HAL_OK)   {
     Error_Handler();
   }
   
-  HAL_TIM_Base_Start(&htim3);
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3) != HAL_OK)   {
+    Error_Handler();
+  }
+  
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4) != HAL_OK)   {
+    Error_Handler();
+  }
+  
   if (HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3) != HAL_OK)   {
     Error_Handler();
   }
   
-  HAL_TIM_Base_Start(&htim4);
   if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2) != HAL_OK)   {
     Error_Handler();
   }
@@ -249,7 +258,6 @@ int main(void)
   
   // Start timer for the LED update function.
   //TIM2_Init();
-  //HAL_TIM_Base_Start(&htim2);
   
   // Compute the prescaler value to have TIM3 counter clock equal to 10 KHz
   //uwPrescalerValue = (uint32_t) ((SystemCoreClock) / 10000) - 1;
@@ -284,6 +292,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	int foo = 0;
+	uint16_t pwm_value = 0;
+	uint16_t step = 10;
 	while (1) {
 		/* USER CODE END WHILE */
 
@@ -297,26 +308,45 @@ int main(void)
 
 		/* USER CODE BEGIN 3 */
 		
-		if (pwm0 > 100.0F) { pwm0 = 0.0F; }
+		/* if (pwm0 > 100.0F) { pwm0 = 0.0F; }
 		float DC = pwm0;
-		pwm0 += 0.5F;
+		pwm0 += 0.5F; */
 		
-		uint32_t newRegVal = (uint32_t) roundf((float)(TIM1->ARR) * (DC * 0.01F));
+		//uint32_t newRegVal = (uint32_t) roundf((float)(TIM1->ARR) * (DC * 0.01F));
 
 		/*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
-		if (newRegVal > TIM1->ARR) {
+		/* if (newRegVal > TIM1->ARR) {
 			newRegVal = TIM1->ARR;
-		}
+		} */
 
 		/*Assign the new DC count to the capture compare register.*/
-		TIM1->CCR3 = 0; //(uint32_t) (roundf(newRegVal));
-		TIM1->CCR4 = 0; //(uint32_t) (roundf(newRegVal));
+		
+		if (pwm_value = 0) {
+			step = 50;
+		}
+		if (pwm_value >= 1000) {
+			step = -50;
+		}
+		
+		pwm_value += step;
+		 
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
+		
+		//TIM1->CCR3 = 0; //(uint32_t) (roundf(newRegVal));
+		//TIM1->CCR4 = 0; //(uint32_t) (roundf(newRegVal));
 		 
 		HAL_Delay(1000);
 		
 		HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
-		//HAL_GPIO_TogglePin(GPIOE, PANEL_D1_Pin);
-		//HAL_GPIO_TogglePin(GPIOE, PANEL_D2_Pin);
+		//HAL_GPIO_WritePin(GPIOE, PANEL_D1_Pin, foo);
+		//HAL_GPIO_WritePin(GPIOE, PANEL_D2_Pin, foo);
+		
+		if (foo == 0) {
+			foo = 1;
+		}
+		else {
+			foo = 0;
+		}
 
 	}
 	/* USER CODE END 3 */
@@ -483,9 +513,9 @@ static void MX_TIM1_Init(void)
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig;
 
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
+  htim1.Init.Prescaler = 100;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 0;
+  htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
