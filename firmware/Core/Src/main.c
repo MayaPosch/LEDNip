@@ -51,6 +51,8 @@
 #include "stm32f4xx_hal.h"
 #include "lwip.h"
 
+#include <math.h>
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -90,6 +92,13 @@ static void MX_USART2_UART_Init(void);
 static void MX_USART3_UART_Init(void);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
+static int pwmChannel;
+static float pwm0 = 0; // LED panel 0
+static float pwm1 = 0; // LED panel 1
+static float pwm2 = 0; // LED R
+static float pwm3 = 0; // LED G
+static float pwm4 = 0; // LED B
                                 
                                 
 /* void adjust_PWM_DC(TIM_HandleTypeDef* const pwmHandle, const float DC) {
@@ -122,6 +131,21 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     {
         count2++;
     } */
+	
+	/* The duty cycle value is a percentage of the reload register value (ARR). Rounding is used.*/
+	if (pwm0 > 100.0F) { pwm0 = 0.0F; }
+	float DC = pwm0;
+	pwm0 += 0.5F;
+	
+    uint32_t newRegVal = (uint32_t) roundf((float)(htim1.Instance->ARR) * (DC * 0.01F));
+
+    /*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
+    if (newRegVal > htim1.Instance->ARR){
+        newRegVal = htim1.Instance->ARR;
+    }
+
+    /*Assign the new DC count to the capture compare register.*/
+     htim1.Instance->CCR3 = (uint32_t)(roundf(newRegVal));  /*Change CCR1 to appropriate channel, or pass it in with function.*/ 
 }
 
 
