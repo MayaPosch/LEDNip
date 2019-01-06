@@ -86,6 +86,7 @@ static void MX_I2C1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_SPI3_Init(void);
 static void MX_TIM1_Init(void);
+static void TIM2_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_USART2_UART_Init(void);
@@ -123,6 +124,32 @@ static float pwm4 = 0; // LED B
 
 /* void LedUpdateCallback() {
 	//
+} */
+
+
+/* void TIM2_IRQHandler() {
+    // Checks whether the TIM2 interrupt has occurred or not
+    if (TIM_GetITStatus(TIM2, TIM_IT_Update)) {
+        // Clears the TIM2 interrupt pending bit
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+		
+        // Toggle orange LED (GPIO13)
+        //GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
+		
+		if (pwm0 > 100.0F) { pwm0 = 0.0F; }
+		float DC = pwm0;
+		pwm0 += 0.5F;
+		
+		uint32_t newRegVal = (uint32_t) roundf((float)(htim1.Instance->ARR) * (DC * 0.01F));
+
+		//In case of the DC being calculated as higher than the reload register, cap it to the reload register
+		if (newRegVal > htim1.Instance->ARR){
+			newRegVal = htim1.Instance->ARR;
+		}
+
+		//Assign the new DC count to the capture compare register.
+		 htim1.Instance->CCR3 = (uint32_t)(roundf(newRegVal));  //Change CCR1 to appropriate channel, or pass it in with function.
+    }
 } */
 
 
@@ -197,27 +224,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
   // Start all of the PWM channels.
-  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1) != HAL_OK)   {
-    /* PWM Generation Error */
+  HAL_TIM_Base_Start(&htim1);
+  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_ALL) != HAL_OK)   {
     Error_Handler();
   }
   
-  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2) != HAL_OK)   {
-    Error_Handler();
-  }
-  
-  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3) != HAL_OK)   {
-    Error_Handler();
-  }
-  
-  if (HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4) != HAL_OK)   {
-    Error_Handler();
-  }
-  
+  HAL_TIM_Base_Start(&htim3);
   if (HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3) != HAL_OK)   {
     Error_Handler();
   }
   
+  HAL_TIM_Base_Start(&htim4);
   if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2) != HAL_OK)   {
     Error_Handler();
   }
@@ -231,11 +248,14 @@ int main(void)
   }
   
   // Start timer for the LED update function.
+  //TIM2_Init();
+  //HAL_TIM_Base_Start(&htim2);
+  
   // Compute the prescaler value to have TIM3 counter clock equal to 10 KHz
   //uwPrescalerValue = (uint32_t) ((SystemCoreClock) / 10000) - 1;
   
   /* Set TIMx instance */
-  htim2.Instance = TIM2;
+  //htim2.Instance = TIM2;
    
   /* Initialize TIM2 peripheral as follows:
        + Period = 10000 - 1
@@ -244,37 +264,62 @@ int main(void)
        + Counter direction = Up
   */
   //htim2.Init.Period = 10000 - 1;
-  htim2.Init.Period = 62499;
+ /*  htim2.Init.Period = 500; // 62499;
   //htim2.Init.Prescaler = uwPrescalerValue;
-  htim2.Init.Prescaler = 319;
+  htim2.Init.Prescaler = 40000; //((SystemCoreClock/2)/10000) - 1; // 319;
   htim2.Init.ClockDivision = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  if(HAL_TIM_Base_Init(&htim2) != HAL_OK)
-  {
+  if(HAL_TIM_Base_Init(&htim2) != HAL_OK) {
     Error_Handler();
-  }
+  } */
   
   /*##-2- Start the TIM Base generation in interrupt mode ####################*/
   /* Start Channel1 */
-  if(HAL_TIM_Base_Start_IT(&htim2) != HAL_OK)
+  /* if(HAL_TIM_Base_Start_IT(&htim2) != HAL_OK)
   {
-    /* Starting Error */
     Error_Handler();
-  }
+  } */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+	while (1) {
+		/* USER CODE END WHILE */
 
-  /* USER CODE END WHILE */
+		// Flash some LEDs to help with debugging.
+		if (TIM2->CNT > 100) {
+			HAL_GPIO_WritePin(GPIOE, LED0_Pin, 0); 
+		}
+		else {
+			HAL_GPIO_WritePin(GPIOE, LED0_Pin, 1);
+		}
 
-  /* USER CODE BEGIN 3 */
+		/* USER CODE BEGIN 3 */
+		
+		if (pwm0 > 100.0F) { pwm0 = 0.0F; }
+		float DC = pwm0;
+		pwm0 += 0.5F;
+		
+		uint32_t newRegVal = (uint32_t) roundf((float)(TIM1->ARR) * (DC * 0.01F));
 
-  }
-  /* USER CODE END 3 */
+		/*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
+		if (newRegVal > TIM1->ARR) {
+			newRegVal = TIM1->ARR;
+		}
+
+		/*Assign the new DC count to the capture compare register.*/
+		TIM1->CCR3 = 0; //(uint32_t) (roundf(newRegVal));
+		TIM1->CCR4 = 0; //(uint32_t) (roundf(newRegVal));
+		 
+		HAL_Delay(1000);
+		
+		HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
+		//HAL_GPIO_TogglePin(GPIOE, PANEL_D1_Pin);
+		//HAL_GPIO_TogglePin(GPIOE, PANEL_D2_Pin);
+
+	}
+	/* USER CODE END 3 */
 
 }
 
@@ -497,6 +542,63 @@ static void MX_TIM1_Init(void)
   HAL_TIM_MspPostInit(&htim1);
 
 }
+
+/* TIM2 init function */
+static void TIM2_Init(void) {
+	// Enable clock for TIM2
+	__TIM2_CLK_ENABLE();
+    htim2.Init.Prescaler = 40000;
+    htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim2.Init.Period = 500;
+    htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim2.Init.RepetitionCounter = 0;
+    HAL_TIM_Base_Init(&htim2);
+    HAL_TIM_Base_Start_IT(&htim2);
+	
+	
+	/* RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+ 
+	TIM_TimeBaseInitTypeDef timerInitStructure; 
+	timerInitStructure.TIM_Prescaler = 40000;
+	timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	timerInitStructure.TIM_Period = 500;
+	timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	timerInitStructure.TIM_RepetitionCounter = 0;
+	TIM_TimeBaseInit(TIM2, &timerInitStructure);
+	TIM_Cmd(TIM2, ENABLE);
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE); */
+
+    // TIM2 initialization overflow every 500ms
+    // TIM2 by default has clock of 84MHz
+    // Here, we must set value of prescaler and period,
+    // so update event is 0.5Hz or 500ms
+    // Update Event (Hz) = timer_clock / ((TIM_Prescaler + 1) * 
+    // (TIM_Period + 1))
+    // Update Event (Hz) = 84MHz / ((4199 + 1) * (9999 + 1)) = 2 Hz
+    /* TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
+    TIM_TimeBaseInitStruct.TIM_Prescaler = 4199;
+    TIM_TimeBaseInitStruct.TIM_Period = 9999;
+    TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;
+    TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
+
+    // TIM2 initialize
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStruct);
+    // Enable TIM2 interrupt
+    TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+    // Start TIM2
+    TIM_Cmd(TIM2, ENABLE);
+
+    // Nested vectored interrupt settings
+    // TIM2 interrupt is most important (PreemptionPriority and 
+    // SubPriority = 0)
+    NVIC_InitTypeDef NVIC_InitStruct;
+    NVIC_InitStruct.NVIC_IRQChannel = TIM2_IRQn;
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+    NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStruct); */
+}
+
 
 /* TIM3 init function */
 static void MX_TIM3_Init(void)
