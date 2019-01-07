@@ -76,9 +76,23 @@ UART_HandleTypeDef huart3;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
+typedef struct RGB_DUTY_RAW {
+	uint16_t r, g, b;
+} RGB_DUTY_RAW;
+
+typedef struct PANEL_DUTY_RAW {
+	uint16_t p1, p2;
+} PANEL_DUTY_RAW;
+
+static const uint16_t PWM_TIMER_RELOAD = 10000; // TIM_COUNTRMODE_UP: period or TIM_COUNTERMODE_CENTERALIGNED1: period/2 
+static volatile RGB_DUTY_RAW syst_led_pwm; // PWM values for the onboard LED (duty cycle rel. to PWM_TIMER_RELOAD)
+static volatile RGB_DUTY_RAW ext_led_pwm;  // PWM values for three external LED channels (duty cycle rel. to PWM_TIMER_RELOAD)
+static volatile PANEL_DUTY_RAW panel_pwm;  // PWM values for two onboard CC drivers (duty cycle rel. to PWM_TIMER_RELOAD)
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_CAN1_Init(void);
@@ -94,14 +108,7 @@ static void MX_USART3_UART_Init(void);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
-static int pwmChannel;
-static float pwm0 = 0; // LED panel 0
-static float pwm1 = 0; // LED panel 1
-static float pwm2 = 0; // LED R
-static float pwm3 = 0; // LED G
-static float pwm4 = 0; // LED B
-                                
-                                
+
 /* void adjust_PWM_DC(TIM_HandleTypeDef* const pwmHandle, const float DC) {
     assert(pwmHandle != NULL);
     assert((DC >= 0.0F) && (DC <= 100.0F)); */
@@ -121,6 +128,10 @@ static float pwm4 = 0; // LED B
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
+
+void update_syst_pwm(void);
+void update_ext_pwm(void); 
+void update_panel_pwm(void);
 
 /* void LedUpdateCallback() {
 	//
@@ -179,6 +190,44 @@ static float pwm4 = 0; // LED B
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+
+inline void update_syst_pwm(void)
+{
+	/* LED_SYSTEM_R, LED_SYSTEM_G, LED_SYSTEM_B: 
+		the PWM signals for the external three LED channels are mapped to TIM1 and TIM3 channels due to 
+		peripheral mapping and routing constraints.
+		TIM1 and TIM3 output polarities are normal, duty cycle is 100% * TIMn->CCRn / TIMn->ARR.
+	*/
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, syst_led_pwm.r);
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, syst_led_pwm.g);
+	// note the B channel is driven by TIM3. It also needs to be configured to use the same counting mode.
+	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, syst_led_pwm.b);	
+} 
+
+inline void update_ext_pwm(void)
+{
+	/* PWM_R, PWM_G, PWM_B: 
+		the PWM signals for the external three LED channels are mapped to TIM4 channels 2, 3 and 4.
+		TIM4 output polarity is normal, duty cycle is 100% * TIM4->CCRn / TIM4->ARR.
+	*/
+	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, ext_led_pwm.r);
+	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, ext_led_pwm.g);
+	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, ext_led_pwm.b);	
+} 
+
+inline void update_panel_pwm(void)
+{
+	/* Panel_D1: 
+		TIM_CHANNEL_3 output polarity is normal, duty cycle is 100% * TIM1->CCR3 / TIM1->ARR.
+	*/
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, panel_pwm.p1);
+	/* Panel_D2: 
+		TIM_CHANNEL_4 output polarity is inverted (TIM1_OCPOLARITY_LOW) and the duty cycle is made complementary.
+		Combined with TIM_OCPOLARITY_LOW, the two channels (CH3 and CH4) produce 180° interleaved PWM 
+		to minimize primary-side current ripple and audible noise.
+	*/
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, TIM1->ARR - panel_pwm.p2); 
+} 
 
 /* USER CODE END 0 */
 
@@ -291,45 +340,40 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
 
-	uint16_t pwm_value = 0;
-	uint16_t step = 1;
+	int16_t pwm_value = 0;
+	int16_t step = 5;
+	
 	while (1) {
-		/* USER CODE END WHILE */
 
-		// Flash some LEDs to help with debugging.
-		if (TIM2->CNT > 100) {
-			HAL_GPIO_WritePin(GPIOE, LED0_Pin, 0); 
-		}
-		else {
-			HAL_GPIO_WritePin(GPIOE, LED0_Pin, 1);
-		}
 
 		/* USER CODE BEGIN 3 */
 
 		/*Assign the new DC count to the capture compare register.*/
 		
-		if (pwm_value <= 2) {
-			step =  1;
+		if (pwm_value <= 0) {
+			step =  5;
 		}
-		if (pwm_value >= 1000) {
-			step = -1;
+		if (pwm_value >= PWM_TIMER_RELOAD) {
+			step = -5;
 		}
 		
 		pwm_value += step;
 		 
 		// brightness ramp demo
-		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value*pwm_value/1000);
-		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, pwm_value*pwm_value/1000);
+		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value*pwm_value / PWM_TIMER_RELOAD);
+		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, pwm_value*pwm_value / PWM_TIMER_RELOAD);
 		
 		// colour temperature modulation demo
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1000-(1000-pwm_value)); // CH4 output polarity is inverted in software so it needs the complementary duty cycle value		
+		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
+		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, PWM_TIMER_RELOAD - (PWM_TIMER_RELOAD - pwm_value)); // CH4 output polarity is inverted in software so it needs the complementary duty cycle value		
+		panel_pwm.p1 = pwm_value;
+		panel_pwm.p2 = PWM_TIMER_RELOAD -  pwm_value;
+		update_panel_pwm();
 		 
 		HAL_Delay(1);
 		
-		HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
+		//HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
 		//HAL_GPIO_WritePin(GPIOE, PANEL_D1_Pin, foo);
 		//HAL_GPIO_WritePin(GPIOE, PANEL_D2_Pin, foo);
 
@@ -498,9 +542,9 @@ static void MX_TIM1_Init(void)
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig;
 
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 250;
+  htim1.Init.Prescaler = 25;
   htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
-  htim1.Init.Period = 1000;
+  htim1.Init.Period = PWM_TIMER_RELOAD;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
@@ -624,9 +668,9 @@ static void MX_TIM3_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
-  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 0;
+  htim3.Init.Prescaler = 25;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
+  htim3.Init.Period = PWM_TIMER_RELOAD;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
   {
@@ -661,9 +705,9 @@ static void MX_TIM4_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 0;
-  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 0;
+  htim4.Init.Prescaler = 25;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
+  htim4.Init.Period = PWM_TIMER_RELOAD;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)
   {
