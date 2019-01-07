@@ -292,9 +292,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	int foo = 0;
+
 	uint16_t pwm_value = 0;
-	uint16_t step = 10;
+	uint16_t step = 1;
 	while (1) {
 		/* USER CODE END WHILE */
 
@@ -307,46 +307,31 @@ int main(void)
 		}
 
 		/* USER CODE BEGIN 3 */
-		
-		/* if (pwm0 > 100.0F) { pwm0 = 0.0F; }
-		float DC = pwm0;
-		pwm0 += 0.5F; */
-		
-		//uint32_t newRegVal = (uint32_t) roundf((float)(TIM1->ARR) * (DC * 0.01F));
-
-		/*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
-		/* if (newRegVal > TIM1->ARR) {
-			newRegVal = TIM1->ARR;
-		} */
 
 		/*Assign the new DC count to the capture compare register.*/
 		
-		if (pwm_value = 0) {
-			step = 50;
+		if (pwm_value <= 2) {
+			step =  1;
 		}
 		if (pwm_value >= 1000) {
-			step = -50;
+			step = -1;
 		}
 		
 		pwm_value += step;
 		 
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
+		// brightness ramp demo
+		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value*pwm_value/1000);
+		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, pwm_value*pwm_value/1000);
 		
-		//TIM1->CCR3 = 0; //(uint32_t) (roundf(newRegVal));
-		//TIM1->CCR4 = 0; //(uint32_t) (roundf(newRegVal));
+		// colour temperature modulation demo
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 1000-(1000-pwm_value)); // CH4 output polarity is inverted in software so it needs the complementary duty cycle value		
 		 
-		HAL_Delay(1000);
+		HAL_Delay(1);
 		
 		HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
 		//HAL_GPIO_WritePin(GPIOE, PANEL_D1_Pin, foo);
 		//HAL_GPIO_WritePin(GPIOE, PANEL_D2_Pin, foo);
-		
-		if (foo == 0) {
-			foo = 1;
-		}
-		else {
-			foo = 0;
-		}
 
 	}
 	/* USER CODE END 3 */
@@ -513,8 +498,8 @@ static void MX_TIM1_Init(void)
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig;
 
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 100;
-  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Prescaler = 250;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
   htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
@@ -541,7 +526,6 @@ static void MX_TIM1_Init(void)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
-
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
@@ -551,7 +535,9 @@ static void MX_TIM1_Init(void)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
-
+  // make CH4 inverted to provide 180° out of phase PWM (needs complementary compare values
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_LOW;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
