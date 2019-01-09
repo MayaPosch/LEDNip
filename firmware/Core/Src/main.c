@@ -370,6 +370,11 @@ int main(void)
 		panel_pwm.p1 = pwm_value;
 		panel_pwm.p2 = PWM_TIMER_RELOAD -  pwm_value;
 		update_panel_pwm();
+		
+		ext_led_pwm.r = pwm_value;
+		ext_led_pwm.g = pwm_value;
+		ext_led_pwm.b = pwm_value;
+		update_ext_pwm();
 		 
 		HAL_Delay(1);
 		
