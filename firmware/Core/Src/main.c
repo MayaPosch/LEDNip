@@ -407,7 +407,8 @@ int main(void)
 	LedHsv.v = 0xff;
 	int16_t HsvStep = 1;
 	int16_t HsvStepDelayCounter = 0;
-	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Can limit the max brightness/current this way.
+	int8_t HsvStepLinger = 0;
+	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Limit the max brightness/current this way.
 	
 	while (1) {
 		/* USER CODE BEGIN 3 */
@@ -436,19 +437,20 @@ int main(void)
 		
 		// Demo: cycle through the RGB colours by mapping from the HSV colour space.
 		if (HsvStepDelayCounter >= 30) {
-			LedRgb = HsvToRgb(LedHsv);
-			if (LedHsv.h >= 0xff) { HsvStep = -1; }
-			else if (LedHsv.h <= 0x00) { HsvStep = 1; }
-			LedHsv.h += HsvStep;
+			if (LedHsv.h >= 0xff && HsvStepLinger == 0) { HsvStep = -1; HsvStepLinger = 1; }
+			else if (LedHsv.h <= 0x00 && HsvStepLinger == 0) { HsvStep = 1; HsvStepLinger = 1; }
+			else {
+				LedHsv.h += HsvStep;
+				
+				LedRgb = HsvToRgb(LedHsv);
+				ext_led_pwm.r = LedRgb.r * RgbToPwm;
+				ext_led_pwm.g = LedRgb.g * RgbToPwm;
+				ext_led_pwm.b = LedRgb.b * RgbToPwm;
+				update_ext_pwm();
+				
+				HsvStepLinger = 0;
+			}
 			
-			/* ext_led_pwm.r = pwm_value;
-			ext_led_pwm.g = pwm_value;
-			ext_led_pwm.b = pwm_value; */
-			
-			ext_led_pwm.r = LedRgb.r * RgbToPwm;
-			ext_led_pwm.g = LedRgb.g * RgbToPwm;
-			ext_led_pwm.b = LedRgb.b * RgbToPwm;
-			update_ext_pwm();
 			HsvStepDelayCounter = 0;
 		}
 		else {
