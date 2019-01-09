@@ -133,35 +133,93 @@ void update_syst_pwm(void);
 void update_ext_pwm(void); 
 void update_panel_pwm(void);
 
-/* void LedUpdateCallback() {
-	//
-} */
 
+// Crusty HSV/RGB stuff ahead.
+typedef struct RgbColor {
+    unsigned char r;
+    unsigned char g;
+    unsigned char b;
+} RgbColor;
 
-/* void TIM2_IRQHandler() {
-    // Checks whether the TIM2 interrupt has occurred or not
-    if (TIM_GetITStatus(TIM2, TIM_IT_Update)) {
-        // Clears the TIM2 interrupt pending bit
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-		
-        // Toggle orange LED (GPIO13)
-        //GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
-		
-		if (pwm0 > 100.0F) { pwm0 = 0.0F; }
-		float DC = pwm0;
-		pwm0 += 0.5F;
-		
-		uint32_t newRegVal = (uint32_t) roundf((float)(htim1.Instance->ARR) * (DC * 0.01F));
+typedef struct HsvColor {
+    unsigned char h;
+    unsigned char s;
+    unsigned char v;
+} HsvColor;
 
-		//In case of the DC being calculated as higher than the reload register, cap it to the reload register
-		if (newRegVal > htim1.Instance->ARR){
-			newRegVal = htim1.Instance->ARR;
-		}
+RgbColor HsvToRgb(HsvColor hsv) {
+    RgbColor rgb;
+    unsigned char region, remainder, p, q, t;
 
-		//Assign the new DC count to the capture compare register.
-		 htim1.Instance->CCR3 = (uint32_t)(roundf(newRegVal));  //Change CCR1 to appropriate channel, or pass it in with function.
+    if (hsv.s == 0) {
+        rgb.r = hsv.v;
+        rgb.g = hsv.v;
+        rgb.b = hsv.v;
+        return rgb;
     }
-} */
+
+    region = hsv.h / 43;
+    remainder = (hsv.h - (region * 43)) * 6; 
+
+    p = (hsv.v * (255 - hsv.s)) >> 8;
+    q = (hsv.v * (255 - ((hsv.s * remainder) >> 8))) >> 8;
+    t = (hsv.v * (255 - ((hsv.s * (255 - remainder)) >> 8))) >> 8;
+
+    switch (region) {
+        case 0:
+            rgb.r = hsv.v; rgb.g = t; rgb.b = p;
+            break;
+        case 1:
+            rgb.r = q; rgb.g = hsv.v; rgb.b = p;
+            break;
+        case 2:
+            rgb.r = p; rgb.g = hsv.v; rgb.b = t;
+            break;
+        case 3:
+            rgb.r = p; rgb.g = q; rgb.b = hsv.v;
+            break;
+        case 4:
+            rgb.r = t; rgb.g = p; rgb.b = hsv.v;
+            break;
+        default:
+            rgb.r = hsv.v; rgb.g = p; rgb.b = q;
+            break;
+    }
+
+    return rgb;
+}
+
+HsvColor RgbToHsv(RgbColor rgb) {
+    HsvColor hsv;
+    unsigned char rgbMin, rgbMax;
+
+    rgbMin = rgb.r < rgb.g ? (rgb.r < rgb.b ? rgb.r : rgb.b) : (rgb.g < rgb.b ? rgb.g : rgb.b);
+    rgbMax = rgb.r > rgb.g ? (rgb.r > rgb.b ? rgb.r : rgb.b) : (rgb.g > rgb.b ? rgb.g : rgb.b);
+
+    hsv.v = rgbMax;
+    if (hsv.v == 0) {
+        hsv.h = 0;
+        hsv.s = 0;
+        return hsv;
+    }
+
+    hsv.s = 255 * ((long) rgbMax - (long) rgbMin) / hsv.v;
+    if (hsv.s == 0) {
+        hsv.h = 0;
+        return hsv;
+    }
+
+    if (rgbMax == rgb.r) {  hsv.h = 0 + 43 * (rgb.g - rgb.b) / (rgbMax - rgbMin); }
+    else if (rgbMax == rgb.g) { hsv.h = 85 + 43 * (rgb.b - rgb.r) / (rgbMax - rgbMin); }
+    else { hsv.h = 171 + 43 * (rgb.r - rgb.g) / (rgbMax - rgbMin); }
+
+    return hsv;
+}
+
+
+static HsvColor LedHsv;
+static RgbColor LedRgb;
+// --- end of crusty HSV/RGB stuff
 
 
 //void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
@@ -344,9 +402,14 @@ int main(void)
 	int16_t pwm_value = 0;
 	int16_t step = 5;
 	
+	LedHsv.h = 0;
+	LedHsv.s = 0xff;
+	LedHsv.v = 0xff;
+	int16_t HsvStep = 1;
+	int16_t HsvStepDelayCounter = 0;
+	int16_t RgbToPwm = PWM_TIMER_RELOAD / 200; // Can limit the max brightness/current this way.
+	
 	while (1) {
-
-
 		/* USER CODE BEGIN 3 */
 
 		/*Assign the new DC count to the capture compare register.*/
@@ -368,20 +431,33 @@ int main(void)
 		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
 		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, PWM_TIMER_RELOAD - (PWM_TIMER_RELOAD - pwm_value)); // CH4 output polarity is inverted in software so it needs the complementary duty cycle value		
 		panel_pwm.p1 = pwm_value;
-		panel_pwm.p2 = PWM_TIMER_RELOAD -  pwm_value;
+		panel_pwm.p2 = PWM_TIMER_RELOAD - pwm_value;
 		update_panel_pwm();
 		
-		ext_led_pwm.r = pwm_value;
-		ext_led_pwm.g = pwm_value;
-		ext_led_pwm.b = pwm_value;
-		update_ext_pwm();
+		// Demo: cycle through the RGB colours by mapping from the HSV colour space.
+		if (HsvStepDelayCounter >= 30) {
+			LedRgb = HsvToRgb(LedHsv);
+			if (LedHsv.h >= 0xff) { HsvStep = -1; }
+			else if (LedHsv.h <= 0x00) { HsvStep = 1; }
+			LedHsv.h += HsvStep;
+			
+			/* ext_led_pwm.r = pwm_value;
+			ext_led_pwm.g = pwm_value;
+			ext_led_pwm.b = pwm_value; */
+			
+			ext_led_pwm.r = LedRgb.r * RgbToPwm;
+			ext_led_pwm.g = LedRgb.g * RgbToPwm;
+			ext_led_pwm.b = LedRgb.b * RgbToPwm;
+			update_ext_pwm();
+			HsvStepDelayCounter = 0;
+		}
+		else {
+			HsvStepDelayCounter++;
+		}
 		 
 		HAL_Delay(1);
 		
 		//HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
-		//HAL_GPIO_WritePin(GPIOE, PANEL_D1_Pin, foo);
-		//HAL_GPIO_WritePin(GPIOE, PANEL_D2_Pin, foo);
-
 	}
 	/* USER CODE END 3 */
 
