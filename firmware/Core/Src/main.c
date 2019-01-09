@@ -407,7 +407,7 @@ int main(void)
 	LedHsv.v = 0xff;
 	int16_t HsvStep = 1;
 	int16_t HsvStepDelayCounter = 0;
-	int16_t RgbToPwm = PWM_TIMER_RELOAD / 200; // Can limit the max brightness/current this way.
+	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Can limit the max brightness/current this way.
 	
 	while (1) {
 		/* USER CODE BEGIN 3 */
