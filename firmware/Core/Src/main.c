@@ -437,8 +437,9 @@ int main(void)
 		
 		// Demo: cycle through the RGB colours by mapping from the HSV colour space.
 		if (HsvStepDelayCounter >= 30) {
-			if (LedHsv.h >= 0xff && HsvStepLinger == 0) { HsvStep = -1; HsvStepLinger = 1; }
-			else if (LedHsv.h <= 0x00 && HsvStepLinger == 0) { HsvStep = 1; HsvStepLinger = 1; }
+			if (LedHsv.h >= 0xff && HsvStepLinger == 0) { HsvStep = -1; HsvStepLinger = 2; }
+			else if (LedHsv.h <= 0x00 && HsvStepLinger == 0) { HsvStep = 1; HsvStepLinger = 2; }
+			else if (HsvStepLinger == 2) { HsvStepLinger = 1; }
 			else {
 				LedHsv.h += HsvStep;
 				
