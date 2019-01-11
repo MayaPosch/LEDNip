@@ -51,10 +51,8 @@
 #include "stm32f4xx_hal.h"
 #include "lwip.h"
 
-#include <math.h>
-
 /* USER CODE BEGIN Includes */
-
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -88,7 +86,6 @@ static const uint16_t PWM_TIMER_RELOAD = 10000; // TIM_COUNTRMODE_UP: period or 
 static volatile RGB_DUTY_RAW syst_led_pwm; // PWM values for the onboard LED (duty cycle rel. to PWM_TIMER_RELOAD)
 static volatile RGB_DUTY_RAW ext_led_pwm;  // PWM values for three external LED channels (duty cycle rel. to PWM_TIMER_RELOAD)
 static volatile PANEL_DUTY_RAW panel_pwm;  // PWM values for two onboard CC drivers (duty cycle rel. to PWM_TIMER_RELOAD)
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -109,23 +106,6 @@ static void MX_USART3_UART_Init(void);
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 
-/* void adjust_PWM_DC(TIM_HandleTypeDef* const pwmHandle, const float DC) {
-    assert(pwmHandle != NULL);
-    assert((DC >= 0.0F) && (DC <= 100.0F)); */
-
-    /* The duty cycle value is a percentage of the reload register value (ARR). Rounding is used.*/
-    /* uint32_t newRegVal = (uint32_t)roundf((float32_t)(pwmHandle->Instance->ARR) * (DC * 0.01F)); */
-
-    /*In case of the DC being calculated as higher than the reload register, cap it to the reload register*/
-    // if (newRegVal > pwmHandle->Instance->ARR){
-        // newRegVal = pwmHandle->Instance->ARR);
-    // }
-
-    /*Assign the new DC count to the capture compare register.*/
-    /* pwmHandle->Instance->CCR1 = (uint32_t)(roundf(newRegVal));*/  /*Change CCR1 to appropriate channel, or pass it in with function.*/ 
-//}
-                                
-
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
@@ -134,7 +114,7 @@ void update_ext_pwm(void);
 void update_panel_pwm(void);
 
 
-// Crusty HSV/RGB stuff ahead.
+// --- crusty HSV/RGB stuff ahead.
 typedef struct RgbColor {
     unsigned char r;
     unsigned char g;
@@ -395,11 +375,7 @@ int main(void)
     Error_Handler();
   } */
 
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-
-	int16_t pwm_value = 0;
+ 	int16_t pwm_value = 0;
 	int16_t step = 5;
 	
 	LedHsv.h = 0;
@@ -408,7 +384,11 @@ int main(void)
 	int16_t HsvStep = 1;
 	int16_t HsvStepDelayCounter = 0;
 	int8_t HsvStepLinger = 0;
-	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Limit the max brightness/current this way.
+	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Limit the max brightness/current this way. 
+  
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
 	
 	while (1) {
 		/* USER CODE BEGIN 3 */
