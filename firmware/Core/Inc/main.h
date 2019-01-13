@@ -59,7 +59,7 @@
 
 /* Private define ------------------------------------------------------------*/
 #define PWM_TIMER_RELOAD 10000
-#define PWM_TIMER_PRESCALER 0
+#define PWM_TIMER_PRESCALER 3
 
 #define LED2_Pin GPIO_PIN_2
 #define LED2_GPIO_Port GPIOE
