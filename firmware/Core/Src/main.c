@@ -855,13 +855,16 @@ static void MX_GPIO_Init(void)
                           |LED1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, PHY_RST_Pin|PHY_AD0_Pin|CAN_STBY_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PHY_RST_GPIO_Port, PHY_RST_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI3_CS0_GPIO_Port, SPI3_CS0_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, PHY_AD0_Pin|CAN_STBY_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SPI2_CS1_Pin|SPI2_CS0_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(SPI3_CS0_GPIO_Port, SPI3_CS0_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, SPI2_CS1_Pin|SPI2_CS0_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : LED2_Pin LED3_Pin LED4_Pin LED5_Pin 
                            LED6_Pin LED7_Pin LED_CAN_Pin LED0_Pin 
@@ -874,8 +877,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PHY_RST_Pin PHY_AD0_Pin CAN_STBY_Pin */
-  GPIO_InitStruct.Pin = PHY_RST_Pin|PHY_AD0_Pin|CAN_STBY_Pin;
+  /*Configure GPIO pin : PHY_RST_Pin */
+  GPIO_InitStruct.Pin = PHY_RST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(PHY_RST_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PHY_AD0_Pin CAN_STBY_Pin */
+  GPIO_InitStruct.Pin = PHY_AD0_Pin|CAN_STBY_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -885,7 +895,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = SPI3_CS0_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(SPI3_CS0_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : I2S_CKIN_CS1_Pin */
@@ -908,7 +918,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = SPI2_CS1_Pin|SPI2_CS0_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
