@@ -1,48 +1,66 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Amplifier_Operational_LM324
+# panel_light_control-rescue_1N4001-Diode
 #
-DEF Amplifier_Operational_LM324 U 0 5 Y Y 5 L N
-F0 "U" 0 200 50 H V L CNN
-F1 "Amplifier_Operational_LM324" 0 -200 50 H V L CNN
-F2 "" -50 100 50 H I C CNN
-F3 "" 50 200 50 H I C CNN
-ALIAS LM324 TLC274 TLC279 TL074 LM324A MCP6004 TL084 TL064 LMV324 LMC6484 MCP604 MC33079 MC33174 MC33179 OPA1604 OPA4134 OPA4340UA OPA4376 MCP6L94 TSV914 ADA4807-4
+DEF panel_light_control-rescue_1N4001-Diode D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "panel_light_control-rescue_1N4001-Diode" 0 -100 50 H V C CNN
+F2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- SOIC*3.9x8.7mm*P1.27mm*
- DIP*W7.62mm*
- TSSOP*4.4x5mm*P0.65mm*
- SSOP*5.3x6.2mm*P0.65mm*
- MSOP*3x3mm*P0.5mm*
+ D*DO?41*
 $ENDFPLIST
 DRAW
-P 4 1 1 10 -200 200 200 0 -200 -200 -200 200 f
-P 4 2 1 10 -200 200 200 0 -200 -200 -200 200 f
-P 4 3 1 10 -200 200 200 0 -200 -200 -200 200 f
-P 4 4 1 10 -200 200 200 0 -200 -200 -200 200 f
-X ~ 1 300 0 100 L 50 50 1 1 O
-X - 2 -300 -100 100 R 50 50 1 1 I
-X + 3 -300 100 100 R 50 50 1 1 I
-X + 5 -300 100 100 R 50 50 2 1 I
-X - 6 -300 -100 100 R 50 50 2 1 I
-X ~ 7 300 0 100 L 50 50 2 1 O
-X + 10 -300 100 100 R 50 50 3 1 I
-X ~ 8 300 0 100 L 50 50 3 1 O
-X - 9 -300 -100 100 R 50 50 3 1 I
-X + 12 -300 100 100 R 50 50 4 1 I
-X - 13 -300 -100 100 R 50 50 4 1 I
-X ~ 14 300 0 100 L 50 50 4 1 O
-X V- 11 -100 -300 150 U 50 50 5 1 W
-X V+ 4 -100 300 150 D 50 50 5 1 W
+P 2 0 1 8 -50 50 -50 -50 N
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x02
+# panel_light_control-rescue_C-Device
 #
-DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_C-Device C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "panel_light_control-rescue_C-Device" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_C_Small-Device
+#
+DEF panel_light_control-rescue_C_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "panel_light_control-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_Conn_01x02-Connector_Generic
+#
+DEF panel_light_control-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -57,11 +75,33 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x04
+# panel_light_control-rescue_Conn_01x02_MountingPin-Connector_Generic_MountingPin
 #
-DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Conn_01x02_MountingPin-Connector_Generic_MountingPin J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x02_MountingPin-Connector_Generic_MountingPin" 50 -200 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??-1MP*
+$ENDFPLIST
+DRAW
+T 0 0 -165 15 0 1 1 Mounting Normal 0 C C
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+P 2 1 1 6 -40 -180 40 -180 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+X MountPin MP 0 -300 120 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_Conn_01x04-Connector_Generic
+#
+DEF panel_light_control-rescue_Conn_01x04-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x04" 0 -300 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x04-Connector_Generic" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -80,11 +120,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x06
+# panel_light_control-rescue_Conn_01x06-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Conn_01x06-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x06-Connector_Generic" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -107,11 +147,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x07
+# panel_light_control-rescue_Conn_01x07-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x07 J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Conn_01x07-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 400 50 H V C CNN
-F1 "Connector_Generic_Conn_01x07" 0 -400 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x07-Connector_Generic" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -136,11 +176,11 @@ X Pin_7 7 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x10
+# panel_light_control-rescue_Conn_01x10-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x10 J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Conn_01x10-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 500 50 H V C CNN
-F1 "Connector_Generic_Conn_01x10" 0 -600 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_01x10-Connector_Generic" 0 -600 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -171,11 +211,11 @@ X Pin_9 9 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x04_Counter_Clockwise
+# panel_light_control-rescue_Conn_02x04_Counter_Clockwise-Connector_Generic
 #
-DEF Connector_Generic_Conn_02x04_Counter_Clockwise J 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Conn_02x04_Counter_Clockwise-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 200 50 H V C CNN
-F1 "Connector_Generic_Conn_02x04_Counter_Clockwise" 50 -300 50 H V C CNN
+F1 "panel_light_control-rescue_Conn_02x04_Counter_Clockwise-Connector_Generic" 50 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -202,129 +242,11 @@ X Pin_8 8 300 100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_MountingPin_Conn_01x02_MountingPin
+# panel_light_control-rescue_Crystal_GND24-Device
 #
-DEF Connector_Generic_MountingPin_Conn_01x02_MountingPin J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_MountingPin_Conn_01x02_MountingPin" 50 -200 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??-1MP*
-$ENDFPLIST
-DRAW
-T 0 0 -165 15 0 1 1 Mounting Normal 0 C C
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-P 2 1 1 6 -40 -180 40 -180 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-X MountPin MP 0 -300 120 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_RJ45_Shielded
-#
-DEF Connector_RJ45_Shielded J 0 40 Y Y 1 F N
-F0 "J" -200 550 50 H V R CNN
-F1 "Connector_RJ45_Shielded" 100 550 50 H V L CNN
-F2 "" 0 25 50 V I C CNN
-F3 "" 0 25 50 V I C CNN
-ALIAS RJ31_Shielded RJ32_Shielded RJ33_Shielded RJ34_Shielded RJ35_Shielded RJ41_Shielded RJ45_Shielded RJ49_Shielded RJ61_Shielded
-$FPLIST
- 8P8C*
- RJ31*
- RJ32*
- RJ33*
- RJ34*
- RJ35*
- RJ41*
- RJ45*
- RJ49*
- RJ61*
-$ENDFPLIST
-DRAW
-S 300 500 -300 -400 0 1 10 f
-P 2 0 1 0 -200 175 -250 175 N
-P 2 0 1 0 -200 225 -250 225 N
-P 3 0 1 0 -250 -125 -200 -125 -200 -125 N
-P 3 0 1 0 -250 -75 -200 -75 -200 -75 N
-P 3 0 1 0 -250 -25 -200 -25 -200 -25 N
-P 3 0 1 0 -250 25 -200 25 -200 25 N
-P 3 0 1 0 -250 75 -200 75 -200 75 N
-P 3 0 1 0 -200 125 -250 125 -250 125 N
-P 14 0 1 0 -250 -175 -250 275 150 275 150 175 200 175 200 125 250 125 250 -25 200 -25 200 -75 150 -75 150 -175 -250 -175 -250 -175 N
-X ~ 1 400 -300 100 L 50 50 1 1 P
-X ~ 2 400 -200 100 L 50 50 1 1 P
-X ~ 3 400 -100 100 L 50 50 1 1 P
-X ~ 4 400 0 100 L 50 50 1 1 P
-X ~ 5 400 100 100 L 50 50 1 1 P
-X ~ 6 400 200 100 L 50 50 1 1 P
-X ~ 7 400 300 100 L 50 50 1 1 P
-X ~ 8 400 400 100 L 50 50 1 1 P
-X ~ SH 0 -500 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_TestPoint
-#
-DEF Connector_TestPoint TP 0 30 N N 1 F N
-F0 "TP" 0 270 50 H V C CNN
-F1 "Connector_TestPoint" 0 200 50 H V C CNN
-F2 "" 200 0 50 H I C CNN
-F3 "" 200 0 50 H I C CNN
-$FPLIST
- Pin*
- Test*
-$ENDFPLIST
-DRAW
-C 0 130 30 0 1 0 N
-X 1 1 0 0 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C
-#
-DEF Device_C C 0 10 N Y 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "Device_C" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 20 -80 -30 80 -30 N
-P 2 0 1 20 -80 30 80 30 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 110 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C_Small
-#
-DEF Device_C_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_C_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal_GND24
-#
-DEF Device_Crystal_GND24 Y 0 40 Y N 1 F N
+DEF panel_light_control-rescue_Crystal_GND24-Device Y 0 40 Y N 1 F N
 F0 "Y" 125 200 50 H V L CNN
-F1 "Device_Crystal_GND24" 125 125 50 H V L CNN
+F1 "panel_light_control-rescue_Crystal_GND24-Device" 125 125 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -347,11 +269,11 @@ X 4 4 0 -200 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D
+# panel_light_control-rescue_D-Device
 #
-DEF Device_D D 0 40 N N 1 F N
+DEF panel_light_control-rescue_D-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D" 0 -100 50 H V C CNN
+F1 "panel_light_control-rescue_D-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -369,11 +291,89 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_L
+# panel_light_control-rescue_GND-power
 #
-DEF Device_L L 0 40 N N 1 F N
+DEF panel_light_control-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "panel_light_control-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_HR911105A-SamacSys_Parts
+#
+DEF panel_light_control-rescue_HR911105A-SamacSys_Parts J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "panel_light_control-rescue_HR911105A-SamacSys_Parts" 750 200 50 H V L CNN
+F2 "HR911105A_1" 750 100 50 H I L CNN
+F3 "http://www.kosmodrom.com.ua/pdf/HR911105A.pdf" 750 0 50 H I L CNN
+F4 "Single port RJ45 connector, with magnetics module and LED" 750 -100 50 H I L CNN "Description"
+F5 "Hanrun Electronics" 750 -300 50 H I L CNN "Manufacturer_Name"
+F6 "HR911105A" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "HR911105A" 750 -700 50 H I L CNN "Arrow Part Number"
+DRAW
+P 5 0 1 6 200 100 700 100 700 -600 200 -600 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 10 10 900 -400 200 L 50 50 0 0 I
+X 11 11 0 -500 200 R 50 50 0 0 I
+X 12 12 900 -500 200 L 50 50 0 0 I
+X 2 2 900 0 200 L 50 50 0 0 B
+X 3 3 0 -100 200 R 50 50 0 0 B
+X 4 4 900 -100 200 L 50 50 0 0 W
+X 5 5 0 -200 200 R 50 50 0 0 W
+X 6 6 900 -200 200 L 50 50 0 0 B
+X 7 7 0 -300 200 R 50 50 0 0 B
+X 8 8 900 -300 200 L 50 50 0 0 W
+X 9 9 0 -400 200 R 50 50 0 0 I
+X CH 15 450 -700 100 U 50 50 1 1 W
+X CH 16 450 -700 100 U 50 50 1 1 P N
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_IRF540N-Transistor_FET
+#
+DEF panel_light_control-rescue_IRF540N-Transistor_FET Q 0 0 Y N 1 F N
+F0 "Q" 250 75 50 H V L CNN
+F1 "panel_light_control-rescue_IRF540N-Transistor_FET" 250 0 50 H V L CNN
+F2 "Package_TO_SOT_THT:TO-220-3_Vertical" 250 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+$FPLIST
+ TO?220*
+$ENDFPLIST
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 10 0 -100 0 N
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X G 1 -200 0 100 R 50 50 1 1 I
+X D 2 100 200 100 D 50 50 1 1 P
+X S 3 100 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_L-Device
+#
+DEF panel_light_control-rescue_L-Device L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "Device_L" 75 0 50 V V C CNN
+F1 "panel_light_control-rescue_L-Device" 75 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -392,11 +392,100 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED_RCBG
+# panel_light_control-rescue_L7805-Regulator_Linear
 #
-DEF Device_LED_RCBG D 0 0 Y N 1 F N
+DEF panel_light_control-rescue_L7805-Regulator_Linear U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "panel_light_control-rescue_L7805-Regulator_Linear" 0 125 50 H V L CNN
+F2 "" 25 -150 50 H I L CIN
+F3 "" 0 -50 50 H I C CNN
+$FPLIST
+ TO?252*
+ TO?263*
+ TO?220*
+$ENDFPLIST
+DRAW
+S -200 75 200 -200 0 1 10 f
+X IN 1 -300 0 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X OUT 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_LAN8720A-Interface_Ethernet
+#
+DEF panel_light_control-rescue_LAN8720A-Interface_Ethernet U 0 40 Y Y 1 F N
+F0 "U" -300 1125 50 H V R CNN
+F1 "panel_light_control-rescue_LAN8720A-Interface_Ethernet" -300 1050 50 H V R CNN
+F2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" 50 -950 50 H I L CNN
+F3 "" -200 -950 50 H I C CNN
+$FPLIST
+ QFN*1EP*4x4mm*P0.5mm*
+$ENDFPLIST
+DRAW
+T 0 -100 -150 50 0 0 0 RMII Normal 0 C C
+S -600 1000 500 -900 0 1 10 f
+P 4 0 1 0 -600 -250 50 -250 50 650 -600 650 N
+X VDD2A 1 100 1200 200 D 50 50 1 1 W
+X RXER/PHYAD0 10 -800 100 200 R 50 50 1 1 O
+X CRS_DV/MODE2 11 -800 0 200 R 50 50 1 1 O
+X MDIO 12 -800 -100 200 R 50 50 1 1 B
+X MDC 13 -800 -200 200 R 50 50 1 1 I
+X INT/REFCLKO 14 -800 -500 200 R 50 50 1 1 O I
+X RST 15 -800 -400 200 R 50 50 1 1 I I
+X TXEN 16 -800 400 200 R 50 50 1 1 I
+X TXD0 17 -800 600 200 R 50 50 1 1 I
+X TXD1 18 -800 500 200 R 50 50 1 1 I
+X VDD1A 19 0 1200 200 D 50 50 1 1 W
+X LED2/nINTSEL 2 700 -400 200 L 50 50 1 1 B
+X TXN 20 700 400 200 L 50 50 1 1 O I
+X TXP 21 700 500 200 L 50 50 1 1 O
+X RXN 22 700 200 200 L 50 50 1 1 O I
+X RXP 23 700 300 200 L 50 50 1 1 O
+X RBIAS 24 700 -100 200 L 50 50 1 1 I
+X VSS 25 0 -1100 200 U 50 50 1 1 W
+X LED1/REGOFF 3 700 -300 200 L 50 50 1 1 B
+X XTAL2 4 -800 -800 200 R 50 50 1 1 P
+X XTAL1/CLKIN 5 -800 -700 200 R 50 50 1 1 P
+X VDDCR 6 -100 1200 200 D 50 50 1 1 W
+X RXD1/MODE1 7 -800 200 200 R 50 50 1 1 O
+X RXD0/MODE0 8 -800 300 200 R 50 50 1 1 O
+X VDDIO 9 -200 1200 200 D 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_LDD-1000H-SamacSys_Parts
+#
+DEF panel_light_control-rescue_LDD-1000H-SamacSys_Parts PS 0 30 Y Y 1 F N
+F0 "PS" 1250 300 50 H V L CNN
+F1 "panel_light_control-rescue_LDD-1000H-SamacSys_Parts" 1250 200 50 H V L CNN
+F2 "" 1250 100 50 H I L CNN
+F3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" 1250 0 50 H I L CNN
+F4 "LED Power Supplies 9-56Vin 2-52Vout 1000mA LED Driver" 1250 -100 50 H I L CNN "Description"
+F5 "Mean Well" 1250 -300 50 H I L CNN "Manufacturer_Name"
+F6 "LDD-1000H" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "70345763" 1250 -700 50 H I L CNN "Allied_Number"
+F8 "http://www.alliedelec.com/mean-well-usa-ldd-1000h/70345763/" 1250 -800 50 H I L CNN "Allied Price/Stock"
+F9 "LDD-1000H" 1250 -900 50 H I L CNN "Arrow Part Number"
+DRAW
+P 5 0 1 6 200 100 1200 100 1200 -500 200 -500 200 100 N
+X -VIN_1 1 0 0 200 R 50 50 0 0 W
+X -VOUT_1 11 0 -200 200 R 50 50 0 0 P
+X -VOUT_2 12 0 -300 200 R 50 50 0 0 P
+X +VOUT_1 13 0 -400 200 R 50 50 0 0 w
+X +VOUT_2 14 1400 0 200 L 50 50 0 0 P
+X -VIN_2 2 0 -100 200 R 50 50 0 0 W
+X PWM_DIM 22 1400 -100 200 L 50 50 0 0 I
+X +VIN_1 23 1400 -200 200 L 50 50 0 0 W
+X +VIN_2 24 1400 -300 200 L 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_LED_RCBG-Device
+#
+DEF panel_light_control-rescue_LED_RCBG-Device D 0 0 Y N 1 F N
 F0 "D" 0 370 50 H V C CNN
-F1 "Device_LED_RCBG" 0 -350 50 H V C CNN
+F1 "panel_light_control-rescue_LED_RCBG-Device" 0 -350 50 H V C CNN
 F2 "" 0 -50 50 H I C CNN
 F3 "" 0 -50 50 H I C CNN
 $FPLIST
@@ -444,11 +533,11 @@ X GA 4 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED_Small
+# panel_light_control-rescue_LED_Small-Device
 #
-DEF Device_LED_Small D 0 10 N N 1 F N
+DEF panel_light_control-rescue_LED_Small-Device D 0 10 N N 1 F N
 F0 "D" -50 125 50 H V L CNN
-F1 "Device_LED_Small" -175 -100 50 H V L CNN
+F1 "panel_light_control-rescue_LED_Small-Device" -175 -100 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -467,88 +556,49 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Polyfuse_Small
+# panel_light_control-rescue_LM324-Amplifier_Operational
 #
-DEF Device_Polyfuse_Small F 0 0 N Y 1 F N
-F0 "F" -75 0 50 V V C CNN
-F1 "Device_Polyfuse_Small" 75 0 50 V V C CNN
-F2 "" 50 -200 50 H I L CNN
-F3 "" 0 0 50 H I C CNN
+DEF panel_light_control-rescue_LM324-Amplifier_Operational U 0 5 Y Y 5 L N
+F0 "U" 0 200 50 H V L CNN
+F1 "panel_light_control-rescue_LM324-Amplifier_Operational" 0 -200 50 H V L CNN
+F2 "" -50 100 50 H I C CNN
+F3 "" 50 200 50 H I C CNN
 $FPLIST
- *polyfuse*
- *PTC*
+ SOIC*3.9x8.7mm*P1.27mm*
+ DIP*W7.62mm*
+ TSSOP*4.4x5mm*P0.65mm*
+ SSOP*5.3x6.2mm*P0.65mm*
+ MSOP*3x3mm*P0.5mm*
 $ENDFPLIST
 DRAW
-S -20 50 20 -50 0 1 0 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 -40 50 -40 30 40 -30 40 -50 N
-X ~ 1 0 100 25 D 50 50 1 1 P
-X ~ 2 0 -100 25 U 50 50 1 1 P
+P 4 1 1 10 -200 200 200 0 -200 -200 -200 200 f
+P 4 2 1 10 -200 200 200 0 -200 -200 -200 200 f
+P 4 3 1 10 -200 200 200 0 -200 -200 -200 200 f
+P 4 4 1 10 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 300 0 100 L 50 50 1 1 O
+X - 2 -300 -100 100 R 50 50 1 1 I
+X + 3 -300 100 100 R 50 50 1 1 I
+X + 5 -300 100 100 R 50 50 2 1 I
+X - 6 -300 -100 100 R 50 50 2 1 I
+X ~ 7 300 0 100 L 50 50 2 1 O
+X + 10 -300 100 100 R 50 50 3 1 I
+X ~ 8 300 0 100 L 50 50 3 1 O
+X - 9 -300 -100 100 R 50 50 3 1 I
+X + 12 -300 100 100 R 50 50 4 1 I
+X - 13 -300 -100 100 R 50 50 4 1 I
+X ~ 14 300 0 100 L 50 50 4 1 O
+X V- 11 -100 -300 150 U 50 50 5 1 W
+X V+ 4 -100 300 150 D 50 50 5 1 W
 ENDDRAW
 ENDDEF
 #
-# Device_R
+# panel_light_control-rescue_MCP2562-E-P-Interface_CAN_LIN
 #
-DEF Device_R R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_R_Small
-#
-DEF Device_R_Small R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Diode_1N4001
-#
-DEF Diode_1N4001 D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "Diode_1N4001" 0 -100 50 H V C CNN
-F2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" 0 -175 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS 1N4002 1N4003 1N4004 1N4005 1N4006 1N4007 BA157 BA158 BA159
-$FPLIST
- D*DO?41*
-$ENDFPLIST
-DRAW
-P 2 0 1 8 -50 50 -50 -50 N
-P 2 0 1 0 50 0 -50 0 N
-P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Interface_CAN_LIN_MCP2562-E-P
-#
-DEF Interface_CAN_LIN_MCP2562-E-P U 0 40 Y Y 1 F N
+DEF panel_light_control-rescue_MCP2562-E-P-Interface_CAN_LIN U 0 40 Y Y 1 F N
 F0 "U" -400 350 50 H V L CNN
-F1 "Interface_CAN_LIN_MCP2562-E-P" 100 350 50 H V L CNN
+F1 "panel_light_control-rescue_MCP2562-E-P-Interface_CAN_LIN" 100 350 50 H V L CNN
 F2 "Package_DIP:DIP-8_W7.62mm" 0 -500 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
-ALIAS MCP2562-H-P
 $FPLIST
  DIP*W7.62mm*
 $ENDFPLIST
@@ -565,56 +615,195 @@ X STBY 8 -500 -200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Interface_Ethernet_LAN8720A
+# panel_light_control-rescue_MountingHole-Mechanical
 #
-DEF Interface_Ethernet_LAN8720A U 0 40 Y Y 1 F N
-F0 "U" -300 1125 50 H V R CNN
-F1 "Interface_Ethernet_LAN8720A" -300 1050 50 H V R CNN
-F2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" 50 -950 50 H I L CNN
-F3 "" -200 -950 50 H I C CNN
+DEF panel_light_control-rescue_MountingHole-Mechanical H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "panel_light_control-rescue_MountingHole-Mechanical" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- QFN*1EP*4x4mm*P0.5mm*
+ MountingHole*
 $ENDFPLIST
 DRAW
-T 0 -100 -150 50 0 0 0 RMII Normal 0 C C
-S -600 1000 500 -900 0 1 10 f
-P 4 0 1 0 -600 -250 50 -250 50 650 -600 650 N
-X VDD2A 1 100 1200 200 D 50 50 1 1 W
-X RXER/PHYAD0 10 -800 100 200 R 50 50 1 1 O
-X CRS_DV/MODE2 11 -800 0 200 R 50 50 1 1 O
-X MDIO 12 -800 -100 200 R 50 50 1 1 B
-X MDC 13 -800 -200 200 R 50 50 1 1 I
-X INT/REFCLKO 14 -800 -500 200 R 50 50 1 1 O I
-X RST 15 -800 -400 200 R 50 50 1 1 I I
-X TXEN 16 -800 400 200 R 50 50 1 1 I
-X TXD0 17 -800 600 200 R 50 50 1 1 I
-X TXD1 18 -800 500 200 R 50 50 1 1 I
-X VDD1A 19 0 1200 200 D 50 50 1 1 W
-X LED2/nINTSEL 2 700 -400 200 L 50 50 1 1 B
-X TXN 20 700 400 200 L 50 50 1 1 O I
-X TXP 21 700 500 200 L 50 50 1 1 O
-X RXN 22 700 200 200 L 50 50 1 1 O I
-X RXP 23 700 300 200 L 50 50 1 1 O
-X RBIAS 24 700 -100 200 L 50 50 1 1 I
-X VSS 25 0 -1100 200 U 50 50 1 1 W
-X LED1/REGOFF 3 700 -300 200 L 50 50 1 1 B
-X XTAL2 4 -800 -800 200 R 50 50 1 1 P
-X XTAL1/CLKIN 5 -800 -700 200 R 50 50 1 1 P
-X VDDCR 6 -100 1200 200 D 50 50 1 1 W
-X RXD1/MODE1 7 -800 200 200 R 50 50 1 1 O
-X RXD0/MODE0 8 -800 300 200 R 50 50 1 1 O
-X VDDIO 9 -200 1200 200 D 50 50 1 1 W
+C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
-# MCU_ST_STM32F2_STM32F207VGTx
+# panel_light_control-rescue_PWR_FLAG-power
 #
-DEF MCU_ST_STM32F2_STM32F207VGTx U 0 20 Y Y 1 F N
+DEF panel_light_control-rescue_PWR_FLAG-power #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "panel_light_control-rescue_PWR_FLAG-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_Polyfuse_Small-Device
+#
+DEF panel_light_control-rescue_Polyfuse_Small-Device F 0 0 N Y 1 F N
+F0 "F" -75 0 50 V V C CNN
+F1 "panel_light_control-rescue_Polyfuse_Small-Device" 75 0 50 V V C CNN
+F2 "" 50 -200 50 H I L CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *polyfuse*
+ *PTC*
+$ENDFPLIST
+DRAW
+S -20 50 20 -50 0 1 0 N
+P 2 0 1 0 0 100 0 -100 N
+P 4 0 1 0 -40 50 -40 30 40 -30 40 -50 N
+X ~ 1 0 100 25 D 50 50 1 1 P
+X ~ 2 0 -100 25 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_R-78B12-2.0-Regulator_Switching
+#
+DEF panel_light_control-rescue_R-78B12-2.0-Regulator_Switching U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "panel_light_control-rescue_R-78B12-2.0-Regulator_Switching" 0 125 50 H V L CNN
+F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Converter*DCDC*RECOM*R*78B*2.0*
+$ENDFPLIST
+DRAW
+S -200 75 200 -200 0 1 10 f
+X IN 1 -300 0 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X OUT 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_R-78B3.3-2.0-Regulator_Switching
+#
+DEF panel_light_control-rescue_R-78B3.3-2.0-Regulator_Switching U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "panel_light_control-rescue_R-78B3.3-2.0-Regulator_Switching" 0 125 50 H V L CNN
+F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Converter*DCDC*RECOM*R*78B*2.0*
+$ENDFPLIST
+DRAW
+S -200 75 200 -200 0 1 10 f
+X IN 1 -300 0 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X OUT 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_R-Device
+#
+DEF panel_light_control-rescue_R-Device R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "panel_light_control-rescue_R-Device" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_RJ45_Shielded-Connector
+#
+DEF panel_light_control-rescue_RJ45_Shielded-Connector J 0 40 Y Y 1 F N
+F0 "J" -200 550 50 H V R CNN
+F1 "panel_light_control-rescue_RJ45_Shielded-Connector" 100 550 50 H V L CNN
+F2 "" 0 25 50 V I C CNN
+F3 "" 0 25 50 V I C CNN
+$FPLIST
+ 8P8C*
+ RJ31*
+ RJ32*
+ RJ33*
+ RJ34*
+ RJ35*
+ RJ41*
+ RJ45*
+ RJ49*
+ RJ61*
+$ENDFPLIST
+DRAW
+S 300 500 -300 -400 0 1 10 f
+P 2 0 1 0 -200 175 -250 175 N
+P 2 0 1 0 -200 225 -250 225 N
+P 3 0 1 0 -250 -125 -200 -125 -200 -125 N
+P 3 0 1 0 -250 -75 -200 -75 -200 -75 N
+P 3 0 1 0 -250 -25 -200 -25 -200 -25 N
+P 3 0 1 0 -250 25 -200 25 -200 25 N
+P 3 0 1 0 -250 75 -200 75 -200 75 N
+P 3 0 1 0 -200 125 -250 125 -250 125 N
+P 14 0 1 0 -250 -175 -250 275 150 275 150 175 200 175 200 125 250 125 250 -25 200 -25 200 -75 150 -75 150 -175 -250 -175 -250 -175 N
+X ~ 1 400 -300 100 L 50 50 1 1 P
+X ~ 2 400 -200 100 L 50 50 1 1 P
+X ~ 3 400 -100 100 L 50 50 1 1 P
+X ~ 4 400 0 100 L 50 50 1 1 P
+X ~ 5 400 100 100 L 50 50 1 1 P
+X ~ 6 400 200 100 L 50 50 1 1 P
+X ~ 7 400 300 100 L 50 50 1 1 P
+X ~ 8 400 400 100 L 50 50 1 1 P
+X ~ SH 0 -500 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_R_Small-Device
+#
+DEF panel_light_control-rescue_R_Small-Device R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "panel_light_control-rescue_R_Small-Device" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_SKQYABE010-SamacSys_Parts
+#
+DEF panel_light_control-rescue_SKQYABE010-SamacSys_Parts S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "panel_light_control-rescue_SKQYABE010-SamacSys_Parts" 650 200 50 H V L CNN
+F2 "SKQYABE010" 650 100 50 H I L CNN
+F3 "http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQY/SKQYABE010.html#Dimensions" 650 0 50 H I L CNN
+F4 "Switch Tactile 6.1 x 3.7 SMT 2.55N Black Button Tactile Switch, SPST-NO 50 mA Surface Mount" 650 -100 50 H I L CNN "Description"
+F5 "2" 650 -200 50 H I L CNN "Height"
+F6 "ALPS" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "SKQYABE010" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "9174188" 650 -500 50 H I L CNN "RS Part Number"
+F9 "http://uk.rs-online.com/web/p/products/9174188" 650 -600 50 H I L CNN "RS Price/Stock"
+F10 "SKQYABE010" 650 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" 650 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 800 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# panel_light_control-rescue_STM32F207VGTx-MCU_ST_STM32F2
+#
+DEF panel_light_control-rescue_STM32F207VGTx-MCU_ST_STM32F2 U 0 20 Y Y 1 F N
 F0 "U" -700 2550 50 H V L CNN
-F1 "MCU_ST_STM32F2_STM32F207VGTx" 500 2550 50 H V L CNN
+F1 "panel_light_control-rescue_STM32F207VGTx-MCU_ST_STM32F2" 500 2550 50 H V L CNN
 F2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" -700 -2600 50 H I R CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS STM32F207VETx STM32F207VFTx STM32F207VGTx
 $FPLIST
  LQFP*14x14mm*P0.5mm*
 $ENDFPLIST
@@ -723,217 +912,20 @@ X RFU 99 -900 2000 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Mechanical_MountingHole
+# panel_light_control-rescue_TestPoint-Connector
 #
-DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
-F0 "H" 0 200 50 H V C CNN
-F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+DEF panel_light_control-rescue_TestPoint-Connector TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "panel_light_control-rescue_TestPoint-Connector" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
 $FPLIST
- MountingHole*
+ Pin*
+ Test*
 $ENDFPLIST
 DRAW
-C 0 0 50 0 1 50 N
-ENDDRAW
-ENDDEF
-#
-# Regulator_Linear_L7805
-#
-DEF Regulator_Linear_L7805 U 0 10 Y Y 1 F N
-F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Linear_L7805" 0 125 50 H V L CNN
-F2 "" 25 -150 50 H I L CIN
-F3 "" 0 -50 50 H I C CNN
-ALIAS L7806 L7808 L7885 L7809 L7812 L7815 L7818 L7824
-$FPLIST
- TO?252*
- TO?263*
- TO?220*
-$ENDFPLIST
-DRAW
-S -200 75 200 -200 0 1 10 f
-X IN 1 -300 0 100 R 50 50 1 1 W
-X GND 2 0 -300 100 U 50 50 1 1 W
-X OUT 3 300 0 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
-# Regulator_Switching_R-78B12-2.0
-#
-DEF Regulator_Switching_R-78B12-2.0 U 0 10 Y Y 1 F N
-F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Switching_R-78B12-2.0" 0 125 50 H V L CNN
-F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Converter*DCDC*RECOM*R*78B*2.0*
-$ENDFPLIST
-DRAW
-S -200 75 200 -200 0 1 10 f
-X IN 1 -300 0 100 R 50 50 1 1 W
-X GND 2 0 -300 100 U 50 50 1 1 W
-X OUT 3 300 0 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
-# Regulator_Switching_R-78B3.3-2.0
-#
-DEF Regulator_Switching_R-78B3.3-2.0 U 0 10 Y Y 1 F N
-F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Switching_R-78B3.3-2.0" 0 125 50 H V L CNN
-F2 "Converter_DCDC:Converter_DCDC_RECOM_R-78B-2.0_THT" 50 -250 50 H I L CIN
-F3 "" 0 0 50 H I C CNN
-ALIAS R-78B1.5-2.0 R-78B1.8-2.0 R-78B12-2.0 R-78B15-2.0 R-78B2.5-2.0 R-78B3.3-2.0 R-78B5.0-2.0 R-78B9.0-2.0
-$FPLIST
- Converter*DCDC*RECOM*R*78B*2.0*
-$ENDFPLIST
-DRAW
-S -200 75 200 -200 0 1 10 f
-X IN 1 -300 0 100 R 50 50 1 1 W
-X GND 2 0 -300 100 U 50 50 1 1 W
-X OUT 3 300 0 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
-# SamacSys_Parts_SKQYABE010
-#
-DEF SamacSys_Parts_SKQYABE010 S 0 30 Y Y 1 F N
-F0 "S" 650 300 50 H V L CNN
-F1 "SamacSys_Parts_SKQYABE010" 650 200 50 H V L CNN
-F2 "SKQYABE010" 650 100 50 H I L CNN
-F3 "http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQY/SKQYABE010.html#Dimensions" 650 0 50 H I L CNN
-F4 "Switch Tactile 6.1 x 3.7 SMT 2.55N Black Button Tactile Switch, SPST-NO 50 mA Surface Mount" 650 -100 50 H I L CNN "Description"
-F5 "2" 650 -200 50 H I L CNN "Height"
-F6 "ALPS" 650 -300 50 H I L CNN "Manufacturer_Name"
-F7 "SKQYABE010" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
-F8 "9174188" 650 -500 50 H I L CNN "RS Part Number"
-F9 "http://uk.rs-online.com/web/p/products/9174188" 650 -600 50 H I L CNN "RS Price/Stock"
-F10 "SKQYABE010" 650 -700 50 H I L CNN "Arrow Part Number"
-F11 "https://www.arrow.com/en/products/skqyabe010/alps-electric" 650 -800 50 H I L CNN "Arrow Price/Stock"
-DRAW
-P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
-X 1 1 0 0 200 R 50 50 0 0 P
-X 2 2 800 0 200 L 50 50 0 0 P
-ENDDRAW
-ENDDEF
-#
-# Transistor_FET_IRF540N
-#
-DEF Transistor_FET_IRF540N Q 0 0 Y N 1 F N
-F0 "Q" 250 75 50 H V L CNN
-F1 "Transistor_FET_IRF540N" 250 0 50 H V L CNN
-F2 "Package_TO_SOT_THT:TO-220-3_Vertical" 250 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-ALIAS IRF3205 IRF540N IRF740 IRLB8721PBF IRLZ34N IRLZ44N
-$FPLIST
- TO?220*
-$ENDFPLIST
-DRAW
-C 65 0 111 0 1 10 N
-C 100 -70 11 0 1 0 F
-C 100 70 11 0 1 0 F
-P 2 0 1 0 10 0 -100 0 N
-P 2 0 1 0 30 -70 100 -70 N
-P 2 0 1 10 30 -50 30 -90 N
-P 2 0 1 0 30 0 100 0 N
-P 2 0 1 10 30 20 30 -20 N
-P 2 0 1 0 30 70 100 70 N
-P 2 0 1 10 30 90 30 50 N
-P 2 0 1 0 100 -70 100 -100 N
-P 2 0 1 0 100 -70 100 0 N
-P 2 0 1 0 100 100 100 70 N
-P 3 0 1 10 10 75 10 -75 10 -75 N
-P 4 0 1 0 40 0 80 15 80 -15 40 0 F
-P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
-P 4 0 1 0 110 20 115 15 145 15 150 10 N
-P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
-X G 1 -200 0 100 R 50 50 1 1 I
-X D 2 100 200 100 D 50 50 1 1 P
-X S 3 100 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# panel_light_control-rescue_HR911105A-SamacSys_Parts
-#
-DEF panel_light_control-rescue_HR911105A-SamacSys_Parts J 0 30 Y Y 1 F N
-F0 "J" 750 300 50 H V L CNN
-F1 "panel_light_control-rescue_HR911105A-SamacSys_Parts" 750 200 50 H V L CNN
-F2 "HR911105A_1" 750 100 50 H I L CNN
-F3 "http://www.kosmodrom.com.ua/pdf/HR911105A.pdf" 750 0 50 H I L CNN
-F4 "Single port RJ45 connector, with magnetics module and LED" 750 -100 50 H I L CNN "Description"
-F5 "Hanrun Electronics" 750 -300 50 H I L CNN "Manufacturer_Name"
-F6 "HR911105A" 750 -400 50 H I L CNN "Manufacturer_Part_Number"
-F7 "HR911105A" 750 -700 50 H I L CNN "Arrow Part Number"
-DRAW
-P 5 0 1 6 200 100 700 100 700 -600 200 -600 200 100 N
-X 1 1 0 0 200 R 50 50 0 0 B
-X 10 10 900 -400 200 L 50 50 0 0 I
-X 11 11 0 -500 200 R 50 50 0 0 I
-X 12 12 900 -500 200 L 50 50 0 0 I
-X 2 2 900 0 200 L 50 50 0 0 B
-X 3 3 0 -100 200 R 50 50 0 0 B
-X 4 4 900 -100 200 L 50 50 0 0 W
-X 5 5 0 -200 200 R 50 50 0 0 W
-X 6 6 900 -200 200 L 50 50 0 0 B
-X 7 7 0 -300 200 R 50 50 0 0 B
-X 8 8 900 -300 200 L 50 50 0 0 W
-X 9 9 0 -400 200 R 50 50 0 0 I
-X CH 15 450 -700 100 U 50 50 1 1 W
-X CH 16 450 -700 100 U 50 50 1 1 P N
-ENDDRAW
-ENDDEF
-#
-# panel_light_control-rescue_LDD-1000H-SamacSys_Parts
-#
-DEF panel_light_control-rescue_LDD-1000H-SamacSys_Parts PS 0 30 Y Y 1 F N
-F0 "PS" 1250 300 50 H V L CNN
-F1 "panel_light_control-rescue_LDD-1000H-SamacSys_Parts" 1250 200 50 H V L CNN
-F2 "" 1250 100 50 H I L CNN
-F3 "http://www.meanwell.com/mw_search/LDD-H/LDD-H-SPEC.PDF" 1250 0 50 H I L CNN
-F4 "LED Power Supplies 9-56Vin 2-52Vout 1000mA LED Driver" 1250 -100 50 H I L CNN "Description"
-F5 "Mean Well" 1250 -300 50 H I L CNN "Manufacturer_Name"
-F6 "LDD-1000H" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
-F7 "70345763" 1250 -700 50 H I L CNN "Allied_Number"
-F8 "http://www.alliedelec.com/mean-well-usa-ldd-1000h/70345763/" 1250 -800 50 H I L CNN "Allied Price/Stock"
-F9 "LDD-1000H" 1250 -900 50 H I L CNN "Arrow Part Number"
-DRAW
-P 5 0 1 6 200 100 1200 100 1200 -500 200 -500 200 100 N
-X -VIN_1 1 0 0 200 R 50 50 0 0 W
-X -VOUT_1 11 0 -200 200 R 50 50 0 0 P
-X -VOUT_2 12 0 -300 200 R 50 50 0 0 P
-X +VOUT_1 13 0 -400 200 R 50 50 0 0 w
-X +VOUT_2 14 1400 0 200 L 50 50 0 0 P
-X -VIN_2 2 0 -100 200 R 50 50 0 0 W
-X PWM_DIM 22 1400 -100 200 L 50 50 0 0 I
-X +VIN_1 23 1400 -200 200 L 50 50 0 0 W
-X +VIN_2 24 1400 -300 200 L 50 50 0 0 W
-ENDDRAW
-ENDDEF
-#
-# power_GND
-#
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_PWR_FLAG
-#
-DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
-F0 "#FLG" 0 75 50 H I C CNN
-F1 "power_PWR_FLAG" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
-X pwr 1 0 0 0 U 50 50 0 0 w
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

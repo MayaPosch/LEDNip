@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:panel_light_control-cache
-EELAYER 28 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Interface_CAN_LIN:MCP2562-E-P U4
+L panel_light_control-rescue:MCP2562-E-P-Interface_CAN_LIN U4
 U 1 1 5BBC56DD
 P 5750 5300
 AR Path="/5BBC4BB7/5BBC56DD" Ref="U4"  Part="1" 
@@ -41,7 +41,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 5200 5250 5200
 $Comp
-L Connector:RJ45_Shielded J11
+L panel_light_control-rescue:RJ45_Shielded-Connector J11
 U 1 1 5BBC5D97
 P 7500 4300
 AR Path="/5BBC4BB7/5BBC5D97" Ref="J11"  Part="1" 
@@ -60,7 +60,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Interface_Ethernet:LAN8720A U5
+L panel_light_control-rescue:LAN8720A-Interface_Ethernet U5
 U 1 1 5BBD20DE
 P 8950 2600
 AR Path="/5BBC4BB7/5BBD20DE" Ref="U5"  Part="1" 
@@ -78,7 +78,7 @@ F 6 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L panel_light_control-rescue:GND-power #PWR0102
 U 1 1 5BBC97CE
 P 9750 3800
 AR Path="/5BBC4BB7/5BBC97CE" Ref="#PWR0102"  Part="1" 
@@ -105,7 +105,7 @@ Wire Wire Line
 Wire Wire Line
 	9200 5050 9300 5050
 $Comp
-L power:GND #PWR0103
+L panel_light_control-rescue:GND-power #PWR0103
 U 1 1 5BBD0CB5
 P 5150 5900
 AR Path="/5BBC4BB7/5BBD0CB5" Ref="#PWR0103"  Part="1" 
@@ -136,7 +136,7 @@ CAN_STBY
 Wire Wire Line
 	5050 5500 5250 5500
 $Comp
-L Device:C_Small C34
+L panel_light_control-rescue:C_Small-Device C34
 U 1 1 5BBDDD9A
 P 5500 4600
 AR Path="/5BBC4BB7/5BBDDD9A" Ref="C34"  Part="1" 
@@ -161,7 +161,7 @@ Wire Wire Line
 Text GLabel 5400 4400 0    50   Input ~ 0
 +5V
 $Comp
-L Device:C_Small C30
+L panel_light_control-rescue:C_Small-Device C30
 U 1 1 5BBE520F
 P 5150 5700
 AR Path="/5BBC4BB7/5BBE520F" Ref="C30"  Part="1" 
@@ -185,7 +185,7 @@ Connection ~ 5150 5400
 Wire Wire Line
 	5150 5400 5250 5400
 $Comp
-L Device:R_Small R30
+L panel_light_control-rescue:R_Small-Device R30
 U 1 1 5BBE7B3D
 P 6350 5600
 AR Path="/5BBC4BB7/5BBE7B3D" Ref="R30"  Part="1" 
@@ -226,7 +226,7 @@ RMII_MDC
 Text GLabel 7700 900  0    50   Input ~ 0
 +3.3V
 $Comp
-L Device:C_Small C31
+L panel_light_control-rescue:C_Small-Device C31
 U 1 1 5BC110E3
 P 8300 1100
 AR Path="/5BBC4BB7/5BC110E3" Ref="C31"  Part="1" 
@@ -247,7 +247,7 @@ $EndComp
 Wire Wire Line
 	7700 900  7900 900 
 $Comp
-L Device:C_Small C32
+L panel_light_control-rescue:C_Small-Device C32
 U 1 1 5BC1F172
 P 8450 1100
 AR Path="/5BBC4BB7/5BC1F172" Ref="C32"  Part="1" 
@@ -265,7 +265,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R33
+L panel_light_control-rescue:R_Small-Device R33
 U 1 1 5BC2F706
 P 9900 3350
 AR Path="/5BBC4BB7/5BC2F706" Ref="R33"  Part="1" 
@@ -288,7 +288,7 @@ Wire Wire Line
 Wire Wire Line
 	9900 2700 9650 2700
 $Comp
-L Device:R R22
+L panel_light_control-rescue:R-Device R22
 U 1 1 5BC5BEB3
 P 7600 2300
 AR Path="/5BBC4BB7/5BC5BEB3" Ref="R22"  Part="1" 
@@ -307,7 +307,7 @@ F 7 "19" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R23
+L panel_light_control-rescue:R-Device R23
 U 1 1 5BC5BEED
 P 7600 2400
 AR Path="/5BBC4BB7/5BC5BEED" Ref="R23"  Part="1" 
@@ -326,7 +326,7 @@ F 7 "19" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R25
+L panel_light_control-rescue:R-Device R25
 U 1 1 5BC5BFD3
 P 7600 2600
 AR Path="/5BBC4BB7/5BC5BFD3" Ref="R25"  Part="1" 
@@ -345,7 +345,7 @@ F 7 "19" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R24
+L panel_light_control-rescue:R-Device R24
 U 1 1 5BC5C00D
 P 7600 2500
 AR Path="/5BBC4BB7/5BC5C00D" Ref="R24"  Part="1" 
@@ -372,7 +372,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 2600 7450 2600
 $Comp
-L Device:Crystal_GND24 Y1
+L panel_light_control-rescue:Crystal_GND24-Device Y1
 U 1 1 5BCA8117
 P 4000 3400
 AR Path="/5BBC4BB7/5BCA8117" Ref="Y1"  Part="1" 
@@ -392,7 +392,7 @@ $EndComp
 Wire Wire Line
 	3400 3500 3550 3500
 $Comp
-L Device:C_Small C22
+L panel_light_control-rescue:C_Small-Device C22
 U 1 1 5BCAE054
 P 4200 3200
 AR Path="/5BBC4BB7/5BCAE054" Ref="C22"  Part="1" 
@@ -417,7 +417,7 @@ Text GLabel 1500 2800 0    50   Output ~ 0
 Text GLabel 7400 3300 0    50   Input ~ 0
 25MHz
 $Comp
-L Device:R R27
+L panel_light_control-rescue:R-Device R27
 U 1 1 5BD222B8
 P 7600 3300
 AR Path="/5BBC4BB7/5BD222B8" Ref="R27"  Part="1" 
@@ -444,7 +444,7 @@ RMII_REFCLKO
 Text GLabel 7400 3000 0    50   Input ~ 0
 PHY_RST
 $Comp
-L Device:R_Small R28
+L panel_light_control-rescue:R_Small-Device R28
 U 1 1 5BD3F9A6
 P 7900 1700
 AR Path="/5BBC4BB7/5BD3F9A6" Ref="R28"  Part="1" 
@@ -487,7 +487,7 @@ Wire Wire Line
 Wire Wire Line
 	7900 900  7900 1600
 $Comp
-L Device:L L1
+L panel_light_control-rescue:L-Device L1
 U 1 1 5BD9950C
 P 10250 900
 AR Path="/5BBC4BB7/5BD9950C" Ref="L1"  Part="1" 
@@ -506,7 +506,7 @@ $EndComp
 Wire Wire Line
 	7900 900  8050 900 
 $Comp
-L Device:C_Small C36
+L panel_light_control-rescue:C_Small-Device C36
 U 1 1 5BDB7E59
 P 9850 1100
 AR Path="/5BBC4BB7/5BDB7E59" Ref="C36"  Part="1" 
@@ -525,7 +525,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C35
+L panel_light_control-rescue:C_Small-Device C35
 U 1 1 5BDE1B23
 P 9450 1200
 AR Path="/5BBC4BB7/5BDE1B23" Ref="C35"  Part="1" 
@@ -543,7 +543,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C33
+L panel_light_control-rescue:C_Small-Device C33
 U 1 1 5BDE1B7D
 P 9300 1200
 AR Path="/5BBC4BB7/5BDE1B7D" Ref="C33"  Part="1" 
@@ -562,7 +562,7 @@ F 7 "5" H 0   0   50  0001 C CNN "box no"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C37
+L panel_light_control-rescue:C_Small-Device C37
 U 1 1 5BE09FD3
 P 10000 1100
 AR Path="/5BBC4BB7/5BE09FD3" Ref="C37"  Part="1" 
@@ -581,7 +581,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R29
+L panel_light_control-rescue:R_Small-Device R29
 U 1 1 5BE5D8B7
 P 8050 1700
 AR Path="/5BBC4BB7/5BE5D8B7" Ref="R29"  Part="1" 
@@ -607,7 +607,7 @@ Wire Wire Line
 	8050 3000 7400 3000
 Connection ~ 8050 3000
 $Comp
-L Device:R_Small R32
+L panel_light_control-rescue:R_Small-Device R32
 U 1 1 5BE7E51F
 P 9900 1950
 AR Path="/5BBC4BB7/5BE7E51F" Ref="R32"  Part="1" 
@@ -624,7 +624,7 @@ F 5 "603-RC0603FR-0749R9L" H 0   0   50  0001 C CNN "Mouser"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R34
+L panel_light_control-rescue:R_Small-Device R34
 U 1 1 5BE7E5FC
 P 10000 1950
 AR Path="/5BBC4BB7/5BE7E5FC" Ref="R34"  Part="1" 
@@ -641,7 +641,7 @@ F 5 "603-RC0603FR-0749R9L" H 0   0   50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R37
+L panel_light_control-rescue:R_Small-Device R37
 U 1 1 5BE7E650
 P 10350 1950
 AR Path="/5BBC4BB7/5BE7E650" Ref="R37"  Part="1" 
@@ -658,7 +658,7 @@ F 5 "603-RC0603FR-0749R9L" H 0   0   50  0001 C CNN "Mouser"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R38
+L panel_light_control-rescue:R_Small-Device R38
 U 1 1 5BE7E6A4
 P 10450 1950
 AR Path="/5BBC4BB7/5BE7E6A4" Ref="R38"  Part="1" 
@@ -707,7 +707,7 @@ Wire Wire Line
 Wire Wire Line
 	10450 2400 9650 2400
 $Comp
-L power:GND #PWR0107
+L panel_light_control-rescue:GND-power #PWR0107
 U 1 1 5BEECAF4
 P 9200 5850
 AR Path="/5BBC4BB7/5BEECAF4" Ref="#PWR0107"  Part="1" 
@@ -736,7 +736,7 @@ LED_GRN-
 Text GLabel 10400 3000 2    50   Output ~ 0
 LED_YLW-
 $Comp
-L Device:R R35
+L panel_light_control-rescue:R-Device R35
 U 1 1 5BF45AA2
 P 10150 2900
 AR Path="/5BBC4BB7/5BF45AA2" Ref="R35"  Part="1" 
@@ -755,7 +755,7 @@ F 7 "21" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R36
+L panel_light_control-rescue:R-Device R36
 U 1 1 5BF5A378
 P 10150 3000
 AR Path="/5BBC4BB7/5BF5A378" Ref="R36"  Part="1" 
@@ -783,7 +783,7 @@ Wire Wire Line
 	10300 3000 10400 3000
 NoConn ~ 8150 3400
 $Comp
-L Device:R R26
+L panel_light_control-rescue:R-Device R26
 U 1 1 5BFA708A
 P 7600 3100
 AR Path="/5BBC4BB7/5BFA708A" Ref="R26"  Part="1" 
@@ -873,7 +873,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 1600 2100 1700
 $Comp
-L power:GND #PWR0109
+L panel_light_control-rescue:GND-power #PWR0109
 U 1 1 5C16DA4C
 P 2450 7400
 AR Path="/5BBC4BB7/5C16DA4C" Ref="#PWR0109"  Part="1" 
@@ -892,7 +892,7 @@ Wire Wire Line
 Text Notes 750  2850 0    50   ~ 0
 MCO1
 $Comp
-L Device:R R19
+L panel_light_control-rescue:R-Device R19
 U 1 1 5C249277
 P 1250 5000
 AR Path="/5BBC4BB7/5C249277" Ref="R19"  Part="1" 
@@ -911,7 +911,7 @@ F 7 "19" H 0   0   50  0001 C CNN "box no"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:R R20
+L panel_light_control-rescue:R-Device R20
 U 1 1 5C25834F
 P 1250 4900
 AR Path="/5BBC4BB7/5C25834F" Ref="R20"  Part="1" 
@@ -943,7 +943,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 5550 9200 5550
 $Comp
-L Device:R_Small R31
+L panel_light_control-rescue:R_Small-Device R31
 U 1 1 5C312486
 P 9750 3350
 AR Path="/5BBC4BB7/5C312486" Ref="R31"  Part="1" 
@@ -1085,7 +1085,7 @@ Wire Wire Line
 Wire Wire Line
 	1500 3400 1600 3400
 $Comp
-L Device:C_Small C17
+L panel_light_control-rescue:C_Small-Device C17
 U 1 1 5CA2B833
 P 3350 1050
 AR Path="/5BBC4BB7/5CA2B833" Ref="C17"  Part="1" 
@@ -1106,7 +1106,7 @@ $EndComp
 Wire Wire Line
 	3350 950  3350 850 
 $Comp
-L Device:C_Small C20
+L panel_light_control-rescue:C_Small-Device C20
 U 1 1 5CA40E50
 P 3000 1050
 AR Path="/5BBC4BB7/5CA40E50" Ref="C20"  Part="1" 
@@ -1129,7 +1129,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 1150 3000 1250
 $Comp
-L Device:C_Small C24
+L panel_light_control-rescue:C_Small-Device C24
 U 1 1 5CA5689E
 P 2650 1050
 AR Path="/5BBC4BB7/5CA5689E" Ref="C24"  Part="1" 
@@ -1152,7 +1152,7 @@ Wire Wire Line
 Wire Wire Line
 	2650 1150 2650 1250
 $Comp
-L Device:C_Small C26
+L panel_light_control-rescue:C_Small-Device C26
 U 1 1 5CA6C61D
 P 2300 1050
 AR Path="/5BBC4BB7/5CA6C61D" Ref="C26"  Part="1" 
@@ -1175,7 +1175,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 1150 2300 1250
 $Comp
-L Device:C_Small C28
+L panel_light_control-rescue:C_Small-Device C28
 U 1 1 5CA8275E
 P 1950 1050
 AR Path="/5BBC4BB7/5CA8275E" Ref="C28"  Part="1" 
@@ -1217,7 +1217,7 @@ NoConn ~ 3400 5600
 NoConn ~ 3400 5500
 NoConn ~ 3400 5400
 $Comp
-L Device:C_Small C15
+L panel_light_control-rescue:C_Small-Device C15
 U 1 1 5CDF86AC
 P 3700 1050
 AR Path="/5BBC4BB7/5CDF86AC" Ref="C15"  Part="1" 
@@ -1239,7 +1239,7 @@ Wire Wire Line
 	2100 1600 2200 1600
 NoConn ~ 1600 2500
 $Comp
-L Device:C_Small C19
+L panel_light_control-rescue:C_Small-Device C19
 U 1 1 5CE43270
 P 3950 2700
 AR Path="/5BBC4BB7/5CE43270" Ref="C19"  Part="1" 
@@ -1257,7 +1257,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C23
+L panel_light_control-rescue:C_Small-Device C23
 U 1 1 5CE43430
 P 3800 2700
 AR Path="/5BBC4BB7/5CE43430" Ref="C23"  Part="1" 
@@ -1281,7 +1281,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 2500 3500 2600
 $Comp
-L power:GND #PWR025
+L panel_light_control-rescue:GND-power #PWR025
 U 1 1 5CEA5395
 P 3800 3000
 AR Path="/5BBC4BB7/5CEA5395" Ref="#PWR025"  Part="1" 
@@ -1296,7 +1296,7 @@ F 3 "" H 3800 3000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C29
+L panel_light_control-rescue:C_Small-Device C29
 U 1 1 5CED7D11
 P 1600 1050
 AR Path="/5BBC4BB7/5CED7D11" Ref="C29"  Part="1" 
@@ -1317,7 +1317,7 @@ $EndComp
 Wire Wire Line
 	1600 1150 1600 1250
 $Comp
-L power:GND #PWR030
+L panel_light_control-rescue:GND-power #PWR030
 U 1 1 5CED7D19
 P 1600 1350
 AR Path="/5BBC4BB7/5CED7D19" Ref="#PWR030"  Part="1" 
@@ -1335,7 +1335,7 @@ Wire Wire Line
 	1600 850  1600 950 
 NoConn ~ 3400 2400
 $Comp
-L Device:C_Small C18
+L panel_light_control-rescue:C_Small-Device C18
 U 1 1 5CF5C42C
 P 4050 2150
 AR Path="/5BBC4BB7/5CF5C42C" Ref="C18"  Part="1" 
@@ -1358,7 +1358,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 2250 4050 2300
 $Comp
-L Device:R R21
+L panel_light_control-rescue:R-Device R21
 U 1 1 5CF93D60
 P 3600 2200
 AR Path="/5BBC4BB7/5CF93D60" Ref="R21"  Part="1" 
@@ -1386,7 +1386,7 @@ Wire Wire Line
 Text GLabel 1500 2400 0    50   Input ~ 0
 I2S_WS
 $Comp
-L MCU_ST_STM32F2:STM32F207VGTx U3
+L panel_light_control-rescue:STM32F207VGTx-MCU_ST_STM32F2 U3
 U 1 1 5BBC4EC1
 P 2500 4400
 AR Path="/5BBC4BB7/5BBC4EC1" Ref="U3"  Part="1" 
@@ -1441,7 +1441,7 @@ Wire Wire Line
 Wire Wire Line
 	10600 5150 10600 4700
 $Comp
-L power:GND #PWR015
+L panel_light_control-rescue:GND-power #PWR015
 U 1 1 5D207DE0
 P 5500 4800
 AR Path="/5BBC4BB7/5D207DE0" Ref="#PWR015"  Part="1" 
@@ -1467,7 +1467,7 @@ Wire Wire Line
 	5750 4400 5500 4400
 Connection ~ 5500 4400
 $Comp
-L power:GND #PWR016
+L panel_light_control-rescue:GND-power #PWR016
 U 1 1 5D28DE2C
 P 5750 5900
 AR Path="/5BBC4BB7/5D28DE2C" Ref="#PWR016"  Part="1" 
@@ -1486,7 +1486,7 @@ Wire Wire Line
 Wire Wire Line
 	5150 5800 5150 5900
 $Comp
-L power:GND #PWR017
+L panel_light_control-rescue:GND-power #PWR017
 U 1 1 5D3C38BE
 P 6900 4400
 AR Path="/5BBC4BB7/5D3C38BE" Ref="#PWR017"  Part="1" 
@@ -1501,7 +1501,7 @@ F 3 "" H 6900 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L panel_light_control-rescue:GND-power #PWR022
 U 1 1 5D3C5889
 P 6900 5500
 AR Path="/5BBC4BB7/5D3C5889" Ref="#PWR022"  Part="1" 
@@ -1544,7 +1544,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 4900 7300 4700
 $Comp
-L power:GND #PWR024
+L panel_light_control-rescue:GND-power #PWR024
 U 1 1 5D47EE1B
 P 7400 5900
 AR Path="/5BBC4BB7/5D47EE1B" Ref="#PWR024"  Part="1" 
@@ -1559,7 +1559,7 @@ F 3 "" H 7400 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L panel_light_control-rescue:GND-power #PWR023
 U 1 1 5D481086
 P 7400 4800
 AR Path="/5BBC4BB7/5D481086" Ref="#PWR023"  Part="1" 
@@ -1655,7 +1655,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 1250 3350 1150
 $Comp
-L power:GND #PWR06
+L panel_light_control-rescue:GND-power #PWR06
 U 1 1 5D884752
 P 3900 2300
 AR Path="/5BBC4BB7/5D884752" Ref="#PWR06"  Part="1" 
@@ -1743,7 +1743,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 2300 3900 2200
 $Comp
-L power:GND #PWR010
+L panel_light_control-rescue:GND-power #PWR010
 U 1 1 5DD183A4
 P 4050 2300
 AR Path="/5BBC4BB7/5DD183A4" Ref="#PWR010"  Part="1" 
@@ -1764,7 +1764,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 3600 4000 3550
 $Comp
-L power:GND #PWR013
+L panel_light_control-rescue:GND-power #PWR013
 U 1 1 5DDD1B75
 P 4400 3700
 AR Path="/5BBC4BB7/5DDD1B75" Ref="#PWR013"  Part="1" 
@@ -1793,7 +1793,7 @@ Connection ~ 4400 3400
 Wire Wire Line
 	4400 3400 4400 3600
 $Comp
-L power:GND #PWR03
+L panel_light_control-rescue:GND-power #PWR03
 U 1 1 5DE266B9
 P 3700 3400
 AR Path="/5BBC4BB7/5DE266B9" Ref="#PWR03"  Part="1" 
@@ -1816,7 +1816,7 @@ Wire Wire Line
 	3550 3600 4000 3600
 Connection ~ 4000 3600
 $Comp
-L Device:C_Small C21
+L panel_light_control-rescue:C_Small-Device C21
 U 1 1 5DEBCA55
 P 4200 3600
 AR Path="/5BBC4BB7/5DEBCA55" Ref="C21"  Part="1" 
@@ -1833,7 +1833,7 @@ F 5 "80-CBR06C110F5G" V 4200 3600 50  0001 C CNN "Mouser"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:RJ45_Shielded J2
+L panel_light_control-rescue:RJ45_Shielded-Connector J2
 U 1 1 5DFDD825
 P 7500 5400
 AR Path="/5BBC4BB7/5DFDD825" Ref="J2"  Part="1" 
@@ -1854,7 +1854,7 @@ $EndComp
 Wire Wire Line
 	8900 4700 8900 5250
 $Comp
-L power:GND #PWR027
+L panel_light_control-rescue:GND-power #PWR027
 U 1 1 5E09B80B
 P 8950 3800
 AR Path="/5BBC4BB7/5E09B80B" Ref="#PWR027"  Part="1" 
@@ -1888,7 +1888,7 @@ Connection ~ 8300 900
 Wire Wire Line
 	8300 900  8450 900 
 $Comp
-L power:GND #PWR026
+L panel_light_control-rescue:GND-power #PWR026
 U 1 1 5E2FD2B1
 P 8300 1400
 AR Path="/5BBC4BB7/5E2FD2B1" Ref="#PWR026"  Part="1" 
@@ -1910,7 +1910,7 @@ Wire Wire Line
 	8450 1200 8450 1300
 Connection ~ 8300 1300
 $Comp
-L power:GND #PWR028
+L panel_light_control-rescue:GND-power #PWR028
 U 1 1 5E36C314
 P 10000 1550
 AR Path="/5BBC4BB7/5E36C314" Ref="#PWR028"  Part="1" 
@@ -1982,7 +1982,7 @@ Wire Wire Line
 Wire Wire Line
 	9200 5550 9200 5850
 $Comp
-L power:GND #PWR029
+L panel_light_control-rescue:GND-power #PWR029
 U 1 1 5E8581A9
 P 10300 5850
 AR Path="/5BBC4BB7/5E8581A9" Ref="#PWR029"  Part="1" 
@@ -2002,7 +2002,7 @@ Connection ~ 10300 5450
 Text Label 9250 1000 0    50   ~ 0
 VDDCR
 $Comp
-L Device:C_Small C27
+L panel_light_control-rescue:C_Small-Device C27
 U 1 1 5BCFD8F3
 P 9700 1100
 AR Path="/5BBC4BB7/5BCFD8F3" Ref="C27"  Part="1" 
@@ -2055,7 +2055,7 @@ PHY_VDDA
 Text GLabel 3500 2800 3    50   Input ~ 0
 +3.3V
 $Comp
-L Device:LED_Small LED0
+L panel_light_control-rescue:LED_Small-Device LED0
 U 1 1 5BD41B70
 P 5250 950
 F 0 "LED0" H 5050 800 50  0000 C CNN
@@ -2070,7 +2070,7 @@ $EndComp
 Wire Wire Line
 	5150 950  4950 950 
 $Comp
-L Device:R_Small R42
+L panel_light_control-rescue:R_Small-Device R42
 U 1 1 5BE6601F
 P 5550 950
 AR Path="/5BBC4BB7/5BE6601F" Ref="R42"  Part="1" 
@@ -2091,7 +2091,7 @@ $EndComp
 Wire Wire Line
 	5450 950  5350 950 
 $Comp
-L Device:C_Small C2
+L panel_light_control-rescue:C_Small-Device C2
 U 1 1 5BD75441
 P 1250 1050
 AR Path="/5BBC4BB7/5BD75441" Ref="C2"  Part="1" 
@@ -2126,7 +2126,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 1250 3700 1250
 $Comp
-L Device:LED_RCBG LED9
+L panel_light_control-rescue:LED_RCBG-Device LED9
 U 1 1 5BD65DAE
 P 5900 6950
 AR Path="/5BBC4BB7/5BD65DAE" Ref="LED9"  Part="1" 
@@ -2143,7 +2143,7 @@ $EndComp
 Wire Wire Line
 	6100 6950 6200 6950
 $Comp
-L Device:R_Small R50
+L panel_light_control-rescue:R_Small-Device R50
 U 1 1 5BD65DB5
 P 5550 7150
 AR Path="/5BBC4BB7/5BD65DB5" Ref="R50"  Part="1" 
@@ -2163,7 +2163,7 @@ F 7 "21" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R49
+L panel_light_control-rescue:R_Small-Device R49
 U 1 1 5BD65DBB
 P 5550 6950
 AR Path="/5BBC4BB7/5BD65DBB" Ref="R49"  Part="1" 
@@ -2183,7 +2183,7 @@ F 7 "21" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R48
+L panel_light_control-rescue:R_Small-Device R48
 U 1 1 5BD65DC1
 P 5550 6750
 AR Path="/5BBC4BB7/5BD65DC1" Ref="R48"  Part="1" 
@@ -2215,7 +2215,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 6750 5650 6750
 $Comp
-L power:GND #PWR0122
+L panel_light_control-rescue:GND-power #PWR0122
 U 1 1 5BD65DCD
 P 6200 7050
 F 0 "#PWR0122" H 6200 6800 50  0001 C CNN
@@ -2290,7 +2290,7 @@ Wire Wire Line
 Text GLabel 5800 3750 2    50   Input ~ 0
 LED_CAN
 $Comp
-L Device:LED_Small LED1
+L panel_light_control-rescue:LED_Small-Device LED1
 U 1 1 5C0171B4
 P 5250 1250
 F 0 "LED1" H 5050 1100 50  0000 C CNN
@@ -2305,7 +2305,7 @@ $EndComp
 Wire Wire Line
 	5150 1250 4950 1250
 $Comp
-L Device:R_Small R43
+L panel_light_control-rescue:R_Small-Device R43
 U 1 1 5C0171BB
 P 5550 1250
 AR Path="/5BBC4BB7/5C0171BB" Ref="R43"  Part="1" 
@@ -2326,7 +2326,7 @@ $EndComp
 Wire Wire Line
 	5450 1250 5350 1250
 $Comp
-L Device:LED_Small LED2
+L panel_light_control-rescue:LED_Small-Device LED2
 U 1 1 5C03640B
 P 5250 1550
 F 0 "LED2" H 5050 1400 50  0000 C CNN
@@ -2341,7 +2341,7 @@ $EndComp
 Wire Wire Line
 	5150 1550 4950 1550
 $Comp
-L Device:R_Small R44
+L panel_light_control-rescue:R_Small-Device R44
 U 1 1 5C036412
 P 5550 1550
 AR Path="/5BBC4BB7/5C036412" Ref="R44"  Part="1" 
@@ -2362,7 +2362,7 @@ $EndComp
 Wire Wire Line
 	5450 1550 5350 1550
 $Comp
-L Device:LED_Small LED3
+L panel_light_control-rescue:LED_Small-Device LED3
 U 1 1 5C056055
 P 5250 1850
 F 0 "LED3" H 5050 1700 50  0000 C CNN
@@ -2377,7 +2377,7 @@ $EndComp
 Wire Wire Line
 	5150 1850 4950 1850
 $Comp
-L Device:R_Small R45
+L panel_light_control-rescue:R_Small-Device R45
 U 1 1 5C05605C
 P 5550 1850
 AR Path="/5BBC4BB7/5C05605C" Ref="R45"  Part="1" 
@@ -2398,7 +2398,7 @@ $EndComp
 Wire Wire Line
 	5450 1850 5350 1850
 $Comp
-L Device:LED_Small LED4
+L panel_light_control-rescue:LED_Small-Device LED4
 U 1 1 5C0760DD
 P 5250 2150
 F 0 "LED4" H 5050 2000 50  0000 C CNN
@@ -2413,7 +2413,7 @@ $EndComp
 Wire Wire Line
 	5150 2150 4950 2150
 $Comp
-L Device:R_Small R46
+L panel_light_control-rescue:R_Small-Device R46
 U 1 1 5C0760E4
 P 5550 2150
 AR Path="/5BBC4BB7/5C0760E4" Ref="R46"  Part="1" 
@@ -2434,7 +2434,7 @@ $EndComp
 Wire Wire Line
 	5450 2150 5350 2150
 $Comp
-L Device:LED_Small LED5
+L panel_light_control-rescue:LED_Small-Device LED5
 U 1 1 5C0960D8
 P 5250 2450
 F 0 "LED5" H 5050 2300 50  0000 C CNN
@@ -2449,7 +2449,7 @@ $EndComp
 Wire Wire Line
 	5150 2450 4950 2450
 $Comp
-L Device:R_Small R47
+L panel_light_control-rescue:R_Small-Device R47
 U 1 1 5C0960DF
 P 5550 2450
 AR Path="/5BBC4BB7/5C0960DF" Ref="R47"  Part="1" 
@@ -2470,7 +2470,7 @@ $EndComp
 Wire Wire Line
 	5450 2450 5350 2450
 $Comp
-L Device:LED_Small LED6
+L panel_light_control-rescue:LED_Small-Device LED6
 U 1 1 5C0B6767
 P 5250 2750
 F 0 "LED6" H 5050 2600 50  0000 C CNN
@@ -2485,7 +2485,7 @@ $EndComp
 Wire Wire Line
 	5150 2750 4950 2750
 $Comp
-L Device:R_Small R51
+L panel_light_control-rescue:R_Small-Device R51
 U 1 1 5C0B676E
 P 5550 2750
 AR Path="/5BBC4BB7/5C0B676E" Ref="R51"  Part="1" 
@@ -2506,7 +2506,7 @@ $EndComp
 Wire Wire Line
 	5450 2750 5350 2750
 $Comp
-L Device:LED_Small LED7
+L panel_light_control-rescue:LED_Small-Device LED7
 U 1 1 5C12EE72
 P 5250 3050
 F 0 "LED7" H 5050 2900 50  0000 C CNN
@@ -2521,7 +2521,7 @@ $EndComp
 Wire Wire Line
 	5150 3050 4950 3050
 $Comp
-L Device:R_Small R52
+L panel_light_control-rescue:R_Small-Device R52
 U 1 1 5C12EE79
 P 5550 3050
 AR Path="/5BBC4BB7/5C12EE79" Ref="R52"  Part="1" 
@@ -2542,7 +2542,7 @@ $EndComp
 Wire Wire Line
 	5450 3050 5350 3050
 $Comp
-L Device:LED_Small LED8
+L panel_light_control-rescue:LED_Small-Device LED8
 U 1 1 5C152FBE
 P 5250 3750
 F 0 "LED8" H 5050 3600 50  0000 C CNN
@@ -2557,7 +2557,7 @@ $EndComp
 Wire Wire Line
 	5150 3750 4950 3750
 $Comp
-L Device:R_Small R53
+L panel_light_control-rescue:R_Small-Device R53
 U 1 1 5C152FC5
 P 5550 3750
 AR Path="/5BBC4BB7/5C152FC5" Ref="R53"  Part="1" 
@@ -2598,7 +2598,7 @@ Connection ~ 4950 2750
 Wire Wire Line
 	4950 2750 4950 3050
 $Comp
-L power:GND #PWR0113
+L panel_light_control-rescue:GND-power #PWR0113
 U 1 1 5C1D5924
 P 4950 3850
 AR Path="/5BBC4BB7/5C1D5924" Ref="#PWR0113"  Part="1" 
@@ -2649,7 +2649,7 @@ Wire Wire Line
 Wire Wire Line
 	5800 3050 5650 3050
 $Comp
-L power:GND #PWR0123
+L panel_light_control-rescue:GND-power #PWR0123
 U 1 1 5C383722
 P 4950 3150
 AR Path="/5BBC4BB7/5C383722" Ref="#PWR0123"  Part="1" 
@@ -2676,7 +2676,7 @@ Connection ~ 6350 5200
 Wire Wire Line
 	6350 5200 6650 5200
 $Comp
-L Connector_Generic:Conn_01x02 TERM1
+L panel_light_control-rescue:Conn_01x02-Connector_Generic TERM1
 U 1 1 5BDBFB79
 P 6150 5900
 F 0 "TERM1" H 6150 5700 50  0000 C CNN
@@ -2696,7 +2696,7 @@ Wire Wire Line
 	6350 6000 6750 6000
 Connection ~ 6750 6000
 $Comp
-L power:GND #PWR0132
+L panel_light_control-rescue:GND-power #PWR0132
 U 1 1 5BE6B640
 P 9750 5850
 AR Path="/5BBC4BB7/5BE6B640" Ref="#PWR0132"  Part="1" 
@@ -2713,7 +2713,7 @@ $EndComp
 Wire Wire Line
 	9750 5850 9750 5750
 $Comp
-L SamacSys_Parts:SKQYABE010 RST1
+L panel_light_control-rescue:SKQYABE010-SamacSys_Parts RST1
 U 1 1 5BE29C94
 P 3600 1500
 F 0 "RST1" H 4000 1300 50  0000 C CNN
@@ -2739,7 +2739,7 @@ Connection ~ 3500 2000
 Wire Wire Line
 	3500 2000 4050 2000
 $Comp
-L power:GND #PWR0133
+L panel_light_control-rescue:GND-power #PWR0133
 U 1 1 5BEA740B
 P 4500 1600
 AR Path="/5BBC4BB7/5BEA740B" Ref="#PWR0133"  Part="1" 
@@ -2758,7 +2758,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 1500 4500 1600
 $Comp
-L Device:R R54
+L panel_light_control-rescue:R-Device R54
 U 1 1 5BF06B2A
 P 3500 1750
 AR Path="/5BBC4BB7/5BF06B2A" Ref="R54"  Part="1" 
@@ -2797,7 +2797,7 @@ JTMS/SWDIO
 Text Notes 750  3450 0    50   ~ 0
 JTCK/SWCLK
 $Comp
-L power:PWR_FLAG #FLG?
+L panel_light_control-rescue:PWR_FLAG-power #FLG?
 U 1 1 5BFBC076
 P 8850 900
 AR Path="/5BFBC076" Ref="#FLG?"  Part="1" 
@@ -2810,7 +2810,7 @@ F 3 "~" H 8850 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L panel_light_control-rescue:PWR_FLAG-power #FLG?
 U 1 1 5BFE35F6
 P 9700 800
 AR Path="/5BFE35F6" Ref="#FLG?"  Part="1" 
@@ -2825,7 +2825,7 @@ $EndComp
 Wire Wire Line
 	9700 800  9700 900 
 $Comp
-L power:PWR_FLAG #FLG?
+L panel_light_control-rescue:PWR_FLAG-power #FLG?
 U 1 1 5C0B7824
 P 4250 2500
 AR Path="/5C0B7824" Ref="#FLG?"  Part="1" 
@@ -2889,7 +2889,7 @@ TIM1_CH1
 Text Notes 4150 4850 0    50   ~ 0
 TIM1_CH2
 $Comp
-L Connector_Generic:Conn_02x04_Counter_Clockwise #DIP8Sock1
+L panel_light_control-rescue:Conn_02x04_Counter_Clockwise-Connector_Generic #DIP8Sock1
 U 1 1 5BF9273B
 P 6150 4350
 F 0 "#DIP8Sock1" H 6200 4667 50  0000 C CNN

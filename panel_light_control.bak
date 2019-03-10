@@ -2525,4 +2525,6 @@ F 5 "AKL 349-02" H -400 0   50  0001 C CNN "Reichelt"
 	1    600  1300
 	-1   0    0    1   
 $EndComp
+Text Notes 3450 3700 0    50   ~ 0
+WRONG PART\nNEXT REV: 630-ASMB-TTF0-0A20B
 $EndSCHEMATC

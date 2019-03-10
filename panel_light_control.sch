@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:panel_light_control-cache
-EELAYER 28 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L panel_light_control-rescue:Conn_01x02-Connector_Generic J1
 U 1 1 5BB7D52D
 P 1000 1300
 F 0 "J1" H 900 900 50  0000 C CNN
@@ -29,7 +29,7 @@ F 6 "571-796644-2" H 1000 1300 50  0001 C CNN "Mouser"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C3
+L panel_light_control-rescue:C-Device C3
 U 1 1 5BB7D5F0
 P 2000 1450
 F 0 "C3" H 2115 1496 50  0000 L CNN
@@ -44,7 +44,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR05
+L panel_light_control-rescue:GND-power #PWR05
 U 1 1 5BB7D800
 P 1700 1900
 F 0 "#PWR05" H 1700 1650 50  0001 C CNN
@@ -75,7 +75,7 @@ F 11 "LDD-1000H" H 0   0   50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic_MountingPin:Conn_01x02_MountingPin PANEL1
+L panel_light_control-rescue:Conn_01x02_MountingPin-Connector_Generic_MountingPin PANEL1
 U 1 1 5BB7E3C7
 P 10600 600
 F 0 "PANEL1" H 10680 592 50  0000 L CNN
@@ -88,7 +88,7 @@ F 5 "490-PJ-063AH" H 10600 600 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic_MountingPin:Conn_01x02_MountingPin PANEL2
+L panel_light_control-rescue:Conn_01x02_MountingPin-Connector_Generic_MountingPin PANEL2
 U 1 1 5BB7E46D
 P 10600 1000
 F 0 "PANEL2" H 10680 992 50  0000 L CNN
@@ -109,7 +109,7 @@ Wire Wire Line
 Wire Wire Line
 	10400 1000 10200 1000
 $Comp
-L Device:C C7
+L panel_light_control-rescue:C-Device C7
 U 1 1 5BB8F45A
 P 4300 2900
 F 0 "C7" H 4415 2946 50  0000 L CNN
@@ -143,7 +143,7 @@ F 11 "LDD-1000H" H 0   0   50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B12-2.0 PS12
+L panel_light_control-rescue:R-78B12-2.0-Regulator_Switching PS12
 U 1 1 5BB902DF
 P 3800 1200
 F 0 "PS12" H 4100 1100 50  0000 C CNN
@@ -163,7 +163,7 @@ F 12 "R-78B12-2.0" H 0   0   50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Switching:R-78B3.3-2.0 PS33
+L panel_light_control-rescue:R-78B3.3-2.0-Regulator_Switching PS33
 U 1 1 5BB90449
 P 3800 2650
 F 0 "PS33" H 4100 2550 50  0000 C CNN
@@ -177,7 +177,7 @@ F 6 "919-R-78B3.3-1.0" H 3800 2650 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L panel_light_control-rescue:GND-power #PWR08
 U 1 1 5BB9376F
 P 4300 1700
 F 0 "#PWR08" H 4300 1450 50  0001 C CNN
@@ -188,7 +188,7 @@ F 3 "" H 4300 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L panel_light_control-rescue:GND-power #PWR09
 U 1 1 5BB937DE
 P 4300 3150
 F 0 "#PWR09" H 4300 2900 50  0001 C CNN
@@ -205,7 +205,7 @@ Text GLabel 6250 1200 2    50   Output ~ 0
 Text GLabel 2150 900  2    50   Output ~ 0
 +24V
 $Comp
-L Connector_Generic:Conn_01x04 I2C1
+L panel_light_control-rescue:Conn_01x04-Connector_Generic I2C1
 U 1 1 5BB98179
 P 10600 4250
 F 0 "I2C1" H 10680 4242 50  0000 L CNN
@@ -224,7 +224,7 @@ Text GLabel 10200 4150 0    50   Input ~ 0
 Wire Wire Line
 	10400 4150 10200 4150
 $Comp
-L power:GND #PWR018
+L panel_light_control-rescue:GND-power #PWR018
 U 1 1 5BB99A4C
 P 10300 4250
 F 0 "#PWR018" H 10300 4000 50  0001 C CNN
@@ -261,7 +261,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 7050 2900 7050
 $Comp
-L Device:D D1
+L panel_light_control-rescue:D-Device D1
 U 1 1 5BBD2C44
 P 3800 900
 F 0 "D1" H 3800 1116 50  0000 C CNN
@@ -282,7 +282,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 900  2000 1200
 $Comp
-L Device:D D2
+L panel_light_control-rescue:D-Device D2
 U 1 1 5BBD8FA3
 P 3800 2350
 F 0 "D2" H 3800 2150 50  0000 C CNN
@@ -333,7 +333,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 5700 1400 5600
 $Comp
-L power:GND #PWR012
+L panel_light_control-rescue:GND-power #PWR012
 U 1 1 5BBFD80F
 P 1300 6750
 F 0 "#PWR012" H 1300 6500 50  0001 C CNN
@@ -351,7 +351,7 @@ Wire Wire Line
 	1500 6750 1400 6750
 Connection ~ 1400 6750
 $Comp
-L Connector_Generic:Conn_01x06 DBG1
+L panel_light_control-rescue:Conn_01x06-Connector_Generic DBG1
 U 1 1 5BC0C2F3
 P 10600 3050
 F 0 "DBG1" H 10680 3042 50  0000 L CNN
@@ -370,7 +370,7 @@ DBG_TX
 Wire Wire Line
 	10250 3250 10400 3250
 $Comp
-L power:GND #PWR019
+L panel_light_control-rescue:GND-power #PWR019
 U 1 1 5BC0F49E
 P 10300 3350
 F 0 "#PWR019" H 10300 3100 50  0001 C CNN
@@ -381,7 +381,7 @@ F 3 "" H 10300 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM324 U2
+L panel_light_control-rescue:LM324-Amplifier_Operational U2
 U 5 1 5BC1F844
 P 8000 1000
 F 0 "U2" H 7958 1046 50  0000 L CNN
@@ -394,7 +394,7 @@ F 5 "595-LM324ADR" H 0   0   50  0001 C CNN "Mouser"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L panel_light_control-rescue:C-Device C5
 U 1 1 5BC2A01B
 P 8500 1050
 F 0 "C5" H 8385 1004 50  0000 R CNN
@@ -411,7 +411,7 @@ $EndComp
 Text GLabel 8700 600  2    50   Input ~ 0
 +12V
 $Comp
-L power:GND #PWR07
+L panel_light_control-rescue:GND-power #PWR07
 U 1 1 5BC2D399
 P 8500 1500
 F 0 "#PWR07" H 8500 1250 50  0001 C CNN
@@ -429,7 +429,7 @@ Connection ~ 8500 1400
 Wire Wire Line
 	8500 600  8500 900 
 $Comp
-L Amplifier_Operational:LM324 U2
+L panel_light_control-rescue:LM324-Amplifier_Operational U2
 U 3 1 5BC3AA2E
 P 7300 1100
 F 0 "U2" H 7300 1300 50  0000 C CNN
@@ -442,7 +442,7 @@ F 5 "595-LM324ADR" H 7300 1100 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR01
+L panel_light_control-rescue:GND-power #PWR01
 U 1 1 5BC3AAE6
 P 6700 1350
 F 0 "#PWR01" H 6700 1100 50  0001 C CNN
@@ -467,7 +467,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 1200 7000 1200
 $Comp
-L Amplifier_Operational:LM324 U2
+L panel_light_control-rescue:LM324-Amplifier_Operational U2
 U 1 1 5BCB6EE3
 P 7000 3850
 F 0 "U2" H 7000 4050 50  0000 C CNN
@@ -480,7 +480,7 @@ F 5 "595-LM324ADR" H 7000 3850 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R7
+L panel_light_control-rescue:R-Device R7
 U 1 1 5BCB6EEA
 P 5800 3750
 F 0 "R7" V 5700 3700 50  0000 L CNN
@@ -495,7 +495,7 @@ F 7 "16" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R8
+L panel_light_control-rescue:R-Device R8
 U 1 1 5BCB6EF1
 P 6400 4050
 F 0 "R8" H 6470 4096 50  0000 L CNN
@@ -510,7 +510,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R17
+L panel_light_control-rescue:R-Device R17
 U 1 1 5BCB6EF8
 P 8200 4400
 F 0 "R17" H 8400 4450 50  0000 C CNN
@@ -523,7 +523,7 @@ F 5 "754-RL1220S-R22-F" H 8200 4400 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R14
+L panel_light_control-rescue:R-Device R14
 U 1 1 5BCB6EFF
 P 7200 4150
 F 0 "R14" V 7400 4150 50  0000 C CNN
@@ -538,7 +538,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R13
+L panel_light_control-rescue:R-Device R13
 U 1 1 5BCB6F06
 P 7650 3850
 F 0 "R13" V 7443 3850 50  0000 C CNN
@@ -553,7 +553,7 @@ F 7 "18" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C10
+L panel_light_control-rescue:C-Device C10
 U 1 1 5BCB6F0D
 P 7000 4350
 F 0 "C10" V 7050 4500 50  0000 C CNN
@@ -568,7 +568,7 @@ F 7 "5" H 0   0   50  0001 C CNN "box no"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:C C8
+L panel_light_control-rescue:C-Device C8
 U 1 1 5BCB6F14
 P 6050 4050
 F 0 "C8" H 5935 4004 50  0000 R CNN
@@ -582,7 +582,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    0    0    1   
 $EndComp
 $Comp
-L Transistor_FET:IRF540N Q2
+L panel_light_control-rescue:IRF540N-Transistor_FET Q2
 U 1 1 5BCB6F1B
 P 8100 3850
 F 0 "Q2" H 8305 3896 50  0000 L CNN
@@ -597,7 +597,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR014
+L panel_light_control-rescue:GND-power #PWR014
 U 1 1 5BCB6F22
 P 6400 4400
 F 0 "#PWR014" H 6400 4150 50  0001 C CNN
@@ -623,7 +623,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 3650 8200 3450
 $Comp
-L Device:R R11
+L panel_light_control-rescue:R-Device R11
 U 1 1 5BCB6F54
 P 6950 3450
 F 0 "R11" V 6743 3450 50  0000 C CNN
@@ -640,7 +640,7 @@ Text GLabel 7250 3450 2    50   Input ~ 0
 Wire Wire Line
 	7250 3450 7100 3450
 $Comp
-L Connector_Generic:Conn_01x04 J6
+L panel_light_control-rescue:Conn_01x04-Connector_Generic J6
 U 1 1 5BD01FFA
 P 10600 1500
 F 0 "J6" H 10680 1492 50  0000 L CNN
@@ -676,7 +676,7 @@ Wire Wire Line
 Text GLabel 10250 3600 0    50   Input ~ 0
 EXT_TX
 $Comp
-L Connector_Generic:Conn_01x04 UART1
+L panel_light_control-rescue:Conn_01x04-Connector_Generic UART1
 U 1 1 5BD8A0A5
 P 10600 3700
 F 0 "UART1" H 10680 3692 50  0000 L CNN
@@ -693,7 +693,7 @@ $EndComp
 Text GLabel 10250 3700 0    50   Output ~ 0
 EXT_RX
 $Comp
-L power:GND #PWR020
+L panel_light_control-rescue:GND-power #PWR020
 U 1 1 5BD8A1A3
 P 10300 3800
 F 0 "#PWR020" H 10300 3550 50  0001 C CNN
@@ -725,7 +725,7 @@ F0 "MCU" 50
 F1 "mcu.sch" 50
 $EndSheet
 $Comp
-L Regulator_Linear:L7805 U1
+L panel_light_control-rescue:L7805-Regulator_Linear U1
 U 1 1 5C1B802D
 P 5450 1200
 F 0 "U1" H 5750 1100 50  0000 C CNN
@@ -738,7 +738,7 @@ F 5 "511-L7805CV" H 0   0   50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L panel_light_control-rescue:C-Device C12
 U 1 1 5C1B8189
 P 5850 1450
 F 0 "C12" H 5965 1496 50  0000 L CNN
@@ -753,7 +753,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0101
+L panel_light_control-rescue:GND-power #PWR0101
 U 1 1 5C1C54D4
 P 5450 1800
 F 0 "#PWR0101" H 5450 1550 50  0001 C CNN
@@ -795,7 +795,7 @@ SPI0_MISO
 Text GLabel 10200 4900 0    50   Input ~ 0
 SPI0_SCK
 $Comp
-L Connector_Generic:Conn_01x10 SPI0
+L panel_light_control-rescue:Conn_01x10-Connector_Generic SPI0
 U 1 1 5C507673
 P 10600 5100
 F 0 "SPI0" H 10680 5092 50  0000 L CNN
@@ -820,7 +820,7 @@ Wire Wire Line
 Text GLabel 10200 5500 0    50   Input ~ 0
 +3.3V
 $Comp
-L power:GND #PWR021
+L panel_light_control-rescue:GND-power #PWR021
 U 1 1 5C542A6A
 P 10300 5400
 F 0 "#PWR021" H 10300 5150 50  0001 C CNN
@@ -833,7 +833,7 @@ $EndComp
 Wire Wire Line
 	10400 5500 10200 5500
 $Comp
-L Connector_Generic:Conn_01x07 JTAG1
+L panel_light_control-rescue:Conn_01x07-Connector_Generic JTAG1
 U 1 1 5C66DBBA
 P 10600 2250
 F 0 "JTAG1" H 10680 2242 50  0000 L CNN
@@ -868,7 +868,7 @@ Wire Wire Line
 Wire Wire Line
 	10400 2350 10200 2350
 $Comp
-L power:GND #PWR04
+L panel_light_control-rescue:GND-power #PWR04
 U 1 1 5C8842DC
 P 10300 2650
 F 0 "#PWR04" H 10300 2400 50  0001 C CNN
@@ -899,7 +899,7 @@ SPI1_MISO
 Text GLabel 10200 6050 0    50   Input ~ 0
 SPI1_SCK
 $Comp
-L Connector_Generic:Conn_01x07 SPI1
+L panel_light_control-rescue:Conn_01x07-Connector_Generic SPI1
 U 1 1 5C9CC464
 P 10600 6150
 F 0 "SPI1" H 10680 6192 50  0000 L CNN
@@ -924,7 +924,7 @@ Wire Wire Line
 Text GLabel 10200 6450 0    50   Input ~ 0
 +3.3V
 $Comp
-L power:GND #PWR02
+L panel_light_control-rescue:GND-power #PWR02
 U 1 1 5C9CC470
 P 10300 6350
 F 0 "#PWR02" H 10300 6100 50  0001 C CNN
@@ -945,7 +945,7 @@ Wire Wire Line
 Wire Wire Line
 	10400 6250 10200 6250
 $Comp
-L power:PWR_FLAG #FLG0101
+L panel_light_control-rescue:PWR_FLAG-power #FLG0101
 U 1 1 5D054B0F
 P 2000 800
 F 0 "#FLG0101" H 2000 875 50  0001 C CNN
@@ -966,7 +966,7 @@ Wire Wire Line
 	4100 1200 4300 1200
 Connection ~ 4300 1200
 $Comp
-L Device:Polyfuse_Small F1
+L panel_light_control-rescue:Polyfuse_Small-Device F1
 U 1 1 5BCB2C00
 P 1500 1200
 F 0 "F1" V 1295 1200 50  0000 C CNN
@@ -979,7 +979,7 @@ F 5 "576-30R300UU " V 1500 1200 50  0001 C CNN "Mouser"
 	0    1    1    0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H1
+L panel_light_control-rescue:MountingHole-Mechanical H1
 U 1 1 5BD4EBE3
 P 6000 6650
 F 0 "H1" H 6100 6696 50  0000 L CNN
@@ -992,7 +992,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
+L panel_light_control-rescue:MountingHole-Mechanical H2
 U 1 1 5BD4EC9B
 P 6000 6900
 F 0 "H2" H 6100 6946 50  0000 L CNN
@@ -1005,7 +1005,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H3
+L panel_light_control-rescue:MountingHole-Mechanical H3
 U 1 1 5BD4ED2F
 P 6000 7150
 F 0 "H3" H 6100 7196 50  0000 L CNN
@@ -1018,7 +1018,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
+L panel_light_control-rescue:MountingHole-Mechanical H4
 U 1 1 5BD4EDC1
 P 6000 7400
 F 0 "H4" H 6100 7446 50  0000 L CNN
@@ -1033,7 +1033,7 @@ $EndComp
 Wire Wire Line
 	1200 1200 1400 1200
 $Comp
-L Device:C C6
+L panel_light_control-rescue:C-Device C6
 U 1 1 5BB90953
 P 4300 1450
 F 0 "C6" H 4415 1496 50  0000 L CNN
@@ -1052,7 +1052,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 1200 2300 1200
 $Comp
-L power:GND #PWR0110
+L panel_light_control-rescue:GND-power #PWR0110
 U 1 1 5BDDBDEA
 P 3800 1700
 F 0 "#PWR0110" H 3800 1450 50  0001 C CNN
@@ -1086,7 +1086,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 2350 3300 2650
 $Comp
-L power:GND #PWR0111
+L panel_light_control-rescue:GND-power #PWR0111
 U 1 1 5C027883
 P 3800 3150
 F 0 "#PWR0111" H 3800 2900 50  0001 C CNN
@@ -1140,7 +1140,7 @@ Panel_W+
 Wire Wire Line
 	2900 5600 3150 5600
 $Comp
-L power:GND #PWR0112
+L panel_light_control-rescue:GND-power #PWR0112
 U 1 1 5C63A578
 P 1300 5600
 F 0 "#PWR0112" H 1300 5350 50  0001 C CNN
@@ -1223,7 +1223,7 @@ Connection ~ 8200 4150
 Wire Wire Line
 	8200 4150 8200 4250
 $Comp
-L power:GND #PWR0114
+L panel_light_control-rescue:GND-power #PWR0114
 U 1 1 5CD2E02F
 P 8200 4650
 F 0 "#PWR0114" H 8200 4400 50  0001 C CNN
@@ -1236,7 +1236,7 @@ $EndComp
 Wire Wire Line
 	8200 4550 8200 4650
 $Comp
-L Amplifier_Operational:LM324 U2
+L panel_light_control-rescue:LM324-Amplifier_Operational U2
 U 2 1 5CE1E150
 P 7000 5450
 F 0 "U2" H 7000 5650 50  0000 C CNN
@@ -1249,7 +1249,7 @@ F 5 "595-LM324ADR" H 7000 5450 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R9
+L panel_light_control-rescue:R-Device R9
 U 1 1 5CE1E156
 P 5800 5350
 F 0 "R9" V 5700 5300 50  0000 L CNN
@@ -1264,7 +1264,7 @@ F 7 "16" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L panel_light_control-rescue:R-Device R10
 U 1 1 5CE1E15C
 P 6400 5650
 F 0 "R10" H 6470 5696 50  0000 L CNN
@@ -1279,7 +1279,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R18
+L panel_light_control-rescue:R-Device R18
 U 1 1 5CE1E162
 P 8200 6000
 F 0 "R18" H 8400 6050 50  0000 C CNN
@@ -1292,7 +1292,7 @@ F 5 "754-RL1220S-R22-F" H 8200 6000 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R16
+L panel_light_control-rescue:R-Device R16
 U 1 1 5CE1E168
 P 7200 5750
 F 0 "R16" V 7400 5750 50  0000 C CNN
@@ -1307,7 +1307,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R15
+L panel_light_control-rescue:R-Device R15
 U 1 1 5CE1E16E
 P 7650 5450
 F 0 "R15" V 7443 5450 50  0000 C CNN
@@ -1322,7 +1322,7 @@ F 7 "18" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C11
+L panel_light_control-rescue:C-Device C11
 U 1 1 5CE1E174
 P 7000 5950
 F 0 "C11" V 7050 6100 50  0000 C CNN
@@ -1337,7 +1337,7 @@ F 7 "5" H 0   0   50  0001 C CNN "box no"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:C C9
+L panel_light_control-rescue:C-Device C9
 U 1 1 5CE1E17A
 P 6050 5650
 F 0 "C9" H 5935 5604 50  0000 R CNN
@@ -1351,7 +1351,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    0    0    1   
 $EndComp
 $Comp
-L Transistor_FET:IRF540N Q3
+L panel_light_control-rescue:IRF540N-Transistor_FET Q3
 U 1 1 5CE1E180
 P 8100 5450
 F 0 "Q3" H 8305 5496 50  0000 L CNN
@@ -1366,7 +1366,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0115
+L panel_light_control-rescue:GND-power #PWR0115
 U 1 1 5CE1E186
 P 6400 6000
 F 0 "#PWR0115" H 6400 5750 50  0001 C CNN
@@ -1392,7 +1392,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 5250 8200 5050
 $Comp
-L Device:R R12
+L panel_light_control-rescue:R-Device R12
 U 1 1 5CE1E194
 P 6950 5050
 F 0 "R12" V 6743 5050 50  0000 C CNN
@@ -1459,7 +1459,7 @@ Connection ~ 8200 5750
 Wire Wire Line
 	8200 5750 8200 5850
 $Comp
-L power:GND #PWR0116
+L panel_light_control-rescue:GND-power #PWR0116
 U 1 1 5CE1E1B8
 P 8200 6250
 F 0 "#PWR0116" H 8200 6000 50  0001 C CNN
@@ -1472,7 +1472,7 @@ $EndComp
 Wire Wire Line
 	8200 6150 8200 6250
 $Comp
-L Amplifier_Operational:LM324 U2
+L panel_light_control-rescue:LM324-Amplifier_Operational U2
 U 4 1 5CE38662
 P 7000 2300
 F 0 "U2" H 7000 2500 50  0000 C CNN
@@ -1485,7 +1485,7 @@ F 5 "595-LM324ADR" H 7000 2300 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L panel_light_control-rescue:R-Device R1
 U 1 1 5CE38668
 P 5800 2200
 F 0 "R1" V 5700 2150 50  0000 L CNN
@@ -1500,7 +1500,7 @@ F 7 "16" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R2
+L panel_light_control-rescue:R-Device R2
 U 1 1 5CE3866E
 P 6400 2500
 F 0 "R2" H 6470 2546 50  0000 L CNN
@@ -1515,7 +1515,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R6
+L panel_light_control-rescue:R-Device R6
 U 1 1 5CE38674
 P 8200 2850
 F 0 "R6" H 8400 2900 50  0000 C CNN
@@ -1528,7 +1528,7 @@ F 5 "754-RL1220S-R22-F" H 8200 2850 50  0001 C CNN "Mouser"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R5
+L panel_light_control-rescue:R-Device R5
 U 1 1 5CE3867A
 P 7200 2600
 F 0 "R5" V 7400 2600 50  0000 C CNN
@@ -1543,7 +1543,7 @@ F 7 "17" H 0   0   50  0001 C CNN "box no"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R4
+L panel_light_control-rescue:R-Device R4
 U 1 1 5CE38680
 P 7650 2300
 F 0 "R4" V 7443 2300 50  0000 C CNN
@@ -1558,7 +1558,7 @@ F 7 "18" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C4
+L panel_light_control-rescue:C-Device C4
 U 1 1 5CE38686
 P 7000 2800
 F 0 "C4" V 7050 2950 50  0000 C CNN
@@ -1573,7 +1573,7 @@ F 7 "5" H 0   0   50  0001 C CNN "box no"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:C C1
+L panel_light_control-rescue:C-Device C1
 U 1 1 5CE3868C
 P 6050 2500
 F 0 "C1" H 5935 2454 50  0000 R CNN
@@ -1587,7 +1587,7 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    0    0    1   
 $EndComp
 $Comp
-L Transistor_FET:IRF540N Q1
+L panel_light_control-rescue:IRF540N-Transistor_FET Q1
 U 1 1 5CE38692
 P 8100 2300
 F 0 "Q1" H 8305 2346 50  0000 L CNN
@@ -1602,7 +1602,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0117
+L panel_light_control-rescue:GND-power #PWR0117
 U 1 1 5CE38698
 P 6400 2850
 F 0 "#PWR0117" H 6400 2600 50  0001 C CNN
@@ -1628,7 +1628,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 2100 8200 1900
 $Comp
-L Device:R R3
+L panel_light_control-rescue:R-Device R3
 U 1 1 5CE386A6
 P 6950 1900
 F 0 "R3" V 6743 1900 50  0000 C CNN
@@ -1683,7 +1683,7 @@ Connection ~ 8200 2600
 Wire Wire Line
 	8200 2600 8200 2700
 $Comp
-L power:GND #PWR0118
+L panel_light_control-rescue:GND-power #PWR0118
 U 1 1 5CE386CA
 P 8200 3100
 F 0 "#PWR0118" H 8200 2850 50  0001 C CNN
@@ -1710,7 +1710,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 900  5850 1200
 $Comp
-L Device:D D4
+L panel_light_control-rescue:D-Device D4
 U 1 1 5BD4F72E
 P 5450 900
 F 0 "D4" H 5450 1116 50  0000 C CNN
@@ -1735,7 +1735,7 @@ Wire Wire Line
 	2300 1300 2300 1200
 Connection ~ 2300 1200
 $Comp
-L Device:C C25
+L panel_light_control-rescue:C-Device C25
 U 1 1 5BE17596
 P 2300 1450
 F 0 "C25" H 2415 1496 50  0000 L CNN
@@ -1750,7 +1750,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C38
+L panel_light_control-rescue:C-Device C38
 U 1 1 5BE6BE21
 P 3300 1450
 F 0 "C38" H 3415 1496 50  0000 L CNN
@@ -1765,7 +1765,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0104
+L panel_light_control-rescue:GND-power #PWR0104
 U 1 1 5BE6F273
 P 3300 1700
 F 0 "#PWR0104" H 3300 1450 50  0001 C CNN
@@ -1783,7 +1783,7 @@ Connection ~ 3300 1200
 Wire Wire Line
 	3300 1200 3500 1200
 $Comp
-L Device:C C39
+L panel_light_control-rescue:C-Device C39
 U 1 1 5BE98B44
 P 3300 2900
 F 0 "C39" H 3415 2946 50  0000 L CNN
@@ -1798,7 +1798,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0105
+L panel_light_control-rescue:GND-power #PWR0105
 U 1 1 5BE98B4A
 P 3300 3150
 F 0 "#PWR0105" H 3300 2900 50  0001 C CNN
@@ -1813,7 +1813,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 2750 3300 2650
 $Comp
-L Device:C C40
+L panel_light_control-rescue:C-Device C40
 U 1 1 5BEACBE6
 P 5050 1450
 F 0 "C40" H 5165 1496 50  0000 L CNN
@@ -1828,7 +1828,7 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0106
+L panel_light_control-rescue:GND-power #PWR0106
 U 1 1 5BEACBEC
 P 5050 1700
 F 0 "#PWR0106" H 5050 1450 50  0001 C CNN
@@ -1850,7 +1850,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 900  3300 1200
 $Comp
-L Device:L L2
+L panel_light_control-rescue:L-Device L2
 U 1 1 5BF33DD8
 P 3050 2350
 F 0 "L2" V 3250 2300 50  0000 L CNN
@@ -1865,7 +1865,7 @@ $EndComp
 Wire Wire Line
 	2800 1200 3000 1200
 $Comp
-L Device:C C42
+L panel_light_control-rescue:C-Device C42
 U 1 1 5BF618DB
 P 3000 1450
 F 0 "C42" H 3050 1500 50  0000 L CNN
@@ -1885,7 +1885,7 @@ Connection ~ 3000 1200
 Wire Wire Line
 	3000 1200 3300 1200
 $Comp
-L power:GND #PWR0108
+L panel_light_control-rescue:GND-power #PWR0108
 U 1 1 5BF927E3
 P 3000 1700
 F 0 "#PWR0108" H 3000 1450 50  0001 C CNN
@@ -1898,7 +1898,7 @@ $EndComp
 Wire Wire Line
 	3000 1600 3000 1700
 $Comp
-L Device:C C41
+L panel_light_control-rescue:C-Device C41
 U 1 1 5BFB2E12
 P 3000 2900
 F 0 "C41" H 3115 2946 50  0000 L CNN
@@ -1913,7 +1913,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0119
+L panel_light_control-rescue:GND-power #PWR0119
 U 1 1 5BFB2E18
 P 3000 3150
 F 0 "#PWR0119" H 3000 2900 50  0001 C CNN
@@ -1930,7 +1930,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 2650 3300 2650
 $Comp
-L Device:L L3
+L panel_light_control-rescue:L-Device L3
 U 1 1 5BFEC541
 P 2650 1200
 F 0 "L3" V 2840 1200 50  0000 C CNN
@@ -1943,7 +1943,7 @@ F 5 "810-VLS5045EX4R7MCA" H 2650 1200 50  0001 C CNN "Mouser"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C43
+L panel_light_control-rescue:C-Device C43
 U 1 1 5C0B5693
 P 4600 1450
 F 0 "C43" H 4715 1496 50  0000 L CNN
@@ -1958,7 +1958,7 @@ F 7 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0120
+L panel_light_control-rescue:GND-power #PWR0120
 U 1 1 5C0C0F9E
 P 4600 1700
 F 0 "#PWR0120" H 4600 1450 50  0001 C CNN
@@ -1989,7 +1989,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 2350 3300 2350
 $Comp
-L Device:LED_RCBG D?
+L panel_light_control-rescue:LED_RCBG-Device D?
 U 1 1 5BE88702
 P 3750 4400
 AR Path="/5BBC4BB7/5BE88702" Ref="D?"  Part="1" 
@@ -2006,7 +2006,7 @@ $EndComp
 Wire Wire Line
 	3950 4400 4050 4400
 $Comp
-L Device:R_Small R?
+L panel_light_control-rescue:R_Small-Device R?
 U 1 1 5BE8870C
 P 3400 4600
 AR Path="/5BBC4BB7/5BE8870C" Ref="R?"  Part="1" 
@@ -2026,7 +2026,7 @@ F 7 "21" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R?
+L panel_light_control-rescue:R_Small-Device R?
 U 1 1 5BE88712
 P 3400 4400
 AR Path="/5BBC4BB7/5BE88712" Ref="R?"  Part="1" 
@@ -2046,7 +2046,7 @@ F 7 "21" H 0   0   50  0001 C CNN "box no"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R?
+L panel_light_control-rescue:R_Small-Device R?
 U 1 1 5BE88718
 P 3400 4200
 AR Path="/5BBC4BB7/5BE88718" Ref="R?"  Part="1" 
@@ -2078,7 +2078,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 4200 3500 4200
 $Comp
-L power:GND #PWR0121
+L panel_light_control-rescue:GND-power #PWR0121
 U 1 1 5BE9D0EE
 P 4050 4500
 F 0 "#PWR0121" H 4050 4250 50  0001 C CNN
@@ -2097,7 +2097,7 @@ PWM_G
 Text GLabel 3100 4200 0    50   Input ~ 0
 PWM_B
 $Comp
-L Diode:1N4001 D12
+L panel_light_control-rescue:1N4001-Diode D12
 U 1 1 5BD0EDAE
 P 1700 1450
 F 0 "D12" V 1650 1800 50  0000 R CNN
@@ -2134,7 +2134,7 @@ Wire Wire Line
 Wire Wire Line
 	10300 2450 10300 2650
 $Comp
-L power:GND #PWR0124
+L panel_light_control-rescue:GND-power #PWR0124
 U 1 1 5BF84658
 P 9500 6150
 F 0 "#PWR0124" H 9500 5900 50  0001 C CNN
@@ -2145,7 +2145,7 @@ F 3 "" H 9500 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C45
+L panel_light_control-rescue:C-Device C45
 U 1 1 5BF8465E
 P 9500 5900
 F 0 "C45" H 9615 5946 50  0000 L CNN
@@ -2166,7 +2166,7 @@ Text GLabel 9500 5650 1    50   Input ~ 0
 Wire Wire Line
 	9500 5650 9500 5750
 $Comp
-L power:GND #PWR0125
+L panel_light_control-rescue:GND-power #PWR0125
 U 1 1 5C03C6B8
 P 9500 5100
 F 0 "#PWR0125" H 9500 4850 50  0001 C CNN
@@ -2177,7 +2177,7 @@ F 3 "" H 9500 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C44
+L panel_light_control-rescue:C-Device C44
 U 1 1 5C03C6BE
 P 9500 4850
 F 0 "C44" H 9615 4896 50  0000 L CNN
@@ -2198,7 +2198,7 @@ Text GLabel 9500 4600 1    50   Input ~ 0
 Wire Wire Line
 	9500 4600 9500 4700
 $Comp
-L power:GND #PWR0126
+L panel_light_control-rescue:GND-power #PWR0126
 U 1 1 5C0532BE
 P 9150 3750
 F 0 "#PWR0126" H 9150 3500 50  0001 C CNN
@@ -2209,7 +2209,7 @@ F 3 "" H 9150 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C16
+L panel_light_control-rescue:C-Device C16
 U 1 1 5C0532C4
 P 9150 3500
 F 0 "C16" H 9265 3546 50  0000 L CNN
@@ -2230,7 +2230,7 @@ Wire Wire Line
 Text GLabel 9150 3250 1    50   Input ~ 0
 +5V
 $Comp
-L power:GND #PWR0127
+L panel_light_control-rescue:GND-power #PWR0127
 U 1 1 5C0DB216
 P 9200 5100
 F 0 "#PWR0127" H 9200 4850 50  0001 C CNN
@@ -2241,7 +2241,7 @@ F 3 "" H 9200 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C13
+L panel_light_control-rescue:C-Device C13
 U 1 1 5C0DB21C
 P 9200 4850
 F 0 "C13" H 9315 4896 50  0000 L CNN
@@ -2262,7 +2262,7 @@ Wire Wire Line
 Text GLabel 9200 4600 1    50   Input ~ 0
 +5V
 $Comp
-L power:GND #PWR0128
+L panel_light_control-rescue:GND-power #PWR0128
 U 1 1 5C112E37
 P 9550 2450
 F 0 "#PWR0128" H 9550 2200 50  0001 C CNN
@@ -2273,7 +2273,7 @@ F 3 "" H 9550 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C14
+L panel_light_control-rescue:C-Device C14
 U 1 1 5C112E3D
 P 9550 2200
 F 0 "C14" H 9665 2246 50  0000 L CNN
@@ -2292,7 +2292,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 1950 9550 2050
 $Comp
-L power:GND #PWR0129
+L panel_light_control-rescue:GND-power #PWR0129
 U 1 1 5C15422E
 P 9550 4100
 F 0 "#PWR0129" H 9550 3850 50  0001 C CNN
@@ -2303,7 +2303,7 @@ F 3 "" H 9550 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C46
+L panel_light_control-rescue:C-Device C46
 U 1 1 5C154234
 P 9550 3850
 F 0 "C46" H 9665 3896 50  0000 L CNN
@@ -2326,7 +2326,7 @@ Wire Wire Line
 Text GLabel 9550 1950 1    50   Input ~ 0
 +3.3V
 $Comp
-L power:GND #PWR0130
+L panel_light_control-rescue:GND-power #PWR0130
 U 1 1 5BDF7CE0
 P 10700 900
 F 0 "#PWR0130" H 10700 650 50  0001 C CNN
@@ -2337,7 +2337,7 @@ F 3 "" H 10700 900 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L power:GND #PWR0131
+L panel_light_control-rescue:GND-power #PWR0131
 U 1 1 5BE04E83
 P 10700 1300
 F 0 "#PWR0131" H 10700 1050 50  0001 C CNN
@@ -2352,7 +2352,7 @@ Wire Wire Line
 Wire Wire Line
 	10700 1300 10600 1300
 $Comp
-L Device:C_Small C?
+L panel_light_control-rescue:C_Small-Device C?
 U 1 1 5BF468BF
 P 6150 1450
 AR Path="/5BBC4BB7/5BF468BF" Ref="C?"  Part="1" 
@@ -2379,7 +2379,7 @@ Wire Wire Line
 	6150 1550 6150 1700
 Connection ~ 5850 1700
 $Comp
-L power:PWR_FLAG #FLG0103
+L panel_light_control-rescue:PWR_FLAG-power #FLG0103
 U 1 1 5BF52E34
 P 3000 1100
 F 0 "#FLG0103" H 3000 1175 50  0001 C CNN
@@ -2392,7 +2392,7 @@ $EndComp
 Wire Wire Line
 	3000 1100 3000 1200
 $Comp
-L power:PWR_FLAG #FLG0104
+L panel_light_control-rescue:PWR_FLAG-power #FLG0104
 U 1 1 5BF8FE53
 P 3300 2250
 F 0 "#FLG0104" H 3300 2325 50  0001 C CNN
@@ -2410,7 +2410,7 @@ Wire Wire Line
 Wire Wire Line
 	1050 1700 1050 1600
 $Comp
-L power:PWR_FLAG #FLG0102
+L panel_light_control-rescue:PWR_FLAG-power #FLG0102
 U 1 1 5D0841CC
 P 1050 1600
 F 0 "#FLG0102" H 1050 1675 50  0001 C CNN
@@ -2421,7 +2421,7 @@ F 3 "~" H 1050 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID1
+L panel_light_control-rescue:TestPoint-Connector FID1
 U 1 1 5BE3B736
 P 5450 6600
 F 0 "FID1" H 5508 6718 50  0000 L CNN
@@ -2434,7 +2434,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID2
+L panel_light_control-rescue:TestPoint-Connector FID2
 U 1 1 5BE3EE88
 P 5450 6800
 F 0 "FID2" H 5508 6918 50  0000 L CNN
@@ -2447,7 +2447,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID3
+L panel_light_control-rescue:TestPoint-Connector FID3
 U 1 1 5BE40FE9
 P 5450 7000
 F 0 "FID3" H 5508 7118 50  0000 L CNN
@@ -2460,7 +2460,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID4
+L panel_light_control-rescue:TestPoint-Connector FID4
 U 1 1 5BE41C23
 P 5450 7200
 F 0 "FID4" H 5508 7318 50  0000 L CNN
@@ -2473,7 +2473,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID5
+L panel_light_control-rescue:TestPoint-Connector FID5
 U 1 1 5BE434C9
 P 5450 7400
 F 0 "FID5" H 5508 7518 50  0000 L CNN
@@ -2486,7 +2486,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint FID6
+L panel_light_control-rescue:TestPoint-Connector FID6
 U 1 1 5BE45F4A
 P 5450 7600
 F 0 "FID6" H 5508 7718 50  0000 L CNN
@@ -2499,7 +2499,7 @@ F 5 "E" H 0   0   50  0001 C CNN "box no"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 #PlugJ6
+L panel_light_control-rescue:Conn_01x04-Connector_Generic #PlugJ6
 U 1 1 5BFA32E0
 P 11050 1500
 F 0 "#PlugJ6" H 10850 1200 50  0000 L CNN
@@ -2513,7 +2513,7 @@ F 6 "RIA CONNECT" H 11050 1500 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 #PlugJ1
+L panel_light_control-rescue:Conn_01x02-Connector_Generic #PlugJ1
 U 1 1 5BF19748
 P 600 1300
 F 0 "#PlugJ1" H 550 1500 50  0000 C CNN
