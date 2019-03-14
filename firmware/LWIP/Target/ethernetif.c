@@ -223,7 +223,7 @@ static void low_level_init(struct netif *netif)
   MACAddr[5] = 0x00;
   heth.Init.MACAddr = &MACAddr[0];
   heth.Init.RxMode = ETH_RXPOLLING_MODE;
-  heth.Init.ChecksumMode = ETH_CHECKSUM_BY_HARDWARE;
+  heth.Init.ChecksumMode = ETH_CHECKSUM_BY_SOFTWARE;
   heth.Init.MediaInterface = ETH_MEDIA_INTERFACE_RMII;
 
   /* USER CODE BEGIN MACADDRESS */
@@ -604,6 +604,42 @@ u32_t sys_now(void)
 }
 
 /* USER CODE END 6 */
+
+/**
+  * @brief  This function sets the netif link status.
+  * @note   This function should be included in the main loop to poll 
+  *         for the link status update  
+  * @param  netif: the network interface
+  * @retval None
+  */
+uint32_t EthernetLinkTimer=0; 
+  
+void ethernetif_set_link(struct netif *netif)
+{
+  uint32_t regvalue = 0;
+  /* Ethernet Link every 200ms */
+  if (HAL_GetTick() - EthernetLinkTimer >= 200)
+  {
+    EthernetLinkTimer = HAL_GetTick(); 
+    
+    /* Read PHY_BSR*/
+    HAL_ETH_ReadPHYRegister(&heth, PHY_BSR, &regvalue);
+    
+    regvalue &= PHY_LINKED_STATUS;
+    
+    /* Check whether the netif link down and the PHY link is up */
+    if(!netif_is_link_up(netif) && (regvalue))
+    {
+      /* network cable is connected */ 
+      netif_set_link_up(netif);        
+    }
+    else if(netif_is_link_up(netif) && (!regvalue))
+    {
+      /* network cable is disconnected */
+      netif_set_link_down(netif);
+    }
+  }
+}
 
 /* USER CODE BEGIN 7 */
 
