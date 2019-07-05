@@ -1,0 +1,41 @@
+LEDNip firmware requirements
+
+2019/07/02, Maya Posch
+---
+
+> Overview
+
+This document describes the software requirements for the Nyantronics LEDNip board. The requisite backend service is covered in a different document.
+
+
+---
+
+> Inputs/Outputs
+
+The firmware takes input from:
+
+* Ethernet interface.
+* CAN interface.
+
+
+It has the following outputs:
+
+* 2x PWM pins to control 2 CC LED drivers.
+* 3x PWM pins to control 3 LED strip (colour) drivers.
+
+
+---
+
+> Basic functionality set
+
+These are the minimal features which the firmware has to support for an MVP.
+
+* Obtain an IP address from the DHCP server on the Ethernet network.
+* Connect to an MQTT broker on this interface.
+* Accept commands on the Ethernet interface via MQTT to:
+	* change the outputs to a specific PWM value, ranging from 0 - 100%.
+	* return the current values the PWM pins have been set to.
+
+> Details:
+
+Implemented as bare metal, using a basic processing loop.
