@@ -29,6 +29,14 @@ APP_CPP_FILES = $(wildcard src/*.cpp)
 APP_C_FILES = $(wildcard src/*.c)
 
 
+# Define compiler flags.
+PROJECT_FLAGS := -DHAL_UART_MODULE_ENABLED=1 
+
+#'-DUSB_MANUFACTURER=Nyantronics' '-DUSB_PRODUCT="LEDNip"' -DHAL_PCD_MODULE_ENABLED=1 -DUSB_VID=
+
+#-DSERIAL_UART_INSTANCE=1 -DHAVE_HWSERIAL1=1  -DUSBCON=1 -DUSBD_USE_HID_COMPOSITE=1
+
+
 #
 # --- End of user-editable variables --- #
 #

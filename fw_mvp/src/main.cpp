@@ -13,9 +13,23 @@
 */
 
 
+#include <Wire.h>
+#include <WSerial.h>
 #include <LwIP.h>
 #include <STM32Ethernet.h>
 #include <PubSubClient.h>
+
+
+#define MQTT_HOST "localhost"
+#define MQTT_PORT 1883
+#define MQTT_USERNAME "user"
+#define MQTT_KEY "pass"
+
+
+// Weak empty variant initialization function.
+// May be redefined by variant files.
+void initVariant() __attribute__((weak));
+void initVariant() { }
 
 
 // Ethernet setup
@@ -66,12 +80,12 @@ void reconnect() {
     // combined length of clientId, username and password exceed this,
     // you will need to increase the value of MQTT_MAX_PACKET_SIZE in
     // PubSubClient.h
-    if (client.connect("STM32Client", AIO_USERNAME, AIO_KEY)) {
+    if (client.connect("STM32Client", MQTT_USERNAME, MQTT_KEY)) {
       Serial.println("connected");
       // Once connected, publish an announcement...
-      client.publish(AIO_USERNAME"/feeds/hello", "Hi, I'm STM32 user!");
+      client.publish(MQTT_USERNAME"/feeds/hello", "Hi, I'm STM32 user!");
       // ... and resubscribe
-      client.subscribe(AIO_USERNAME"/feeds/onoff");
+      client.subscribe(MQTT_USERNAME"/feeds/onoff");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -89,7 +103,7 @@ int main() {
 	pinMode(LED_BUILTIN, OUTPUT); // Initialize the LED_BUILTIN pin as an output
 	Serial.begin(115200);
 
-	client.setServer(AIO_SERVER, AIO_SERVERPORT);
+	client.setServer(MQTT_HOST, MQTT_PORT);
 	client.setCallback(callback);
 
 	// Start the Ethernet connection:
