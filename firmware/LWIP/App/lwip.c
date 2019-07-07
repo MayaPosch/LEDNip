@@ -86,17 +86,17 @@ uint8_t GATEWAY_ADDRESS[4];
 void MX_LWIP_Init(void)
 {
   /* IP addresses initialization */
-  IP_ADDRESS[0] = 192;
-  IP_ADDRESS[1] = 168;
-  IP_ADDRESS[2] = 10;
-  IP_ADDRESS[3] = 239;
+  IP_ADDRESS[0] = 10;
+  IP_ADDRESS[1] = 214;
+  IP_ADDRESS[2] = 227;
+  IP_ADDRESS[3] = 240;
   NETMASK_ADDRESS[0] = 255;
   NETMASK_ADDRESS[1] = 255;
   NETMASK_ADDRESS[2] = 255;
   NETMASK_ADDRESS[3] = 0;
-  GATEWAY_ADDRESS[0] = 192;
-  GATEWAY_ADDRESS[1] = 168;
-  GATEWAY_ADDRESS[2] = 10;
+  GATEWAY_ADDRESS[0] = 10;
+  GATEWAY_ADDRESS[1] = 214;
+  GATEWAY_ADDRESS[2] = 227;
   GATEWAY_ADDRESS[3] = 1;
   
   /* Initilialize the LwIP stack without RTOS */

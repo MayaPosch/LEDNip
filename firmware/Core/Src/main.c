@@ -227,8 +227,7 @@ static RgbColor LedRgb;
 
 /* USER CODE BEGIN 0 */
 
-inline void update_syst_pwm(void)
-{
+inline void update_syst_pwm(void) {
 	/* LED_SYSTEM_R, LED_SYSTEM_G, LED_SYSTEM_B: 
 		the PWM signals for the external three LED channels are mapped to TIM1 and TIM3 channels due to 
 		peripheral mapping and routing constraints.
@@ -240,8 +239,7 @@ inline void update_syst_pwm(void)
 	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, syst_led_pwm.b);	
 } 
 
-inline void update_ext_pwm(void)
-{
+inline void update_ext_pwm(void) {
 	/* PWM_R, PWM_G, PWM_B: 
 		the PWM signals for the external three LED channels are mapped to TIM4 channels 2, 3 and 4.
 		TIM4 output polarity is normal, duty cycle is 100% * TIM4->CCRn / TIM4->ARR.
@@ -251,8 +249,7 @@ inline void update_ext_pwm(void)
 	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, ext_led_pwm.b);	
 } 
 
-inline void update_panel_pwm(void)
-{
+inline void update_panel_pwm(void) {
 	/* Panel_D1: 
 		TIM_CHANNEL_3 output polarity is normal, duty cycle is 100% * TIM1->CCR3 / TIM1->ARR.
 	*/
@@ -265,6 +262,177 @@ inline void update_panel_pwm(void)
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, TIM1->ARR - panel_pwm.p2); 
 } 
 
+
+// --- MQTT begins here ---
+#include <string.h>
+#include "mqtt.h"
+
+#define MQTT_HOST_0 10
+#define MQTT_HOST_1 214
+#define MQTT_HOST_2 227
+#define MQTT_HOST_3 218
+//#define MQTT_HOST "vielseitigkeit.club.entropia.de"
+//#define MQTT_HOST "localhost"
+#define MQTT_PORT 1883
+#define MQTT_USERNAME "user"
+#define MQTT_KEY "pass"
+
+mqtt_client_t static_client;
+int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Limit the max brightness/current this way. 
+
+void mqtt_do_connect(mqtt_client_t *client);
+
+
+// --- Callbacks ---
+//
+
+
+static int inpub_id;
+static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len) {
+	printf("Incoming publish at topic %s with total length %u\n", topic, (unsigned int)tot_len);
+
+	/* Decode topic string into a user defined reference */
+	if(strcmp(topic, "/plants/rgb") == 0) {
+		inpub_id = 0;
+	} 
+	else if (strcmp(topic, "/plants/panels") == 0) {
+		inpub_id = 1;
+	}	 
+	else {
+		/* For all other topics */
+		inpub_id = 2;
+	}
+}
+
+
+static void mqtt_sub_request_cb(void *arg, err_t result) {
+	  /* Just print the result code here for simplicity, 
+		 normal behaviour would be to take some action if subscribe fails like 
+		 notifying user, retry subscribe or disconnect from server */
+	  printf("Subscribe result: %d\n", result);
+}
+
+
+static void mqtt_request_cb(void *arg, err_t result) {
+	//
+}
+
+
+static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags) {
+	printf("Incoming publish payload with length %d, flags %u\n", len, (unsigned int)flags);
+	//mqtt_publish(&static_client, "/plants/debug", "Red adjusted.", 12, 0, 0, mqtt_request_cb, 0);
+
+	if (flags & MQTT_DATA_FLAG_LAST) {
+		/* Last fragment of payload received (or whole part if payload fits receive buffer
+		See MQTT_VAR_HEADER_BUFFER_LEN)  */
+
+		/* Call function or do action depending on reference, in this case inpub_id */
+		if (inpub_id == 0) { // /plants/rgb
+		  /* Don't trust the publisher, check zero termination */
+			if (data[len-1] == 0) {
+				printf("mqtt_incoming_data_cb: %s\n", (const char *) data);
+				//mqtt_publish(&static_client, "/plants/debug", "Red adjusted.", 12, 0, 0, mqtt_request_cb, 0);
+			}
+			
+			if (len == 2) {
+				if ((char) data[0] == 'R') {
+					ext_led_pwm.r = (char) data[1];
+					ext_led_pwm.r *= 3;
+					mqtt_publish(&static_client, "/plants/debug", "Red adjusted.", 12, 0, 0, mqtt_request_cb, 0);
+				}
+				else if ((char) data[0] == 'G') {
+					ext_led_pwm.g = (char) data[1];
+					ext_led_pwm.g *= 3;
+					mqtt_publish(&static_client, "/plants/debug", "Green adjusted.", 14, 0, 0, mqtt_request_cb, 0);
+				}
+				else if ((char) data[0] == 'B') {
+					ext_led_pwm.b = (char) data[1];
+					ext_led_pwm.b *= 3;
+					mqtt_publish(&static_client, "/plants/debug", "Blue adjusted.", 13, 0, 0, mqtt_request_cb, 0);
+				}
+				
+				update_ext_pwm();
+			}
+			else {
+				mqtt_publish(&static_client, "/plants/debug", "No valid RGB command.", 21, 0, 0, mqtt_request_cb, 0);
+			}
+		} 
+		else if (inpub_id == 1) { // /plants/panels
+			if (len == 2) {
+				if ((char) data[0] == 'W') {
+					panel_pwm.p1 = (char) data[1];
+					panel_pwm.p1 *= 3;
+				}
+				else if ((char) data[0] == 'Y') {
+					panel_pwm.p2 = (char) data[1];
+					panel_pwm.p2 *= 3;
+				}
+				
+				update_panel_pwm();
+			}
+		} 
+		else {
+			printf("mqtt_incoming_data_cb: Ignoring payload...\n");
+		}
+	} 
+	else {
+		/* Handle fragmented payload, store in buffer, write to file or whatever */
+	}
+}
+
+
+static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status) {
+	err_t err;
+	if (status == MQTT_CONNECT_ACCEPTED) {
+		printf("mqtt_connection_cb: Successfully connected\n");
+
+		/* Setup callback for incoming publish requests */
+		mqtt_set_inpub_callback(client, mqtt_incoming_publish_cb, mqtt_incoming_data_cb, arg);
+
+		/* Subscribe to a topic named "subtopic" with QoS level 1, call mqtt_sub_request_cb with result */ 
+		err = mqtt_subscribe(client, "/plants/rgb", 1, mqtt_sub_request_cb, arg);
+		err = mqtt_subscribe(client, "/plants/panels", 1, mqtt_sub_request_cb, arg);
+
+		if (err != ERR_OK) {
+			printf("mqtt_subscribe return: %d\n", err);
+		}
+	} 
+	else {
+		printf("mqtt_connection_cb: Disconnected, reason: %d\n", status);
+
+		/* Its more nice to be connected, so try to reconnect */
+		mqtt_do_connect(client);
+	}  
+}
+// --- End Callbacks ---
+
+
+void mqtt_do_connect(mqtt_client_t *client) {
+	ip4_addr_t broker_ipaddr;
+	struct mqtt_connect_client_info_t ci;
+	err_t err;
+
+	/* Setup an empty client info structure */
+	memset(&ci, 0, sizeof(ci));
+
+	/* Minimal amount of information required is client identifier, so set it here */ 
+	ci.client_id = "LEDNip-Mark_I";
+	
+	IP4_ADDR(&broker_ipaddr, MQTT_HOST_0, MQTT_HOST_1, MQTT_HOST_2, MQTT_HOST_3);
+
+	/* Initiate client and connect to server, if this fails immediately an error code is returned
+	 otherwise mqtt_connection_cb will be called with connection result after attempting 
+	 to establish a connection with the server. 
+	 For now MQTT version 3.1.1 is always used */
+	err = mqtt_client_connect(client, &broker_ipaddr, MQTT_PORT, mqtt_connection_cb, 0, &ci);
+
+	/* For now just print the result code if something goes wrong */
+	if(err != ERR_OK) {
+		printf("mqtt_connect return %d\n", err);
+	}
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -272,8 +440,7 @@ inline void update_panel_pwm(void)
   *
   * @retval None
   */
-int main(void)
-{
+int main(void) {
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -373,7 +540,7 @@ int main(void)
     Error_Handler();
   } */
 
- 	int16_t pwm_value = 0;
+ 	/* int16_t pwm_value = 0;
 	int16_t step = 5;
 	
 	LedHsv.h = 0;
@@ -381,15 +548,16 @@ int main(void)
 	LedHsv.v = 0xff;
 	int16_t HsvStep = 1;
 	int16_t HsvStepDelayCounter = 0;
-	int8_t HsvStepLinger = 0;
-	int16_t RgbToPwm = PWM_TIMER_RELOAD / 360; // Limit the max brightness/current this way. 
+	int8_t HsvStepLinger = 0; */
+	
+	// --- MQTT stuff ---
+	mqtt_do_connect(&static_client);
   
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1) {
 
   /* USER CODE END WHILE */
 
@@ -399,14 +567,14 @@ int main(void)
 
 		/*Assign the new DC count to the capture compare register.*/
 		
-		if (pwm_value <= 0) {
+		/* if (pwm_value <= 0) {
 			step =  5;
 		}
 		if (pwm_value >= PWM_TIMER_RELOAD) {
 			step = -5;
 		}
 		
-		pwm_value += step;
+		pwm_value += step; */
 		 
 		// brightness ramp demo
 		// __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value*pwm_value / PWM_TIMER_RELOAD);
@@ -415,12 +583,12 @@ int main(void)
 		// colour temperature modulation demo
 		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_value);
 		//__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, PWM_TIMER_RELOAD - (PWM_TIMER_RELOAD - pwm_value)); // CH4 output polarity is inverted in software so it needs the complementary duty cycle value		
-		panel_pwm.p1 = pwm_value;
+		/* panel_pwm.p1 = pwm_value;
 		panel_pwm.p2 = PWM_TIMER_RELOAD - pwm_value;
-		update_panel_pwm();
+		update_panel_pwm(); */
 		
 		// Demo: cycle through the RGB colours by mapping from the HSV colour space.
-		if (HsvStepDelayCounter >= 10) {
+		/* if (HsvStepDelayCounter >= 10) {
 			if (LedHsv.h >= 0xff && HsvStepLinger == 0) { HsvStep = -1; HsvStepLinger = 2; }
 			else if (LedHsv.h <= 0x00 && HsvStepLinger == 0) { HsvStep = 1; HsvStepLinger = 2; }
 			else if (HsvStepLinger == 2) { HsvStepLinger = 1; }
@@ -440,12 +608,14 @@ int main(void)
 		}
 		else {
 			HsvStepDelayCounter++;
-		}
+		} */
 		 
 		HAL_Delay(1);
 		
 		//HAL_GPIO_TogglePin(GPIOE, LED1_Pin);
 	}
+	
+	mqtt_disconnect(&static_client);
   /* USER CODE END 3 */
 
 }
