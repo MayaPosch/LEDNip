@@ -15,10 +15,10 @@ ARCH ?= stm32
 # atmega1280, arduino, mega 
 # atmega2560, wiring, mega
 #
-MCU ?= stm32f746vg
+MCU ?= stm32f427vg
 PROGRAMMER ?= jtag
 # Pin variant.
-VARIANT ?= stm32f746
+VARIANT ?= LEDNip
 
 # Set the name of the output (ELF & Hex) file.
 OUTPUT := lednip_fw
@@ -30,7 +30,10 @@ APP_C_FILES = $(wildcard src/*.c)
 
 
 # Define compiler flags.
-PROJECT_FLAGS := -DHAL_UART_MODULE_ENABLED=1 
+PROJECT_FLAGS := -DHAL_UART_MODULE_ENABLED=1 -DHAL_ETH_MODULE_ENABLED=1
+
+# Programmer settings
+OPENOCD_CONFIG := LEDNipv01.cfg
 
 #'-DUSB_MANUFACTURER=Nyantronics' '-DUSB_PRODUCT="LEDNip"' -DHAL_PCD_MODULE_ENABLED=1 -DUSB_VID=
 

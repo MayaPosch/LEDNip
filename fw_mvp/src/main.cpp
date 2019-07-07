@@ -20,7 +20,8 @@
 #include <PubSubClient.h>
 
 
-#define MQTT_HOST "localhost"
+#define MQTT_HOST "vielseitigkeit.club.entropia.de"
+//#define MQTT_HOST "localhost"
 #define MQTT_PORT 1883
 #define MQTT_USERNAME "user"
 #define MQTT_KEY "pass"
@@ -35,6 +36,8 @@
 #define RGB_R_PIN PD_13
 #define RGB_G_PIN PD_14
 #define RGB_B_PIN PD_15
+#define PANEL_W PE_13
+#define PANEL_Y PE_14
 
 
 // Weak empty variant initialization function.
@@ -61,37 +64,49 @@ char msg[8];
 void callback(char* topic, byte* payload, unsigned int length) {
 
 #if 0
-  Serial.print("Message arrived [");
-  Serial.print(topic);
-  Serial.print("] ");
-  for (unsigned int i = 0; i < length; i++) {
-    Serial.print((char)payload[i]);
-  }
-  Serial.println();
-#else
-  UNUSED(topic);
-#endif
-  if (length > 2) {
-    // Switch on/off the LED (payload messages can be 'ON' or 'OFF')
-    if ((char) payload[0] == 'R') {
-      //digitalWrite(LED_BUILTIN, HIGH); // Turn the LED on
-	  analogWrite(RGB_R_PIN, payload[1]);
-    }
-	else if ((char) payload[0] == 'G') {
-      //digitalWrite(LED_BUILTIN, LOW);  // Turn the LED off
-	  analogWrite(RGB_G_PIN, payload[1]);
-    }
-	else if ((char) payload[0] == 'B') {
-      //digitalWrite(LED_BUILTIN, LOW);  // Turn the LED off
-	  analogWrite(RGB_B_PIN, payload[1]);
-    }
-	else {
-		Serial.println("Unknown RGB command.");
+	Serial.print("Message arrived [");
+	Serial.print(topic);
+	Serial.print("] ");
+	for (unsigned int i = 0; i < length; i++) {
+		Serial.print((char)payload[i]);
 	}
-  }
-  else {
-	  Serial.println("Unknown command.");
-  }
+	Serial.println();
+#else
+	UNUSED(topic);
+#endif
+	if (length > 2) {
+		// Switch on/off the LED (payload messages can be 'ON' or 'OFF')
+		if ((char) payload[0] == 'R') {
+		  //digitalWrite(LED_BUILTIN, HIGH); // Turn the LED on
+		  analogWrite(RGB_R_PIN, payload[1]);
+		}
+		else if ((char) payload[0] == 'G') {
+		  //digitalWrite(LED_BUILTIN, LOW);  // Turn the LED off
+		  analogWrite(RGB_G_PIN, payload[1]);
+		}
+		else if ((char) payload[0] == 'B') {
+		  analogWrite(RGB_B_PIN, payload[1]);
+		}
+		else if ((char) payload[0] == 'P') {
+			if (length > 3) {
+				if ((char) payload[1] == 'W') {
+					analogWrite(PANEL_W, payload[2]);
+				}
+				else if ((char) payload[1] == 'Y') {
+				  analogWrite(PANEL_Y, payload[2]);
+				}
+			}
+			else {
+				Serial.println("Invalid panel command.");
+			}
+		}
+		else {
+			Serial.println("Unknown RGB command.");
+		}
+	}
+	else {
+		Serial.println("Unknown command.");
+	}
 }
 
 
@@ -105,12 +120,14 @@ void reconnect() {
     // combined length of clientId, username and password exceed this,
     // you will need to increase the value of MQTT_MAX_PACKET_SIZE in
     // PubSubClient.h
-    if (client.connect("STM32Client", MQTT_USERNAME, MQTT_KEY)) {
+    //if (client.connect("STM32Client", MQTT_USERNAME, MQTT_KEY)) {
+    if (client.connect("STM32Client")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
       //client.publish(MQTT_USERNAME"/feeds/hello", "Hi, I'm STM32 user!");
       // ... and resubscribe
       client.subscribe("/plants/rgb");
+      client.subscribe("/plants/panel");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -145,18 +162,18 @@ int main() {
 	Wire.begin();
 	
 	
-	// --- Setup finished
-	
-	if (!client.connected()) {
-		reconnect();
-	}
-	
-	client.loop();
-	
+	// --- Setup finished	
 	for (;;) {
 #if defined(CORE_CALLBACK)
 		CoreCallback();
 #endif
+
+		if (!client.connected()) {
+			reconnect();
+		}
+		
+		client.loop();
+	
 		if (serialEventRun) {
 			serialEventRun();
 		}
