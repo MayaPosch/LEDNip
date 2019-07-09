@@ -968,11 +968,11 @@ Text GLabel 1450 4500 0    50   Output ~ 0
 I2C_SCL
 Text GLabel 1450 4600 0    50   BiDi ~ 0
 I2C_SDA
-Text GLabel 3550 6700 2    50   Output ~ 0
+Text GLabel 3950 6700 2    50   Output ~ 0
 PWM_R
-Text GLabel 3550 6800 2    50   Output ~ 0
+Text GLabel 3950 6800 2    50   Output ~ 0
 PWM_G
-Text GLabel 3550 6900 2    50   Output ~ 0
+Text GLabel 3950 6900 2    50   Output ~ 0
 PWM_B
 Text GLabel 3550 5900 2    50   Output ~ 0
 DBG_TX
@@ -982,9 +982,9 @@ Text GLabel 3550 6200 2    50   Output ~ 0
 EXT_TX
 Text GLabel 3550 6300 2    50   Input ~ 0
 EXT_RX
-Text GLabel 3550 5000 2    50   Input ~ 0
+Text GLabel 3750 5000 2    50   Output ~ 0
 Panel_D1
-Text GLabel 3550 5100 2    50   Input ~ 0
+Text GLabel 3750 5100 2    50   Output ~ 0
 Panel_D2
 Text GLabel 1500 6600 0    50   Input ~ 0
 SPI0_MOSI
@@ -1038,16 +1038,6 @@ Wire Wire Line
 	3550 6300 3400 6300
 Wire Wire Line
 	3400 6200 3550 6200
-Wire Wire Line
-	3550 6900 3400 6900
-Wire Wire Line
-	3400 6800 3550 6800
-Wire Wire Line
-	3550 6700 3400 6700
-Wire Wire Line
-	3400 5100 3550 5100
-Wire Wire Line
-	3550 5000 3400 5000
 Wire Wire Line
 	1500 6600 1600 6600
 Wire Wire Line
@@ -1274,12 +1264,6 @@ F 6 "4" H 0   0   50  0001 C CNN "box no"
 	1    3800 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 2600 3500 2600
-Wire Wire Line
-	3400 2500 3500 2500
-Wire Wire Line
-	3500 2500 3500 2600
 $Comp
 L panel_light_control-rescue:GND-power #PWR025
 U 1 1 5CEA5395
@@ -1333,7 +1317,6 @@ F 3 "" H 1600 1350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1600 850  1600 950 
-NoConn ~ 3400 2400
 $Comp
 L panel_light_control-rescue:C_Small-Device C18
 U 1 1 5CF5C42C
@@ -1381,12 +1364,10 @@ Wire Wire Line
 Wire Wire Line
 	3750 2200 3900 2200
 NoConn ~ 9300 5350
-Wire Wire Line
-	3500 2700 3400 2700
 Text GLabel 1500 2400 0    50   Input ~ 0
 I2S_WS
 $Comp
-L panel_light_control-rescue:STM32F207VGTx-MCU_ST_STM32F2 U3
+L MCU_ST_STM32F4:STM32F427VGTx U3
 U 1 1 5BBC4EC1
 P 2500 4400
 AR Path="/5BBC4BB7/5BBC4EC1" Ref="U3"  Part="1" 
@@ -1394,11 +1375,11 @@ AR Path="/5C1EFDBE/5BBC4EC1" Ref="U?"  Part="1"
 AR Path="/5C211DD3/5BBC4EC1" Ref="U?"  Part="1" 
 AR Path="/5C211FC6/5BBC4EC1" Ref="U?"  Part="1" 
 F 0 "U3" H 2600 4600 50  0000 R CNN
-F 1 "STM32F207VGT6" H 2850 4450 50  0000 R CNN
+F 1 "STM32F427VGT6" H 2850 4450 50  0000 R CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 1800 1800 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00237391.pdf" H 2500 4400 50  0001 C CNN
-F 4 "STM32F207VGT6" H 2500 4400 50  0001 C CNN "MPN"
-F 5 "511-STM32F207VGT6 " H 2500 4400 50  0001 C CNN "Mouser"
+F 4 "STM32F427VGT6" H 2500 4400 50  0001 C CNN "MPN"
+F 5 "511-STM32F427VGT6 " H 2500 4400 50  0001 C CNN "Mouser"
 	1    2500 4400
 	-1   0    0    -1  
 $EndComp
@@ -1734,12 +1715,7 @@ Wire Wire Line
 	3800 2500 3950 2500
 Wire Wire Line
 	3950 2500 3950 2600
-Wire Wire Line
-	3800 2500 3500 2500
 Connection ~ 3800 2500
-Connection ~ 3500 2500
-Wire Wire Line
-	3500 2700 3500 2800
 Wire Wire Line
 	3900 2300 3900 2200
 $Comp
@@ -2126,112 +2102,81 @@ Wire Wire Line
 Wire Wire Line
 	3350 1250 3700 1250
 $Comp
-L panel_light_control-rescue:LED_RCBG-Device LED9
-U 1 1 5BD65DAE
-P 5900 6950
-AR Path="/5BBC4BB7/5BD65DAE" Ref="LED9"  Part="1" 
-AR Path="/5BD65DAE" Ref="LED?"  Part="1" 
-F 0 "LED9" H 5900 6483 50  0000 C CNN
-F 1 "RGB-PLCC4" H 5900 6574 50  0000 C CNN
-F 2 "LED_SMD:LED_Cree-PLCC4_2x2mm_CW" H 5900 6900 50  0001 C CNN
-F 3 "~" H 5900 6900 50  0001 C CNN
-F 4 "RD1616-63RGBC-C2CA or DL-PCB0606RGBC-C2" H 5900 6950 50  0001 C CNN "MPN"
-F 5 "630-ASMB-KTF0-0A306 (WRONG PART)" H 5900 6950 50  0001 C CNN "Mouser"
-	1    5900 6950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6100 6950 6200 6950
-$Comp
 L panel_light_control-rescue:R_Small-Device R50
 U 1 1 5BD65DB5
-P 5550 7150
+P 6150 7350
 AR Path="/5BBC4BB7/5BD65DB5" Ref="R50"  Part="1" 
 AR Path="/5C1EFDBE/5BD65DB5" Ref="R?"  Part="1" 
 AR Path="/5C211DD3/5BD65DB5" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5BD65DB5" Ref="R?"  Part="1" 
 AR Path="/5BD65DB5" Ref="R?"  Part="1" 
-F 0 "R50" V 5500 6900 50  0000 L CNN
-F 1 "1k" V 5600 7150 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 7150 50  0001 C CNN
-F 3 "~" H 5550 7150 50  0001 C CNN
-F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
-F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "21" H 0   0   50  0001 C CNN "box no"
-	1    5550 7150
+F 0 "R50" V 6100 7100 50  0000 L CNN
+F 1 "120" V 6200 7350 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6150 7350 50  0001 C CNN
+F 3 "~" H 6150 7350 50  0001 C CNN
+F 4 "RC0603FR-071KL" H 600 200 50  0001 C CNN "MPN"
+F 5 "603-RC0603FR-071KL" H 600 200 50  0001 C CNN "Mouser"
+F 6 "X" H 600 200 50  0001 C CNN "stock"
+F 7 "21" H 600 200 50  0001 C CNN "box no"
+	1    6150 7350
 	0    1    1    0   
 $EndComp
 $Comp
 L panel_light_control-rescue:R_Small-Device R49
 U 1 1 5BD65DBB
-P 5550 6950
+P 6100 7150
 AR Path="/5BBC4BB7/5BD65DBB" Ref="R49"  Part="1" 
 AR Path="/5C1EFDBE/5BD65DBB" Ref="R?"  Part="1" 
 AR Path="/5C211DD3/5BD65DBB" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5BD65DBB" Ref="R?"  Part="1" 
 AR Path="/5BD65DBB" Ref="R?"  Part="1" 
-F 0 "R49" V 5500 6700 50  0000 L CNN
-F 1 "1k" V 5600 6950 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 6950 50  0001 C CNN
-F 3 "~" H 5550 6950 50  0001 C CNN
-F 4 "RC0603FR-071KL" H 0   0   50  0001 C CNN "MPN"
-F 5 "603-RC0603FR-071KL" H 0   0   50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "21" H 0   0   50  0001 C CNN "box no"
-	1    5550 6950
+F 0 "R49" V 6050 6900 50  0000 L CNN
+F 1 "1k" V 6150 7150 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6100 7150 50  0001 C CNN
+F 3 "~" H 6100 7150 50  0001 C CNN
+F 4 "RC0603FR-071KL" H 550 200 50  0001 C CNN "MPN"
+F 5 "603-RC0603FR-071KL" H 550 200 50  0001 C CNN "Mouser"
+F 6 "X" H 550 200 50  0001 C CNN "stock"
+F 7 "21" H 550 200 50  0001 C CNN "box no"
+	1    6100 7150
 	0    1    1    0   
 $EndComp
 $Comp
 L panel_light_control-rescue:R_Small-Device R48
 U 1 1 5BD65DC1
-P 5550 6750
+P 4100 7250
 AR Path="/5BBC4BB7/5BD65DC1" Ref="R48"  Part="1" 
 AR Path="/5C1EFDBE/5BD65DC1" Ref="R?"  Part="1" 
 AR Path="/5C211DD3/5BD65DC1" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5BD65DC1" Ref="R?"  Part="1" 
 AR Path="/5BD65DC1" Ref="R?"  Part="1" 
-F 0 "R48" V 5500 6500 50  0000 L CNN
-F 1 "120R" V 5600 6750 50  0000 C TNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5550 6750 50  0001 C CNN
-F 3 "~" H 5550 6750 50  0001 C CNN
-F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
-F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "18" H 0   0   50  0001 C CNN "box no"
-	1    5550 6750
+F 0 "R48" V 4050 7000 50  0000 L CNN
+F 1 "1k" V 4150 7250 50  0000 C TNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4100 7250 50  0001 C CNN
+F 3 "~" H 4100 7250 50  0001 C CNN
+F 4 "RC0603FR-07120RL" H -1450 500 50  0001 C CNN "MPN"
+F 5 "603-RC0603FR-07120RL" H -1450 500 50  0001 C CNN "Mouser"
+F 6 "X" H -1450 500 50  0001 C CNN "stock"
+F 7 "18" H -1450 500 50  0001 C CNN "box no"
+	1    4100 7250
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5250 6750 5450 6750
-Wire Wire Line
-	5250 6950 5450 6950
-Wire Wire Line
-	5250 7150 5450 7150
-Wire Wire Line
-	5700 7150 5650 7150
-Wire Wire Line
-	5650 6950 5700 6950
-Wire Wire Line
-	5700 6750 5650 6750
 $Comp
 L panel_light_control-rescue:GND-power #PWR0122
 U 1 1 5BD65DCD
-P 6200 7050
-F 0 "#PWR0122" H 6200 6800 50  0001 C CNN
-F 1 "GND" H 6205 6877 50  0000 C CNN
-F 2 "" H 6200 7050 50  0001 C CNN
-F 3 "" H 6200 7050 50  0001 C CNN
-	1    6200 7050
+P 5250 7550
+F 0 "#PWR0122" H 5250 7300 50  0001 C CNN
+F 1 "GND" H 5255 7377 50  0000 C CNN
+F 2 "" H 5250 7550 50  0001 C CNN
+F 3 "" H 5250 7550 50  0001 C CNN
+	1    5250 7550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 6950 6200 7050
-Text GLabel 5250 7150 0    50   Input ~ 0
+Text GLabel 3950 7250 0    50   Input ~ 0
 LED_SYSTEM_R
-Text GLabel 5250 6950 0    50   Input ~ 0
+Text GLabel 6300 7150 2    50   Input ~ 0
 LED_SYSTEM_G
-Text GLabel 5250 6750 0    50   Input ~ 0
+Text GLabel 6300 7350 2    50   Input ~ 0
 LED_SYSTEM_B
 Wire Wire Line
 	3400 3400 3550 3400
@@ -2240,53 +2185,31 @@ Wire Wire Line
 Wire Wire Line
 	3550 3200 4000 3200
 Wire Wire Line
-	3550 4800 3400 4800
-Wire Wire Line
-	3400 4600 3550 4600
-Wire Wire Line
 	1450 3700 1600 3700
-Wire Wire Line
-	3400 4400 3550 4400
-Wire Wire Line
-	3550 4300 3400 4300
-Wire Wire Line
-	3400 4200 3550 4200
-Wire Wire Line
-	3550 4100 3400 4100
-Text GLabel 3550 4400 2    50   Output ~ 0
+Text GLabel 3700 4400 2    50   Output ~ 0
 LED7
-Text GLabel 3550 4200 2    50   Output ~ 0
+Text GLabel 3700 4200 2    50   Output ~ 0
 LED5
-Text GLabel 3550 4300 2    50   Output ~ 0
+Text GLabel 3700 4300 2    50   Output ~ 0
 LED6
-Text GLabel 3550 4100 2    50   Output ~ 0
+Text GLabel 3700 4100 2    50   Output ~ 0
 LED4
 Text GLabel 1450 3700 0    50   Output ~ 0
 LED_SYSTEM_B
-Text GLabel 3550 4600 2    50   Output ~ 0
+Text GLabel 3850 4600 2    50   Output ~ 0
 LED_SYSTEM_G
-Text GLabel 3550 4800 2    50   Output ~ 0
+Text GLabel 3850 4800 2    50   Output ~ 0
 LED_SYSTEM_R
-Text GLabel 3550 3700 2    50   Output ~ 0
+Text GLabel 3700 3700 2    50   Output ~ 0
 LED0
-Text GLabel 3550 3800 2    50   Output ~ 0
+Text GLabel 3700 3800 2    50   Output ~ 0
 LED1
-Text GLabel 3550 3900 2    50   Output ~ 0
+Text GLabel 3700 3900 2    50   Output ~ 0
 LED2
-Text GLabel 3550 4000 2    50   Output ~ 0
+Text GLabel 3700 4000 2    50   Output ~ 0
 LED3
-Wire Wire Line
-	3550 3700 3400 3700
-Wire Wire Line
-	3400 3800 3550 3800
-Wire Wire Line
-	3550 3900 3400 3900
-Wire Wire Line
-	3400 4000 3550 4000
-Text GLabel 3550 5200 2    50   Input ~ 0
+Text GLabel 3850 5200 2    50   Output ~ 0
 LED_CAN
-Wire Wire Line
-	3550 5200 3400 5200
 Text GLabel 5800 3750 2    50   Input ~ 0
 LED_CAN
 $Comp
@@ -2681,7 +2604,7 @@ U 1 1 5BDBFB79
 P 6150 5900
 F 0 "TERM1" H 6150 5700 50  0000 C CNN
 F 1 "Conn_01x02" H 6150 5600 50  0000 C CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 6150 5900 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 5900 50  0001 C CNN
 F 3 "~" H 6150 5900 50  0001 C CNN
 F 4 "455-1719-ND " H 0   0   50  0001 C CNN "DigiKey"
 F 5 "S2B-PH-K-S(LF)(SN)‎" H 0   0   50  0001 C CNN "MPN"
@@ -2872,21 +2795,21 @@ Text Notes 500  5150 0    50   ~ 0
 SPI2_MISO
 Text Notes 500  4650 0    50   ~ 0
 SPI2_NSS
-Text Notes 4000 5050 0    50   ~ 0
+Text Notes 4200 5050 0    50   ~ 0
 TIM1_CH3
-Text Notes 4000 5150 0    50   ~ 0
+Text Notes 4200 5150 0    50   ~ 0
 TIM1_CH4
-Text Notes 3900 6750 0    50   ~ 0
+Text Notes 4250 6750 0    50   ~ 0
 TIM4_CH2
-Text Notes 3900 6850 0    50   ~ 0
+Text Notes 4250 6850 0    50   ~ 0
 TIM4_CH3
-Text Notes 3900 6950 0    50   ~ 0
+Text Notes 4250 6950 0    50   ~ 0
 TIM4_CH4
 Text Notes 500  3750 0    50   ~ 0
 TIM3_CH3
-Text Notes 4150 4650 0    50   ~ 0
+Text Notes 4000 4550 0    50   ~ 0
 TIM1_CH1
-Text Notes 4150 4850 0    50   ~ 0
+Text Notes 4000 4750 0    50   ~ 0
 TIM1_CH2
 $Comp
 L panel_light_control-rescue:Conn_02x04_Counter_Clockwise-Connector_Generic #DIP8Sock1
@@ -2901,6 +2824,132 @@ F 5 "575-1104730841001000" H 6150 4350 50  0001 C CNN "Mouser"
 	1    6150 4350
 	1    0    0    -1  
 $EndComp
-Text Notes 5150 6550 0    50   ~ 0
-WRONG PART\nNEXT REV: 630-ASMB-TTF0-0A20B
+Wire Wire Line
+	3400 2500 3500 2500
+Wire Wire Line
+	3400 2400 3500 2400
+Wire Wire Line
+	3500 2400 3500 2500
+Connection ~ 3500 2500
+Wire Wire Line
+	3500 2500 3800 2500
+Wire Wire Line
+	3400 2600 3500 2600
+Wire Wire Line
+	3500 2600 3500 2800
+$Comp
+L ASMB-TTF0-0A20B:ASMB-TTF0-0A20B LED9
+U 1 1 5D3015BD
+P 4300 7150
+F 0 "LED9" H 5250 7415 50  0000 C CNN
+F 1 "ASMB-TTF0-0A20B" H 5250 7324 50  0000 C CNN
+F 2 "ASMB-TTF0-0A20B:ASMBTTF00A20B" H 6050 7250 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ASMB-TTF0-0A20B.pdf" H 6050 7150 50  0001 L CNN
+F 4 "BROADCOM LIMITED - ASMB-TTF0-0A20B - LED, RGB, 710/1840/410MCD, PLCC-6" H 6050 7050 50  0001 L CNN "Description"
+F 5 "2" H 6050 6950 50  0001 L CNN "Height"
+F 6 "Avago Technologies" H 6050 6850 50  0001 L CNN "Manufacturer_Name"
+F 7 "ASMB-TTF0-0A20B" H 6050 6750 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "630-ASMB-TTF0-0A20B" H 6050 6650 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=630-ASMB-TTF0-0A20B" H 6050 6550 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 6050 6450 50  0001 L CNN "RS Part Number"
+F 11 "" H 6050 6350 50  0001 L CNN "RS Price/Stock"
+	1    4300 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 7150 4250 7150
+Wire Wire Line
+	4250 7150 4250 7350
+Wire Wire Line
+	5250 7500 5250 7550
+Connection ~ 5250 7500
+Wire Wire Line
+	5950 7350 6050 7350
+Wire Wire Line
+	6000 7250 5950 7250
+Wire Wire Line
+	6000 7250 6000 7500
+Wire Wire Line
+	4000 7250 3950 7250
+Wire Wire Line
+	4200 7250 4300 7250
+Wire Wire Line
+	6000 7150 5950 7150
+Wire Wire Line
+	6300 7350 6250 7350
+Wire Wire Line
+	6200 7150 6300 7150
+Wire Wire Line
+	5250 7500 6000 7500
+Wire Wire Line
+	4250 7500 5250 7500
+Wire Wire Line
+	4300 7350 4250 7350
+Connection ~ 4250 7350
+Wire Wire Line
+	4250 7350 4250 7500
+Text Label 3400 4600 0    50   ~ 0
+PE9_LS_G
+Text Label 3400 4800 0    50   ~ 0
+PE11_LS_R
+Wire Wire Line
+	3400 4600 3850 4600
+Wire Wire Line
+	3400 4800 3850 4800
+Text Label 3400 5000 0    50   ~ 0
+PE13_P1
+Text Label 3400 5100 0    50   ~ 0
+PE14_P2
+Wire Wire Line
+	3400 5000 3750 5000
+Wire Wire Line
+	3400 5100 3750 5100
+Text Label 3400 6700 0    50   ~ 0
+PD13_PWM_R
+Text Label 3400 6800 0    50   ~ 0
+PD14_PWM_G
+Text Label 3400 6900 0    50   ~ 0
+PD15_PWM_B
+Wire Wire Line
+	3400 6700 3950 6700
+Wire Wire Line
+	3400 6800 3950 6800
+Wire Wire Line
+	3400 6900 3950 6900
+Text Label 3400 3700 0    50   ~ 0
+PE0_L0
+Text Label 3400 3800 0    50   ~ 0
+PE1_L1
+Text Label 3400 3900 0    50   ~ 0
+PE2_L2
+Text Label 3400 4000 0    50   ~ 0
+PE3_L3
+Text Label 3400 4100 0    50   ~ 0
+PE4_L4
+Text Label 3400 4200 0    50   ~ 0
+PE5_L5
+Text Label 3400 4300 0    50   ~ 0
+P6_L6
+Text Label 3400 4400 0    50   ~ 0
+PE7_L7
+Wire Wire Line
+	3400 3700 3700 3700
+Wire Wire Line
+	3400 3800 3700 3800
+Wire Wire Line
+	3400 3900 3700 3900
+Wire Wire Line
+	3400 4000 3700 4000
+Wire Wire Line
+	3400 4100 3700 4100
+Wire Wire Line
+	3400 4200 3700 4200
+Wire Wire Line
+	3400 4300 3700 4300
+Wire Wire Line
+	3400 4400 3700 4400
+Text Label 3400 5200 0    50   ~ 0
+PE15_LCAN
+Wire Wire Line
+	3400 5200 3850 5200
 $EndSCHEMATC
