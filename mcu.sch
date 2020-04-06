@@ -17,46 +17,46 @@ $EndDescr
 $Comp
 L panel_light_control-rescue:MCP2562-E-P-Interface_CAN_LIN U4
 U 1 1 5BBC56DD
-P 5750 5300
+P 5750 5500
 AR Path="/5BBC4BB7/5BBC56DD" Ref="U4"  Part="1" 
 AR Path="/5C1EFDBE/5BBC56DD" Ref="U?"  Part="1" 
 AR Path="/5C211DD3/5BBC56DD" Ref="U?"  Part="1" 
 AR Path="/5C211FC6/5BBC56DD" Ref="U?"  Part="1" 
-F 0 "U4" H 5900 5800 50  0000 C CNN
-F 1 "MCP2562-E-P" H 6150 5700 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5750 4800 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 5750 5300 50  0001 C CNN
-F 4 "MCP2562-E/P " H 5750 5300 50  0001 C CNN "MPN"
-F 5 "579-MCP2562-E/P" H 5750 5300 50  0001 C CNN "Mouser"
-F 6 "E" H 0   0   50  0001 C CNN "box no"
-	1    5750 5300
+F 0 "U4" H 5900 6000 50  0000 C CNN
+F 1 "MCP2562-E-P" H 6150 5900 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5750 5000 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 5750 5500 50  0001 C CNN
+F 4 "MCP2562-E/P " H 5750 5500 50  0001 C CNN "MPN"
+F 5 "579-MCP2562-E/P" H 5750 5500 50  0001 C CNN "Mouser"
+F 6 "E" H 0   200 50  0001 C CNN "box no"
+	1    5750 5500
 	1    0    0    -1  
 $EndComp
-Text GLabel 5050 5100 0    50   Input ~ 0
+Text GLabel 5050 5300 0    50   Input ~ 0
 CAN_TX
-Text GLabel 5050 5200 0    50   Input ~ 0
+Text GLabel 5050 5400 0    50   Input ~ 0
 CAN_RX
 Wire Wire Line
-	5050 5100 5250 5100
+	5050 5300 5250 5300
 Wire Wire Line
-	5050 5200 5250 5200
+	5050 5400 5250 5400
 $Comp
 L panel_light_control-rescue:RJ45_Shielded-Connector J11
 U 1 1 5BBC5D97
-P 7500 4300
+P 7850 4000
 AR Path="/5BBC4BB7/5BBC5D97" Ref="J11"  Part="1" 
 AR Path="/5C1EFDBE/5BBC5D97" Ref="J?"  Part="1" 
 AR Path="/5C211DD3/5BBC5D97" Ref="J?"  Part="1" 
 AR Path="/5C211FC6/5BBC5D97" Ref="J?"  Part="1" 
-F 0 "J11" V 7050 4750 50  0000 R CNN
-F 1 "RJ45_Shielded" V 7150 4800 50  0000 R CNN
-F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 4325 50  0001 C CNN
-F 3 "~" V 7500 4325 50  0001 C CNN
-F 4 "RJHSE-5380 " V 7500 4300 50  0001 C CNN "MPN"
-F 5 "523-RJHSE-5380 " V 7500 4300 50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "E" H 0   0   50  0001 C CNN "box no"
-	1    7500 4300
+F 0 "J11" V 7400 4150 50  0000 R CNN
+F 1 "RJ45_Shielded" V 7500 4350 50  0000 R CNN
+F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7850 4025 50  0001 C CNN
+F 3 "~" V 7850 4025 50  0001 C CNN
+F 4 "RJHSE-5380 " V 7850 4000 50  0001 C CNN "MPN"
+F 5 "523-RJHSE-5380 " V 7850 4000 50  0001 C CNN "Mouser"
+F 6 "X" H 350 -300 50  0001 C CNN "stock"
+F 7 "E" H 350 -300 50  0001 C CNN "box no"
+	1    7850 4000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -92,49 +92,39 @@ F 3 "" H 9750 3800 50  0001 C CNN
 	1    9750 3800
 	1    0    0    -1  
 $EndComp
-Text GLabel 10400 5550 2    50   Input ~ 0
+Text GLabel 10700 5850 2    50   Input ~ 0
 LED_YLW-
 Wire Wire Line
-	10400 5550 10200 5550
+	10700 5850 10500 5850
 Wire Wire Line
-	10200 5350 10300 5350
+	10500 5650 10600 5650
 Wire Wire Line
 	9750 3450 9750 3550
 Wire Wire Line
-	10200 5250 10300 5250
+	10500 5550 10600 5550
 Wire Wire Line
-	9200 5050 9300 5050
+	9500 5350 9600 5350
 $Comp
 L panel_light_control-rescue:GND-power #PWR0103
 U 1 1 5BBD0CB5
-P 5150 5900
+P 5150 6100
 AR Path="/5BBC4BB7/5BBD0CB5" Ref="#PWR0103"  Part="1" 
 AR Path="/5C1EFDBE/5BBD0CB5" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5BBD0CB5" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5BBD0CB5" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0103" H 5150 5650 50  0001 C CNN
-F 1 "GND" H 5155 5727 50  0000 C CNN
-F 2 "" H 5150 5900 50  0001 C CNN
-F 3 "" H 5150 5900 50  0001 C CNN
-	1    5150 5900
+F 0 "#PWR0103" H 5150 5850 50  0001 C CNN
+F 1 "GND" H 5155 5927 50  0000 C CNN
+F 2 "" H 5150 6100 50  0001 C CNN
+F 3 "" H 5150 6100 50  0001 C CNN
+	1    5150 6100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7400 5800 7400 5900
-NoConn ~ 7500 4700
-NoConn ~ 7600 4700
-NoConn ~ 7700 4700
-NoConn ~ 7800 4700
-NoConn ~ 7900 4700
-NoConn ~ 7500 5800
-NoConn ~ 7600 5800
-NoConn ~ 7700 5800
-NoConn ~ 7800 5800
-NoConn ~ 7900 5800
-Text GLabel 5050 5500 0    50   Input ~ 0
+NoConn ~ 7950 6000
+NoConn ~ 7850 6000
+Text GLabel 5050 5700 0    50   Input ~ 0
 CAN_STBY
 Wire Wire Line
-	5050 5500 5250 5500
+	5050 5700 5250 5700
 $Comp
 L panel_light_control-rescue:C_Small-Device C34
 U 1 1 5BBDDD9A
@@ -154,53 +144,53 @@ F 7 "2" H 0   0   50  0001 C CNN "box no"
 	1    5500 4600
 	1    0    0    1   
 $EndComp
-Text GLabel 5050 5400 0    50   Input ~ 0
+Text GLabel 5050 5600 0    50   Input ~ 0
 +3.3V
 Wire Wire Line
-	5050 5400 5150 5400
+	5050 5600 5150 5600
 Text GLabel 5400 4400 0    50   Input ~ 0
 +5V
 $Comp
 L panel_light_control-rescue:C_Small-Device C30
 U 1 1 5BBE520F
-P 5150 5700
+P 5150 5900
 AR Path="/5BBC4BB7/5BBE520F" Ref="C30"  Part="1" 
 AR Path="/5C1EFDBE/5BBE520F" Ref="C?"  Part="1" 
 AR Path="/5C211DD3/5BBE520F" Ref="C?"  Part="1" 
 AR Path="/5C211FC6/5BBE520F" Ref="C?"  Part="1" 
-F 0 "C30" H 5058 5654 50  0000 R CNN
-F 1 "100nF" H 5058 5745 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5150 5700 50  0001 C CNN
-F 3 "~" H 5150 5700 50  0001 C CNN
-F 4 "C0603C104K5RECAUTO" H 0   0   50  0001 C CNN "MPN"
-F 5 "80-C0603C104K5REAUTO" H 0   0   50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "2" H 0   0   50  0001 C CNN "box no"
-	1    5150 5700
+F 0 "C30" H 5058 5854 50  0000 R CNN
+F 1 "100nF" H 5058 5945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5150 5900 50  0001 C CNN
+F 3 "~" H 5150 5900 50  0001 C CNN
+F 4 "C0603C104K5RECAUTO" H 0   200 50  0001 C CNN "MPN"
+F 5 "80-C0603C104K5REAUTO" H 0   200 50  0001 C CNN "Mouser"
+F 6 "X" H 0   200 50  0001 C CNN "stock"
+F 7 "2" H 0   200 50  0001 C CNN "box no"
+	1    5150 5900
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	5150 5600 5150 5400
-Connection ~ 5150 5400
+	5150 5800 5150 5600
+Connection ~ 5150 5600
 Wire Wire Line
-	5150 5400 5250 5400
+	5150 5600 5250 5600
 $Comp
 L panel_light_control-rescue:R_Small-Device R30
 U 1 1 5BBE7B3D
-P 6350 5600
+P 6550 5900
 AR Path="/5BBC4BB7/5BBE7B3D" Ref="R30"  Part="1" 
 AR Path="/5C1EFDBE/5BBE7B3D" Ref="R?"  Part="1" 
 AR Path="/5C211DD3/5BBE7B3D" Ref="R?"  Part="1" 
 AR Path="/5C211FC6/5BBE7B3D" Ref="R?"  Part="1" 
-F 0 "R30" H 6409 5646 50  0000 L CNN
-F 1 "120R" H 6409 5555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6350 5600 50  0001 C CNN
-F 3 "~" H 6350 5600 50  0001 C CNN
-F 4 "RC0603FR-07120RL" H 0   0   50  0001 C CNN "MPN"
-F 5 "603-RC0603FR-07120RL" H 0   0   50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "18" H 0   0   50  0001 C CNN "box no"
-	1    6350 5600
+F 0 "R30" H 6609 5946 50  0000 L CNN
+F 1 "120R" H 6609 5855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6550 5900 50  0001 C CNN
+F 3 "~" H 6550 5900 50  0001 C CNN
+F 4 "RC0603FR-07120RL" H 200 300 50  0001 C CNN "MPN"
+F 5 "603-RC0603FR-07120RL" H 200 300 50  0001 C CNN "Mouser"
+F 6 "X" H 200 300 50  0001 C CNN "stock"
+F 7 "18" H 200 300 50  0001 C CNN "box no"
+	1    6550 5900
 	1    0    0    -1  
 $EndComp
 Text GLabel 1450 700  0    50   Input ~ 0
@@ -709,28 +699,28 @@ Wire Wire Line
 $Comp
 L panel_light_control-rescue:GND-power #PWR0107
 U 1 1 5BEECAF4
-P 9200 5850
+P 9500 6150
 AR Path="/5BBC4BB7/5BEECAF4" Ref="#PWR0107"  Part="1" 
 AR Path="/5C1EFDBE/5BEECAF4" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5BEECAF4" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5BEECAF4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0107" H 9200 5600 50  0001 C CNN
-F 1 "GND" H 9205 5677 50  0000 C CNN
-F 2 "" H 9200 5850 50  0001 C CNN
-F 3 "" H 9200 5850 50  0001 C CNN
-	1    9200 5850
+F 0 "#PWR0107" H 9500 5900 50  0001 C CNN
+F 1 "GND" H 9505 5977 50  0000 C CNN
+F 2 "" H 9500 6150 50  0001 C CNN
+F 3 "" H 9500 6150 50  0001 C CNN
+	1    9500 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 5450 9200 5450
+	9600 5750 9500 5750
 Wire Wire Line
-	10300 5350 10300 5450
-Text GLabel 9200 5450 0    50   Input ~ 0
+	10600 5650 10600 5750
+Text GLabel 9500 5750 0    50   Input ~ 0
 LED_GRN-
 Wire Wire Line
-	9300 5250 8900 5250
+	9600 5550 9200 5550
 Wire Wire Line
-	8900 4700 10600 4700
+	9200 5000 10900 5000
 Text GLabel 10400 2900 2    50   Output ~ 0
 LED_GRN-
 Text GLabel 10400 3000 2    50   Output ~ 0
@@ -939,9 +929,9 @@ Wire Wire Line
 	1400 4900 1600 4900
 Connection ~ 7900 2700
 Wire Wire Line
-	10200 5450 10300 5450
+	10500 5750 10600 5750
 Wire Wire Line
-	9300 5550 9200 5550
+	9600 5850 9500 5850
 $Comp
 L panel_light_control-rescue:R_Small-Device R31
 U 1 1 5C312486
@@ -1363,7 +1353,7 @@ Wire Wire Line
 	3450 2200 3400 2200
 Wire Wire Line
 	3750 2200 3900 2200
-NoConn ~ 9300 5350
+NoConn ~ 9600 5650
 Text GLabel 1500 2400 0    50   Input ~ 0
 I2S_WS
 $Comp
@@ -1403,9 +1393,9 @@ Text Notes 6300 2550 0    50   ~ 0
 (PD):PHYAD0=0
 Text Notes 6300 2200 0    50   ~ 0
 MODE:111 \n= all capable
-Text Notes 9600 5500 0    50   ~ 0
+Text Notes 9900 5800 0    50   ~ 0
 GN.A
-Text Notes 9750 5600 0    50   ~ 0
+Text Notes 10050 5900 0    50   ~ 0
 Y.A
 Wire Wire Line
 	8050 1800 8050 3000
@@ -1418,9 +1408,9 @@ Wire Wire Line
 	9900 2100 10750 2100
 Connection ~ 10350 1750
 Wire Wire Line
-	10200 5150 10600 5150
+	10500 5450 10900 5450
 Wire Wire Line
-	10600 5150 10600 4700
+	10900 5450 10900 5000
 $Comp
 L panel_light_control-rescue:GND-power #PWR015
 U 1 1 5D207DE0
@@ -1443,157 +1433,101 @@ Wire Wire Line
 Wire Wire Line
 	5500 4400 5400 4400
 Wire Wire Line
-	5750 4900 5750 4400
+	5750 5100 5750 4400
 Wire Wire Line
 	5750 4400 5500 4400
 Connection ~ 5500 4400
 $Comp
 L panel_light_control-rescue:GND-power #PWR016
 U 1 1 5D28DE2C
-P 5750 5900
+P 5750 6100
 AR Path="/5BBC4BB7/5D28DE2C" Ref="#PWR016"  Part="1" 
 AR Path="/5C1EFDBE/5D28DE2C" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5D28DE2C" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5D28DE2C" Ref="#PWR?"  Part="1" 
-F 0 "#PWR016" H 5750 5650 50  0001 C CNN
-F 1 "GND" H 5755 5727 50  0000 C CNN
-F 2 "" H 5750 5900 50  0001 C CNN
-F 3 "" H 5750 5900 50  0001 C CNN
-	1    5750 5900
+F 0 "#PWR016" H 5750 5850 50  0001 C CNN
+F 1 "GND" H 5755 5927 50  0000 C CNN
+F 2 "" H 5750 6100 50  0001 C CNN
+F 3 "" H 5750 6100 50  0001 C CNN
+	1    5750 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 5700 5750 5900
+	5750 5900 5750 6100
 Wire Wire Line
-	5150 5800 5150 5900
+	5150 6000 5150 6100
 $Comp
 L panel_light_control-rescue:GND-power #PWR017
 U 1 1 5D3C38BE
-P 6900 4400
+P 7250 4200
 AR Path="/5BBC4BB7/5D3C38BE" Ref="#PWR017"  Part="1" 
 AR Path="/5C1EFDBE/5D3C38BE" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5D3C38BE" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5D3C38BE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR017" H 6900 4150 50  0001 C CNN
-F 1 "GND" H 6905 4227 50  0000 C CNN
-F 2 "" H 6900 4400 50  0001 C CNN
-F 3 "" H 6900 4400 50  0001 C CNN
-	1    6900 4400
+F 0 "#PWR017" H 7250 3950 50  0001 C CNN
+F 1 "GND" H 7255 4027 50  0000 C CNN
+F 2 "" H 7250 4200 50  0001 C CNN
+F 3 "" H 7250 4200 50  0001 C CNN
+	1    7250 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L panel_light_control-rescue:GND-power #PWR022
 U 1 1 5D3C5889
-P 6900 5500
+P 7250 5700
 AR Path="/5BBC4BB7/5D3C5889" Ref="#PWR022"  Part="1" 
 AR Path="/5C1EFDBE/5D3C5889" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5D3C5889" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5D3C5889" Ref="#PWR?"  Part="1" 
-F 0 "#PWR022" H 6900 5250 50  0001 C CNN
-F 1 "GND" H 6905 5327 50  0000 C CNN
-F 2 "" H 6900 5500 50  0001 C CNN
-F 3 "" H 6900 5500 50  0001 C CNN
-	1    6900 5500
+F 0 "#PWR022" H 7250 5450 50  0001 C CNN
+F 1 "GND" H 7255 5527 50  0000 C CNN
+F 2 "" H 7250 5700 50  0001 C CNN
+F 3 "" H 7250 5700 50  0001 C CNN
+	1    7250 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7000 5400 6900 5400
+	7350 5600 7250 5600
 Wire Wire Line
-	6900 5400 6900 5500
+	7250 5600 7250 5700
 Wire Wire Line
-	7000 4300 6900 4300
+	7350 4000 7250 4000
 Wire Wire Line
-	6900 4300 6900 4400
+	7250 4000 7250 4200
 Wire Wire Line
-	7200 4700 7200 4800
+	6650 5400 6650 6200
 Wire Wire Line
-	7200 4800 6650 4800
-Wire Wire Line
-	6650 4800 6650 5200
-Wire Wire Line
-	6650 5900 7200 5900
-Wire Wire Line
-	7200 5900 7200 5800
-Wire Wire Line
-	7300 5800 7300 6000
-Wire Wire Line
-	7300 6000 6750 6000
-Wire Wire Line
-	6750 6000 6750 5400
-Wire Wire Line
-	6750 4900 7300 4900
-Wire Wire Line
-	7300 4900 7300 4700
-$Comp
-L panel_light_control-rescue:GND-power #PWR024
-U 1 1 5D47EE1B
-P 7400 5900
-AR Path="/5BBC4BB7/5D47EE1B" Ref="#PWR024"  Part="1" 
-AR Path="/5C1EFDBE/5D47EE1B" Ref="#PWR?"  Part="1" 
-AR Path="/5C211DD3/5D47EE1B" Ref="#PWR?"  Part="1" 
-AR Path="/5C211FC6/5D47EE1B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR024" H 7400 5650 50  0001 C CNN
-F 1 "GND" H 7405 5727 50  0000 C CNN
-F 2 "" H 7400 5900 50  0001 C CNN
-F 3 "" H 7400 5900 50  0001 C CNN
-	1    7400 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L panel_light_control-rescue:GND-power #PWR023
-U 1 1 5D481086
-P 7400 4800
-AR Path="/5BBC4BB7/5D481086" Ref="#PWR023"  Part="1" 
-AR Path="/5C1EFDBE/5D481086" Ref="#PWR?"  Part="1" 
-AR Path="/5C211DD3/5D481086" Ref="#PWR?"  Part="1" 
-AR Path="/5C211FC6/5D481086" Ref="#PWR?"  Part="1" 
-F 0 "#PWR023" H 7400 4550 50  0001 C CNN
-F 1 "GND" H 7405 4627 50  0000 C CNN
-F 2 "" H 7400 4800 50  0001 C CNN
-F 3 "" H 7400 4800 50  0001 C CNN
-	1    7400 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7400 4700 7400 4800
-Connection ~ 6650 5200
-Wire Wire Line
-	6650 5200 6650 5900
-Connection ~ 6750 5400
-Wire Wire Line
-	6750 5400 6750 4900
-Wire Wire Line
-	10300 5050 10200 5050
+	10600 5350 10500 5350
 $Comp
 L panel_light_control-rescue:HR911105A-SamacSys_Parts J13
 U 1 1 5BBC51BA
-P 9300 5050
+P 9600 5350
 AR Path="/5BBC4BB7/5BBC51BA" Ref="J13"  Part="1" 
 AR Path="/5C1EFDBE/5BBC51BA" Ref="J?"  Part="1" 
 AR Path="/5C211DD3/5BBC51BA" Ref="J?"  Part="1" 
 AR Path="/5C211FC6/5BBC51BA" Ref="J?"  Part="1" 
-F 0 "J13" H 9750 5315 50  0000 C CNN
-F 1 "HR911105A" H 9750 5224 50  0000 C CNN
-F 2 "SamacSys_Parts:HR911105A_1" H 10050 5150 50  0001 L CNN
-F 3 "http://www.kosmodrom.com.ua/pdf/HR911105A.pdf" H 10050 5050 50  0001 L CNN
-F 4 "Single port RJ45 connector, with magnetics module and LED" H 10050 4950 50  0001 L CNN "Description"
-F 5 "Hanrun Electronics" H 10050 4750 50  0001 L CNN "Manufacturer_Name"
-F 6 "HR911105A" H 10050 4650 50  0001 L CNN "Manufacturer_Part_Number"
-F 7 "HR911105A" H 10050 4350 50  0001 L CNN "Arrow Part Number"
-F 8 "HR911105A" H 9300 5050 50  0001 C CNN "AliExpress"
-F 9 "710-7499011121A (WE near match)" H 9300 5050 50  0001 C CNN "Mouser"
-F 10 "X" H 0   0   50  0001 C CNN "stock"
-F 11 "E" H 0   0   50  0001 C CNN "box no"
-	1    9300 5050
+F 0 "J13" H 10050 5615 50  0000 C CNN
+F 1 "HR911105A" H 10050 5524 50  0000 C CNN
+F 2 "SamacSys_Parts:HR911105A_1" H 10350 5450 50  0001 L CNN
+F 3 "http://www.kosmodrom.com.ua/pdf/HR911105A.pdf" H 10350 5350 50  0001 L CNN
+F 4 "Single port RJ45 connector, with magnetics module and LED" H 10350 5250 50  0001 L CNN "Description"
+F 5 "Hanrun Electronics" H 10350 5050 50  0001 L CNN "Manufacturer_Name"
+F 6 "HR911105A" H 10350 4950 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "HR911105A" H 10350 4650 50  0001 L CNN "Arrow Part Number"
+F 8 "HR911105A" H 9600 5350 50  0001 C CNN "AliExpress"
+F 9 "710-7499011121A (WE near match)" H 9600 5350 50  0001 C CNN "Mouser"
+F 10 "X" H 300 300 50  0001 C CNN "stock"
+F 11 "E" H 300 300 50  0001 C CNN "box no"
+	1    9600 5350
 	1    0    0    -1  
 $EndComp
 Text GLabel 10750 2100 2    50   Output ~ 0
 TX_P
 Text GLabel 10750 2200 2    50   Output ~ 0
 TX_N
-Text GLabel 9200 5050 0    50   Output ~ 0
+Text GLabel 9500 5350 0    50   Output ~ 0
 TX_P
-Text GLabel 10300 5050 2    50   Output ~ 0
+Text GLabel 10600 5350 2    50   Output ~ 0
 TX_N
 Wire Wire Line
 	10000 2200 10750 2200
@@ -1604,13 +1538,13 @@ RX_N
 Wire Wire Line
 	10750 2400 10450 2400
 Connection ~ 10450 2400
-Text GLabel 9200 5150 0    50   Input ~ 0
+Text GLabel 9500 5450 0    50   Input ~ 0
 RX_P
 Wire Wire Line
 	10350 2300 10750 2300
 Wire Wire Line
-	9200 5150 9300 5150
-Text GLabel 10300 5250 2    50   Input ~ 0
+	9500 5450 9600 5450
+Text GLabel 10600 5550 2    50   Input ~ 0
 RX_N
 Wire Wire Line
 	2300 7200 2300 7300
@@ -1811,24 +1745,22 @@ $EndComp
 $Comp
 L panel_light_control-rescue:RJ45_Shielded-Connector J2
 U 1 1 5DFDD825
-P 7500 5400
+P 7850 5600
 AR Path="/5BBC4BB7/5DFDD825" Ref="J2"  Part="1" 
 AR Path="/5C1EFDBE/5DFDD825" Ref="J?"  Part="1" 
 AR Path="/5C211DD3/5DFDD825" Ref="J?"  Part="1" 
 AR Path="/5C211FC6/5DFDD825" Ref="J?"  Part="1" 
-F 0 "J2" V 7050 5850 50  0000 R CNN
-F 1 "RJ45_Shielded" V 7150 5900 50  0000 R CNN
-F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7500 5425 50  0001 C CNN
-F 3 "~" V 7500 5425 50  0001 C CNN
-F 4 "RJHSE-5380 " V 7500 5400 50  0001 C CNN "MPN"
-F 5 "523-RJHSE-5380 " V 7500 5400 50  0001 C CNN "Mouser"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "E" H 0   0   50  0001 C CNN "box no"
-	1    7500 5400
+F 0 "J2" V 7400 6150 50  0000 R CNN
+F 1 "RJ45_Shielded" V 7500 6400 50  0000 R CNN
+F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7850 5625 50  0001 C CNN
+F 3 "~" V 7850 5625 50  0001 C CNN
+F 4 "RJHSE-5380 " V 7850 5600 50  0001 C CNN "MPN"
+F 5 "523-RJHSE-5380 " V 7850 5600 50  0001 C CNN "Mouser"
+F 6 "X" H 350 200 50  0001 C CNN "stock"
+F 7 "E" H 350 200 50  0001 C CNN "box no"
+	1    7850 5600
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8900 4700 8900 5250
 $Comp
 L panel_light_control-rescue:GND-power #PWR027
 U 1 1 5E09B80B
@@ -1956,25 +1888,25 @@ Connection ~ 10450 1750
 Wire Wire Line
 	10450 1750 10550 1750
 Wire Wire Line
-	9200 5550 9200 5850
+	9500 5850 9500 6150
 $Comp
 L panel_light_control-rescue:GND-power #PWR029
 U 1 1 5E8581A9
-P 10300 5850
+P 10600 6150
 AR Path="/5BBC4BB7/5E8581A9" Ref="#PWR029"  Part="1" 
 AR Path="/5C1EFDBE/5E8581A9" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5E8581A9" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5E8581A9" Ref="#PWR?"  Part="1" 
-F 0 "#PWR029" H 10300 5600 50  0001 C CNN
-F 1 "GND" H 10305 5677 50  0000 C CNN
-F 2 "" H 10300 5850 50  0001 C CNN
-F 3 "" H 10300 5850 50  0001 C CNN
-	1    10300 5850
+F 0 "#PWR029" H 10600 5900 50  0001 C CNN
+F 1 "GND" H 10605 5977 50  0000 C CNN
+F 2 "" H 10600 6150 50  0001 C CNN
+F 3 "" H 10600 6150 50  0001 C CNN
+	1    10600 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10300 5450 10300 5850
-Connection ~ 10300 5450
+	10600 5750 10600 6150
+Connection ~ 10600 5750
 Text Label 9250 1000 0    50   ~ 0
 VDDCR
 $Comp
@@ -2026,7 +1958,7 @@ Text Label 9150 900  0    50   ~ 0
 PHY_VDDA
 Text Label 10100 1750 0    50   ~ 0
 PHY_VDDA
-Text Label 9350 4700 0    50   ~ 0
+Text Label 9650 5000 0    50   ~ 0
 PHY_VDDA
 Text GLabel 3500 2800 3    50   Input ~ 0
 +3.3V
@@ -2589,52 +2521,38 @@ $EndComp
 Wire Wire Line
 	4950 3150 4950 3050
 Connection ~ 4950 3050
-Wire Wire Line
-	6250 5400 6750 5400
-Wire Wire Line
-	6250 5200 6350 5200
-Wire Wire Line
-	6350 5500 6350 5200
-Connection ~ 6350 5200
-Wire Wire Line
-	6350 5200 6650 5200
 $Comp
 L panel_light_control-rescue:Conn_01x02-Connector_Generic TERM1
 U 1 1 5BDBFB79
-P 6150 5900
-F 0 "TERM1" H 6150 5700 50  0000 C CNN
-F 1 "Conn_01x02" H 6150 5600 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 5900 50  0001 C CNN
-F 3 "~" H 6150 5900 50  0001 C CNN
-F 4 "455-1719-ND " H 0   0   50  0001 C CNN "DigiKey"
-F 5 "S2B-PH-K-S(LF)(SN)‎" H 0   0   50  0001 C CNN "MPN"
-F 6 "X" H 0   0   50  0001 C CNN "stock"
-F 7 "E" H 0   0   50  0001 C CNN "box no"
-	1    6150 5900
+P 6150 6100
+F 0 "TERM1" H 6150 5900 50  0000 C CNN
+F 1 "Conn_01x02" H 6150 5800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 6100 50  0001 C CNN
+F 3 "~" H 6150 6100 50  0001 C CNN
+F 4 "455-1719-ND " H 0   200 50  0001 C CNN "DigiKey"
+F 5 "S2B-PH-K-S(LF)(SN)‎" H 0   200 50  0001 C CNN "MPN"
+F 6 "X" H 0   200 50  0001 C CNN "stock"
+F 7 "E" H 0   200 50  0001 C CNN "box no"
+	1    6150 6100
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	6350 5700 6350 5900
-Wire Wire Line
-	6350 6000 6750 6000
-Connection ~ 6750 6000
 $Comp
 L panel_light_control-rescue:GND-power #PWR0132
 U 1 1 5BE6B640
-P 9750 5850
+P 10050 6150
 AR Path="/5BBC4BB7/5BE6B640" Ref="#PWR0132"  Part="1" 
 AR Path="/5C1EFDBE/5BE6B640" Ref="#PWR?"  Part="1" 
 AR Path="/5C211DD3/5BE6B640" Ref="#PWR?"  Part="1" 
 AR Path="/5C211FC6/5BE6B640" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0132" H 9750 5600 50  0001 C CNN
-F 1 "GND" H 9755 5677 50  0000 C CNN
-F 2 "" H 9750 5850 50  0001 C CNN
-F 3 "" H 9750 5850 50  0001 C CNN
-	1    9750 5850
+F 0 "#PWR0132" H 10050 5900 50  0001 C CNN
+F 1 "GND" H 10055 5977 50  0000 C CNN
+F 2 "" H 10050 6150 50  0001 C CNN
+F 3 "" H 10050 6150 50  0001 C CNN
+	1    10050 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9750 5850 9750 5750
+	10050 6150 10050 6050
 $Comp
 L panel_light_control-rescue:SKQYABE010-SamacSys_Parts RST1
 U 1 1 5BE29C94
@@ -2766,13 +2684,13 @@ Connection ~ 3950 2500
 Wire Wire Line
 	8850 900  8850 1000
 Connection ~ 8850 1000
-Text GLabel 10450 4550 0    50   Input ~ 0
+Text GLabel 10750 4850 0    50   Input ~ 0
 PYH_VDDA
 Wire Wire Line
-	10450 4550 10600 4550
+	10750 4850 10900 4850
 Wire Wire Line
-	10600 4550 10600 4700
-Connection ~ 10600 4700
+	10900 4850 10900 5000
+Connection ~ 10900 5000
 Text Notes 700  4250 0    50   ~ 0
 CAN2_RX
 Text Notes 700  4350 0    50   ~ 0
@@ -2952,4 +2870,120 @@ Text Label 3400 5200 0    50   ~ 0
 PE15_LCAN
 Wire Wire Line
 	3400 5200 3850 5200
+Wire Wire Line
+	2700 7200 2700 7300
+Wire Wire Line
+	2700 7300 2600 7300
+Connection ~ 2600 7300
+Wire Wire Line
+	7550 4400 7550 6000
+Wire Wire Line
+	7650 4400 7650 6000
+Wire Wire Line
+	7750 4400 7750 6000
+Wire Wire Line
+	6350 6200 6650 6200
+Wire Wire Line
+	9200 5000 9200 5550
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 5EE3E83F
+P 6950 5600
+F 0 "JP1" V 7200 5650 50  0000 L CNN
+F 1 "SJ_3_BR12" V 7100 5650 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 6950 5600 50  0001 C CNN
+F 3 "~" H 6950 5600 50  0001 C CNN
+	1    6950 5600
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	8050 6000 8050 4400
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP2
+U 1 1 5ED5D15D
+P 6850 5200
+F 0 "JP2" V 7100 5300 50  0000 L CNN
+F 1 "SJ_3_BR12" V 7000 5300 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 6850 5200 50  0001 C CNN
+F 3 "~" H 6850 5200 50  0001 C CNN
+	1    6850 5200
+	0    1    -1   0   
+$EndComp
+Connection ~ 6650 5400
+Text Label 7550 5250 1    50   ~ 0
+PAT_TX_P
+Text Label 7650 5250 1    50   ~ 0
+PAT_TX_N
+Text Label 7750 5250 1    50   ~ 0
+PAT_RX_P
+Text Label 8050 5250 1    50   ~ 0
+PAT_RX_N
+Wire Wire Line
+	6950 6100 8150 6100
+Wire Wire Line
+	8150 6100 8150 6000
+Wire Wire Line
+	8250 6000 8250 6200
+Wire Wire Line
+	6850 6200 6850 5400
+Wire Wire Line
+	8150 4400 8150 4750
+Wire Wire Line
+	8250 4850 8250 4400
+Wire Wire Line
+	6950 6100 6950 5800
+Wire Wire Line
+	6550 4750 6550 5600
+Wire Wire Line
+	6250 5600 6550 5600
+Wire Wire Line
+	6550 4750 8150 4750
+Connection ~ 6550 5600
+Wire Wire Line
+	6650 4850 8250 4850
+Wire Wire Line
+	8250 6200 6850 6200
+Wire Wire Line
+	6650 4850 6650 5200
+Wire Wire Line
+	6550 5600 6800 5600
+Wire Wire Line
+	6700 5200 6650 5200
+Connection ~ 6650 5200
+Wire Wire Line
+	6650 5200 6650 5400
+Wire Wire Line
+	6250 5400 6650 5400
+Wire Wire Line
+	6550 5600 6550 5800
+Wire Wire Line
+	6350 6100 6550 6100
+Wire Wire Line
+	6550 6100 6550 6000
+Wire Wire Line
+	6950 5400 6950 4500
+Wire Wire Line
+	6950 4500 7850 4500
+Wire Wire Line
+	7850 4500 7850 4400
+Wire Wire Line
+	6850 5000 6850 4600
+Wire Wire Line
+	6850 4600 7950 4600
+Wire Wire Line
+	7950 4600 7950 4400
+Text Label 6300 5400 0    50   ~ 0
+CANH
+Text Label 6300 5600 0    50   ~ 0
+CANL
+Text Label 7050 4500 0    50   ~ 0
+CANL1
+Text Label 7050 4600 0    50   ~ 0
+CANH1
+Text Label 7050 6100 0    50   ~ 0
+CANL2
+Text Label 7050 6200 0    50   ~ 0
+CANH2
+Text Notes 8400 4700 0    50   ~ 0
+Jumper Config A (default):\nCAN passed through between J2 (pin 7,8) and J11 (pin 7,8).\nETH connected to J13.\n\nJumper Config B:\nCAN passed through between J11 (pin 7,8) and J11 (pin 4,5).\nETH connected to J13 or\nETH connected to J11 (pin 1,2;3,6) with RJ45 patch J2<->J13.
 $EndSCHEMATC

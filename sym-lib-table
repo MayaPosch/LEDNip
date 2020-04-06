@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name panel_light_control-rescue)(type Legacy)(uri ${KIPRJMOD}/panel_light_control-rescue.lib)(options "")(descr ""))
+  (lib (name ASMB-TTF0-0A20B)(type Legacy)(uri ${KIPRJMOD}/libs/ASMB-TTF0-0A20B/ASMB-TTF0-0A20B.lib)(options "")(descr ""))
 )
